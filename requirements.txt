@@ -1,0 +1,13 @@
+# 必须用 /usr/bin/python3 (3.12.3) 跑 —— 默认的 python3 是 miniconda，没有 uhd
+# 且因 libstdc++ 太旧无法加载 UHD 的 .so（详见 README「环境」一节）。
+#
+# 下面的版本号是 /usr/bin/python3 上实测可用的组合，不是下限要求。
+numpy==1.26.4
+scipy==1.11.4
+matplotlib==3.6.3
+Pillow==10.2.0
+
+# uhd 不在 PyPI 上装：随 UHD 4.8.0.HEAD-0-g308126a4 源码编译安装到
+#   /usr/local/lib/python3.13/site-packages/uhd   (源码装)
+#   /usr/lib/python3/dist-packages/uhd            (apt 装，/usr/bin/python3 用的是这个)
+# 只有 current/USRPSaveData2Channel.py 需要它；纯离线分析不装也能跑。
