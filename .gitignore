@@ -1,6 +1,3 @@
 __pycache__/
 *.pyc
 data/experiment_*
-# debug 录制的谱和图（MB 级、可再生），代码本身要跟踪
-debug/*.npz
-debug/*.png
