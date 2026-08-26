@@ -56,6 +56,21 @@ class DopplerEngine:
         """环形缓冲灌满前，谱里还混着初始零值，不该拿去判决。"""
         return self._primed >= self.cfg.n_ring
 
+    @property
+    def work(self) -> np.ndarray:
+        """20260826 新增：(num_channels, n_work*2) int16，只读——当前 step 的
+        新数据 + 上一步末尾的 carry（跟 ingest()/process() 内部用的是同一份
+        内存，没有另外拷贝）。这份"当前 step + 上一步尾巴"的连续视图是下行
+        功率提取（rt_detect.py 的 DownlinkPower）也需要的同一个东西——不新开
+        一份 carry 缓冲重复维护同一套逻辑，直接复用这份，省内存也省一份
+        容易跟这边失步的重复代码。
+
+        **只读**：调用方不该写它——写了会打乱 Doppler 处理自己下一步的
+        carry 状态，这条链路调得很细（见文件头"关键实现细节...别随手改回去"），
+        任何写入都可能引入一个很难查的间歇性 bug。
+        """
+        return self._work
+
     def ingest(self, raw_i16: np.ndarray) -> None:
         """把一个 step 的新数据搬进 work 缓冲（并保留上一步的尾巴做 carry）。"""
         # 先把上一步的尾巴挪到 carry 区，再写入新数据——顺序不能反。

@@ -2,6 +2,14 @@
 # -*- coding: utf-8 -*-
 """ISAC 桥接：收 rt_main 发来的 UDP 判决，转成 isac_server 的 shadowing/normal。
 
+20260826 新增：同一个 UDP 端口上，也转发 rt_main 发来的另外两路连续流：
+  - dBFS 包（{"dBFS": ..., "dBFS_channels": [...], "wallClock": ...}）——
+    上行/reference channel，每步都发，调 isac_server 的 push_dBFS()
+  - power 包（{"power": ..., "wallClock": ...}）——下行/sensing channel
+    （Master 方向）判遮挡用，TDD 锁定时才发，调 isac_server 的 push_power()
+两路都跟 present/shadowing 那支完全独立——不做心跳/去抖/失效回落，
+rt_main 发多快这边转多快，见下面 emit() 之后紧跟着的两个分支。
+
 ## ⚠️ 这个脚本用 miniconda 的 python3 跑，不是 /usr/bin/python3
 
     python3 RealtimeISAC/isac_bridge.py          # 注意：不写 /usr/bin/
@@ -60,6 +68,8 @@ def main() -> int:
     a = p.parse_args()
 
     push_result = None
+    push_dBFS = None
+    push_power = None
     if not a.dry:
         if not os.path.isdir(a.server_dir):
             print(f"找不到 isac_server 目录: {a.server_dir}", file=sys.stderr)
@@ -72,6 +82,23 @@ def main() -> int:
                   f"这个脚本要用 **miniconda 的 python3** 跑（有 fastapi/uvicorn），"
                   f"不是 /usr/bin/python3。", file=sys.stderr)
             return 1
+        # 20260826 新增：push_dBFS 单独 try——a.server_dir 指向的那份 isac_server.py
+        # 可能还没同步这次新加的函数（比如这台机器的部署还是旧版本），单独 import
+        # 失败不该拖累整个 bridge 起不来，present 判决照常转发，只是先不广播 dBFS，
+        # 打个警告方便发现"忘记同步 isac_server.py"这种情况。
+        try:
+            from isac_server import push_dBFS
+        except ImportError:
+            print(f"[bridge] 警告：{a.server_dir} 里的 isac_server.py 还没有 push_dBFS"
+                  f"（版本较旧，缺 20260826 的 dBFS 广播支持）——present 判决照常转发，"
+                  f"dBFS 判决会被丢弃。同步一下 isac_server.py 就好。", file=sys.stderr)
+        # 20260826 新增：push_power 同上，单独 try，缺了只警告不拖累整个 bridge
+        try:
+            from isac_server import push_power
+        except ImportError:
+            print(f"[bridge] 警告：{a.server_dir} 里的 isac_server.py 还没有 push_power"
+                  f"（版本较旧，缺下行功率判遮挡的广播支持）——present 判决照常转发，"
+                  f"下行 power 判决会被丢弃。同步一下 isac_server.py 就好。", file=sys.stderr)
         start_server_in_background(port=a.isac_port)
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -84,6 +111,10 @@ def main() -> int:
     mode = "normal"
     last_rx = 0.0
     n_rx = 0
+    n_rx_dbfs = 0
+    last_dbfs_print = 0.0
+    n_rx_power = 0
+    last_power_print = 0.0
 
     def emit(new_mode: str, why: str) -> None:
         nonlocal mode
@@ -108,6 +139,38 @@ def main() -> int:
                 msg = json.loads(data.decode("utf-8"))
             except (UnicodeDecodeError, json.JSONDecodeError):
                 continue                     # 不是我们的包，忽略
+
+            # 20260826 新增：dBFS 是独立的一路连续流（rt_main.py 每步都发一次，
+            # ~50Hz，不跟 present 的心跳/去抖挂钩），跟下面 present 那支分开处理，
+            # 不影响 stale_sec 回落逻辑——那个逻辑只关心"多久没收到 present 判决"，
+            # dBFS 包不算数，避免两路互相干扰对方的语义。
+            if "dBFS" in msg:
+                n_rx_dbfs += 1
+                dbfs_now = time.time()
+                if push_dBFS is not None:
+                    push_dBFS(msg["dBFS"], msg.get("wallClock"))
+                # ~50Hz 量级，全打印会刷屏；节流到最多每秒一行，只为确认这条链路在动
+                if dbfs_now - last_dbfs_print >= 1.0:
+                    print(f"[bridge] dBFS={msg['dBFS']:+.1f} "
+                          f"channels={msg.get('dBFS_channels')} (共收到 {n_rx_dbfs} 条)",
+                          flush=True)
+                    last_dbfs_print = dbfs_now
+                continue
+
+            # 20260826 新增：power 是下行（Master 方向）功率判遮挡那一路，
+            # 跟上面 dBFS（上行/reference channel）是完全独立的通道——两个都
+            # 可能出现在同一个 UDP 端口上，靠字段名区分，互不影响对方的处理。
+            if "power" in msg:
+                n_rx_power += 1
+                power_now = time.time()
+                if push_power is not None:
+                    push_power(msg["power"], msg.get("wallClock"))
+                if power_now - last_power_print >= 1.0:
+                    print(f"[bridge] power(downlink)={msg['power']:+.1f}dBFS "
+                          f"(共收到 {n_rx_power} 条)", flush=True)
+                    last_power_print = power_now
+                continue
+
             if "present" not in msg:
                 continue
             last_rx = time.time()
@@ -117,7 +180,7 @@ def main() -> int:
                    f"score={msg.get('score', '?')}")
             emit("shadowing" if msg["present"] else "normal", why)
     except KeyboardInterrupt:
-        print(f"\n[bridge] 退出（共收到 {n_rx} 条判决）")
+        print(f"\n[bridge] 退出（共收到 {n_rx} 条判决，{n_rx_dbfs} 条 dBFS，{n_rx_power} 条 power）")
         if push_result is not None:
             push_result("normal")
     return 0

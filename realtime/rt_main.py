@@ -19,7 +19,8 @@ import time
 import numpy as np
 
 from rt_config import RtConfig
-from rt_detect import PowerMonitor, PresenceDetector
+from rt_detect import (PowerMonitor, PresenceDetector, DownlinkPower,
+                        SimpleDownlinkShadowJudge)
 from rt_display import PeakLine, Waterfall
 from rt_dsp import DopplerEngine, to_db
 from rt_live import LiveWaterfall
@@ -81,11 +82,16 @@ def run(cfg: RtConfig, duration: float, waterfall: bool, dry_run: bool,
     engine = DopplerEngine(cfg)
     power_mon = PowerMonitor(cfg)
     detector = PresenceDetector(cfg, engine.dc_mask, engine.freqs)
+    # 20260826 新增：task2/3——下行（Master 方向，sensing channel）功率判遮挡，
+    # 见 rt_detect.py 里 DownlinkPower/SimpleDownlinkShadowJudge 的说明
+    downlink_power = DownlinkPower(cfg)
+    dl_judge = SimpleDownlinkShadowJudge(cfg)
     if sink is None and publish:
         sink = stdout_sink
     pub = Publisher(sink=sink).start()
     if sink is not None:
-        print(f"📡 判决外发: {sink!r}  心跳 {heartbeat_sec:.0f}s")
+        print(f"📡 判决外发: {sink!r}  心跳 {heartbeat_sec:.0f}s"
+              f"  + dBFS 每步都发 (~{1.0/cfg.step_sec:.0f}Hz，20260826 新增)")
     stats = Stats()
     peak_line = PeakLine(every=5)
     wf = Waterfall(engine.freqs, every=2) if waterfall else None
@@ -125,7 +131,49 @@ def run(cfg: RtConfig, duration: float, waterfall: bool, dry_run: bool,
             t0 = time.perf_counter()
             sync.update(raw)
             power_mon.update(raw)
+
+            # 20260826 新增：每一步（跟下面 Doppler 计算同一个窗口）都把这步的
+            # dBFS 发出去，不做任何 debounce/节流——目的是拿来跟 present 判决
+            # （debounce 后天生有 ~0.2~0.6s 延迟，见 rt_config.py 的 debounce_*
+            # 注释）比反应速度，任何一步被吞掉都会让这个对比失真。
+            #
+            # 用 power_mon.inst（瞬时值），不用 power_mon.dbfs（EMA 平滑过，
+            # alpha=0.05 时间常数 0.4s——PowerMonitor 自己的注释就说了 EMA 是
+            # 给人看的，只有瞬时值才看得出遮挡这种零点几秒的事件，见 rt_detect.py）。
+            #
+            # 两路各自的 inst 都发（dBFS_channels），单一的 dBFS 字段（喂给网页
+            # 现成的 feedDBFS() 判断接口）取两路均值——两路哪个更能代表"有没有
+            # 遮挡"是后续判决算法要定的事，这里先把两路原始值都保留下来。
+            #
+            # Publisher 本身非阻塞（队列满就丢最旧的，不阻塞 DSP 循环；sink 是
+            # None 时 send() 内部直接 return），50Hz 量级（step_sec 默认 0.02s）
+            # 随便发不会拖慢这个循环，也跟下面 present 那次 pub.send() 一样不用
+            # 额外判断 sink 存不存在。
+            pub.send({
+                "dBFS": round(sum(power_mon.inst) / len(power_mon.inst), 2),
+                "dBFS_channels": [round(d, 2) for d in power_mon.inst],
+                "wallClock": round(time.time() * 1000),
+            })
+
             engine.ingest(raw)
+
+            # 20260826 新增：task2/3/4——下行（Master 方向）功率判遮挡。必须放在
+            # engine.ingest(raw) 之后（要读 engine.work，这份 carry 缓冲要先被
+            # 这一步的新数据更新过）、但不用等 engine.process() 那堆 FFT/CAF 算完——
+            # 尽量早发，跟上面 dBFS 那段一样是为了不要给"反应速度"对比引入
+            # 不必要的延迟。字段名用 "power"（不是 "dBFS"）——见 dash-js/
+            # shadowInputs.js 的 feedPowerShadow()，这是它专门等的那路输入，
+            # 跟上面 uplink 的 "dBFS" 是两个独立的判断通道，故意不共用。
+            # 只在 valid 时发（TDD 没锁定时，下行窗口这个概念本身不成立，
+            # 发一个没意义的数字出去比不发更容易误导）。
+            downlink_power.update(engine.work, sync)
+            dl_judge.update(downlink_power)
+            if downlink_power.valid:
+                pub.send({
+                    "power": round(downlink_power.inst, 2),
+                    "wallClock": round(time.time() * 1000),
+                })
+
             power = engine.process(sync.phase, sync.n_integrate)
             fd, pk = engine.peak(power)
             # ring 灌满前谱里还混着初始零值，判决不可信，这段不喂给检测器
@@ -141,7 +189,8 @@ def run(cfg: RtConfig, duration: float, waterfall: bool, dry_run: bool,
             # 实时图也算进计时区：它每 4 步要花几毫秒，是本方案里最贵的一项，
             # 挪到计时区外面只会让 p99 好看而不解决丢步。分项耗时见 lw.status()。
             if lw is not None:
-                lw.update(power, fd, f"{detector.status()} {power_mon.status()} {tag}",
+                lw.update(power, fd, f"{detector.status()} {power_mon.status()} "
+                                     f"{downlink_power.status()} {dl_judge.status()} {tag}",
                           present)
             dt_ms = (time.perf_counter() - t0) * 1e3
             stats.add(dt_ms)
@@ -165,7 +214,8 @@ def run(cfg: RtConfig, duration: float, waterfall: bool, dry_run: bool,
                 wf.update(to_db(power), f"{fd:+7.1f}Hz {detector.status()} {tag}")
             else:
                 peak_line.update(fd, pk, f"{dt_ms:5.2f}ms {detector.status()} "
-                                         f"{power_mon.status()} {tag}")
+                                         f"{power_mon.status()} "
+                                         f"{downlink_power.status()} {dl_judge.status()} {tag}")
             if time.monotonic() >= t_end:
                 break
     except KeyboardInterrupt:
@@ -181,6 +231,7 @@ def run(cfg: RtConfig, duration: float, waterfall: bool, dry_run: bool,
     print(stats.summary(cfg.step_sec * 1e3))
     print(sync.status())
     print(power_mon.status())
+    print(f"{downlink_power.status()}  {dl_judge.status()}")
     print(f"判决: {'有人' if detector.present else '无人'}  "
           f"score={detector.score}/{cfg.debounce_n}")
     print(pub.status())
@@ -273,7 +324,8 @@ def main() -> int:
     p.add_argument("--live-fmax", type=float, default=None,
                    help="实时图只画 ±这么多 Hz（默认全量程 ±500）")
     p.add_argument("--isac", action="store_true",
-                   help="把有人/无人以 UDP 发给 isac_bridge.py（-> 网页 shadowing/normal）")
+                   help="把有人/无人 + 每步的 dBFS 以 UDP 发给 isac_bridge.py"
+                        "（-> 网页 shadowing/normal + dBFS 判断通道）")
     p.add_argument("--isac-host", type=str, default="127.0.0.1")
     p.add_argument("--isac-port", type=int, default=9099)
     p.add_argument("--heartbeat", type=float, default=2.0,

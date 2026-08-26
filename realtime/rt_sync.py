@@ -131,6 +131,17 @@ class TddSync:
         self.duty = 0.0
 
     @property
+    def n_on(self) -> int:
+        """20260826 新增：实测的上行 ON 段长度（样本数），不受 force_n_on_us
+        影响——跟 n_integrate 不是一回事：n_integrate 是"Doppler 引擎这一步
+        实际积分多少样本"，force_n_on_us 非 0 时会被强制覆盖成对比实验要的值；
+        这里要的是"上行 ON 窗口真实在哪、多长"这个物理事实，下行功率提取
+        （rt_detect.py 的 DownlinkPower）要靠它算"上行窗口之外"是哪一段，
+        用被强制覆盖过的值会算错窗口位置。
+        """
+        return self._n_on
+
+    @property
     def n_integrate(self) -> int:
         """每帧参与积分的样本数：锁定时只积**实测的** ON 段，未锁定时积满整个周期。
 

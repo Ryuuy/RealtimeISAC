@@ -83,6 +83,122 @@ class PowerMonitor:
         return s + ("  ⚠️" + ",".join(bad) if bad else "")
 
 
+class DownlinkPower:
+    """20260826 新增。sensing channel（ch1，物理上朝向 Master）在**下行时隙**
+    的平均功率，转成 dBFS。
+
+    物理背景（跟这段代码怎么写强相关，不是废话）：两个背靠背角天线，
+    reference channel（ch0）朝 Slave，sensing channel（ch1）朝 Master。
+    TddSync 只用 ch0 的功率包络判定"上行 TDD 什么时候 ON"（见 rt_sync.py），
+    DopplerEngine 的 CAF 也是在这个上行 ON 窗口内积分（见 rt_dsp.py）。
+    这里反过来看**上行窗口之外**那一段——对这条 TDD 链路来说那对应 Master
+    的下行发射，sensing channel 正对着 Master，这段时间会直接、强地收到
+    下行信号，用它的功率变化能不能反映"链路是不是被挡"，是这个类存在的
+    目的（跟 PowerMonitor 的"纯链路健康监控"是不同的目的，故意分开）。
+
+    不用 ISAC 预测式的判断思路，也不重新做一遍 TddSync 那套盲同步——
+    上行窗口的位置/长度（phase/n_on）TddSync 已经算好了，这里只是换一个
+    窗口位置去切同一份数据算功率，是同一类"从 buffer 里抽一段、平方求和"
+    的开销，不比 PowerMonitor.update() 贵。
+
+    不维护自己的 carry 缓冲：直接读 DopplerEngine.work（同一份内存的只读
+    视图），省内存，也避免两边各自维护一套 carry 逻辑、迟早对不上的风险。
+    """
+
+    def __init__(self, cfg: RtConfig):
+        self.cfg = cfg
+        self.inst = 0.0      # 瞬时 dBFS——遮挡这种零点几秒的事件要看这个，不是 EMA
+        self.dbfs = None     # EMA 平滑过的，给人看状态行用
+        self.valid = False   # 上行没锁定时，"下行窗口在哪"没意义，这次值不可信
+
+    def update(self, work: np.ndarray, sync) -> None:
+        """work: DopplerEngine.work 的返回值，(num_channels, n_work*2) int16。
+        sync: 当前的 TddSync 实例（读 .locked/.phase/.n_on）。"""
+        cfg = self.cfg
+        if not sync.locked:
+            self.valid = False
+            return
+
+        n_per = cfg.n_period
+        n_fr = cfg.n_frames_per_step
+        n_on = sync.n_on
+        dl_len = n_per - n_on
+        if dl_len <= 0:
+            # 上行占空 100%（理论上不该发生，真出现了说明 sync 那边有问题），
+            # 没有下行窗口可言，不硬凑
+            self.valid = False
+            return
+
+        # 下行窗口紧跟在上行 ON 窗口后面：[phase+n_on, phase+n_per)。
+        # 不用取模——work 里每帧的绝对偏移是 k*n_per + dl_start，这份 buffer
+        # 本来就是按连续样本流存的（DopplerEngine._work 的 carry 设计就是
+        # 为了让这种"可能跨到下一个周期栅格"的切片不用特殊处理，直接读
+        # 连续内存就是对的，见 rt_dsp.py 里 work 属性的说明）。
+        dl_start = sync.phase + n_on
+        ch1 = work[1].reshape(-1, 2)  # 视图，不拷贝：(n_work_samples, 2) 的 (I,Q)
+
+        total = 0
+        for k in range(n_fr):
+            s = k * n_per + dl_start
+            seg = ch1[s:s + dl_len].astype(np.int64)
+            total += int(np.sum(seg * seg))
+
+        mean_power = total / (n_fr * dl_len) / (32767.0 ** 2)
+        d = float(to_db(mean_power))
+        self.inst = d
+        a = cfg.power_ema_alpha
+        self.dbfs = d if self.dbfs is None else (1 - a) * self.dbfs + a * d
+        self.valid = True
+
+    def status(self) -> str:
+        if not self.valid:
+            return "下行(Master)=--(上行未锁定)"
+        return f"下行(Master)={self.inst:6.1f}dBFS"
+
+
+class SimpleDownlinkShadowJudge:
+    """20260826 新增。task3：一个刻意写得很简单的、纯本地终端可见的二值判决——
+    "下行功率比基线低了一截 -> 判遮挡"，不是要跟 Doppler 的 present 判决
+    抢答案，是给本地调试用（跑起来在终端上直接看得到"现在判的是遮挡还是
+    没遮挡"，不用开着网页盯 shadowJudgment 数组）。
+
+    ⚠️ 真正会被记进论文数据、送到网页的判断，走的是 dash-js/shadowInputs.js
+    的 feedPowerShadow()——那边已经有阈值+回滞的判断逻辑了（见两轮之前加的
+    那套），这里**不重复实现一套一样的东西跟它打架**：Python 这边只发原始
+    dBFS 数值（rt_main.py 通过 push_power() 发出去），真正"要不要标记成
+    shadow"的判断只由浏览器那边做一次。这个类纯粹是本地可见性，它的判断
+    结果不会被发送、不会被记录，只打印在终端状态行里。
+
+    判法：滑动看最近 baseline_sec 秒里的**最大值**当基线（跟 EnergyDetector
+    的思路类似但简化很多——没有百分位数、没有棘轮限速，因为这里的目的是
+    "本地一眼看出个大概"，不是精确判据），当前瞬时值比基线低超过
+    drop_margin_db 就判 shadow。
+    """
+
+    def __init__(self, cfg: RtConfig, baseline_sec: float = 5.0, drop_margin_db: float = 10.0):
+        self.cfg = cfg
+        self.drop_margin_db = drop_margin_db
+        self._ring_len = max(1, int(round(baseline_sec / cfg.step_sec)))
+        self._ring = np.full(self._ring_len, np.nan, dtype=np.float64)
+        self._i = 0
+        self._filled = 0
+        self.shadow = False
+
+    def update(self, downlink_power: DownlinkPower) -> None:
+        if not downlink_power.valid:
+            return
+        self._ring[self._i] = downlink_power.inst
+        self._i = (self._i + 1) % self._ring_len
+        self._filled = min(self._filled + 1, self._ring_len)
+
+        valid_ring = self._ring[:self._filled]
+        baseline = float(np.nanmax(valid_ring))
+        self.shadow = bool(downlink_power.inst < baseline - self.drop_margin_db)
+
+    def status(self) -> str:
+        return f"下行简易判决(本地only)={'遮挡' if self.shadow else '正常'}"
+
+
 class ClutterMap:
     """逐 bin 的静止背景图（雷达里的 clutter map）。CFAR 前先用它归一化。
 
