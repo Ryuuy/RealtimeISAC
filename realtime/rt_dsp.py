@@ -39,8 +39,6 @@ class DopplerEngine:
         self._ring = np.zeros(cfg.n_ring, dtype=np.complex64)
         self._win = np.blackman(cfg.n_ring).astype(np.float32)
         self._fftbuf = np.zeros(cfg.nfft, dtype=np.complex64)
-        self._dc = np.complex64(0)
-        self._dc_n = 0
         self._primed = 0          # 已灌入的帧数，达到 n_ring 前谱不可信
         # 最近一帧的**复数**谱。实时判决只要 |S|^2，这个引用纯给 --debug 录制用
         # （复数谱才画得出相位面板）。不额外分配：S 本来就要算出来。
@@ -131,25 +129,15 @@ class DopplerEngine:
         dec_im = np.divide(im_f, norm, out=np.zeros_like(im_f), where=norm > 0)
         dec = (dec_re + 1j * dec_im).astype(np.complex64)
 
-        # ---- DC 抑制：EMA 跟踪均值后相减，O(1) 内存，不存历史 ----
-        # ⚠️ 开头这几十步必须用**精确滑动均值**，不能直接上 alpha=0.01 的 EMA。
-        # alpha=0.01 的时间常数是 100 步 = 2 秒，而 ring 只要 10 步(0.2s) 就灌满
-        # 并报 ready。早先只把第一帧热启动成实测均值仍然不够——那个估计只来自
-        # 20 帧，很毛糙，之后要 2 秒才refine。实测后果：开机后 t=1.1~1.6s 残余 DC
-        # 泄漏到非DC bin，能量被抬高 12dB，**主判据自己触发，一启动就误报"有人"**。
-        #
-        # 修法是标准的 EMA 预热：alpha 取 max(设定值, 1/n)。n=1 时 alpha=1（直接
-        # 取当前值），之后是精确的累计平均，等 1/n 掉到设定值以下（n=100）再切成
-        # 定常 EMA。开头无偏且立刻收敛，稳态行为完全不变。
-        #
-        # ⚠️ 严格历史序：先用**上一步留下的** self._dc 去减本帧，再拿本帧的均值
-        # 刷新 self._dc 给下一帧用。旧写法是反过来（先把本帧均值混进估计，再用
-        # 混合后的估计减本帧），本帧会看到掺了自己一点点的估计，不是纯历史平均。
-        m = dec.mean()
-        dec -= self._dc
-        self._dc_n += 1
-        a = max(cfg.dc_ema_alpha, 1.0 / self._dc_n)
-        self._dc = np.complex64((1.0 - a) * self._dc + a * m)
+        # ---- 不做时域去 DC ----
+        # 静态信道下 conj(ch0)·ch1 的零多普勒常量（静止杂波）留在流里，靠频域的
+        # DC 保护带 (dc_guard_hz，见 _dc_mask / valid_mask) 在判决/找峰值时排除即可，
+        # 跟老 analyze_caf.py 一致。
+        # ⚠️ 之前这里有一段"每 step 更新一次的 EMA 去 DC"（self._dc / dc_ema_alpha），
+        # 已删除：它每 0.02s 才刷新一次、整段 step 保持不变地相减，等于往流里注入一个
+        # 周期 20 帧(0.02s) 的台阶 → 在 ±50·k Hz 造出一整排线谱梳。消融实测
+        # (debug/ablate_doppler.py, debug/comb_rootcause.py)：拿掉这段后 ±50/100/150/
+        # 200Hz 的"高出本底"从 +8~+10dB 全部归零，谱形跟老 CAF 一致。
 
         # ---- 滑窗：撇掉最旧的 n_fr 个，接上新的 ----
         self._ring[:-n_fr] = self._ring[n_fr:]

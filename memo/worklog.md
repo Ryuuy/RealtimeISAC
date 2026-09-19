@@ -415,3 +415,33 @@ einsum + 一次 float64 sqrt/div，代价可忽略（p99 从 ~2ms 涨到 ~3ms，
 3. 还没做过完整的带真值标注走动测试来正式打分（`tpr`/`far`/`flips`）——
    今天全是零散验证单个 bug，下次建议专门录一段完整流程，`debug/replay.py`
    走一遍完整评分。
+
+---
+
+# 2026-09-02（周三）：±50·k Hz 多普勒梳的真正成因 = 逐 step 块状去 DC
+
+在另一台机器的采集 `experiment_30MHz_static_20260710_155243`（B210 serial=321D889，
+2026-07-10，30MHz，有人在 ~13.75m 走）上把实时链路整条跑了一遍，**推翻了上面
+8/15、8/16 关于 ±50/100/200Hz 是"TX 超帧结构"的结论**：
+
+- 那条梳是 `rt_dsp.process()` 里**每 step（0.02s=50Hz）更新一次的 EMA 去 DC**造出来的
+  —— 20 个 H 减同一个标量、下一步减另一个 → 往流里注入周期 20 帧的零阶保持台阶
+  → FFT 出来就是 `1/step_sec` 及其谐波的梳。
+- **决定性证据**：改 `step_sec`，梳间距精确跟着 `1/step_sec` 走（0.025s→梳在 40 的倍数，
+  50/100/150 变 0）。跟 50Hz 市电、跟 TX 都无关。
+- 消融：拿掉去 DC / 改逐帧更新 / 改扣窗均值 → ±50·k 全部从 +8~10dB 归零。TDD 门控无关，
+  逐帧归一化只是放大器。
+- 老 `analyze_caf.py` 没这条梳，因为它没有逐 step 去 DC（`compute_caf_matrix` 完全不去，
+  `fast_caf_spectrogram` 用 scipy 的 per-segment detrend，是平滑的）。
+- 真实 TX/市电纹波确实在原始 IQ 包络里（ch0 100Hz +12dB），但共模，在相关系数里约掉了，
+  多普勒谱上 <1dB。
+
+**已改**：`rt_dsp.py` 删掉 EMA 去 DC；`rt_config.py` 的 `dc_ema_alpha` 降级为只给
+`debug/ablate_doppler.py` 用。当初加去 DC 是为了 8/15 那个 EMA 预热误报，但真正解决它的
+是 `dc_guard_hz` 6→20Hz，这条 EMA 是多余的双保险。
+
+**详见 `memo/dc_removal_comb_bug.md`**（含消融表、复现命令、以及要不要回退
+`notch_freqs_hz` / `cfar_min_run` / `cfar_threshold_db` 那些为梳做的对抗性改动的清单）。
+
+新增 debug 工具：`debug/replay_raw_iq.py`（原始 2ch IQ -> 实时 DSP -> doppler npz）、
+`debug/ablate_doppler.py`（逐项消融）、`debug/comb_rootcause.py`、`debug/compare_doppler_combs.py`。

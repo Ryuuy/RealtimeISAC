@@ -61,7 +61,10 @@ class RtConfig:
 
     # ---- 频谱 ----
     nfft: int = 256
-    dc_ema_alpha: float = 0.01       # DC 抑制的 EMA 系数（O(1) 内存）
+    # 时域去 DC 已从 rt_dsp 删除（每 step 块状相减会造 ±50·k Hz 线谱梳，见 rt_dsp
+    # process() 里的注释）。这个系数现在**只被 debug/ablate_doppler.py 的对比实验用**，
+    # 主链路不再引用；静态杂波靠下面 dc_guard_hz 的频域保护带兜。
+    dc_ema_alpha: float = 0.01
     # DC 保护带：静态信道的 conj 乘积在 0Hz 堆一个很大的常量，加窗后会向两侧泄漏。
     # Blackman 主瓣宽度 = 6*fs_out/n_ring = 6*1000/200 = 30Hz，即 DC 能量铺满 ±15Hz。
     # 所以保护带必须 >= 15Hz，取 20Hz 留余量（早先设的 6Hz 挡不住，会把 DC 当成目标）。
