@@ -23,8 +23,9 @@ from rt_detect import (PowerMonitor, PresenceDetector, DownlinkPower,
                         SimpleDownlinkShadowJudge)
 from rt_display import PeakLine, Waterfall
 from rt_dsp import DopplerEngine, to_db
-from rt_live import LiveWaterfall
-from rt_publish import Publisher, UdpSink, stdout_sink
+from rt_live import LiveWaterfallProc
+from rt_publish import (Publisher, UdpSink, stdout_sink, encode_spec,
+                        SPEC_DB_MIN, SPEC_DB_MAX)
 from rt_record import DopplerRecorder
 from rt_sync import TddSync
 
@@ -68,12 +69,20 @@ def run(cfg: RtConfig, duration: float, waterfall: bool, dry_run: bool,
         heartbeat_sec: float = 2.0) -> int:
     print("=== 实时多普勒 + 有无检测 (RealtimeISAC) ===")
     print(cfg.describe())
+    if cfg.use_ridge:
+        print(f"判据: DC脊宽 (阈 +{cfg.ridge_thresh_db:g}dB 于全谱中位数, "
+              f"脊宽>={cfg.ridge_thresh_hz:g}Hz 命中, 纯多普勒不看功率)  [--legacy-judge 退回 Energy+CFAR]")
     print(f"DC保护带 ±{cfg.dc_guard_hz:.0f}Hz  "
-          f"能量判据: {'基线(环' + f'{cfg.energy_ring_sec:.0f}s p{cfg.energy_pct:.0f}+棘轮' + f'{cfg.energy_rise_db_s}dB/s) +{cfg.energy_margin_db:.0f}dB' if cfg.use_energy else '屏蔽(debug CFAR用)'}  "
+          f"{'(旧)' if cfg.use_ridge else ''}能量判据: {'基线(环' + f'{cfg.energy_ring_sec:.0f}s p{cfg.energy_pct:.0f}+棘轮' + f'{cfg.energy_rise_db_s}dB/s) +{cfg.energy_margin_db:.0f}dB' if cfg.use_energy else '屏蔽(debug CFAR用)'}  "
           f"{'OR CFAR' if cfg.use_cfar else 'CFAR关'}(门限+{cfg.cfar_threshold_db:g}dB,"
           f"连续游程>={cfg.cfar_min_run}bin)")
-    print(f"去抖 {cfg.debounce_enter}/{cfg.debounce_exit} of {cfg.debounce_n} "
-          f"(窗 {cfg.debounce_n*cfg.step_sec:.2f}s)")
+    _dn, _de, _dx = ((cfg.ridge_debounce_n, cfg.ridge_debounce_enter, cfg.ridge_debounce_exit)
+                     if cfg.use_ridge else (cfg.debounce_n, cfg.debounce_enter, cfg.debounce_exit))
+    if cfg.use_ridge and cfg.ridge_verdict == "accum":
+        print(f"判决: 证据累积 W={cfg.ridge_acc_w}步 进入E>={cfg.ridge_acc_enter:g}Hz "
+              f"退出E<{cfg.ridge_acc_exit:g}连续{cfg.ridge_acc_hold}步  [--verdict mofn 退回 M-of-N]")
+    else:
+        print(f"去抖 进入{_de}/退出<{_dx} of {_dn} (窗 {_dn*cfg.step_sec:.2f}s)")
     print(f"数据率: {cfg.sample_rate*4*cfg.num_channels/1e6:.0f} MB/s"
           f"{'  <-- 接近 B210 USB3 上限' if cfg.sample_rate*4*cfg.num_channels > 200e6 else ''}")
     print("-" * 68)
@@ -98,7 +107,7 @@ def run(cfg: RtConfig, duration: float, waterfall: bool, dry_run: bool,
     if wf:
         print(wf.header)
 
-    lw = LiveWaterfall(engine.freqs, cfg, live_sec, live_fps, live_fmax) if live else None
+    lw = LiveWaterfallProc(engine.freqs, cfg, live_sec, live_fps, live_fmax) if live else None
     if lw is not None and lw.enabled:
         print(f"📈 实时瀑布图已开：{live_sec:.0f}s 窗口, 目标 {live_fps:.0f}fps"
               f"{f', ±{live_fmax:.0f}Hz' if live_fmax else ''}  (关窗口即停止绘图)")
@@ -110,7 +119,14 @@ def run(cfg: RtConfig, duration: float, waterfall: bool, dry_run: bool,
         print(f"🔴 debug 录制已开启 -> {debug_dir}  "
               f"(上限 {rec.n_max} 帧, 预分配 {rec.nbytes/1e6:.1f} MB)")
 
+    spec_every = 2          # 频谱列每 2 步发一次 = 25 列/秒（给网页瀑布图 + 落盘），不影响 DSP 速率
+    spec_k = 0
+    last_meta = 0.0
     src = None
+    last_drop = 0
+    last_ovf = 0
+    ovf_times = []
+    guard = 0          # 丢步后还要冻结判决的步数（环里还有断裂的数据）
     last_present = None
     last_beat = 0.0
     try:
@@ -177,7 +193,54 @@ def run(cfg: RtConfig, duration: float, waterfall: bool, dry_run: bool,
             power = engine.process(sync.phase, sync.n_integrate)
             fd, pk = engine.peak(power)
             # ring 灌满前谱里还混着初始零值，判决不可信，这段不喂给检测器
-            present = detector.update(power, engine.freqs) if engine.ready else False
+            # 丢步 = 环形缓冲相位断裂，之后 n_ring 帧的谱是假的（单帧全频段能量爆、脊宽假命中）。
+            # 丢步后冻结判决 n_ring 帧（0.2s）：不喂检测器，present 保持原值。
+            # UHD overflow 也一样：采集侧丢了一小段采样，帧栅格/相位在那里不连续。errors.overflow
+            # 在生产者线程 recv 时就计数，而消费者最多落后 4 步(80ms)才处理到那一步，所以冻结时间
+            # 比 n_ring 多留 6 步余量。
+            if src is not None and (src.dropped + src.errors.overflow) != last_drop:
+                lost_total = src.dropped + src.errors.overflow
+                if src.errors.overflow != last_ovf:
+                    last_ovf = src.errors.overflow
+                    ovf_times.append(time.monotonic() - t_run0)
+                    print(f"\n⚠️  t={ovf_times[-1]:.1f}s: UHD overflow(第{last_ovf}次)，冻结判决 "
+                          f"{(cfg.n_ring // cfg.n_frames_per_step + 7) * cfg.step_sec:.2f}s", flush=True)
+                last_drop = lost_total
+                guard = cfg.n_ring // cfg.n_frames_per_step + 7
+            if guard > 0:
+                guard -= 1
+                present = detector.present
+            else:
+                present = detector.update(power, engine.freqs) if engine.ready else False
+            # ---- 频谱列 + meta 外发（网页瀑布图、isac_bridge 落盘用）----
+            # 时间戳 = 本机 time.time()（ms），与 present 翻转事件、dBFS/power 用同一个钟；
+            # 这一列覆盖的是 [wallClock-0.2s, wallClock] 的数据（Blackman 窗中心≈wallClock-0.1s）。
+            if isinstance(sink, UdpSink) and engine.ready:      # --publish(stdout) 不发，免得刷屏
+                spec_k += 1
+                if spec_k % spec_every == 0:
+                    pub.send({"spec": encode_spec(to_db(power)),
+                              "wallClock": round(time.time() * 1000, 1),
+                              "ridge": round(detector.ridge_hz, 1),
+                              "hit": int(detector.ridge_hit),
+                              "v": int(present),
+                              "E": int(detector.score)})
+                now_m = time.monotonic()
+                if now_m - last_meta >= 5.0:
+                    last_meta = now_m
+                    pub.send({"meta": {
+                        "ridge_thresh_hz": cfg.ridge_thresh_hz, "ridge_thresh_db": cfg.ridge_thresh_db,
+                        "ridge_search_hz": cfg.ridge_search_hz,
+                        "verdict": (cfg.ridge_verdict if cfg.use_ridge else "legacy_energy_cfar"),
+                        "acc_w": cfg.ridge_acc_w, "acc_cap": cfg.ridge_acc_cap,
+                        "acc_enter": cfg.ridge_acc_enter, "acc_exit": cfg.ridge_acc_exit,
+                        "acc_hold": cfg.ridge_acc_hold,
+                        "mofn": [cfg.ridge_debounce_n, cfg.ridge_debounce_enter, cfg.ridge_debounce_exit],
+                        "step_sec": cfg.step_sec, "window_sec": cfg.window_sec,
+                        "spec_every_steps": spec_every, "col_rate_hz": 1.0 / (cfg.step_sec * spec_every),
+                        "fs_out_hz": cfg.fs_out, "nfft": cfg.nfft, "dc_guard_hz": cfg.dc_guard_hz,
+                        "db_min": SPEC_DB_MIN, "db_max": SPEC_DB_MAX,
+                        "sample_rate_hz": cfg.sample_rate, "gain_db": cfg.gain,
+                        "sync_locked": bool(sync.locked)}})
             # 录制放在计时区**内**：它确实占用每步预算，藏起来只会让 p99 骗人。
             # 实测开销 ~1µs（一次 2KB memcpy），对 4ms 的步长可以忽略。
             if rec is not None:
@@ -185,13 +248,14 @@ def run(cfg: RtConfig, duration: float, waterfall: bool, dry_run: bool,
                         detector.n_hits, detector.max_run, detector.peak_hz, engine.ready,
                         power_mon.inst, detector.energy.e_db,
                         detector.energy.floor_db or 0.0)
-            tag = "" if engine.ready else "[灌注中]"
+            tag = "[丢步,冻结判决]" if guard > 0 else ("" if engine.ready else "[灌注中]")
             # 实时图也算进计时区：它每 4 步要花几毫秒，是本方案里最贵的一项，
             # 挪到计时区外面只会让 p99 好看而不解决丢步。分项耗时见 lw.status()。
             if lw is not None:
                 lw.update(power, fd, f"{detector.status()} {power_mon.status()} "
                                      f"{downlink_power.status()} {dl_judge.status()} {tag}",
-                          present)
+                          present, ridge_hz=detector.ridge_hz if cfg.use_ridge else None,
+                          raw_hit=detector.ridge_hit if cfg.use_ridge else None)
             dt_ms = (time.perf_counter() - t0) * 1e3
             stats.add(dt_ms)
 
@@ -206,7 +270,9 @@ def run(cfg: RtConfig, duration: float, waterfall: bool, dry_run: bool,
                           "bins": detector.n_hits, "run": detector.max_run,
                           "score": detector.score,
                           "energy_db": round(detector.energy.margin_db, 1),
-                          "t": round(time.time(), 3)})
+                          "ridge_hz": round(detector.ridge_hz, 1),
+                          "t": round(time.time(), 3),
+                          "wallClock": round(time.time() * 1000, 1)})
                 last_present = present
                 last_beat = now
 
@@ -233,7 +299,7 @@ def run(cfg: RtConfig, duration: float, waterfall: bool, dry_run: bool,
     print(power_mon.status())
     print(f"{downlink_power.status()}  {dl_judge.status()}")
     print(f"判决: {'有人' if detector.present else '无人'}  "
-          f"score={detector.score}/{cfg.debounce_n}")
+          f"score={detector.score}/{detector._n}")
     print(pub.status())
     if lw is not None:
         print(lw.status())
@@ -251,7 +317,8 @@ def run(cfg: RtConfig, duration: float, waterfall: bool, dry_run: bool,
             print(f"💾 已存 {path}")
             print(f"   出图: /usr/bin/python3 {os.path.join(DEBUG_DIR, 'plot_doppler.py')}")
     if not dry_run and errors is not None:
-        print(f"UHD 错误: {errors}   主动丢步={src.dropped if src else 0}")
+        print(f"UHD 错误: {errors}   主动丢步={src.dropped if src else 0}"
+              + (f"   overflow 发生在 t={[round(x, 1) for x in ovf_times]}s" if ovf_times else ""))
         if errors.overflow:
             print("⚠️  出现 overflow：采集侧跟不上。先排查 USB 控制器/线缆，"
                   "再考虑降采样率——计算侧余量见上方 p99。")
@@ -320,7 +387,7 @@ def main() -> int:
     p.add_argument("--live", action="store_true",
                    help="弹一个实时滚动多普勒瀑布图（数据从右往左填）")
     p.add_argument("--live-sec", type=float, default=15.0, help="实时图时间窗(秒)")
-    p.add_argument("--live-fps", type=float, default=12.0, help="实时图目标刷新率")
+    p.add_argument("--live-fps", type=float, default=20.0, help="实时图目标刷新率")
     p.add_argument("--live-fmax", type=float, default=None,
                    help="实时图只画 ±这么多 Hz（默认全量程 ±500）")
     p.add_argument("--isac", action="store_true",
@@ -337,6 +404,17 @@ def main() -> int:
     p.add_argument("--no-tracking-cal", action="store_true",
                    help="关掉 AD9361 的 DC offset / IQ 平衡跟踪校准（默认开；"
                         "关掉实测会制造虚警，只用于对比实验）")
+    p.add_argument("--legacy-judge", action="store_true",
+                   help="退回旧判据 Energy+CFAR（默认是 DC 脊宽，与 debug/full_analysis.py 一致）")
+    p.add_argument("--ridge-thresh-hz", type=float, default=90.0,
+                   help="DC 脊宽 >= 这个值判命中（默认 90，20260930 标定）")
+    p.add_argument("--ridge-thresh-db", type=float, default=6.0,
+                   help="脊线 bin 须高出全谱中位数这么多 dB（默认 6）")
+    p.add_argument("--debounce", type=str, default=None, metavar="N,ENTER,EXIT",
+                   help="脊宽判据的 M-of-N 去抖，格式 N,ENTER,EXIT。默认 20,10,3：最近 20 步里 "
+                        ">=10 步命中进入有人，<3 步才退出。更快的例子：12,6,2")
+    p.add_argument("--verdict", choices=("accum", "mofn"), default=None,
+                   help="脊宽判决形式：accum=证据累积（默认，进入更快），mofn=M-of-N 去抖")
     p.add_argument("--no-energy", action="store_true",
                    help="关掉宽带能量主判据，只看 CFAR 裸跑（默认开；"
                         "仅用于单独 debug CFAR，别用来跑生产）")
@@ -346,7 +424,16 @@ def main() -> int:
                    force_n_on_us=a.n_on_us,
                    use_clutter_map=a.clutter_map,
                    rx_tracking_cal=not a.no_tracking_cal,
-                   use_energy=not a.no_energy)
+                   use_energy=not a.no_energy,
+                   use_ridge=not a.legacy_judge,
+                   ridge_thresh_hz=a.ridge_thresh_hz,
+                   ridge_thresh_db=a.ridge_thresh_db)
+    if a.verdict:
+        cfg.ridge_verdict = a.verdict
+    if a.debounce:
+        cfg.ridge_verdict = "mofn"       # 显式给了去抖参数就是要 M-of-N
+        n_, e_, x_ = (int(v) for v in a.debounce.split(","))
+        cfg.ridge_debounce_n, cfg.ridge_debounce_enter, cfg.ridge_debounce_exit = n_, e_, x_
     sink = UdpSink(a.isac_host, a.isac_port) if a.isac else None
     return run(cfg, a.duration, a.waterfall, a.dry_run, a.publish,
                debug_dir=a.debug_dir if a.debug else None,

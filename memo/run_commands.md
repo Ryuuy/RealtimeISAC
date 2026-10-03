@@ -114,6 +114,23 @@ Ctrl+C 随时停，停了桥接 6 秒后自动回落 normal。
 逐帧归一化，一次把「是不是 DC / 是不是切歪了 / 是不是帧长不够 / 是不是 TX 自己的」
 四个假设分开。也会打上升沿的稳定性和 ppm 漂移。
 
+## 5b. 频谱除法 vs CAF 多普勒对比
+
+同一份原始 IQ、同样的切窗/采样率/STFT 后端，只换"每帧→复数"那一步：
+
+```bash
+cd ~/sdr_workspace/RealtimeISAC/realtime
+/usr/bin/python3 rt_iqdump.py --ms 5000          # 采原始 IQ（要对比真人多普勒就边走边采、--ms 8000）
+/usr/bin/python3 ../debug/compare_caf_vs_specdiv.py            # 出对比图
+/usr/bin/python3 ../debug/compare_caf_vs_specdiv.py --fmax 300 --no-show
+```
+
+- CAF：`dec = Σ conj(ch0)·ch1 / (‖ch0‖·‖ch1‖)`（复刻 `rt_dsp`，相关系数归一化）
+- 频谱除法：`H(f)=FFT(ch1)/FFT(ch0)`，取 `median(Re)+j·median(Im)`（复刻老
+  `Udoppler_spectrum_division_20MHz.py` 的 LimeSDR 做法）
+- 输出 `debug/cmp_caf_specdiv_*.png` + `.npz`（含两条 1kHz 复数流 + 两个谱矩阵）
+- 原始 `debug/iq_*.npz` 有几百 MB，已 gitignore，只留本地
+
 ## 6. 不碰硬件自检
 
 ```bash

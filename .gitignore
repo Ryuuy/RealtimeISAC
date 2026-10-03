@@ -1,3 +1,9 @@
 __pycache__/
 *.pyc
 data/experiment_*
+# 原始 IQ dump 动辄几百 MB（rt_iqdump.py 采的），只留本地，不进 git。
+# 处理后的 doppler_*.npz / cmp_*.npz 很小，照常提交。
+debug/iq_*.npz
+
+# 会话记录（isac_bridge.py 写的，含瀑布图/遥测，不进 git）
+isac_logs/

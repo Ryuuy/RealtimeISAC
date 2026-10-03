@@ -18,17 +18,38 @@
     pub.send({"present": True, "doppler_hz": 281.2})
 """
 
+import base64
 import json
 import socket
 import threading
 from queue import Empty, Full, Queue
+
+import numpy as np
+
+# ---- 频谱列的线上格式（rt_main -> isac_bridge -> 网页/落盘文件，三处共用，改这里要同步改 DASH 侧 JS）----
+# 每一列 = 256 点 fftshift 后的功率谱(dB, 相对量)，线性量化成 uint8：
+#     q = round((dB - SPEC_DB_MIN) / (SPEC_DB_MAX - SPEC_DB_MIN) * 255)，反量化 dB = SPEC_DB_MIN + q*step
+# 真机实测范围 -80 ~ +36 dB，取 [-90, +50]，步长 0.55 dB。
+SPEC_DB_MIN = -90.0
+SPEC_DB_MAX = 50.0
+
+
+def encode_spec(power_db: np.ndarray) -> str:
+    """256 点 dB 谱 -> base64(uint8[256])，约 344 字符。"""
+    q = np.clip(np.rint((power_db - SPEC_DB_MIN) / (SPEC_DB_MAX - SPEC_DB_MIN) * 255.0), 0, 255)
+    return base64.b64encode(q.astype(np.uint8).tobytes()).decode("ascii")
+
+
+def decode_spec(b64: str) -> np.ndarray:
+    """base64 -> uint8[256]（原始量化值）。dB = SPEC_DB_MIN + q*(SPEC_DB_MAX-SPEC_DB_MIN)/255。"""
+    return np.frombuffer(base64.b64decode(b64), dtype=np.uint8)
 
 
 class Publisher:
     """非阻塞外发。sink 是你自己的推送函数，签名 sink(payload: dict) -> None。
     sink 里抛异常不会影响 DSP，只会被计到 self.errors。"""
 
-    def __init__(self, sink=None, maxsize: int = 8):
+    def __init__(self, sink=None, maxsize: int = 64):
         self.sink = sink
         self._q: "Queue[dict]" = Queue(maxsize=maxsize)
         self._stop = threading.Event()

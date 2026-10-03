@@ -366,8 +366,31 @@ class EnergyDetector:
         return self.e_db - (self.floor_db if self.floor_db is not None else self.e_db)
 
 
+def dc_ridge_width(power: np.ndarray, freqs: np.ndarray, thresh_db: float = 6.0,
+                   search_hz: float = 100.0) -> float:
+    """DC 脊宽（Hz）。与 debug/full_analysis.py 的同名函数逐行等价，改一边必须改另一边。
+
+    从 f=0 的 bin 往两边扩：下一个 bin 功率还高于 (全谱中位数 * 10^(thresh_db/10))
+    就继续，第一次跌破就停。静止时 0Hz 只有一条窄的静态泄漏，人一动微多普勒让脊线
+    两侧展宽。阈值基准是单帧全谱中位数，无历史状态、不看绝对功率。
+    """
+    power = power.astype(np.float64)
+    thresh = np.median(power) * (10.0 ** (thresh_db / 10.0))
+    center = int(np.argmin(np.abs(freqs)))
+    n = len(freqs)
+    bin_hz = float(freqs[1] - freqs[0])
+    j = center
+    while j + 1 < n and freqs[j + 1] <= search_hz and power[j + 1] > thresh:
+        j += 1
+    i = center
+    while i - 1 >= 0 and freqs[i - 1] >= -search_hz and power[i - 1] > thresh:
+        i -= 1
+    return (j - i) * bin_hz
+
+
 class PresenceDetector:
-    """宽带能量（主）OR CFAR（副） -> M-of-N 去抖 + 迟滞 -> 「有人 / 无人」。
+    """默认：DC 脊宽 -> M-of-N 去抖 + 迟滞 -> 「有人 / 无人」。
+    cfg.use_ridge=False（--legacy-judge）时：宽带能量（主）OR CFAR（副）。
 
     去抖用一个整数当位寄存器：每帧左移一位塞进新的命中位，
     popcount 就是最近 N 帧的命中数。真 O(1) 内存，没有数组。
@@ -375,11 +398,27 @@ class PresenceDetector:
 
     def __init__(self, cfg: RtConfig, dc_mask: np.ndarray, freqs: np.ndarray):
         self.cfg = cfg
+        self.ridge_hz = 0.0        # 本帧 DC 脊宽（未去抖的逐帧值，给实时图/外发用）
+        self.ridge_hit = False     # 本帧脊宽是否过阈值（未去抖，等价于离线的 present）
+        self._valid = dc_mask
         self.cfar = CfarDetector(cfg, dc_mask)
         self.energy = EnergyDetector(cfg, freqs)
         self.clutter = ClutterMap(cfg, len(freqs)) if cfg.use_clutter_map else None
+        if cfg.use_ridge:
+            self._n, self._enter, self._exit = (cfg.ridge_debounce_n,
+                                                cfg.ridge_debounce_enter, cfg.ridge_debounce_exit)
+        else:
+            self._n, self._enter, self._exit = (cfg.debounce_n, cfg.debounce_enter,
+                                                cfg.debounce_exit)
+        self._acc = cfg.use_ridge and cfg.ridge_verdict == "accum"
+        if self._acc:
+            self._ex = np.zeros(cfg.ridge_acc_w, dtype=np.float64)   # 最近 W 步的证据环
+            self._ex_i = 0
+            self._E = 0.0
+            self._low = 0
+            self._n = int(cfg.ridge_acc_enter)       # status 里显示 E/A
         self._hist = 0
-        self._mask = (1 << cfg.debounce_n) - 1
+        self._mask = (1 << self._n) - 1
         self.present = False
         self.n_hits = 0            # 本帧过 CFAR 门限的 bin 数（全谱总数，仅供参考/显示）
         self.max_run = 0           # 最长连续命中段长度（bin）——真正用来判决的量
@@ -387,7 +426,37 @@ class PresenceDetector:
         self.peak_hz = 0.0         # 命中 bin 里最强的那个的多普勒
         self.e_hit = False         # 本帧能量判据是否命中
 
+    def _update_ridge(self, power: np.ndarray, freqs: np.ndarray) -> bool:
+        cfg = self.cfg
+        self.ridge_hz = dc_ridge_width(power, freqs, cfg.ridge_thresh_db, cfg.ridge_search_hz)
+        self.ridge_hit = self.ridge_hz >= cfg.ridge_thresh_hz
+        self.n_hits, self.max_run = 0, 0
+        # peak_hz 只是外发/显示用的「最强非DC bin」，不参与判决
+        self.peak_hz = float(freqs[int(np.argmax(np.where(self._valid, power, -np.inf)))])
+        if self._acc:
+            return self._accumulate()
+        return self._debounce(self.ridge_hit)
+
+    def _accumulate(self) -> bool:
+        """证据累积判决，见 rt_config.ridge_acc_* 的注释。O(1)：W 长的环 + 滚动和。"""
+        cfg = self.cfg
+        ex = min(max(self.ridge_hz - cfg.ridge_thresh_hz, 0.0), cfg.ridge_acc_cap)
+        self._E += ex - self._ex[self._ex_i]
+        self._ex[self._ex_i] = ex
+        self._ex_i = (self._ex_i + 1) % self._ex.size
+        E = max(self._E, 0.0)          # 浮点累减可能出现 -1e-13
+        self.score = int(E)
+        if self.present:
+            self._low = self._low + 1 if E < cfg.ridge_acc_exit else 0
+            if self._low >= cfg.ridge_acc_hold:
+                self.present, self._low = False, 0
+        elif E >= cfg.ridge_acc_enter:
+            self.present, self._low = True, 0
+        return self.present
+
     def update(self, power: np.ndarray, freqs: np.ndarray) -> bool:
+        if self.cfg.use_ridge:
+            return self._update_ridge(power, freqs)
         self.e_hit = self.energy.update(power)
         # CFAR 判在**背景归一化后**的谱上：固定线谱被抹平，游走的目标凸显。
         # 背景只在判"无人"时学，避免把人自己学进去。
@@ -408,19 +477,25 @@ class PresenceDetector:
         else:
             self.peak_hz = 0.0
 
+        return self._debounce(frame_hit)
+
+    def _debounce(self, frame_hit: bool) -> bool:
         self._hist = ((self._hist << 1) | int(frame_hit)) & self._mask
         self.score = int(self._hist.bit_count())
         # 迟滞：进入和退出用不同门限，避免在边界反复横跳
         if self.present:
-            if self.score < self.cfg.debounce_exit:
+            if self.score < self._exit:
                 self.present = False
         else:
-            if self.score >= self.cfg.debounce_enter:
+            if self.score >= self._enter:
                 self.present = True
         return self.present
 
     def status(self) -> str:
         flag = "有人" if self.present else "无人"
+        if self.cfg.use_ridge:
+            return (f"[{flag}] {'E' if self._acc else 'score'}={self.score:3d}/{self._n} "
+                    f"脊宽={self.ridge_hz:5.1f}Hz(阈{self.cfg.ridge_thresh_hz:.0f})")
         e_tag = f"E={self.energy.margin_db:+5.1f}dB" + ("" if self.cfg.use_energy else "(屏蔽)")
         return (f"[{flag}] score={self.score:2d}/{self.cfg.debounce_n} "
                 f"{e_tag} bins={self.n_hits:2d} run={self.max_run:2d}")

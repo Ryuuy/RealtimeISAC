@@ -129,3 +129,16 @@ validate_capture_and_caf.py
 
 （`USRPSaveData2Channel_HighRate.py`、`USRPSweepData2Channel*.py` 等是 
 `USRPSaveData2Channel.py` 的其它变体，同样不在闭包里，需要的话再单独挑。）
+
+
+---
+
+## 2026-10 update: where to read first
+
+* **`METHODS.md`** — every method used in the sensing chain and the detector (equations, parameters, how they were calibrated,
+  which alternatives were tried and rejected, with numbers), plus engineering pitfalls and an index of the `debug/` scripts.
+* **Live pipeline** (`realtime/`): `rt_main.py` (entry) → `rt_sync.py` (TDD gating) → `rt_dsp.py` (normalised cross-correlation + Doppler FFT)
+  → `rt_detect.py` (DC ridge width + evidence accumulation) → `rt_publish.py` (UDP) → `isac_bridge.py` (WebSocket to the DASH page + session file).
+* **Run**: `python3 isac_bridge.py` (miniconda python; needs fastapi/uvicorn) and, in `realtime/`,
+  `/usr/bin/python3 rt_main.py --duration 3600 --isac [--live --live-fmax 500]` (system python; needs uhd). See `memo/run_commands.md`.
+* **Recorded sessions** are written by `isac_bridge.py` to `isac_logs/*.npz` (not committed; format in `isac_session_log.py`).

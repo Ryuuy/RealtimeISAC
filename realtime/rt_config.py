@@ -58,6 +58,15 @@ class RtConfig:
     sync_min_contrast: float = 0.30
     # 每隔多少 step 重新跟一次 TDD 相位（应对 TX/RX 时钟漂移）
     sync_every_n_steps: int = 10
+    # 估计 TDD 窗口位置时额外折叠最近这么多秒的数据（滑动）。**默认 0 = 只用当前一步
+    # （20ms），行为与原来一致。** 20261003 试过 1.0（对齐离线每 1s 重同步）：n_int 抖动
+    # 变小，但逐帧 ρ 与离线的相关系数没有变化（0.983/0.999），命中率也没变，而用户要求
+    # 检测尽量早、不要把窗口放大，所以关掉。想复现对比就设 1.0。
+    sync_history_sec: float = 0.0
+    # 某次重估失败（对比度不够/没有结构）时，沿用上一次的锁定结果，最多连续这么多次
+    # 重估（默认 5 次 = 1s）才降级为自由运行。原来一失败就 phase=0+满周期积分，
+    # 整个周期（含 OFF 段噪声）进积分，ρ 全是垃圾。离线同样是回退到上一个/全局值。
+    sync_hold_estimates: int = 5
 
     # ---- 频谱 ----
     nfft: int = 256
@@ -86,7 +95,18 @@ class RtConfig:
     notch_freqs_hz: tuple[float, ...] = (50.0, 100.0, 150.0, 200.0, 300.0, 400.0)
     notch_guard_hz: float = 20.0     # 每个陷波口的半宽，覆盖实测最宽 ~16Hz 还留余量
 
-    # ---- 宽带能量检测（主判据，2026-08-15 用真值标注重标）----
+    # ---- DC 脊宽判据（20261003 起的**主判据**，跟 debug/full_analysis.py 同一个算法）----
+    # 纯多普勒、不依赖功率：从 0Hz 往两侧扩，bin 功率还高于「全谱中位数 +ridge_thresh_db」
+    # 就继续，跌破就停，量这段宽度。宽度 >= ridge_thresh_hz 即本帧命中。
+    # 阈值是 20260930 用 4 份零人(含空调/灯)+4 份走动数据扫出来的：90Hz 是零人组
+    # 降到 0% 误触发的分界点。只有 1 人/1 天/1 套设备，换场景需重新验证。
+    # use_ridge=False（--legacy-judge）退回旧的 Energy+CFAR。
+    use_ridge: bool = True
+    ridge_thresh_db: float = 6.0
+    ridge_thresh_hz: float = 90.0
+    ridge_search_hz: float = 100.0   # 往两侧最多扩到这里
+
+    # ---- 宽带能量检测（旧主判据，2026-08-15 用真值标注重标；现仅 --legacy-judge 用）----
     # ⚠️ 为什么主判据不是 CFAR：真机实测「有人 vs 无人」的非DC平均功率差 34.3dB，
     # 但 CA-CFAR 的噪声估计同时涨了 34.7dB —— 净剩 -0.4dB。原因是训练区单侧只跨
     # 62Hz，而人走路的微多普勒铺满 ±400Hz，目标能量整个灌进自己的训练区，
@@ -159,6 +179,33 @@ class RtConfig:
     debounce_n: int = 30             # 30 帧 @50fps = 0.6s
     debounce_enter: int = 15         # 进入"有人"所需命中数
     debounce_exit: int = 4           # 低于此值才退回"无人"（迟滞，退出比进入难得多）
+    # DC 脊宽判据专用去抖（旧值 30/15/4 是给 Energy+CFAR 标的）。20261003 用 9 份零人(84s)
+    # +10 份走动录制扫过，延迟=簇内第一次逐帧命中->present 拉起：
+    #   15/30 退<4: 延迟中位0.35s p90 0.72s 零人误触发0   （旧）
+    #   10/20 退<3: 延迟中位0.22s p90 0.56s 零人误触发0   <- 默认
+    #    6/12 退<2: 延迟中位0.12s p90 0.37s 零人误触发2段/84s
+    #    4/8  退<2: 延迟中位0.06s p90 0.21s 零人误触发3段/84s
+    # 命令行 --debounce N,ENTER,EXIT 可覆盖。
+    ridge_debounce_n: int = 20
+    ridge_debounce_enter: int = 10
+    ridge_debounce_exit: int = 3
+
+    # ---- 20261003 脊宽判决的第二种形式："证据累积"（默认），M-of-N 作备选 ----
+    # M-of-N 把每帧压成 0/1，「脊宽 91Hz」和「脊宽 190Hz」同样只算一票，所以要攒够 10 票
+    # (>=0.18s) 才进入。累积法保留幅度：每步证据 = clip(脊宽-阈值, 0, cap)，最近 W 步求和 E，
+    # E>=A 进入；E<B 且连续 H 步退出。强信号几步就够（190Hz 的动作每步 +100，2 步即过），
+    # 勉强过阈值的零星毛刺（零人时 90~125Hz）攒不够。
+    # 用 9 份零人(84s)+10 份走动共 25 段动作扫出（延迟=簇内第一次逐帧命中->verdict 拉起）：
+    #   M-of-N 20/10/3 : 进入中位0.24s p90 0.62s 退出0.10s 零人误触发0   段数/动作1.08
+    #   累积 W8 A200 H4: 进入中位0.12s p90 0.54s 退出0.02s 零人误触发0   段数/动作1.52 漏检0/25
+    # 代价：一段动作里 verdict 起停略多（1.5 段 vs 1.1 段）。样本小（1人/1天/1设备），A 在
+    # 这批数据上零误触发，换场景请重扫。`--verdict mofn` 退回 M-of-N。
+    ridge_verdict: str = "accum"        # "accum" | "mofn"
+    ridge_acc_w: int = 8
+    ridge_acc_cap: float = 100.0
+    ridge_acc_enter: float = 200.0
+    ridge_acc_exit: float = 20.0
+    ridge_acc_hold: int = 4
     # ---- 功率监控 ----
     power_decim: int = 10            # 算 Rx 功率时的抽取倍数（省算力）
     power_ema_alpha: float = 0.05
