@@ -56,17 +56,18 @@ class TddSync:
         self.duty = 0.0           # 实测占空比（不是配置里的 tdd_duty）
         self._n_on = 0            # 实测 ON 段长度（样本），锁定时用它做积分长度
         self._counter = 0
+        self._fail = 0            # 连续重估失败次数（见 cfg.sync_hold_estimates）
+        # 最近 sync_history_sec 的逐 step 折叠包络环（滑动）。估计时取平均，
+        # 等价于折叠 ~1s 数据，跟离线每 1s 重同步一致。
+        self._hist = None
+        self._hist_i = 0
+        self._hist_n = 0
 
     def update(self, raw_i16: np.ndarray, force: bool = False) -> bool:
         """raw_i16: (2, n_step*2)。返回本次是否真的重新估计了相位。
 
         不需要每个 step 都做——时钟漂移很慢，每 sync_every_n_steps 跟一次即可。
         """
-        if not force and self._counter % self.cfg.sync_every_n_steps != 0:
-            self._counter += 1
-            return False
-        self._counter += 1
-
         cfg = self.cfg
         dec = cfg.sync_decim
         n_per_dec = cfg.n_period // dec
@@ -83,7 +84,22 @@ class TddSync:
         power = i_comp[:need]
         power = power * power
         # 折叠：把 n_fr 个 TDD 周期叠起来平均，噪声 ~1/sqrt(n_fr) 地被压掉
-        profile = power.reshape(n_fr, n_per_dec).mean(axis=0)
+        step_profile = power.reshape(n_fr, n_per_dec).mean(axis=0)
+
+        # 每个 step 都入环（~几十µs），但只在到点时才估计
+        if self._hist is None or self._hist.shape[1] != n_per_dec:
+            h = max(1, int(round(cfg.sync_history_sec / max(cfg.step_sec, 1e-6))))
+            self._hist = np.zeros((h, n_per_dec), dtype=np.float64)
+            self._hist_i = self._hist_n = 0
+        self._hist[self._hist_i] = step_profile
+        self._hist_i = (self._hist_i + 1) % self._hist.shape[0]
+        self._hist_n = min(self._hist_n + 1, self._hist.shape[0])
+
+        due = force or self._counter % cfg.sync_every_n_steps == 0
+        self._counter += 1
+        if not due:
+            return False
+        profile = self._hist[:self._hist_n].mean(axis=0)
 
         # 找 ON 段：阈值 + **环形最长连续段**，窗宽由数据定，不预设占空比。
         # 阈值取 p10/p90 的**几何**中点：ON 与 OFF 差 36dB，算术中点会紧贴 ON
@@ -96,7 +112,7 @@ class TddSync:
         # 长度落在 [5%, 95%] 之外都说明包络是平的（纯噪声会给出一堆碎段，
         # 全 ON 说明没有 OFF 段可言）-> 没结构
         if not (0.05 * n_per_dec <= length <= 0.95 * n_per_dec):
-            self._fallback()
+            self._lost()
             return True
 
         # 对比度：**ON 段内 vs 段外的平均功率之比**，而不是折叠包络的极值张开。
@@ -111,7 +127,7 @@ class TddSync:
 
         if self.contrast < cfg.sync_min_contrast:
             # 没有 TDD 结构（没开 TX，或增益/频率不对）-> 自由运行，不做门控
-            self._fallback()
+            self._lost()
             return True
 
         # 两端各内缩一点，避开上升/下降沿的滤波暂态（实测下降沿有 ~80µs 的拖尾，
@@ -122,7 +138,16 @@ class TddSync:
         self._n_on = min(n_on, cfg.n_period)
         self.duty = length / n_per_dec
         self.locked = True
+        self._fail = 0
         return True
+
+    def _lost(self) -> None:
+        """这次重估没找到结构。已锁定时先沿用上一次的 phase/n_on（偶发失败不该
+        把整个周期当 ON 去积分），连续失败超过 cfg.sync_hold_estimates 才降级。"""
+        if self.locked and self._fail < self.cfg.sync_hold_estimates:
+            self._fail += 1
+            return
+        self._fallback()
 
     def _fallback(self) -> None:
         self.locked = False

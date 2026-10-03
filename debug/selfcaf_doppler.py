@@ -38,6 +38,13 @@ def newest_iq(dirp):
 
 
 def ema_dc_remove(z, hop=HOP, alpha=DC_ALPHA):
+    """20260930 弃用，别再调用！这就是 rt_dsp.py commit 1833792 修掉的那个坑：
+    每 hop(=0.02s=50Hz) 才刷新一次 DC 估计、整个 hop 内当常数减，等于往流里灌
+    一个周期 0.02s 的零阶保持阶梯，FFT 出来就是 ±50Hz·k 的梳子——之前一直当成
+    TX 杂散/50Hz市电在查，其实是这个函数自己造的。rt_dsp.py 已经改成完全不做
+    时域去DC，只靠频域 DC 保护带（DC_GUARD_HZ）排除零多普勒。这个函数留着只是
+    不删历史代码，函数体不再被调用。
+    """
     z = z.astype(np.complex128).copy()
     dc, dc_n = 0.0 + 0.0j, 0
     for i0 in range(0, len(z), hop):
@@ -142,7 +149,9 @@ def main() -> int:
     ]
     res = []
     for name, z in streams:
-        tt, freqs, S = stft_short(ema_dc_remove(z))
+        # 20260930：不再调用 ema_dc_remove（见上面函数注释，那是造±50Hz梳子的根源）。
+        # 跟 rt_dsp.py 现在的做法一致：不做时域去DC，只靠频域 DC_GUARD_HZ 排除零多普勒。
+        tt, freqs, S = stft_short(z)
         res.append((name, tt, freqs, S))
 
     fmask = np.abs(res[0][2]) <= a.fmax

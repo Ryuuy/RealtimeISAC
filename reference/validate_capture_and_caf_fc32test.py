@@ -41,11 +41,17 @@ TW_SEC = 0.4
 STEP_SEC = 0.02
 DECIM = 16
 PDP_WINDOW_SEC = 0.1
-PDP_DELAY_NEG = 3   # PDP 范围 -3..+3，选最强的 delay
-PDP_DELAY_POS = 3
-# GIF 用：delay 从 -3 扫到 +3，每帧 0.5s，距离标注
-DELAY_MIN_GIF = -3
-DELAY_MAX_GIF = 3
+# 2026-09-01 用户要求：delay 固定 0（不做 PDP 搜索，也不扫 GIF）。
+PDP_DELAY_NEG = 0   # PDP 范围 -0..+0 = 只算 delay 0
+PDP_DELAY_POS = 0
+# GIF 用：delay 从 0 扫到 0（就一帧），每帧 0.5s，距离标注
+DELAY_MIN_GIF = 0
+DELAY_MAX_GIF = 0
+# 采样率覆盖：None = 用数据 acquisition_parameters.json 里的 sample_rate_hz。
+# 设成 10e6 会强制按 10 MHz 解读——⚠️ 只有当数据本身就是 10 MHz 采的才对，
+# 否则多普勒/距离/频率轴全部按比例错。目前 reference/ 下唯一的 fc32 数据
+# （experiment_30MHz_static_20260227_150212）是 30 MHz。
+FORCE_SAMPLE_RATE_HZ = None
 GIF_FRAME_DURATION_SEC = 0.5
 C_LIGHT = 3e8  # m/s
 # max_duration_sec=None 时默认只读 60 秒，避免整盘加载崩溃
@@ -264,6 +270,9 @@ def run_validation(experiment_folder, Tw=TW_SEC, step=STEP_SEC, freq_range=(-600
     if not check_data_format(params, data_file):
         return None
     sample_rate_hz = params["sample_rate_hz"] if params and "sample_rate_hz" in params else 20e6
+    if FORCE_SAMPLE_RATE_HZ is not None:
+        print(f"⚠️ FORCE_SAMPLE_RATE_HZ={FORCE_SAMPLE_RATE_HZ/1e6:.0f}MHz 覆盖数据里的 {sample_rate_hz/1e6:.0f}MHz")
+        sample_rate_hz = FORCE_SAMPLE_RATE_HZ
     use_sec = max_duration_sec if max_duration_sec is not None else DEFAULT_MAX_DURATION_SEC
     print(f"验证: 打开 memmap，加载前 {use_sec}s 数据...", flush=True)
     ch0_memmap, ch1_memmap, total_per_ch = read_2ch_iq_memmap(data_file)
@@ -421,6 +430,9 @@ def run_validation_gif(
     if not check_data_format(params, data_file):
         return None
     sample_rate_hz = params["sample_rate_hz"] if params and "sample_rate_hz" in params else 20e6
+    if FORCE_SAMPLE_RATE_HZ is not None:
+        print(f"⚠️ FORCE_SAMPLE_RATE_HZ={FORCE_SAMPLE_RATE_HZ/1e6:.0f}MHz 覆盖数据里的 {sample_rate_hz/1e6:.0f}MHz")
+        sample_rate_hz = FORCE_SAMPLE_RATE_HZ
     if step_m is None or first_bin_max_m is None:
         auto_first_bin_max_m, auto_step_m = range_step_for_sample_rate(sample_rate_hz)
         if step_m is None:

@@ -1,188 +1,287 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""ISAC 桥接：收 rt_main 发来的 UDP 判决，转成 isac_server 的 shadowing/normal。
+"""ISAC bridge: rt_main's UDP stream -> isac_server (WebSocket for the DASH page) + session file.
 
-20260826 新增：同一个 UDP 端口上，也转发 rt_main 发来的另外两路连续流：
-  - dBFS 包（{"dBFS": ..., "dBFS_channels": [...], "wallClock": ...}）——
-    上行/reference channel，每步都发，调 isac_server 的 push_dBFS()
-  - power 包（{"power": ..., "wallClock": ...}）——下行/sensing channel
-    （Master 方向）判遮挡用，TDD 锁定时才发，调 isac_server 的 push_power()
-两路都跟 present/shadowing 那支完全独立——不做心跳/去抖/失效回落，
-rt_main 发多快这边转多快，见下面 emit() 之后紧跟着的两个分支。
+## Naming (20261003)
 
-## ⚠️ 这个脚本用 miniconda 的 python3 跑，不是 /usr/bin/python3
+The ISAC mode that used to be called "shadowing" is now **"doppler_detected"** ("we see Doppler
+now"); the other mode is still "normal". The DASH page also accepts the legacy string
+"shadowing" so an old bridge keeps working. The power-based shadow judgements in the page
+(dBFS / power) are a different thing and keep their name.
 
-    python3 RealtimeISAC/isac_bridge.py          # 注意：不写 /usr/bin/
+## What goes where
 
-和整个项目其它脚本相反。原因是两个解释器的依赖互斥：
+  rt_main (UDP, same host)        bridge                           consumers
+  {"present":...}  verdict flips  -> push_result(mode)             page: adaptation (via mode)
+                                  -> {"type":"doppler_event"}      page: detection record, server time
+                                  -> SessionLog.add_detection      isac_logs/isac_*.npz
+  {"spec": b64,...} 25 Hz         -> {"type":"doppler_spec"}       page: spectrogram chart + snapshot
+                                  -> SessionLog.add_spec           isac_logs/isac_*.npz
+  {"meta": {...}}  every 5 s      -> {"type":"doppler_meta"}       page: threshold line
+  {"dBFS"...} {"power"...}        -> push_dBFS / push_power        page: shadowInputs.js
+  (nothing)                       -> {"type":"clock","ts":ms} 1 Hz page: clock sync (see below)
 
-| | uhd | fastapi/uvicorn |
-|---|---|---|
-| `/usr/bin/python3` | ✅ | ❌ |
-| miniconda `python3` | ❌ (撞 GLIBCXX) | ✅ |
+No change to isac_server.py is needed: the new messages are broadcast through its existing
+`_broadcast_payload`, and the page's new records (ISAC-interface button, ...) come back
+through its existing `video_telemetry` log (stamped with server_recv_ts on arrival).
 
-所以 `rt_main.py` 只能在前者跑、`isac_server` 只能在后者跑，中间用 UDP 连起来。
+## One clock
 
-## 跑法（两个终端）
+Every timestamp written here is THIS host's time.time()*1000 (rt_main runs on the same host).
+The page estimates its offset to this clock from the `ts` carried by every message (see
+DASH_html_old-main/dash-js/isacClock.js) and also stamps its own records with a server-time
+estimate; snapshots_FORMAT.md describes how to align everything.
 
-    # 终端 A：起桥接 + web server
+## ⚠️ Run with miniconda's python3 (not /usr/bin/python3)
+
     python3 RealtimeISAC/isac_bridge.py
 
-    # 终端 B：起实时检测，把判决打到桥接
-    cd RealtimeISAC/realtime
-    /usr/bin/python3 rt_main.py --duration 600 --isac
+Two terminals:
 
-网页连 `ws://<本机IP>:8765/isac`，或者 `http://<本机IP>:8765/isac/state` 看当前状态。
+    # A: bridge + web server
+    python3 RealtimeISAC/isac_bridge.py
+    # B: detection
+    cd RealtimeISAC/realtime && /usr/bin/python3 rt_main.py --duration 3600 --isac [--live --live-fmax 500]
 
-## 两个健壮性设计
+Web page: ws://<this host>:8765/isac, state: http://<this host>:8765/isac/state
 
-1. **心跳**：rt_main 除了状态翻转时发，还每 2 秒重发一次当前状态。
-   这样桥接后启动、或丢了一个 UDP 包，最多 2 秒就同步回来。
-   `push_result()` 本身对相同状态直接 return，重发不会刷屏也不占带宽。
-2. **失效超时**：超过 stale_sec 收不到任何包（rt_main 崩了 / 被 Ctrl+C），
-   自动回落到 normal。否则网页会永远停在最后那个 shadowing 上，
-   而实际上早就没人在测了——**宁可漏报也不要挂着一个假状态**。
+## Robustness
+
+1. Heartbeat: rt_main re-sends the current state every 2 s; push_result() ignores repeats.
+2. Stale timeout: no verdict for stale_sec -> fall back to normal (better to miss than to show a
+   stale "doppler detected").
+3. The session file is written every --save-every seconds (in a thread) and on exit.
 """
 
 import argparse
+import asyncio
+import base64
 import json
 import os
+import signal
 import socket
 import sys
 import time
 
 DEFAULT_SERVER_DIR = "/home/usrpb210/DASH/DASH_html_old-main/isac_server"
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+
+MODE_DETECTED = "doppler_detected"
+MODE_NORMAL = "normal"
 
 
 def main() -> int:
-    p = argparse.ArgumentParser(description="rt_main 判决 -> isac_server")
-    p.add_argument("--udp-port", type=int, default=9099, help="监听 rt_main 的端口")
+    p = argparse.ArgumentParser(description="rt_main verdict/spectrum -> isac_server + session file")
+    p.add_argument("--udp-port", type=int, default=9099, help="port rt_main sends to")
     p.add_argument("--udp-host", type=str, default="127.0.0.1")
-    p.add_argument("--isac-port", type=int, default=8765, help="isac_server 的端口")
+    p.add_argument("--isac-port", type=int, default=8765, help="isac_server port")
     p.add_argument("--server-dir", type=str, default=DEFAULT_SERVER_DIR,
-                   help="isac_server.py 所在目录")
+                   help="directory containing isac_server.py")
     p.add_argument("--stale-sec", type=float, default=6.0,
-                   help="这么久没收到判决就回落到 normal（0 = 不回落）")
+                   help="fall back to normal after this long without a verdict (0 = never)")
     p.add_argument("--dry", action="store_true",
-                   help="不起 isac_server，只把收到的判决打出来（联调用）")
+                   help="do not start isac_server, only print verdicts (and still record)")
+    p.add_argument("--log-dir", type=str, default=os.path.join(HERE, "isac_logs"),
+                   help="where the session .npz goes (default RealtimeISAC/isac_logs)")
+    p.add_argument("--no-log", action="store_true", help="do not write a session file")
+    p.add_argument("--save-every", type=float, default=20.0, help="seconds between autosaves")
+    p.add_argument("--rotate-min", type=float, default=120.0,
+                   help="start a new session part (file) every this many minutes; bounds RAM and "
+                        "save time for long runs (0 = never rotate)")
+    p.add_argument("--legacy-mode-name", action="store_true",
+                   help="push the OLD mode string 'shadowing' instead of 'doppler_detected' to the page "
+                        "(only needed while some page copy has not been updated yet; the new page "
+                        "accepts both)")
+    p.add_argument("--no-spec", action="store_true",
+                   help="do not forward spectrogram columns to the page (still recorded)")
     a = p.parse_args()
 
-    push_result = None
-    push_dBFS = None
-    push_power = None
+    # Ctrl+C (SIGINT) and `kill` (SIGTERM) both end in the same clean path: final save of the session
+    # file. Without this, a process started in the background (`&`, scripts, nohup) inherits an IGNORED
+    # SIGINT, Python then never installs its KeyboardInterrupt handler, and `kill -INT` does nothing.
+    signal.signal(signal.SIGINT, signal.default_int_handler)
+    signal.signal(signal.SIGTERM, signal.default_int_handler)
+
+    srv = None
+    push_result = push_dBFS = push_power = None
+    get_telemetry = None
     if not a.dry:
         if not os.path.isdir(a.server_dir):
-            print(f"找不到 isac_server 目录: {a.server_dir}", file=sys.stderr)
+            print(f"isac_server directory not found: {a.server_dir}", file=sys.stderr)
             return 1
         sys.path.insert(0, a.server_dir)
         try:
+            import isac_server as srv
             from isac_server import push_result, start_server_in_background
         except ImportError as e:
-            print(f"import isac_server 失败: {e}\n"
-                  f"这个脚本要用 **miniconda 的 python3** 跑（有 fastapi/uvicorn），"
-                  f"不是 /usr/bin/python3。", file=sys.stderr)
+            print(f"import isac_server failed: {e}\nRun this with MINICONDA's python3 "
+                  f"(fastapi/uvicorn), not /usr/bin/python3.", file=sys.stderr)
             return 1
-        # 20260826 新增：push_dBFS 单独 try——a.server_dir 指向的那份 isac_server.py
-        # 可能还没同步这次新加的函数（比如这台机器的部署还是旧版本），单独 import
-        # 失败不该拖累整个 bridge 起不来，present 判决照常转发，只是先不广播 dBFS，
-        # 打个警告方便发现"忘记同步 isac_server.py"这种情况。
-        try:
-            from isac_server import push_dBFS
-        except ImportError:
-            print(f"[bridge] 警告：{a.server_dir} 里的 isac_server.py 还没有 push_dBFS"
-                  f"（版本较旧，缺 20260826 的 dBFS 广播支持）——present 判决照常转发，"
-                  f"dBFS 判决会被丢弃。同步一下 isac_server.py 就好。", file=sys.stderr)
-        # 20260826 新增：push_power 同上，单独 try，缺了只警告不拖累整个 bridge
-        try:
-            from isac_server import push_power
-        except ImportError:
-            print(f"[bridge] 警告：{a.server_dir} 里的 isac_server.py 还没有 push_power"
-                  f"（版本较旧，缺下行功率判遮挡的广播支持）——present 判决照常转发，"
-                  f"下行 power 判决会被丢弃。同步一下 isac_server.py 就好。", file=sys.stderr)
+        push_dBFS = getattr(srv, "push_dBFS", None)
+        push_power = getattr(srv, "push_power", None)
+        get_telemetry = getattr(srv, "get_video_telemetry", None)
+        for name, fn in (("push_dBFS", push_dBFS), ("push_power", push_power),
+                         ("get_video_telemetry", get_telemetry)):
+            if fn is None:
+                print(f"[bridge] WARNING: {a.server_dir}/isac_server.py has no {name} (old version) "
+                      f"- the matching feature is skipped, everything else keeps working.",
+                      file=sys.stderr)
         start_server_in_background(port=a.isac_port)
+
+    def broadcast(payload: dict) -> bool:
+        """Send an arbitrary JSON message to every connected page, through isac_server's own
+        broadcast coroutine (no isac_server change needed)."""
+        if srv is None or getattr(srv, "_loop", None) is None:
+            return False
+        fn = getattr(srv, "_broadcast_payload", None)
+        if fn is None:
+            return False
+        asyncio.run_coroutine_threadsafe(fn(payload), srv._loop)
+        return True
+
+    log = None
+    if not a.no_log:
+        from isac_session_log import SessionLog
+        log = SessionLog(a.log_dir, save_every=a.save_every, bridge_args=vars(a),
+                         rotate_min=a.rotate_min)
+        print(f"[bridge] session files: {os.path.dirname(log.path)}/isac_<stamp>_pNNN.npz "
+              f"(autosave every {a.save_every:.0f}s, new part every {a.rotate_min:g} min)")
+
+    def telemetry():
+        try:
+            return get_telemetry() if get_telemetry is not None else []
+        except Exception:
+            return []
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.bind((a.udp_host, a.udp_port))
     sock.settimeout(0.5)
-    print(f"[bridge] 监听 udp://{a.udp_host}:{a.udp_port}"
-          f"{'  (dry 模式，不起 isac_server)' if a.dry else ''}")
-    print("[bridge] 等 rt_main 的判决... Ctrl+C 退出")
+    print(f"[bridge] listening udp://{a.udp_host}:{a.udp_port}"
+          f"{'  (dry mode, isac_server not started)' if a.dry else ''}")
+    print("[bridge] waiting for rt_main ... Ctrl+C to quit")
 
-    mode = "normal"
+    mode = MODE_NORMAL
     last_rx = 0.0
-    n_rx = 0
-    n_rx_dbfs = 0
-    last_dbfs_print = 0.0
-    n_rx_power = 0
-    last_power_print = 0.0
+    n_rx = n_rx_dbfs = n_rx_power = n_spec = 0
+    last_dbfs_print = last_power_print = 0.0
+    last_det_state = None
+    last_clock = 0.0
 
     def emit(new_mode: str, why: str) -> None:
         nonlocal mode
         if new_mode == mode:
             return
         mode = new_mode
-        ts = time.strftime("%H:%M:%S")
-        print(f"[{ts}] -> {new_mode:9s} ({why})", flush=True)
+        print(f"[{time.strftime('%H:%M:%S')}] -> {('doppler detected' if new_mode == MODE_DETECTED else 'normal'):16s} ({why})",
+              flush=True)
         if push_result is not None:
-            push_result(new_mode)
+            # pages that were not updated yet only know the old name for the "detected" mode
+            push_result("shadowing" if (a.legacy_mode_name and new_mode == MODE_DETECTED) else new_mode)
+
+    def tick() -> None:
+        """Periodic work that must run even when rt_main is silent."""
+        nonlocal last_clock
+        now = time.time()
+        if now - last_clock >= 1.0:
+            last_clock = now
+            broadcast({"type": "clock", "ts": round(now * 1000.0, 3)})
+        if log is not None:
+            log.maybe_save(telemetry)
 
     try:
         while True:
+            tick()
             try:
-                data, _ = sock.recvfrom(4096)
+                data, _ = sock.recvfrom(8192)
             except socket.timeout:
                 if a.stale_sec and last_rx and time.time() - last_rx > a.stale_sec:
-                    emit("normal", f"超过 {a.stale_sec:.0f}s 没收到判决，回落")
+                    emit(MODE_NORMAL, f"no verdict for {a.stale_sec:.0f}s, falling back")
+                    if log is not None and last_det_state == 1:
+                        # synthetic flip, marked with score=-1 so analysis can tell it apart
+                        log.add_detection(time.time() * 1000.0, 0, 0.0, -1)
+                    last_det_state = 0
                     last_rx = 0.0
                 continue
             try:
                 msg = json.loads(data.decode("utf-8"))
             except (UnicodeDecodeError, json.JSONDecodeError):
-                continue                     # 不是我们的包，忽略
-
-            # 20260826 新增：dBFS 是独立的一路连续流（rt_main.py 每步都发一次，
-            # ~50Hz，不跟 present 的心跳/去抖挂钩），跟下面 present 那支分开处理，
-            # 不影响 stale_sec 回落逻辑——那个逻辑只关心"多久没收到 present 判决"，
-            # dBFS 包不算数，避免两路互相干扰对方的语义。
-            if "dBFS" in msg:
-                n_rx_dbfs += 1
-                dbfs_now = time.time()
-                if push_dBFS is not None:
-                    push_dBFS(msg["dBFS"], msg.get("wallClock"))
-                # ~50Hz 量级，全打印会刷屏；节流到最多每秒一行，只为确认这条链路在动
-                if dbfs_now - last_dbfs_print >= 1.0:
-                    print(f"[bridge] dBFS={msg['dBFS']:+.1f} "
-                          f"channels={msg.get('dBFS_channels')} (共收到 {n_rx_dbfs} 条)",
-                          flush=True)
-                    last_dbfs_print = dbfs_now
                 continue
 
-            # 20260826 新增：power 是下行（Master 方向）功率判遮挡那一路，
-            # 跟上面 dBFS（上行/reference channel）是完全独立的通道——两个都
-            # 可能出现在同一个 UDP 端口上，靠字段名区分，互不影响对方的处理。
+            # ---- spectrogram column (25 Hz) ----
+            if "spec" in msg:
+                n_spec += 1
+                t_ms = float(msg.get("wallClock", time.time() * 1000.0))
+                if log is not None:
+                    try:
+                        log.add_spec(t_ms, base64.b64decode(msg["spec"]), float(msg.get("ridge", 0.0)),
+                                     int(msg.get("hit", 0)), int(msg.get("v", 0)), int(msg.get("E", 0)))
+                    except Exception:
+                        pass
+                if not a.no_spec:
+                    broadcast({"type": "doppler_spec", "ts": t_ms, "db": msg["spec"],
+                               "ridge": msg.get("ridge"), "hit": msg.get("hit"),
+                               "v": msg.get("v"), "E": msg.get("E")})
+                continue
+
+            if "meta" in msg:
+                if log is not None:
+                    log.set_rt_meta(msg["meta"])
+                broadcast({"type": "doppler_meta", "meta": msg["meta"]})
+                continue
+
+            if "dBFS" in msg:
+                n_rx_dbfs += 1
+                if log is not None:
+                    ch = msg.get("dBFS_channels") or [msg["dBFS"], msg["dBFS"]]
+                    log.add_dbfs(float(msg.get("wallClock", time.time() * 1000.0)), float(msg["dBFS"]),
+                                 float(ch[0]), float(ch[1]))
+                if push_dBFS is not None:
+                    push_dBFS(msg["dBFS"], msg.get("wallClock"))
+                if time.time() - last_dbfs_print >= 1.0:
+                    print(f"[bridge] dBFS={msg['dBFS']:+.1f} channels={msg.get('dBFS_channels')} "
+                          f"(total {n_rx_dbfs})", flush=True)
+                    last_dbfs_print = time.time()
+                continue
+
             if "power" in msg:
                 n_rx_power += 1
-                power_now = time.time()
+                if log is not None:
+                    log.add_dlpower(float(msg.get("wallClock", time.time() * 1000.0)), float(msg["power"]))
                 if push_power is not None:
                     push_power(msg["power"], msg.get("wallClock"))
-                if power_now - last_power_print >= 1.0:
-                    print(f"[bridge] power(downlink)={msg['power']:+.1f}dBFS "
-                          f"(共收到 {n_rx_power} 条)", flush=True)
-                    last_power_print = power_now
+                if time.time() - last_power_print >= 1.0:
+                    print(f"[bridge] power(downlink)={msg['power']:+.1f}dBFS (total {n_rx_power})",
+                          flush=True)
+                    last_power_print = time.time()
                 continue
 
             if "present" not in msg:
                 continue
             last_rx = time.time()
             n_rx += 1
-            why = (f"doppler={msg.get('doppler_hz', 0):+.0f}Hz "
-                   f"E={msg.get('energy_db', 0):+.0f}dB "
-                   f"score={msg.get('score', '?')}")
-            emit("shadowing" if msg["present"] else "normal", why)
+            state = 1 if msg["present"] else 0
+            if state != last_det_state:
+                t_ms = float(msg.get("wallClock", time.time() * 1000.0))
+                if log is not None:
+                    log.add_detection(t_ms, state, float(msg.get("ridge_hz", 0.0)),
+                                      int(msg.get("score", 0)))
+                broadcast({"type": "doppler_event",
+                           "state": MODE_DETECTED if state else MODE_NORMAL, "ts": t_ms,
+                           "ridge": msg.get("ridge_hz"), "E": msg.get("score")})
+                last_det_state = state
+            why = (f"doppler={msg.get('doppler_hz', 0):+.0f}Hz ridge={msg.get('ridge_hz', 0):.0f}Hz "
+                   f"E={msg.get('score', '?')}")
+            emit(MODE_DETECTED if state else MODE_NORMAL, why)
     except KeyboardInterrupt:
-        print(f"\n[bridge] 退出（共收到 {n_rx} 条判决，{n_rx_dbfs} 条 dBFS，{n_rx_power} 条 power）")
+        print(f"\n[bridge] exit ({n_rx} verdict msgs, {n_spec} spectrum columns, "
+              f"{n_rx_dbfs} dBFS, {n_rx_power} power)")
         if push_result is not None:
-            push_result("normal")
+            push_result(MODE_NORMAL)
+        if log is not None:
+            log.ingest_telemetry(telemetry(), force=True)
+            log.save(None, blocking=True)
+            print(f"[bridge] session saved: {len(log.paths)} part(s): " + ", ".join(os.path.basename(x) for x in log.paths))
     return 0
 
 

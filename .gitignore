@@ -4,3 +4,9 @@ data/experiment_*
 # 原始 IQ dump 动辄几百 MB（rt_iqdump.py 采的），只留本地，不进 git。
 # 处理后的 doppler_*.npz / cmp_*.npz 很小，照常提交。
 debug/iq_*.npz
+
+# 会话记录（isac_bridge.py 写的，含瀑布图/遥测，不进 git）
+isac_logs/
+
+# 对比实验的原始大文件（每个 ~230 MB，超过 GitHub 100 MB 单文件上限，只留本地）
+debug/cmp3_*.npz

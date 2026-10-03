@@ -56,6 +56,9 @@ def main() -> int:
     p.add_argument("--gain", type=float, default=30.0)
     p.add_argument("--serial", type=str, default="32392D3")
     p.add_argument("--no-save", action="store_true", help="不存 npz，只出图")
+    p.add_argument("--no-cal", action="store_true",
+                   help="关掉 AD9361 后台 DC offset / IQ balance 跟踪校准"
+                        "（跟踪校准会随信号电平周期性改修正量 -> 多普勒谱固定线谱）")
     p.add_argument("--out-dir", type=str, default=DEBUG_DIR)
     p.add_argument("--periods", type=int, default=20,
                    help="第一栏画多少个 TDD 周期（默认 20）")
@@ -67,7 +70,8 @@ def main() -> int:
                    help="不碰硬件，直接从存好的 iq_*.npz 重画（换 --mark/--ch 用）")
     a = p.parse_args()
 
-    cfg = RtConfig(serial=a.serial, sample_rate=a.fs * 1e6, gain=a.gain)
+    cfg = RtConfig(serial=a.serial, sample_rate=a.fs * 1e6, gain=a.gain,
+                   rx_tracking_cal=not a.no_cal)
     n_step = cfg.n_step
     n_cap = max(1, int(np.ceil(a.ms * 1e-3 / cfg.step_sec)))
 
@@ -131,7 +135,8 @@ def main() -> int:
         path = os.path.join(a.out_dir, f"iq_{stamp}.npz")
         np.savez(path, iq=iq, fs=cfg.sample_rate, phase=phase, n_int=n_int,
                  n_period=n_per, locked=sync.locked, contrast=sync.contrast,
-                 gain=cfg.gain, center_freq=cfg.center_freq)
+                 gain=cfg.gain, center_freq=cfg.center_freq,
+                 rx_tracking_cal=cfg.rx_tracking_cal)
         print(f"💾 原始 IQ 已存 {path}  ({os.path.getsize(path)/1e6:.0f} MB)")
         print("   自己切: d=np.load(路径); ch0=d['iq'][0,0::2]+1j*d['iq'][0,1::2]")
 

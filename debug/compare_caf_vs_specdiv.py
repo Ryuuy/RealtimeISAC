@@ -55,10 +55,14 @@ def frame_bounds(phase, n_int, n_per, total):
 
 
 def ema_dc_remove(z, hop=HOP, alpha=DC_ALPHA):
-    """按 hop 粒度做 EMA 去 DC，严格历史序 + alpha 预热。
+    """⚠️ 已废弃，别再调用——复刻的是 rt_dsp.process 里那段有 bug 的 per-step DC。
 
-    复刻 rt_dsp.process 的 DC 抑制：用上一步留下的估计去减本步，再拿本步均值刷新。
-    两条流用同一套处理，比较才公平。
+    2026-09-02 定位到：这段"每 hop(=step_sec=0.02s) 才更新一次、整段 hop 内
+    原地不变地相减"的 EMA 是一个零阶保持台阶，FFT 到 0.2s 环上会长出
+    ±(1/step_sec)·k Hz 的整排线谱（在这就是 ±50Hz 整数倍），跟 TX/硬件无关。
+    `rt_dsp.py` 已经把这段删掉，改成不做时域去 DC、静态杂波交给频域
+    dc_guard_hz 保护带（见 memo/dc_removal_comb_bug.md）。这个函数留着只是
+    给想复现"bug 长什么样"的对比实验用，主流程不再调用它。
     """
     z = z.astype(np.complex128).copy()
     dc = 0.0 + 0.0j
@@ -162,9 +166,11 @@ def main() -> int:
             print(f"  {k+1}/{n_fr}")
     print(f"  用时 {time.time()-t0:.1f}s")
 
-    # 共用后端：同一套 EMA 去 DC + 同一套滑动 STFT
-    t_caf, freqs, S_caf = stft(ema_dc_remove(caf))
-    t_sdv, _, S_sdv = stft(ema_dc_remove(sdv))
+    # 共用后端：同一套滑动 STFT，不做时域去 DC（跟 rt_dsp.py 2026-09-02 的修复一致——
+    # 之前这里调 ema_dc_remove 复刻 rt_dsp 的 per-step EMA，那段本身就是 ±50Hz·k
+    # 梳子的来源，已删除，见 memo/dc_removal_comb_bug.md）
+    t_caf, freqs, S_caf = stft(caf)
+    t_sdv, _, S_sdv = stft(sdv)
 
     fmask = np.ones(len(freqs), bool) if a.fmax is None else (np.abs(freqs) <= a.fmax)
     f_axis = freqs[fmask]
