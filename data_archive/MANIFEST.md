@@ -1,8 +1,8 @@
 # data_archive — 本机 `isac_logs/` 与浏览器快照的完整备份（2026-10-03 ~ 2026-10-10）
 
-这些文件原来**只在实验室电脑上**（`isac_logs/` 被仓库 `.gitignore` 忽略，浏览器快照在 `~/Downloads`）。为了在家也能分析，原样存档于此。
+这些文件原来**只在实验室电脑上**（`isac_logs/` 被仓库 `.gitignore` 忽略（本存档目录因此命名为 `sessions_raw/`），浏览器快照在 `~/Downloads`）。为了在家也能分析，原样存档于此。
 
-- `isac_logs/`：ISAC 会话日志（`.npz`）、NTG-2501 轮询（`.csv`/`.log`）、`isac_bridge` 退出时自动生成的概览图（`overview_*.png`）。**未加工，原样复制**。
+- `sessions_raw/`（原目录名 `isac_logs/`，因为仓库 `.gitignore` 会忽略任何叫 `isac_logs/` 的目录，所以存档时改名）：ISAC 会话日志（`.npz`）、NTG-2501 轮询（`.csv`/`.log`）、`isac_bridge` 退出时自动生成的概览图（`overview_*.png`）。**未加工，原样复制**。
 - `dash_snapshots_gz/`：浏览器 "Save Full Snapshot" 的 JSON，**无损 gzip -9**（`gunzip` 后与原件逐字节相同；原件 sha256 见下表），为节省仓库空间。
 - 已经在 `experiments/*/raw/` 里**逐字节相同**的文件（`203031`、`205507` 的 npz/csv/log，以及 3 个快照）没有重复存放，表里标了位置。
 - 注意：`20261010_180657` 的 CSV/log 在此是**最终完整版**（到 20:30）；`experiments/20261010_knife_edge_plate/raw/` 里是 18:35 的截取版（实验窗口 18:09–18:19:30 在其中）。
