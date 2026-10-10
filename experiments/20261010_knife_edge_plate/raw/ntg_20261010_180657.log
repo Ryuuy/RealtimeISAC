@@ -1,0 +1,1389 @@
+打点：在这个终端按回车（可先输入标签再回车），时间会写进下一行的 marker 列
+记录中 -> /home/usrpb210/sdr_workspace/RealtimeISAC/isac_logs/ntg_20261010_180657.csv
+  Master 192.168.1.201（26ms 首次响应），间隔 0.1s（10Hz）
+  Ctrl+C 随时停，每行写完立刻 flush，已写的数据不会丢
+
+[    1.0s] n=11 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 24.5 dB  QPSK  16ms
+[    2.0s] n=21 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 26.0 dB  QPSK  18ms
+[    3.1s] n=32 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 26.5 dB  QPSK  12ms
+[    4.1s] n=42 err=0  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 27.0 dB  QPSK  11ms
+[    5.1s] n=52 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 29.0 dB  QPSK  10ms
+[    6.1s] n=62 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 29.0 dB  QPSK  12ms
+[    7.1s] n=72 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 29.5 dB  QPSK  12ms
+[    8.1s] n=82 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 29.5 dB  QPSK  11ms
+[    9.2s] n=93 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 29.0 dB  QPSK  10ms
+[   10.2s] n=103 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 29.5 dB  QPSK  10ms
+[   11.2s] n=113 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  10ms
+[   12.2s] n=123 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 29.5 dB  QPSK  11ms
+[   13.2s] n=133 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[   14.2s] n=143 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[   15.3s] n=154 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[   16.3s] n=164 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[   17.5s] n=171 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  207ms
+[   18.6s] n=181 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  12ms
+[   19.7s] n=192 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 29.5 dB  QPSK  12ms
+[   20.7s] n=202 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  10ms
+[   21.7s] n=212 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  18ms
+[   22.8s] n=223 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[   23.8s] n=233 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.0 dB  QPSK  12ms
+[   24.9s] n=244 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[   25.9s] n=254 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 29.5 dB  QPSK  11ms
+[   26.9s] n=264 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.0 dB  QPSK  11ms
+[   28.0s] n=275 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  10ms
+[   29.0s] n=285 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  10ms
+[   30.0s] n=295 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.0 dB  QPSK  11ms
+[   31.0s] n=305 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.4 dBm  CNR= 30.5 dB  QPSK  11ms
+[   32.0s] n=315 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  10ms
+[   33.0s] n=325 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  11ms
+[   34.0s] n=335 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  14ms
+[   35.1s] n=346 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  10ms
+[   36.1s] n=356 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  12ms
+[   37.2s] n=367 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[   38.2s] n=377 err=0  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  17ms
+[   39.3s] n=388 err=0  SlaveTx=   5.0 dBm  MasterRx= -52.2 dBm  CNR= 27.0 dB  QPSK  12ms
+  [2026-10-10T18:07:39.110] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:07:41.112] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:07:43.114] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:07:45.116] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:07:47.118] ⚠️ <urlopen error timed out>
+[   51.0s] n=399 err=5  SlaveTx=   5.0 dBm  MasterRx= -51.7 dBm  CNR= 17.5 dB  QPSK  1037ms
+[   52.0s] n=410 err=5  SlaveTx=   5.0 dBm  MasterRx= -50.1 dBm  CNR= 19.5 dB  QPSK  17ms
+[   53.1s] n=421 err=5  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 21.5 dB  QPSK  29ms
+[   54.2s] n=432 err=5  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 22.5 dB  QPSK  10ms
+  [2026-10-10T18:07:54.261] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:07:56.264] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:07:58.265] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:00.267] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:02.269] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:04.271] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:06.274] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:08.275] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:10.277] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:12.279] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:14.281] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:16.283] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:18.285] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:20.287] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:22.289] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:24.291] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:26.293] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:28.295] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:30.297] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:32.299] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:34.301] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:36.303] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:38.305] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:40.307] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:42.309] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:43.376] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:08:45.378] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:46.448] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:08:48.450] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:49.521] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:08:51.523] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:52.592] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:08:54.595] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:55.664] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:08:57.666] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:08:58.736] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:09:00.738] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:01.808] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:09:03.810] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:04.880] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:09:06.883] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:07.952] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:09:09.955] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:11.024] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:09:13.026] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:14.096] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:09:16.098] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:17.168] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:09:19.170] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:20.240] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:09:22.242] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:23.312] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:09:25.314] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:26.384] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:09:28.386] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:29.456] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:09:31.465] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:32.528] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:09:34.530] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:35.600] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:09:37.602] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:38.672] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:09:40.675] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:41.744] ⚠️ <urlopen error [Errno 113] No route to host>
+[  165.6s] n=505 err=69  SlaveTx=   5.0 dBm  MasterRx= -67.0 dBm  CNR= 11.5 dB  QPSK  1036ms
+  [2026-10-10T18:09:45.183] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:47.185] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:49.187] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:51.190] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:53.191] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:55.193] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:57.195] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:09:59.198] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:10:01.200] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:10:03.202] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:10:05.204] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:10:07.206] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:10:09.208] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:10:11.211] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:10:13.213] ⚠️ <urlopen error timed out>
+[  197.1s] n=525 err=84  SlaveTx=   5.0 dBm  MasterRx= -66.8 dBm  CNR= 11.5 dB  QPSK  1053ms
+[  198.1s] n=536 err=84  SlaveTx=   5.0 dBm  MasterRx= -67.0 dBm  CNR= 11.5 dB  QPSK  12ms
+[  199.1s] n=546 err=84  SlaveTx=   5.0 dBm  MasterRx= -67.8 dBm  CNR= 10.0 dB  QPSK  11ms
+  [2026-10-10T18:10:18.772] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:10:20.774] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:10:22.776] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:10:24.778] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:10:26.781] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:10:28.783] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:10:30.785] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:10:32.787] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:10:34.789] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:10:36.791] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:10:38.793] ⚠️ <urlopen error timed out>
+[  221.7s] n=562 err=95  SlaveTx=   5.0 dBm  MasterRx= -64.6 dBm  CNR= 13.5 dB  QPSK  60ms
+[  222.8s] n=571 err=95  SlaveTx=   5.0 dBm  MasterRx= -63.9 dBm  CNR=  9.5 dB  QPSK  165ms
+[  223.8s] n=582 err=95  SlaveTx=   5.0 dBm  MasterRx= -63.9 dBm  CNR= 11.0 dB  QPSK  11ms
+[  224.8s] n=592 err=95  SlaveTx=   5.0 dBm  MasterRx= -63.2 dBm  CNR= 13.5 dB  QPSK  12ms
+[  225.8s] n=602 err=95  SlaveTx=   5.0 dBm  MasterRx= -63.7 dBm  CNR= 13.5 dB  QPSK  11ms
+[  226.8s] n=612 err=95  SlaveTx=   5.0 dBm  MasterRx= -63.1 dBm  CNR= 14.0 dB  QPSK  11ms
+[  227.8s] n=622 err=95  SlaveTx=   5.0 dBm  MasterRx= -63.2 dBm  CNR= 14.5 dB  QPSK  11ms
+[  228.8s] n=632 err=95  SlaveTx=   5.0 dBm  MasterRx= -64.3 dBm  CNR= 13.0 dB  QPSK  17ms
+[  229.9s] n=642 err=95  SlaveTx=   5.0 dBm  MasterRx= -64.1 dBm  CNR= 13.5 dB  QPSK  80ms
+[  230.9s] n=651 err=95  SlaveTx=   5.0 dBm  MasterRx= -63.9 dBm  CNR= 15.0 dB  QPSK  13ms
+[  232.0s] n=662 err=95  SlaveTx=   5.0 dBm  MasterRx= -64.0 dBm  CNR= 11.5 dB  QPSK  11ms
+[  233.0s] n=672 err=95  SlaveTx=   5.0 dBm  MasterRx= -63.6 dBm  CNR= 14.0 dB  QPSK  10ms
+[  234.0s] n=682 err=95  SlaveTx=   5.0 dBm  MasterRx= -62.6 dBm  CNR= 13.0 dB  QPSK  11ms
+[  235.0s] n=692 err=95  SlaveTx=   5.0 dBm  MasterRx= -62.7 dBm  CNR= 15.5 dB  QPSK  11ms
+[  236.0s] n=702 err=95  SlaveTx=   5.0 dBm  MasterRx= -62.9 dBm  CNR=  7.0 dB  QPSK  11ms
+[  237.1s] n=713 err=95  SlaveTx=   5.0 dBm  MasterRx= -63.5 dBm  CNR= 13.0 dB  QPSK  10ms
+[  238.1s] n=723 err=95  SlaveTx=   5.0 dBm  MasterRx= -64.4 dBm  CNR= 16.5 dB  QPSK  10ms
+[  239.1s] n=733 err=95  SlaveTx=   5.0 dBm  MasterRx= -65.2 dBm  CNR= 14.0 dB  QPSK  11ms
+[  240.1s] n=743 err=95  SlaveTx=   5.0 dBm  MasterRx= -64.5 dBm  CNR= 14.0 dB  QPSK  11ms
+[  241.2s] n=754 err=95  SlaveTx=   5.0 dBm  MasterRx= -63.6 dBm  CNR= 13.0 dB  QPSK  10ms
+[  242.2s] n=764 err=95  SlaveTx=   5.0 dBm  MasterRx= -63.3 dBm  CNR= 13.5 dB  QPSK  11ms
+  [2026-10-10T18:11:02.227] ⚠️ timed out
+  [2026-10-10T18:11:04.229] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:06.231] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:08.234] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:10.236] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:12.238] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:14.240] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:16.242] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:18.244] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:20.246] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:22.248] ⚠️ <urlopen error timed out>
+[  265.2s] n=783 err=106  SlaveTx=   5.0 dBm  MasterRx= -66.7 dBm  CNR= 12.0 dB  QPSK  127ms
+[  266.2s] n=789 err=106  SlaveTx=   5.0 dBm  MasterRx= -66.4 dBm  CNR= 13.5 dB  QPSK  208ms
+[  267.3s] n=796 err=106  SlaveTx=   5.0 dBm  MasterRx= -67.8 dBm  CNR= 13.0 dB  QPSK  71ms
+[  268.3s] n=807 err=106  SlaveTx=   5.0 dBm  MasterRx= -64.7 dBm  CNR= 14.5 dB  QPSK  11ms
+  [2026-10-10T18:11:28.200] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:30.202] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:32.204] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:34.206] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:36.208] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:38.210] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:40.212] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:42.214] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:44.216] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:46.218] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:48.220] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:50.222] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:52.225] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:54.227] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:55.312] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:11:57.314] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:11:58.384] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:12:00.387] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:01.456] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:12:03.458] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:04.529] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:12:06.531] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:07.601] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:12:09.603] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:10.672] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:12:12.675] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:13.744] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:12:15.746] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:16.817] ⚠️ <urlopen error [Errno 113] No route to host>
+[  320.7s] n=843 err=135  SlaveTx=   5.0 dBm  MasterRx= -62.0 dBm  CNR= 12.0 dB  QPSK  1034ms
+[  321.8s] n=854 err=135  SlaveTx=   5.0 dBm  MasterRx= -61.7 dBm  CNR= 12.5 dB  QPSK  77ms
+[  322.8s] n=864 err=135  SlaveTx=   5.0 dBm  MasterRx= -60.3 dBm  CNR= 12.0 dB  QPSK  11ms
+[  323.8s] n=874 err=135  SlaveTx=   5.0 dBm  MasterRx= -61.5 dBm  CNR= 10.5 dB  QPSK  11ms
+  [2026-10-10T18:12:23.098] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:25.100] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:27.101] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:29.103] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:31.105] ⚠️ <urlopen error timed out>
+[  334.9s] n=880 err=140  SlaveTx=   5.0 dBm  MasterRx= -56.7 dBm  CNR= 15.0 dB  QPSK  1017ms
+[  336.0s] n=891 err=140  SlaveTx=   5.0 dBm  MasterRx= -59.5 dBm  CNR= 15.5 dB  QPSK  11ms
+[  337.1s] n=900 err=140  SlaveTx=   5.0 dBm  MasterRx= -63.6 dBm  CNR= 16.0 dB  QPSK  155ms
+  [2026-10-10T18:12:36.826] ⚠️ timed out
+  [2026-10-10T18:12:38.829] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:40.831] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:42.833] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:44.835] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:46.837] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:48.839] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:50.841] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:52.843] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:54.845] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:56.847] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:12:58.849] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:13:00.851] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:13:02.853] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:13:03.920] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:13:05.922] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:13:06.992] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:13:08.995] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:13:10.064] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:13:12.067] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:13:13.136] ⚠️ <urlopen error [Errno 113] No route to host>
+  [2026-10-10T18:13:15.138] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:13:16.208] ⚠️ <urlopen error [Errno 113] No route to host>
+[  379.0s] n=927 err=163  SlaveTx=   5.0 dBm  MasterRx= -61.8 dBm  CNR= 11.5 dB  QPSK  12ms
+[  380.1s] n=938 err=163  SlaveTx=   5.0 dBm  MasterRx= -63.4 dBm  CNR= 15.0 dB  QPSK  15ms
+[  381.2s] n=949 err=163  SlaveTx=   5.0 dBm  MasterRx= -59.6 dBm  CNR= 12.5 dB  QPSK  11ms
+[  382.2s] n=959 err=163  SlaveTx=   5.0 dBm  MasterRx= -60.7 dBm  CNR= 15.5 dB  QPSK  11ms
+[  383.2s] n=969 err=163  SlaveTx=   5.0 dBm  MasterRx= -59.7 dBm  CNR= 19.0 dB  QPSK  10ms
+[  384.2s] n=979 err=163  SlaveTx=   5.0 dBm  MasterRx= -60.0 dBm  CNR= 17.0 dB  QPSK  11ms
+[  385.3s] n=989 err=163  SlaveTx=   5.0 dBm  MasterRx= -59.4 dBm  CNR= 20.0 dB  QPSK  12ms
+[  386.3s] n=999 err=163  SlaveTx=   5.0 dBm  MasterRx= -56.9 dBm  CNR= 12.5 dB  QPSK  11ms
+[  387.3s] n=1009 err=163  SlaveTx=   5.0 dBm  MasterRx= -58.2 dBm  CNR= 18.5 dB  QPSK  12ms
+[  388.4s] n=1020 err=163  SlaveTx=   5.0 dBm  MasterRx= -60.4 dBm  CNR= 12.5 dB  QPSK  11ms
+  [2026-10-10T18:13:28.320] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:13:30.322] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:13:32.325] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:13:34.327] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:13:36.329] ⚠️ <urlopen error timed out>
+[  400.2s] n=1033 err=168  SlaveTx=   5.0 dBm  MasterRx= -57.7 dBm  CNR= 15.0 dB  QPSK  1073ms
+[  401.2s] n=1044 err=168  SlaveTx=   5.0 dBm  MasterRx= -59.0 dBm  CNR= 19.0 dB  QPSK  11ms
+[  402.2s] n=1054 err=168  SlaveTx=   5.0 dBm  MasterRx= -58.6 dBm  CNR= 17.0 dB  QPSK  11ms
+[  403.2s] n=1064 err=168  SlaveTx=   5.0 dBm  MasterRx= -58.2 dBm  CNR= 16.5 dB  QPSK  11ms
+[  404.2s] n=1074 err=168  SlaveTx=   5.0 dBm  MasterRx= -59.1 dBm  CNR= 14.5 dB  QPSK  11ms
+[  405.3s] n=1083 err=168  SlaveTx=   5.0 dBm  MasterRx= -59.9 dBm  CNR= 14.5 dB  QPSK  120ms
+[  406.5s] n=1090 err=168  SlaveTx=   5.0 dBm  MasterRx= -58.9 dBm  CNR= 16.0 dB  QPSK  225ms
+[  407.5s] n=1096 err=168  SlaveTx=   5.0 dBm  MasterRx= -57.3 dBm  CNR= 20.0 dB  QPSK  133ms
+[  408.5s] n=1107 err=168  SlaveTx=   5.0 dBm  MasterRx= -58.2 dBm  CNR= 19.5 dB  QPSK  12ms
+[  409.6s] n=1118 err=168  SlaveTx=   5.0 dBm  MasterRx= -57.6 dBm  CNR= 20.0 dB  QPSK  10ms
+[  410.6s] n=1128 err=168  SlaveTx=   5.0 dBm  MasterRx= -58.0 dBm  CNR= 20.0 dB  QPSK  10ms
+[  411.6s] n=1138 err=168  SlaveTx=   5.0 dBm  MasterRx= -56.5 dBm  CNR= 18.0 dB  QPSK  11ms
+[  412.6s] n=1148 err=168  SlaveTx=   5.0 dBm  MasterRx= -58.7 dBm  CNR= 20.5 dB  QPSK  10ms
+[  413.6s] n=1158 err=168  SlaveTx=   5.0 dBm  MasterRx= -57.3 dBm  CNR= 16.5 dB  QPSK  10ms
+[  414.6s] n=1168 err=168  SlaveTx=   5.0 dBm  MasterRx= -62.5 dBm  CNR= 15.5 dB  QPSK  10ms
+[  415.6s] n=1178 err=168  SlaveTx=   5.0 dBm  MasterRx= -61.8 dBm  CNR= 17.0 dB  QPSK  11ms
+[  416.7s] n=1189 err=168  SlaveTx=   5.0 dBm  MasterRx= -59.2 dBm  CNR= 13.5 dB  QPSK  10ms
+[  417.7s] n=1199 err=168  SlaveTx=   5.0 dBm  MasterRx= -61.3 dBm  CNR= 14.5 dB  QPSK  11ms
+[  418.7s] n=1209 err=168  SlaveTx=   5.0 dBm  MasterRx= -57.1 dBm  CNR= 18.5 dB  QPSK  11ms
+[  419.7s] n=1219 err=168  SlaveTx=   5.0 dBm  MasterRx= -58.1 dBm  CNR= 22.5 dB  QPSK  12ms
+[  420.7s] n=1229 err=168  SlaveTx=   5.0 dBm  MasterRx= -56.0 dBm  CNR= 14.5 dB  QPSK  11ms
+[  421.7s] n=1239 err=168  SlaveTx=   5.0 dBm  MasterRx= -56.2 dBm  CNR= 14.5 dB  QPSK  11ms
+[  422.7s] n=1249 err=168  SlaveTx=   5.0 dBm  MasterRx= -56.7 dBm  CNR= 19.5 dB  QPSK  11ms
+[  423.7s] n=1259 err=168  SlaveTx=   5.0 dBm  MasterRx= -55.9 dBm  CNR= 12.5 dB  QPSK  10ms
+[  424.7s] n=1269 err=168  SlaveTx=   5.0 dBm  MasterRx= -59.1 dBm  CNR= 15.0 dB  QPSK  10ms
+[  425.7s] n=1279 err=168  SlaveTx=   5.0 dBm  MasterRx= -60.4 dBm  CNR= 16.0 dB  QPSK  11ms
+[  426.7s] n=1289 err=168  SlaveTx=   5.0 dBm  MasterRx= -56.0 dBm  CNR= 16.5 dB  QPSK  12ms
+[  427.8s] n=1300 err=168  SlaveTx=   5.0 dBm  MasterRx= -59.1 dBm  CNR= 15.5 dB  QPSK  10ms
+[  428.9s] n=1310 err=168  SlaveTx=   5.0 dBm  MasterRx= -57.2 dBm  CNR= 18.0 dB  QPSK  63ms
+[  429.9s] n=1320 err=168  SlaveTx=   5.0 dBm  MasterRx= -54.6 dBm  CNR= 19.0 dB  QPSK  11ms
+[  430.9s] n=1330 err=168  SlaveTx=   5.0 dBm  MasterRx= -54.1 dBm  CNR= 16.0 dB  QPSK  11ms
+[  431.9s] n=1340 err=168  SlaveTx=   5.0 dBm  MasterRx= -54.2 dBm  CNR= 18.5 dB  QPSK  11ms
+[  432.9s] n=1350 err=168  SlaveTx=   5.0 dBm  MasterRx= -54.4 dBm  CNR= 19.0 dB  QPSK  11ms
+[  434.0s] n=1361 err=168  SlaveTx=   5.0 dBm  MasterRx= -55.1 dBm  CNR= 23.5 dB  QPSK  10ms
+[  435.0s] n=1371 err=168  SlaveTx=   5.0 dBm  MasterRx= -59.5 dBm  CNR= 23.0 dB  QPSK  11ms
+[  436.0s] n=1381 err=168  SlaveTx=   5.0 dBm  MasterRx= -58.1 dBm  CNR= 12.5 dB  QPSK  11ms
+[  437.0s] n=1391 err=168  SlaveTx=   5.0 dBm  MasterRx= -57.2 dBm  CNR= 18.5 dB  QPSK  12ms
+[  438.0s] n=1401 err=168  SlaveTx=   5.0 dBm  MasterRx= -57.8 dBm  CNR= 21.0 dB  QPSK  11ms
+[  439.0s] n=1411 err=168  SlaveTx=   5.0 dBm  MasterRx= -59.0 dBm  CNR= 19.0 dB  QPSK  11ms
+[  440.1s] n=1422 err=168  SlaveTx=   5.0 dBm  MasterRx= -57.6 dBm  CNR= 16.0 dB  QPSK  11ms
+[  441.1s] n=1432 err=168  SlaveTx=   5.0 dBm  MasterRx= -57.6 dBm  CNR= 18.5 dB  QPSK  11ms
+[  442.1s] n=1442 err=168  SlaveTx=   5.0 dBm  MasterRx= -58.4 dBm  CNR= 21.0 dB  QPSK  11ms
+[  443.1s] n=1452 err=168  SlaveTx=   5.0 dBm  MasterRx= -57.7 dBm  CNR= 19.0 dB  QPSK  11ms
+[  444.1s] n=1462 err=168  SlaveTx=   5.0 dBm  MasterRx= -57.8 dBm  CNR= 22.5 dB  QPSK  11ms
+[  445.1s] n=1472 err=168  SlaveTx=   5.0 dBm  MasterRx= -58.2 dBm  CNR= 26.5 dB  QPSK  15ms
+[  446.2s] n=1483 err=168  SlaveTx=   5.0 dBm  MasterRx= -58.5 dBm  CNR= 21.0 dB  QPSK  10ms
+[  447.2s] n=1493 err=168  SlaveTx=   5.0 dBm  MasterRx= -57.7 dBm  CNR= 18.0 dB  QPSK  11ms
+[  448.2s] n=1503 err=168  SlaveTx=   5.0 dBm  MasterRx= -58.2 dBm  CNR= 20.5 dB  QPSK  11ms
+[  449.2s] n=1513 err=168  SlaveTx=   5.0 dBm  MasterRx= -56.5 dBm  CNR= 17.5 dB  QPSK  12ms
+[  450.2s] n=1523 err=168  SlaveTx=   5.0 dBm  MasterRx= -57.0 dBm  CNR= 19.5 dB  QPSK  11ms
+[  451.2s] n=1533 err=168  SlaveTx=   5.0 dBm  MasterRx= -57.8 dBm  CNR= 21.5 dB  QPSK  12ms
+[  452.3s] n=1544 err=168  SlaveTx=   5.0 dBm  MasterRx= -57.0 dBm  CNR= 18.5 dB  QPSK  12ms
+[  453.4s] n=1555 err=168  SlaveTx=   5.0 dBm  MasterRx= -55.9 dBm  CNR= 17.0 dB  QPSK  10ms
+[  454.4s] n=1565 err=168  SlaveTx=   5.0 dBm  MasterRx= -53.8 dBm  CNR= 18.0 dB  QPSK  11ms
+[  455.5s] n=1576 err=168  SlaveTx=   5.0 dBm  MasterRx= -53.6 dBm  CNR= 23.5 dB  QPSK  11ms
+[  456.5s] n=1586 err=168  SlaveTx=   5.0 dBm  MasterRx= -55.0 dBm  CNR= 19.5 dB  QPSK  11ms
+[  457.5s] n=1596 err=168  SlaveTx=   5.0 dBm  MasterRx= -53.9 dBm  CNR= 19.0 dB  QPSK  11ms
+[  458.5s] n=1606 err=168  SlaveTx=   5.0 dBm  MasterRx= -55.6 dBm  CNR= 20.0 dB  QPSK  11ms
+[  459.5s] n=1616 err=168  SlaveTx=   5.0 dBm  MasterRx= -53.8 dBm  CNR= 21.0 dB  QPSK  11ms
+[  460.5s] n=1626 err=168  SlaveTx=   5.0 dBm  MasterRx= -53.3 dBm  CNR= 23.0 dB  QPSK  11ms
+[  461.5s] n=1636 err=168  SlaveTx=   5.0 dBm  MasterRx= -52.6 dBm  CNR= 19.0 dB  QPSK  12ms
+[  462.6s] n=1647 err=168  SlaveTx=   5.0 dBm  MasterRx= -52.2 dBm  CNR= 19.0 dB  QPSK  11ms
+[  463.6s] n=1657 err=168  SlaveTx=   5.0 dBm  MasterRx= -52.8 dBm  CNR= 23.0 dB  QPSK  10ms
+[  464.6s] n=1667 err=168  SlaveTx=   5.0 dBm  MasterRx= -54.6 dBm  CNR= 18.0 dB  QPSK  10ms
+[  465.6s] n=1677 err=168  SlaveTx=   5.0 dBm  MasterRx= -54.8 dBm  CNR= 19.0 dB  QPSK  11ms
+[  466.6s] n=1687 err=168  SlaveTx=   5.0 dBm  MasterRx= -55.6 dBm  CNR= 22.0 dB  QPSK  11ms
+[  467.6s] n=1697 err=168  SlaveTx=   5.0 dBm  MasterRx= -53.7 dBm  CNR= 25.0 dB  QPSK  10ms
+[  468.6s] n=1707 err=168  SlaveTx=   5.0 dBm  MasterRx= -53.3 dBm  CNR= 20.0 dB  QPSK  10ms
+[  469.6s] n=1717 err=168  SlaveTx=   5.0 dBm  MasterRx= -53.9 dBm  CNR= 17.0 dB  QPSK  10ms
+[  470.6s] n=1727 err=168  SlaveTx=   5.0 dBm  MasterRx= -57.1 dBm  CNR= 15.0 dB  QPSK  11ms
+[  471.6s] n=1737 err=168  SlaveTx=   5.0 dBm  MasterRx= -54.1 dBm  CNR= 17.0 dB  QPSK  11ms
+[  472.6s] n=1747 err=168  SlaveTx=   5.0 dBm  MasterRx= -54.6 dBm  CNR= 23.5 dB  QPSK  12ms
+[  473.6s] n=1757 err=168  SlaveTx=   5.0 dBm  MasterRx= -53.8 dBm  CNR= 22.5 dB  QPSK  11ms
+[  474.6s] n=1767 err=168  SlaveTx=   5.0 dBm  MasterRx= -54.4 dBm  CNR= 20.5 dB  QPSK  11ms
+[  475.6s] n=1777 err=168  SlaveTx=   5.0 dBm  MasterRx= -56.4 dBm  CNR= 24.5 dB  QPSK  12ms
+[  476.7s] n=1788 err=168  SlaveTx=   5.0 dBm  MasterRx= -55.2 dBm  CNR= 17.5 dB  QPSK  10ms
+[  477.7s] n=1798 err=168  SlaveTx=   5.0 dBm  MasterRx= -56.1 dBm  CNR= 15.5 dB  QPSK  11ms
+[  478.7s] n=1808 err=168  SlaveTx=   5.0 dBm  MasterRx= -59.9 dBm  CNR= 12.0 dB  QPSK  10ms
+[  479.7s] n=1818 err=168  SlaveTx=   5.0 dBm  MasterRx= -57.1 dBm  CNR= 15.5 dB  QPSK  10ms
+[  480.7s] n=1828 err=168  SlaveTx=   5.0 dBm  MasterRx= -56.6 dBm  CNR= 21.5 dB  QPSK  10ms
+[  481.7s] n=1838 err=168  SlaveTx=   5.0 dBm  MasterRx= -57.2 dBm  CNR= 22.0 dB  QPSK  12ms
+[  482.7s] n=1848 err=168  SlaveTx=   5.0 dBm  MasterRx= -56.2 dBm  CNR= 18.0 dB  QPSK  12ms
+[  483.7s] n=1858 err=168  SlaveTx=   5.0 dBm  MasterRx= -55.2 dBm  CNR= 21.5 dB  QPSK  12ms
+[  484.7s] n=1868 err=168  SlaveTx=   5.0 dBm  MasterRx= -54.8 dBm  CNR=  9.0 dB  QPSK  11ms
+[  485.7s] n=1878 err=168  SlaveTx=   5.0 dBm  MasterRx= -54.4 dBm  CNR= 20.5 dB  QPSK  11ms
+[  486.8s] n=1888 err=168  SlaveTx=   5.0 dBm  MasterRx= -56.4 dBm  CNR= 21.5 dB  QPSK  18ms
+[  487.9s] n=1899 err=168  SlaveTx=   5.0 dBm  MasterRx= -54.6 dBm  CNR= 19.5 dB  QPSK  13ms
+[  488.9s] n=1909 err=168  SlaveTx=   5.0 dBm  MasterRx= -54.6 dBm  CNR= 17.5 dB  QPSK  60ms
+[  490.0s] n=1920 err=168  SlaveTx=   5.0 dBm  MasterRx= -58.8 dBm  CNR= 17.0 dB  QPSK  11ms
+  [2026-10-10T18:15:10.155] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:15:12.158] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:15:14.160] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:15:16.162] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:15:18.165] ⚠️ <urlopen error timed out>
+[  502.1s] n=1935 err=173  SlaveTx=   5.0 dBm  MasterRx= -56.2 dBm  CNR= 16.5 dB  QPSK  1062ms
+[  503.1s] n=1946 err=173  SlaveTx=   5.0 dBm  MasterRx= -55.5 dBm  CNR= 17.0 dB  QPSK  11ms
+[  504.1s] n=1956 err=173  SlaveTx=   5.0 dBm  MasterRx= -56.2 dBm  CNR= 19.0 dB  QPSK  12ms
+[  505.1s] n=1966 err=173  SlaveTx=   5.0 dBm  MasterRx= -55.8 dBm  CNR= 18.0 dB  QPSK  12ms
+[  506.1s] n=1976 err=173  SlaveTx=   5.0 dBm  MasterRx= -55.5 dBm  CNR= 18.0 dB  QPSK  12ms
+[  507.2s] n=1987 err=173  SlaveTx=   5.0 dBm  MasterRx= -55.0 dBm  CNR= 18.0 dB  QPSK  11ms
+[  508.2s] n=1997 err=173  SlaveTx=   5.0 dBm  MasterRx= -56.0 dBm  CNR= 19.0 dB  QPSK  11ms
+[  509.2s] n=2007 err=173  SlaveTx=   5.0 dBm  MasterRx= -56.3 dBm  CNR= 17.5 dB  QPSK  12ms
+[  510.3s] n=2018 err=173  SlaveTx=   5.0 dBm  MasterRx= -55.1 dBm  CNR= 17.0 dB  QPSK  11ms
+[  511.3s] n=2028 err=173  SlaveTx=   5.0 dBm  MasterRx= -55.7 dBm  CNR= 21.0 dB  QPSK  11ms
+[  512.3s] n=2038 err=173  SlaveTx=   5.0 dBm  MasterRx= -55.5 dBm  CNR= 18.0 dB  QPSK  10ms
+[  513.3s] n=2048 err=173  SlaveTx=   5.0 dBm  MasterRx= -56.5 dBm  CNR= 18.5 dB  QPSK  12ms
+  [2026-10-10T18:15:33.439] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:15:35.442] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:15:37.444] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:15:39.447] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:15:41.448] ⚠️ <urlopen error timed out>
+[  525.3s] n=2063 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.0 dBm  CNR= 14.0 dB  QPSK  1075ms
+[  526.4s] n=2074 err=178  SlaveTx=   5.0 dBm  MasterRx= -54.6 dBm  CNR= 12.0 dB  QPSK  12ms
+[  527.4s] n=2084 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.5 dBm  CNR= 10.5 dB  QPSK  12ms
+[  528.4s] n=2094 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.8 dBm  CNR= 11.0 dB  QPSK  12ms
+[  529.4s] n=2104 err=178  SlaveTx=   5.0 dBm  MasterRx= -55.4 dBm  CNR= 13.5 dB  QPSK  12ms
+[  530.5s] n=2115 err=178  SlaveTx=   5.0 dBm  MasterRx= -54.0 dBm  CNR= 16.0 dB  QPSK  10ms
+[  531.5s] n=2125 err=178  SlaveTx=   5.0 dBm  MasterRx= -55.2 dBm  CNR= 12.0 dB  QPSK  12ms
+[  532.5s] n=2135 err=178  SlaveTx=   5.0 dBm  MasterRx= -56.0 dBm  CNR= 14.0 dB  QPSK  12ms
+[  533.6s] n=2146 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.8 dBm  CNR= 11.0 dB  QPSK  12ms
+[  534.6s] n=2156 err=178  SlaveTx=   5.0 dBm  MasterRx= -54.9 dBm  CNR= 19.0 dB  QPSK  11ms
+[  535.7s] n=2167 err=178  SlaveTx=   5.0 dBm  MasterRx= -54.5 dBm  CNR= 20.0 dB  QPSK  12ms
+[  536.8s] n=2178 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.9 dBm  CNR=  9.0 dB  QPSK  10ms
+[  537.8s] n=2188 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.9 dBm  CNR=  9.5 dB  QPSK  10ms
+[  538.8s] n=2198 err=178  SlaveTx=   5.0 dBm  MasterRx= -53.1 dBm  CNR= 10.5 dB  QPSK  12ms
+[  539.8s] n=2208 err=178  SlaveTx=   5.0 dBm  MasterRx= -55.3 dBm  CNR= 18.5 dB  QPSK  11ms
+[  540.8s] n=2218 err=178  SlaveTx=   5.0 dBm  MasterRx= -55.0 dBm  CNR= 21.0 dB  QPSK  11ms
+[  541.8s] n=2228 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.8 dBm  CNR= 13.5 dB  QPSK  11ms
+[  542.9s] n=2239 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.7 dBm  CNR= 11.5 dB  QPSK  12ms
+[  544.0s] n=2250 err=178  SlaveTx=   5.0 dBm  MasterRx= -54.5 dBm  CNR= 16.5 dB  QPSK  11ms
+[  545.0s] n=2260 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 20.0 dB  QPSK  12ms
+[  546.1s] n=2271 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 14.0 dB  QPSK  10ms
+[  547.1s] n=2281 err=178  SlaveTx=   5.0 dBm  MasterRx= -49.8 dBm  CNR= 14.5 dB  QPSK  14ms
+[  548.2s] n=2292 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.4 dBm  CNR= 22.0 dB  QPSK  11ms
+[  549.3s] n=2302 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.8 dBm  CNR= 17.5 dB  QPSK  91ms
+[  550.3s] n=2313 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.6 dBm  CNR= 15.5 dB  QPSK  12ms
+[  551.4s] n=2324 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 13.0 dB  QPSK  11ms
+[  552.5s] n=2335 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.8 dBm  CNR= 14.5 dB  QPSK  10ms
+[  553.5s] n=2345 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 12.0 dB  QPSK  11ms
+[  554.6s] n=2356 err=178  SlaveTx=   5.0 dBm  MasterRx= -53.0 dBm  CNR= 20.5 dB  QPSK  10ms
+[  555.6s] n=2366 err=178  SlaveTx=   5.0 dBm  MasterRx= -53.3 dBm  CNR= 20.0 dB  QPSK  11ms
+[  556.6s] n=2376 err=178  SlaveTx=   5.0 dBm  MasterRx= -53.3 dBm  CNR= 20.0 dB  QPSK  11ms
+[  557.6s] n=2386 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.8 dBm  CNR= 20.0 dB  QPSK  11ms
+[  558.6s] n=2396 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.6 dBm  CNR= 15.5 dB  QPSK  13ms
+[  559.7s] n=2407 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 13.5 dB  QPSK  10ms
+[  560.7s] n=2417 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.5 dBm  CNR= 17.5 dB  QPSK  10ms
+[  561.7s] n=2427 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 15.0 dB  QPSK  10ms
+[  562.7s] n=2437 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.7 dBm  CNR= 17.5 dB  QPSK  12ms
+[  563.7s] n=2447 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.1 dBm  CNR= 21.5 dB  QPSK  11ms
+[  564.7s] n=2457 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 15.5 dB  QPSK  11ms
+[  565.7s] n=2467 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 16.5 dB  QPSK  12ms
+[  566.7s] n=2477 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.3 dBm  CNR= 17.5 dB  QPSK  11ms
+[  567.7s] n=2487 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.1 dBm  CNR= 24.0 dB  QPSK  11ms
+[  568.7s] n=2497 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.5 dBm  CNR= 23.0 dB  QPSK  12ms
+[  569.7s] n=2507 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.9 dBm  CNR= 26.0 dB  QPSK  12ms
+[  570.7s] n=2517 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.3 dBm  CNR= 23.5 dB  QPSK  11ms
+[  571.7s] n=2527 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.5 dBm  CNR= 24.0 dB  QPSK  10ms
+[  572.7s] n=2537 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.1 dBm  CNR= 22.0 dB  QPSK  11ms
+[  573.7s] n=2547 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 23.5 dB  QPSK  10ms
+[  574.7s] n=2557 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.1 dBm  CNR= 21.5 dB  QPSK  11ms
+[  575.7s] n=2567 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 22.0 dB  QPSK  11ms
+[  576.7s] n=2577 err=178  SlaveTx=   5.0 dBm  MasterRx= -49.8 dBm  CNR= 21.5 dB  QPSK  11ms
+[  577.7s] n=2587 err=178  SlaveTx=   4.7 dBm  MasterRx= -50.3 dBm  CNR= 25.0 dB  QPSK  12ms
+[  578.8s] n=2598 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 23.5 dB  QPSK  10ms
+[  579.8s] n=2608 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 25.5 dB  QPSK  12ms
+[  580.8s] n=2618 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 25.0 dB  QPSK  12ms
+[  581.8s] n=2628 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.4 dBm  CNR= 25.5 dB  QPSK  12ms
+[  582.9s] n=2639 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 28.5 dB  QPSK  10ms
+[  583.9s] n=2649 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.4 dBm  CNR= 29.0 dB  QPSK  11ms
+[  584.9s] n=2659 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 27.5 dB  QPSK  11ms
+[  586.0s] n=2669 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 29.0 dB  QPSK  11ms
+[  587.0s] n=2679 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.4 dBm  CNR= 27.5 dB  QPSK  12ms
+[  588.1s] n=2690 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 26.5 dB  QPSK  11ms
+[  589.1s] n=2700 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 28.5 dB  QPSK  11ms
+[  590.1s] n=2710 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.1 dBm  CNR= 29.5 dB  QPSK  12ms
+[  591.1s] n=2720 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.3 dBm  CNR= 29.5 dB  QPSK  12ms
+[  592.1s] n=2730 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.2 dBm  CNR= 25.5 dB  QPSK  12ms
+[  593.1s] n=2740 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 25.5 dB  QPSK  12ms
+[  594.1s] n=2750 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 26.5 dB  QPSK  11ms
+[  595.1s] n=2760 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 28.0 dB  QPSK  17ms
+[  596.2s] n=2771 err=178  SlaveTx=   4.7 dBm  MasterRx= -49.8 dBm  CNR= 25.0 dB  QPSK  11ms
+[  597.2s] n=2781 err=178  SlaveTx=   4.9 dBm  MasterRx= -50.1 dBm  CNR= 28.0 dB  QPSK  12ms
+[  598.2s] n=2791 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.2 dBm  CNR= 26.5 dB  QPSK  12ms
+[  599.2s] n=2801 err=178  SlaveTx=   4.0 dBm  MasterRx= -49.8 dBm  CNR= 29.0 dB  QPSK  11ms
+[  600.2s] n=2811 err=178  SlaveTx=   3.5 dBm  MasterRx= -49.9 dBm  CNR= 24.5 dB  QPSK  11ms
+[  601.2s] n=2821 err=178  SlaveTx=   4.3 dBm  MasterRx= -49.8 dBm  CNR= 24.0 dB  QPSK  12ms
+[  602.2s] n=2831 err=178  SlaveTx=   4.8 dBm  MasterRx= -50.7 dBm  CNR= 27.0 dB  QPSK  11ms
+[  603.2s] n=2841 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 21.0 dB  QPSK  11ms
+[  604.2s] n=2851 err=178  SlaveTx=   4.7 dBm  MasterRx= -50.6 dBm  CNR= 21.5 dB  QPSK  12ms
+[  605.2s] n=2861 err=178  SlaveTx=   3.9 dBm  MasterRx= -50.2 dBm  CNR= 20.0 dB  QPSK  12ms
+[  606.2s] n=2871 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 27.5 dB  QPSK  12ms
+[  607.2s] n=2881 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.3 dBm  CNR= 27.5 dB  QPSK  12ms
+[  608.2s] n=2891 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.1 dBm  CNR= 26.0 dB  QPSK  12ms
+[  609.2s] n=2901 err=178  SlaveTx=   4.9 dBm  MasterRx= -49.9 dBm  CNR= 28.0 dB  QPSK  89ms
+[  610.3s] n=2912 err=178  SlaveTx=   4.2 dBm  MasterRx= -50.2 dBm  CNR= 26.0 dB  QPSK  11ms
+[  611.4s] n=2923 err=178  SlaveTx=   4.7 dBm  MasterRx= -50.0 dBm  CNR= 28.0 dB  QPSK  11ms
+[  612.4s] n=2933 err=178  SlaveTx=   4.4 dBm  MasterRx= -49.9 dBm  CNR= 28.5 dB  QPSK  11ms
+[  613.4s] n=2943 err=178  SlaveTx=   3.9 dBm  MasterRx= -49.7 dBm  CNR= 24.0 dB  QPSK  11ms
+[  614.4s] n=2953 err=178  SlaveTx=   3.1 dBm  MasterRx= -49.7 dBm  CNR= 26.5 dB  QPSK  11ms
+[  615.4s] n=2963 err=178  SlaveTx=   3.1 dBm  MasterRx= -50.1 dBm  CNR= 29.0 dB  QPSK  11ms
+[  616.4s] n=2973 err=178  SlaveTx=   2.8 dBm  MasterRx= -50.3 dBm  CNR= 28.5 dB  QPSK  11ms
+[  617.4s] n=2983 err=178  SlaveTx=   3.1 dBm  MasterRx= -50.0 dBm  CNR= 25.0 dB  QPSK  12ms
+[  618.4s] n=2993 err=178  SlaveTx=   2.7 dBm  MasterRx= -49.9 dBm  CNR= 28.0 dB  QPSK  12ms
+[  619.4s] n=3003 err=178  SlaveTx=   2.9 dBm  MasterRx= -50.0 dBm  CNR= 29.0 dB  QPSK  12ms
+[  620.4s] n=3013 err=178  SlaveTx=   2.5 dBm  MasterRx= -49.9 dBm  CNR= 28.5 dB  QPSK  12ms
+[  621.4s] n=3023 err=178  SlaveTx=   2.8 dBm  MasterRx= -50.0 dBm  CNR= 29.0 dB  QPSK  12ms
+[  622.4s] n=3033 err=178  SlaveTx=   3.0 dBm  MasterRx= -49.8 dBm  CNR= 27.5 dB  QPSK  12ms
+[  623.4s] n=3043 err=178  SlaveTx=   2.8 dBm  MasterRx= -50.0 dBm  CNR= 28.0 dB  QPSK  11ms
+[  624.4s] n=3053 err=178  SlaveTx=   3.0 dBm  MasterRx= -50.0 dBm  CNR= 30.0 dB  QPSK  18ms
+[  625.5s] n=3064 err=178  SlaveTx=   3.0 dBm  MasterRx= -50.0 dBm  CNR= 29.0 dB  QPSK  12ms
+[  626.6s] n=3075 err=178  SlaveTx=   3.4 dBm  MasterRx= -49.8 dBm  CNR= 29.0 dB  QPSK  11ms
+[  627.6s] n=3085 err=178  SlaveTx=   3.3 dBm  MasterRx= -50.1 dBm  CNR= 30.0 dB  QPSK  12ms
+[  628.6s] n=3095 err=178  SlaveTx=   3.5 dBm  MasterRx= -49.6 dBm  CNR= 29.0 dB  QPSK  12ms
+[  629.7s] n=3106 err=178  SlaveTx=   3.0 dBm  MasterRx= -50.3 dBm  CNR= 26.0 dB  QPSK  12ms
+[  630.7s] n=3116 err=178  SlaveTx=   3.3 dBm  MasterRx= -49.7 dBm  CNR= 28.0 dB  QPSK  15ms
+[  631.8s] n=3127 err=178  SlaveTx=   3.2 dBm  MasterRx= -50.5 dBm  CNR= 29.0 dB  QPSK  11ms
+[  632.8s] n=3137 err=178  SlaveTx=   3.6 dBm  MasterRx= -50.2 dBm  CNR= 25.0 dB  QPSK  11ms
+[  633.8s] n=3147 err=178  SlaveTx=   4.9 dBm  MasterRx= -49.6 dBm  CNR= 24.5 dB  QPSK  12ms
+[  634.9s] n=3158 err=178  SlaveTx=   4.7 dBm  MasterRx= -50.3 dBm  CNR= 23.5 dB  QPSK  11ms
+[  635.9s] n=3168 err=178  SlaveTx=   4.7 dBm  MasterRx= -50.3 dBm  CNR= 22.0 dB  QPSK  11ms
+[  636.9s] n=3178 err=178  SlaveTx=   4.6 dBm  MasterRx= -49.7 dBm  CNR= 26.5 dB  QPSK  11ms
+[  637.9s] n=3188 err=178  SlaveTx=   4.8 dBm  MasterRx= -49.8 dBm  CNR= 25.0 dB  QPSK  11ms
+[  639.0s] n=3199 err=178  SlaveTx=   4.0 dBm  MasterRx= -50.5 dBm  CNR= 27.0 dB  QPSK  11ms
+[  640.0s] n=3209 err=178  SlaveTx=   4.6 dBm  MasterRx= -50.2 dBm  CNR= 24.0 dB  QPSK  12ms
+[  641.0s] n=3219 err=178  SlaveTx=   4.1 dBm  MasterRx= -50.1 dBm  CNR= 27.0 dB  QPSK  12ms
+[  642.0s] n=3229 err=178  SlaveTx=   4.8 dBm  MasterRx= -49.8 dBm  CNR= 23.5 dB  QPSK  12ms
+[  643.0s] n=3239 err=178  SlaveTx=   4.3 dBm  MasterRx= -50.2 dBm  CNR= 26.0 dB  QPSK  12ms
+[  644.1s] n=3250 err=178  SlaveTx=   4.4 dBm  MasterRx= -50.1 dBm  CNR= 27.5 dB  QPSK  12ms
+[  645.1s] n=3260 err=178  SlaveTx=   4.6 dBm  MasterRx= -50.1 dBm  CNR= 26.5 dB  QPSK  11ms
+[  646.1s] n=3270 err=178  SlaveTx=   4.6 dBm  MasterRx= -50.0 dBm  CNR= 24.0 dB  QPSK  10ms
+[  647.1s] n=3280 err=178  SlaveTx=   4.6 dBm  MasterRx= -50.2 dBm  CNR= 29.5 dB  QPSK  10ms
+[  648.1s] n=3290 err=178  SlaveTx=   4.9 dBm  MasterRx= -50.2 dBm  CNR= 30.5 dB  QPSK  11ms
+[  649.1s] n=3300 err=178  SlaveTx=   4.5 dBm  MasterRx= -50.0 dBm  CNR= 26.5 dB  QPSK  12ms
+[  650.1s] n=3310 err=178  SlaveTx=   4.4 dBm  MasterRx= -49.9 dBm  CNR= 28.5 dB  QPSK  12ms
+[  651.1s] n=3320 err=178  SlaveTx=   4.3 dBm  MasterRx= -50.1 dBm  CNR= 28.5 dB  QPSK  12ms
+[  652.1s] n=3330 err=178  SlaveTx=   4.3 dBm  MasterRx= -49.9 dBm  CNR= 29.5 dB  QPSK  12ms
+[  653.2s] n=3341 err=178  SlaveTx=   4.9 dBm  MasterRx= -50.2 dBm  CNR= 29.5 dB  QPSK  12ms
+[  654.3s] n=3351 err=178  SlaveTx=   4.4 dBm  MasterRx= -49.7 dBm  CNR= 23.5 dB  QPSK  13ms
+[  655.3s] n=3361 err=178  SlaveTx=   4.2 dBm  MasterRx= -50.0 dBm  CNR= 27.0 dB  QPSK  13ms
+[  656.4s] n=3372 err=178  SlaveTx=   4.7 dBm  MasterRx= -50.2 dBm  CNR= 29.0 dB  QPSK  11ms
+[  657.5s] n=3383 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.1 dBm  CNR= 21.5 dB  QPSK  13ms
+[  658.6s] n=3394 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.0 dBm  CNR= 22.5 dB  QPSK  12ms
+[  659.6s] n=3404 err=178  SlaveTx=   4.8 dBm  MasterRx= -49.5 dBm  CNR= 26.5 dB  QPSK  12ms
+[  660.6s] n=3414 err=178  SlaveTx=   4.0 dBm  MasterRx= -49.2 dBm  CNR= 22.0 dB  QPSK  12ms
+[  661.6s] n=3424 err=178  SlaveTx=   4.9 dBm  MasterRx= -50.7 dBm  CNR= 20.5 dB  QPSK  12ms
+[  662.6s] n=3434 err=178  SlaveTx=   4.8 dBm  MasterRx= -50.2 dBm  CNR= 19.0 dB  QPSK  11ms
+[  663.6s] n=3444 err=178  SlaveTx=   4.5 dBm  MasterRx= -50.8 dBm  CNR= 21.0 dB  QPSK  11ms
+[  664.6s] n=3454 err=178  SlaveTx=   4.0 dBm  MasterRx= -50.4 dBm  CNR= 27.0 dB  QPSK  11ms
+[  665.6s] n=3464 err=178  SlaveTx=   4.9 dBm  MasterRx= -50.9 dBm  CNR= 21.5 dB  QPSK  11ms
+[  666.6s] n=3474 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 23.5 dB  QPSK  11ms
+[  667.6s] n=3484 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.4 dBm  CNR= 20.5 dB  QPSK  11ms
+[  668.6s] n=3494 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.7 dBm  CNR= 20.5 dB  QPSK  11ms
+[  669.6s] n=3503 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 23.5 dB  QPSK  120ms
+[  670.6s] n=3514 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.2 dBm  CNR= 25.5 dB  QPSK  10ms
+[  671.6s] n=3524 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 26.5 dB  QPSK  10ms
+[  672.6s] n=3534 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 23.5 dB  QPSK  11ms
+[  673.6s] n=3544 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.9 dBm  CNR= 25.5 dB  QPSK  12ms
+[  674.6s] n=3554 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.5 dBm  CNR= 25.5 dB  QPSK  11ms
+[  675.6s] n=3564 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.1 dBm  CNR= 23.0 dB  QPSK  13ms
+[  676.6s] n=3574 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 21.5 dB  QPSK  18ms
+[  677.7s] n=3585 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.9 dBm  CNR= 26.0 dB  QPSK  11ms
+[  678.7s] n=3595 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.9 dBm  CNR= 25.5 dB  QPSK  11ms
+[  679.7s] n=3605 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 22.0 dB  QPSK  11ms
+[  680.7s] n=3615 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 24.5 dB  QPSK  12ms
+[  681.7s] n=3625 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.1 dBm  CNR= 28.0 dB  QPSK  13ms
+[  682.7s] n=3635 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.3 dBm  CNR= 29.0 dB  QPSK  13ms
+[  683.7s] n=3645 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 22.5 dB  QPSK  12ms
+[  684.7s] n=3655 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.3 dBm  CNR= 26.5 dB  QPSK  11ms
+[  685.7s] n=3665 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.9 dBm  CNR= 24.0 dB  QPSK  12ms
+[  686.8s] n=3676 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.6 dBm  CNR= 24.5 dB  QPSK  11ms
+[  687.8s] n=3686 err=178  SlaveTx=   5.0 dBm  MasterRx= -53.4 dBm  CNR= 25.5 dB  QPSK  11ms
+[  688.8s] n=3696 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.8 dBm  CNR= 25.5 dB  QPSK  11ms
+[  689.8s] n=3706 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.2 dBm  CNR= 24.0 dB  QPSK  11ms
+[  690.8s] n=3716 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 24.5 dB  QPSK  11ms
+[  691.9s] n=3727 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.2 dBm  CNR= 24.0 dB  QPSK  10ms
+[  692.9s] n=3737 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.3 dBm  CNR= 24.5 dB  QPSK  11ms
+[  693.9s] n=3747 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.4 dBm  CNR= 17.5 dB  QPSK  10ms
+[  694.9s] n=3757 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 19.0 dB  QPSK  12ms
+[  695.9s] n=3767 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.3 dBm  CNR= 23.0 dB  QPSK  12ms
+[  696.9s] n=3777 err=178  SlaveTx=   5.0 dBm  MasterRx= -53.1 dBm  CNR= 21.0 dB  QPSK  11ms
+[  698.0s] n=3788 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.5 dBm  CNR= 23.0 dB  QPSK  10ms
+[  699.0s] n=3798 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 22.0 dB  QPSK  10ms
+[  700.1s] n=3808 err=178  SlaveTx=   5.0 dBm  MasterRx= -53.2 dBm  CNR= 26.5 dB  QPSK  12ms
+[  701.1s] n=3818 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.5 dBm  CNR= 25.5 dB  QPSK  11ms
+[  702.1s] n=3828 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 24.0 dB  QPSK  11ms
+[  703.1s] n=3838 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.3 dBm  CNR= 25.0 dB  QPSK  11ms
+[  704.1s] n=3848 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.4 dBm  CNR= 22.5 dB  QPSK  12ms
+[  705.2s] n=3859 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.9 dBm  CNR= 20.0 dB  QPSK  11ms
+[  706.2s] n=3869 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 11.5 dB  QPSK  13ms
+[  707.3s] n=3880 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.2 dBm  CNR= 16.5 dB  QPSK  12ms
+[  708.4s] n=3891 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.8 dBm  CNR= 20.5 dB  QPSK  10ms
+[  709.4s] n=3901 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.1 dBm  CNR= 18.5 dB  QPSK  11ms
+[  710.4s] n=3911 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.1 dBm  CNR= 19.0 dB  QPSK  11ms
+[  711.4s] n=3921 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.7 dBm  CNR= 24.5 dB  QPSK  11ms
+[  712.4s] n=3931 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.2 dBm  CNR= 24.5 dB  QPSK  17ms
+[  713.5s] n=3942 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.8 dBm  CNR= 22.0 dB  QPSK  10ms
+[  714.5s] n=3952 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.5 dBm  CNR= 22.0 dB  QPSK  10ms
+[  715.5s] n=3962 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.0 dBm  CNR= 24.0 dB  QPSK  11ms
+[  716.5s] n=3972 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.7 dBm  CNR= 23.0 dB  QPSK  12ms
+[  717.5s] n=3982 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.3 dBm  CNR= 21.0 dB  QPSK  12ms
+[  718.6s] n=3993 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.9 dBm  CNR= 19.5 dB  QPSK  11ms
+[  719.6s] n=4003 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.7 dBm  CNR= 19.5 dB  QPSK  12ms
+[  720.6s] n=4013 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 18.0 dB  QPSK  11ms
+[  721.6s] n=4023 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.1 dBm  CNR= 17.0 dB  QPSK  11ms
+[  722.6s] n=4033 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 15.5 dB  QPSK  11ms
+[  723.6s] n=4043 err=178  SlaveTx=   5.0 dBm  MasterRx= -52.9 dBm  CNR= 18.5 dB  QPSK  11ms
+[  724.7s] n=4054 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.7 dBm  CNR= 17.5 dB  QPSK  12ms
+[  725.8s] n=4065 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 23.0 dB  QPSK  10ms
+[  726.8s] n=4075 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.4 dBm  CNR= 20.5 dB  QPSK  11ms
+[  727.8s] n=4085 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.1 dBm  CNR= 20.5 dB  QPSK  10ms
+[  728.8s] n=4095 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.1 dBm  CNR= 21.5 dB  QPSK  36ms
+[  729.8s] n=4105 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.4 dBm  CNR= 21.0 dB  QPSK  12ms
+[  730.8s] n=4115 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.1 dBm  CNR= 25.0 dB  QPSK  13ms
+[  731.8s] n=4125 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 19.5 dB  QPSK  13ms
+[  732.9s] n=4136 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 21.5 dB  QPSK  11ms
+[  733.9s] n=4146 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 24.5 dB  QPSK  10ms
+[  734.9s] n=4156 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.2 dBm  CNR= 24.0 dB  QPSK  11ms
+[  735.9s] n=4166 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 23.0 dB  QPSK  11ms
+[  736.9s] n=4176 err=178  SlaveTx=   5.0 dBm  MasterRx= -49.9 dBm  CNR= 18.0 dB  QPSK  12ms
+[  738.0s] n=4187 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 25.0 dB  QPSK  10ms
+[  739.0s] n=4197 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 25.5 dB  QPSK  10ms
+[  740.0s] n=4207 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.1 dBm  CNR= 21.5 dB  QPSK  11ms
+[  741.0s] n=4217 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.3 dBm  CNR= 24.5 dB  QPSK  12ms
+[  742.0s] n=4227 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 22.5 dB  QPSK  12ms
+[  743.0s] n=4237 err=178  SlaveTx=   5.0 dBm  MasterRx= -51.1 dBm  CNR= 27.5 dB  QPSK  11ms
+[  744.0s] n=4247 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.4 dBm  CNR= 26.0 dB  QPSK  12ms
+[  745.0s] n=4257 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 26.5 dB  QPSK  11ms
+[  746.0s] n=4267 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 28.5 dB  QPSK  11ms
+[  747.0s] n=4277 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 25.0 dB  QPSK  12ms
+[  748.1s] n=4288 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.4 dBm  CNR= 29.0 dB  QPSK  12ms
+[  749.1s] n=4298 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 25.5 dB  QPSK  11ms
+[  750.1s] n=4308 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.3 dBm  CNR= 27.5 dB  QPSK  11ms
+[  751.1s] n=4318 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.3 dBm  CNR= 26.0 dB  QPSK  12ms
+[  752.2s] n=4329 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 28.0 dB  QPSK  12ms
+[  753.2s] n=4339 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 26.0 dB  QPSK  12ms
+[  754.3s] n=4350 err=178  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 27.0 dB  QPSK  12ms
+  [2026-10-10T18:19:34.393] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:19:36.395] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:19:38.397] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:19:40.399] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:19:42.401] ⚠️ <urlopen error timed out>
+[  766.2s] n=4364 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 19.0 dB  QPSK  1017ms
+[  767.3s] n=4375 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 20.0 dB  QPSK  12ms
+[  768.4s] n=4386 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 22.0 dB  QPSK  11ms
+[  769.4s] n=4396 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 23.0 dB  QPSK  11ms
+[  770.4s] n=4406 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 24.0 dB  QPSK  11ms
+[  771.4s] n=4416 err=183  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 25.5 dB  QPSK  71ms
+[  772.5s] n=4427 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 26.0 dB  QPSK  12ms
+[  773.6s] n=4438 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 26.5 dB  QPSK  11ms
+[  774.6s] n=4448 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 27.0 dB  QPSK  11ms
+[  775.6s] n=4458 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 28.5 dB  QPSK  11ms
+[  776.6s] n=4467 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 29.0 dB  QPSK  115ms
+[  777.7s] n=4475 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 29.0 dB  QPSK  11ms
+[  778.7s] n=4485 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 29.5 dB  QPSK  11ms
+[  779.7s] n=4495 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  14ms
+[  780.7s] n=4505 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  14ms
+[  781.8s] n=4516 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[  782.8s] n=4526 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[  783.8s] n=4536 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  13ms
+[  784.8s] n=4546 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[  785.9s] n=4557 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  787.0s] n=4565 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  204ms
+[  788.1s] n=4574 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  789.1s] n=4584 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.5 dB  QPSK  11ms
+[  790.1s] n=4594 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.4 dBm  CNR= 30.5 dB  QPSK  11ms
+[  791.1s] n=4604 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.0 dB  QPSK  11ms
+[  792.1s] n=4614 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  793.1s] n=4624 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[  794.1s] n=4634 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  12ms
+[  795.1s] n=4644 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 29.5 dB  QPSK  12ms
+[  796.1s] n=4654 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  11ms
+[  797.2s] n=4660 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  266ms
+[  798.3s] n=4670 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  10ms
+[  799.3s] n=4680 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 29.5 dB  QPSK  11ms
+[  800.3s] n=4690 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[  801.3s] n=4700 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  802.3s] n=4710 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  803.3s] n=4720 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  11ms
+[  804.3s] n=4730 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[  805.3s] n=4740 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  12ms
+[  806.3s] n=4750 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  12ms
+[  807.5s] n=4754 err=183  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 31.0 dB  QPSK  314ms
+[  808.5s] n=4765 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  10ms
+[  809.5s] n=4775 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[  810.5s] n=4785 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  12ms
+[  811.5s] n=4795 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 29.5 dB  QPSK  12ms
+[  812.5s] n=4805 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.0 dB  QPSK  11ms
+[  813.5s] n=4815 err=183  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 30.5 dB  QPSK  12ms
+[  814.6s] n=4826 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[  815.6s] n=4836 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[  816.7s] n=4845 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  199ms
+[  817.8s] n=4851 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[  818.8s] n=4861 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  12ms
+[  819.8s] n=4871 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[  820.8s] n=4881 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[  821.8s] n=4891 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  11ms
+[  822.9s] n=4902 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 31.0 dB  QPSK  10ms
+[  823.9s] n=4912 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[  825.0s] n=4923 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[  826.0s] n=4933 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[  827.3s] n=4940 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  321ms
+[  828.3s] n=4950 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  829.3s] n=4960 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  11ms
+[  830.3s] n=4970 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[  831.3s] n=4980 err=183  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 30.0 dB  QPSK  12ms
+[  832.3s] n=4990 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  14ms
+[  833.4s] n=5001 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  12ms
+[  834.4s] n=5011 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  11ms
+[  835.4s] n=5021 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  836.6s] n=5031 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  160ms
+[  837.6s] n=5036 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  12ms
+[  838.6s] n=5046 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[  839.6s] n=5056 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  840.6s] n=5066 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  11ms
+[  841.7s] n=5076 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  10ms
+[  842.7s] n=5086 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  10ms
+[  843.7s] n=5096 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.5 dB  QPSK  12ms
+[  844.7s] n=5106 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  845.7s] n=5116 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[  846.7s] n=5124 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 29.5 dB  QPSK  221ms
+[  847.7s] n=5130 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  10ms
+[  848.7s] n=5140 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  14ms
+[  849.8s] n=5151 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.0 dB  QPSK  12ms
+[  850.9s] n=5162 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[  851.9s] n=5172 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  12ms
+[  852.9s] n=5182 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  12ms
+[  854.0s] n=5193 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  10ms
+[  855.0s] n=5203 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  10ms
+[  856.0s] n=5213 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  12ms
+[  857.3s] n=5219 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  343ms
+[  858.3s] n=5229 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  11ms
+[  859.3s] n=5239 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.5 dB  QPSK  11ms
+[  860.3s] n=5249 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  11ms
+[  861.3s] n=5259 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 31.0 dB  QPSK  11ms
+[  862.3s] n=5269 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  12ms
+[  863.3s] n=5279 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  14ms
+[  864.4s] n=5290 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[  865.4s] n=5300 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[  866.6s] n=5310 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  185ms
+[  867.7s] n=5315 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  868.7s] n=5325 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[  869.7s] n=5335 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[  870.8s] n=5346 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[  871.8s] n=5356 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[  872.8s] n=5366 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  10ms
+[  873.8s] n=5376 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  11ms
+[  874.8s] n=5386 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[  875.8s] n=5396 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  10ms
+[  877.2s] n=5404 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  505ms
+[  878.3s] n=5414 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  10ms
+[  879.3s] n=5424 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 31.0 dB  QPSK  11ms
+[  880.3s] n=5434 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  12ms
+[  881.3s] n=5444 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[  882.3s] n=5454 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[  883.3s] n=5464 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  884.3s] n=5474 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[  885.3s] n=5484 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  12ms
+[  886.3s] n=5494 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[  887.5s] n=5497 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  490ms
+[  888.5s] n=5508 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[  889.5s] n=5518 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  11ms
+[  890.5s] n=5528 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  10ms
+[  891.5s] n=5538 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  12ms
+[  892.5s] n=5548 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  13ms
+[  893.6s] n=5559 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[  894.6s] n=5569 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  11ms
+[  895.7s] n=5579 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[  897.1s] n=5588 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 31.5 dB  QPSK  500ms
+[  898.2s] n=5597 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  11ms
+[  899.2s] n=5607 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[  900.2s] n=5617 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  10ms
+[  901.2s] n=5627 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 29.5 dB  QPSK  11ms
+[  902.2s] n=5637 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[  903.2s] n=5647 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  904.2s] n=5657 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[  905.2s] n=5667 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  10ms
+[  906.2s] n=5677 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  10ms
+[  907.5s] n=5681 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  378ms
+[  908.5s] n=5692 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[  909.5s] n=5702 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  11ms
+[  910.5s] n=5712 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  11ms
+[  911.5s] n=5722 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  912.5s] n=5732 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  11ms
+[  913.5s] n=5742 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 31.0 dB  QPSK  11ms
+[  914.5s] n=5752 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[  915.5s] n=5762 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  12ms
+[  916.7s] n=5773 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  21ms
+[  917.7s] n=5784 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  11ms
+[  918.7s] n=5794 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  919.8s] n=5804 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  12ms
+[  920.9s] n=5815 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[  921.9s] n=5825 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[  922.9s] n=5835 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[  923.9s] n=5845 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 29.5 dB  QPSK  10ms
+[  924.9s] n=5855 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 29.5 dB  QPSK  12ms
+[  925.9s] n=5865 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  19ms
+[  927.0s] n=5876 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[  928.0s] n=5886 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  10ms
+[  929.0s] n=5896 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[  930.0s] n=5906 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  931.0s] n=5916 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[  932.0s] n=5926 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  11ms
+[  933.0s] n=5936 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[  934.0s] n=5946 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  11ms
+[  935.0s] n=5956 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 29.5 dB  QPSK  12ms
+[  936.0s] n=5966 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.2 dBm  CNR= 29.5 dB  QPSK  12ms
+[  937.0s] n=5976 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[  938.0s] n=5986 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.0 dB  QPSK  12ms
+[  939.1s] n=5997 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.4 dBm  CNR= 28.0 dB  QPSK  11ms
+[  940.1s] n=6007 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 29.0 dB  QPSK  11ms
+[  941.1s] n=6017 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[  942.1s] n=6027 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  12ms
+[  943.1s] n=6037 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[  944.1s] n=6047 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  10ms
+[  945.1s] n=6057 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[  946.1s] n=6067 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[  947.1s] n=6077 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[  948.1s] n=6087 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  17ms
+[  949.2s] n=6098 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  12ms
+[  950.3s] n=6109 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  951.3s] n=6119 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[  952.3s] n=6129 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 31.5 dB  QPSK  10ms
+[  953.3s] n=6139 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  954.3s] n=6149 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.0 dB  QPSK  12ms
+[  955.3s] n=6159 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  956.3s] n=6169 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[  957.3s] n=6179 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  958.3s] n=6189 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  13ms
+[  959.4s] n=6200 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[  960.4s] n=6210 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  10ms
+[  961.4s] n=6220 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[  962.4s] n=6230 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  10ms
+[  963.4s] n=6240 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[  964.4s] n=6250 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[  965.4s] n=6260 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[  966.4s] n=6270 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[  967.4s] n=6280 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  10ms
+[  968.4s] n=6290 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  969.4s] n=6300 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  16ms
+[  970.5s] n=6311 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  971.6s] n=6322 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[  972.6s] n=6332 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 31.0 dB  QPSK  12ms
+[  973.6s] n=6342 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[  974.6s] n=6352 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 29.0 dB  QPSK  13ms
+[  975.6s] n=6362 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  13ms
+[  976.6s] n=6372 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  12ms
+[  977.6s] n=6382 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[  978.6s] n=6392 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  10ms
+[  979.7s] n=6402 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.5 dB  QPSK  13ms
+[  980.7s] n=6412 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 29.5 dB  QPSK  12ms
+[  981.7s] n=6422 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.0 dB  QPSK  11ms
+[  982.7s] n=6432 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[  983.7s] n=6442 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  18ms
+[  984.8s] n=6453 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 29.5 dB  QPSK  10ms
+[  985.8s] n=6463 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.0 dB  QPSK  11ms
+[  986.8s] n=6473 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  10ms
+[  987.8s] n=6483 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[  988.8s] n=6493 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[  989.8s] n=6503 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 31.0 dB  QPSK  12ms
+[  990.8s] n=6513 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.5 dB  QPSK  11ms
+[  991.8s] n=6523 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  10ms
+[  992.8s] n=6533 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[  993.8s] n=6543 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[  994.8s] n=6553 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[  995.8s] n=6563 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.0 dB  QPSK  11ms
+[  996.8s] n=6573 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  12ms
+[  997.8s] n=6583 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.0 dB  QPSK  11ms
+[  998.8s] n=6593 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[  999.8s] n=6603 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  10ms
+[ 1000.8s] n=6613 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1001.8s] n=6623 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1002.8s] n=6633 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1003.8s] n=6643 err=183  SlaveTx=   5.0 dBm  MasterRx= -51.1 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1004.8s] n=6653 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1005.8s] n=6663 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1006.8s] n=6673 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1007.8s] n=6683 err=183  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1008.8s] n=6693 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1009.8s] n=6703 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1010.8s] n=6713 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1011.8s] n=6723 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.4 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1012.8s] n=6733 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1013.8s] n=6743 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1014.8s] n=6753 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1015.8s] n=6763 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1016.8s] n=6773 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1017.8s] n=6783 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1018.8s] n=6793 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1019.8s] n=6803 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  19ms
+[ 1020.9s] n=6814 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1021.9s] n=6824 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1022.9s] n=6834 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1023.9s] n=6844 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1024.9s] n=6854 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  18ms
+[ 1025.9s] n=6864 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  20ms
+[ 1027.0s] n=6875 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1028.0s] n=6885 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1029.0s] n=6895 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1030.0s] n=6905 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1031.0s] n=6915 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1032.0s] n=6925 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1033.1s] n=6936 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1034.1s] n=6946 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1035.1s] n=6956 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1036.1s] n=6966 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1037.1s] n=6976 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1038.1s] n=6986 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1039.1s] n=6996 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1040.2s] n=7007 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.4 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1041.3s] n=7017 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1042.3s] n=7027 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1043.3s] n=7037 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  17ms
+[ 1044.4s] n=7048 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1045.4s] n=7058 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1046.4s] n=7068 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.5 dB  QPSK  11ms
+[ 1047.4s] n=7078 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1048.5s] n=7089 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1049.5s] n=7099 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 29.5 dB  QPSK  11ms
+[ 1050.5s] n=7109 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1051.5s] n=7119 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1052.5s] n=7129 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1053.5s] n=7139 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1054.5s] n=7149 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.5 dB  QPSK  11ms
+[ 1055.5s] n=7159 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.5 dB  QPSK  12ms
+[ 1056.5s] n=7169 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 31.0 dB  QPSK  16ms
+[ 1057.5s] n=7179 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  16ms
+[ 1058.6s] n=7190 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1059.6s] n=7200 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1060.6s] n=7210 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1061.6s] n=7220 err=183  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 31.0 dB  QPSK  15ms
+[ 1062.6s] n=7230 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  19ms
+[ 1063.7s] n=7241 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1064.7s] n=7251 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1065.7s] n=7261 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1066.7s] n=7271 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1067.7s] n=7281 err=183  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1068.7s] n=7291 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1069.7s] n=7301 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1070.7s] n=7311 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1071.7s] n=7321 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  13ms
+[ 1072.8s] n=7332 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1073.8s] n=7342 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1074.8s] n=7352 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1075.8s] n=7362 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  15ms
+[ 1076.9s] n=7373 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1077.9s] n=7383 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1078.9s] n=7393 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1079.9s] n=7403 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1080.9s] n=7413 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1081.9s] n=7423 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1082.9s] n=7433 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1083.9s] n=7443 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 29.5 dB  QPSK  12ms
+[ 1084.9s] n=7453 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1085.9s] n=7463 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1086.9s] n=7473 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1087.9s] n=7483 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1088.9s] n=7493 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1089.9s] n=7503 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1090.9s] n=7513 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.4 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1091.9s] n=7523 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1092.9s] n=7533 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1093.9s] n=7543 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1094.9s] n=7553 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1095.9s] n=7563 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1096.9s] n=7573 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1097.9s] n=7583 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  13ms
+[ 1099.0s] n=7594 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1100.0s] n=7604 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1101.0s] n=7614 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1102.1s] n=7625 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1103.1s] n=7635 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  10ms
+[ 1104.2s] n=7645 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1105.2s] n=7655 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1106.2s] n=7665 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1107.2s] n=7675 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1108.2s] n=7685 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  18ms
+[ 1109.3s] n=7696 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1110.3s] n=7706 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1111.3s] n=7716 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  10ms
+[ 1112.3s] n=7726 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  15ms
+[ 1113.3s] n=7736 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1114.3s] n=7746 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1115.3s] n=7756 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1116.3s] n=7766 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  13ms
+[ 1117.3s] n=7776 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1118.3s] n=7786 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1119.3s] n=7796 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1120.3s] n=7806 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1121.3s] n=7816 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1122.3s] n=7826 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1123.3s] n=7836 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1124.3s] n=7846 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1125.3s] n=7856 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1126.3s] n=7866 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1127.3s] n=7876 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1128.3s] n=7886 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1129.3s] n=7896 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1130.3s] n=7906 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1131.3s] n=7916 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1132.3s] n=7926 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  19ms
+[ 1133.4s] n=7937 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1134.4s] n=7947 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1135.4s] n=7957 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1136.4s] n=7967 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1137.4s] n=7977 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1138.4s] n=7987 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.5 dB  QPSK  11ms
+[ 1139.4s] n=7997 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  14ms
+[ 1140.5s] n=8008 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1141.5s] n=8018 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1142.5s] n=8028 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1143.5s] n=8038 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1144.5s] n=8048 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1145.5s] n=8058 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1146.5s] n=8068 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1147.5s] n=8078 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  13ms
+[ 1148.5s] n=8088 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1149.5s] n=8098 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1150.5s] n=8108 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1151.6s] n=8119 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1152.6s] n=8129 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1153.6s] n=8139 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1154.6s] n=8149 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1155.6s] n=8159 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1156.6s] n=8169 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1157.6s] n=8179 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1158.6s] n=8189 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1159.6s] n=8199 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1160.6s] n=8209 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1161.6s] n=8219 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  13ms
+[ 1162.6s] n=8229 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1163.6s] n=8239 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1164.7s] n=8249 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1165.7s] n=8259 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1166.7s] n=8269 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1167.7s] n=8279 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.5 dB  QPSK  11ms
+[ 1168.7s] n=8289 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1169.7s] n=8299 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1170.8s] n=8310 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  10ms
+[ 1171.8s] n=8320 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1172.8s] n=8330 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1173.8s] n=8340 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1174.8s] n=8350 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1175.8s] n=8360 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1176.8s] n=8370 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1177.8s] n=8380 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1178.8s] n=8390 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1179.8s] n=8400 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  10ms
+[ 1180.8s] n=8410 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1181.8s] n=8420 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1182.8s] n=8430 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1183.8s] n=8440 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1184.8s] n=8450 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  10ms
+[ 1185.8s] n=8460 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1186.8s] n=8470 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1187.8s] n=8480 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  10ms
+[ 1188.8s] n=8490 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1189.8s] n=8500 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1190.8s] n=8510 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1191.8s] n=8520 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1192.8s] n=8530 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1193.8s] n=8540 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1194.8s] n=8550 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  13ms
+[ 1195.8s] n=8560 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  14ms
+[ 1196.9s] n=8571 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1197.9s] n=8581 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1198.9s] n=8591 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1199.9s] n=8601 err=183  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1200.9s] n=8611 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 29.5 dB  QPSK  11ms
+[ 1201.9s] n=8621 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1202.9s] n=8631 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1203.9s] n=8641 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  21ms
+[ 1205.0s] n=8652 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1206.1s] n=8663 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1207.1s] n=8673 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1208.1s] n=8683 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1209.1s] n=8693 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1210.1s] n=8703 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  10ms
+[ 1211.1s] n=8713 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1212.1s] n=8723 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 32.0 dB  QPSK  11ms
+[ 1213.1s] n=8733 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1214.1s] n=8743 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 29.5 dB  QPSK  11ms
+[ 1215.1s] n=8753 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  10ms
+[ 1216.1s] n=8763 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  10ms
+[ 1217.1s] n=8773 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1218.1s] n=8783 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1219.1s] n=8793 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1220.1s] n=8803 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1221.1s] n=8813 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1222.1s] n=8823 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1223.2s] n=8833 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1224.2s] n=8843 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1225.2s] n=8853 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1226.2s] n=8863 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1227.2s] n=8873 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1228.2s] n=8883 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1229.2s] n=8893 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1230.2s] n=8903 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  10ms
+[ 1231.2s] n=8913 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1232.2s] n=8923 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.4 dBm  CNR= 29.5 dB  QPSK  10ms
+[ 1233.2s] n=8933 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  13ms
+[ 1234.2s] n=8943 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1235.2s] n=8953 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1236.2s] n=8963 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.4 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1237.2s] n=8973 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1238.2s] n=8983 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1239.2s] n=8993 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1240.2s] n=9003 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1241.2s] n=9013 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1242.2s] n=9023 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1243.2s] n=9033 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1244.2s] n=9043 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1245.2s] n=9053 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1246.2s] n=9063 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1247.2s] n=9073 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  13ms
+[ 1248.3s] n=9084 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1249.3s] n=9094 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1250.3s] n=9104 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1251.3s] n=9114 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1252.3s] n=9124 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  10ms
+[ 1253.3s] n=9134 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1254.3s] n=9144 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1255.3s] n=9154 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1256.3s] n=9164 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1257.3s] n=9174 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1258.3s] n=9184 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  10ms
+[ 1259.3s] n=9194 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1260.3s] n=9204 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1261.3s] n=9214 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1262.3s] n=9224 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  10ms
+[ 1263.3s] n=9234 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1264.3s] n=9244 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1265.3s] n=9254 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1266.3s] n=9264 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  17ms
+[ 1267.4s] n=9275 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1268.4s] n=9285 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1269.4s] n=9295 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1270.4s] n=9305 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  10ms
+[ 1271.4s] n=9315 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1272.4s] n=9325 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1273.4s] n=9335 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1274.4s] n=9345 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1275.4s] n=9355 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1276.4s] n=9365 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.5 dB  QPSK  11ms
+[ 1277.4s] n=9375 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1278.4s] n=9385 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1279.4s] n=9395 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1280.4s] n=9405 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1281.5s] n=9415 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1282.5s] n=9425 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1283.5s] n=9435 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1284.5s] n=9445 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1285.5s] n=9455 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1286.5s] n=9465 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1287.5s] n=9475 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1288.5s] n=9485 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1289.5s] n=9495 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  16ms
+[ 1290.6s] n=9506 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  13ms
+[ 1291.6s] n=9516 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  13ms
+[ 1292.6s] n=9526 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1293.6s] n=9536 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 31.0 dB  QPSK  13ms
+[ 1294.6s] n=9546 err=183  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 30.5 dB  QPSK  13ms
+[ 1295.7s] n=9557 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  10ms
+[ 1296.7s] n=9567 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  10ms
+[ 1297.7s] n=9577 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1298.7s] n=9587 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 31.0 dB  QPSK  10ms
+[ 1299.7s] n=9597 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  10ms
+[ 1300.7s] n=9607 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1301.7s] n=9617 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  10ms
+[ 1302.7s] n=9627 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1303.7s] n=9637 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1304.7s] n=9647 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  10ms
+[ 1305.7s] n=9657 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1306.7s] n=9667 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1307.7s] n=9677 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1308.7s] n=9687 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1309.7s] n=9697 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1310.7s] n=9707 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1311.7s] n=9717 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1312.7s] n=9727 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1313.7s] n=9737 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1314.7s] n=9747 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1315.7s] n=9757 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1316.7s] n=9767 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1317.7s] n=9777 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1318.7s] n=9787 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1319.7s] n=9797 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  10ms
+[ 1320.7s] n=9807 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1321.7s] n=9817 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1322.7s] n=9827 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1323.7s] n=9837 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1324.7s] n=9847 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1325.7s] n=9857 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  17ms
+[ 1326.8s] n=9868 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1327.8s] n=9878 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1328.8s] n=9888 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1329.8s] n=9898 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1330.8s] n=9908 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1331.8s] n=9918 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1332.8s] n=9928 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1333.8s] n=9938 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  16ms
+[ 1334.9s] n=9949 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1335.9s] n=9959 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1336.9s] n=9969 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1338.0s] n=9979 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  21ms
+[ 1339.0s] n=9989 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.0 dB  QPSK  19ms
+[ 1340.1s] n=10000 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  10ms
+[ 1341.1s] n=10010 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1342.1s] n=10020 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1343.1s] n=10030 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1344.1s] n=10040 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1345.1s] n=10050 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  17ms
+[ 1346.2s] n=10061 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1347.2s] n=10071 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1348.2s] n=10081 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1349.2s] n=10091 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.4 dBm  CNR= 28.5 dB  QPSK  11ms
+[ 1350.2s] n=10101 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 28.0 dB  QPSK  11ms
+[ 1351.2s] n=10111 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 29.5 dB  QPSK  11ms
+[ 1352.2s] n=10121 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1353.2s] n=10131 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 29.5 dB  QPSK  12ms
+[ 1354.2s] n=10141 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1355.2s] n=10151 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1356.2s] n=10161 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 29.5 dB  QPSK  11ms
+[ 1357.2s] n=10171 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1358.2s] n=10181 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1359.2s] n=10191 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1360.2s] n=10201 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1361.2s] n=10211 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1362.2s] n=10221 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1363.2s] n=10231 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1364.2s] n=10241 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1365.2s] n=10251 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1366.2s] n=10261 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1367.2s] n=10271 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1368.2s] n=10281 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1369.2s] n=10291 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1370.2s] n=10301 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  18ms
+[ 1371.3s] n=10312 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1372.3s] n=10322 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1373.3s] n=10332 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1374.3s] n=10342 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1375.3s] n=10352 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 31.0 dB  QPSK  13ms
+[ 1376.3s] n=10362 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  14ms
+[ 1377.4s] n=10373 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1378.4s] n=10383 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1379.4s] n=10393 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.4 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1380.4s] n=10403 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 29.5 dB  QPSK  15ms
+[ 1381.5s] n=10414 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1382.5s] n=10424 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1383.5s] n=10434 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1384.5s] n=10444 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1385.5s] n=10454 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1386.5s] n=10464 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1387.5s] n=10474 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  10ms
+[ 1388.5s] n=10484 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1389.5s] n=10494 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1390.5s] n=10504 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1391.5s] n=10514 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1392.5s] n=10524 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.4 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1393.5s] n=10534 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1394.5s] n=10544 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1395.6s] n=10554 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1396.6s] n=10564 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1397.6s] n=10574 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 27.5 dB  QPSK  12ms
+[ 1398.6s] n=10584 err=183  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 27.5 dB  QPSK  11ms
+[ 1399.6s] n=10594 err=183  SlaveTx=   5.0 dBm  MasterRx= -56.3 dBm  CNR= 24.5 dB  QPSK  12ms
+  [2026-10-10T18:30:19.026] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:30:21.028] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:30:23.031] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:30:25.033] ⚠️ <urlopen error timed out>
+  [2026-10-10T18:30:27.035] ⚠️ <urlopen error timed out>
+[ 1410.9s] n=10602 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 19.0 dB  QPSK  1056ms
+[ 1411.9s] n=10613 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 20.0 dB  QPSK  14ms
+[ 1413.0s] n=10624 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 21.5 dB  QPSK  10ms
+[ 1414.0s] n=10634 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 22.5 dB  QPSK  11ms
+[ 1415.0s] n=10644 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 23.0 dB  QPSK  11ms
+[ 1416.0s] n=10654 err=188  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 24.0 dB  QPSK  10ms
+[ 1417.0s] n=10664 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 25.0 dB  QPSK  12ms
+[ 1418.0s] n=10674 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 26.0 dB  QPSK  12ms
+[ 1419.0s] n=10684 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 27.5 dB  QPSK  12ms
+[ 1420.0s] n=10694 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 28.5 dB  QPSK  11ms
+[ 1421.0s] n=10704 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 28.5 dB  QPSK  12ms
+[ 1422.0s] n=10714 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 28.5 dB  QPSK  12ms
+[ 1423.0s] n=10724 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 29.0 dB  QPSK  11ms
+[ 1424.1s] n=10734 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 29.5 dB  QPSK  11ms
+[ 1425.1s] n=10744 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1426.1s] n=10754 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 29.5 dB  QPSK  11ms
+[ 1427.1s] n=10764 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  13ms
+[ 1428.1s] n=10774 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1429.1s] n=10784 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.3 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1430.1s] n=10794 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1431.1s] n=10804 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1432.1s] n=10814 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1433.1s] n=10824 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 29.5 dB  QPSK  11ms
+[ 1434.1s] n=10834 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1435.1s] n=10844 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1436.1s] n=10854 err=188  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1437.1s] n=10864 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1438.1s] n=10874 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1439.2s] n=10885 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1440.2s] n=10895 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  10ms
+[ 1441.2s] n=10905 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1442.2s] n=10915 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1443.2s] n=10925 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1444.2s] n=10935 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1445.2s] n=10945 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  14ms
+[ 1446.3s] n=10956 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1447.3s] n=10966 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1448.3s] n=10976 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1449.3s] n=10986 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1450.3s] n=10996 err=188  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1451.3s] n=11006 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  13ms
+[ 1452.3s] n=11016 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1453.3s] n=11026 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1454.3s] n=11036 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1455.3s] n=11046 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1456.3s] n=11056 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1457.3s] n=11066 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1458.3s] n=11076 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1459.3s] n=11086 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1460.3s] n=11096 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  10ms
+[ 1461.3s] n=11106 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1462.3s] n=11116 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1463.3s] n=11126 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1464.3s] n=11136 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1465.3s] n=11146 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1466.3s] n=11156 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  10ms
+[ 1467.3s] n=11166 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1468.3s] n=11176 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  14ms
+[ 1469.4s] n=11187 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1470.4s] n=11197 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1471.4s] n=11207 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1472.4s] n=11217 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1473.4s] n=11227 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1474.4s] n=11237 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1475.4s] n=11247 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1476.4s] n=11257 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1477.4s] n=11267 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1478.4s] n=11277 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1479.4s] n=11287 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1480.4s] n=11297 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1481.5s] n=11307 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1482.5s] n=11317 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1483.5s] n=11327 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1484.5s] n=11337 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1485.6s] n=11348 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1486.6s] n=11358 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1487.6s] n=11368 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1488.6s] n=11378 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1489.6s] n=11388 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1490.6s] n=11398 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  13ms
+[ 1491.6s] n=11408 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1492.6s] n=11418 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1493.6s] n=11428 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1494.6s] n=11438 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 31.0 dB  QPSK  10ms
+[ 1495.6s] n=11448 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1496.6s] n=11458 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1497.6s] n=11468 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1498.6s] n=11478 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 29.5 dB  QPSK  12ms
+[ 1499.6s] n=11488 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1500.6s] n=11498 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1501.6s] n=11508 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1502.6s] n=11518 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1503.6s] n=11528 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1504.6s] n=11538 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  14ms
+[ 1505.6s] n=11548 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  18ms
+[ 1506.7s] n=11559 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1507.7s] n=11569 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  10ms
+[ 1508.7s] n=11579 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  12ms
+[ 1509.7s] n=11589 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1510.7s] n=11599 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1511.7s] n=11609 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1512.7s] n=11619 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1513.7s] n=11629 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1514.7s] n=11639 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  13ms
+[ 1515.8s] n=11650 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  17ms
+[ 1516.9s] n=11661 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1517.9s] n=11671 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1518.9s] n=11681 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1519.9s] n=11691 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1520.9s] n=11701 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1521.9s] n=11711 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.5 dB  QPSK  11ms
+[ 1522.9s] n=11721 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  17ms
+[ 1524.0s] n=11732 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1525.0s] n=11742 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1526.0s] n=11752 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  10ms
+[ 1527.0s] n=11762 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1528.0s] n=11772 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1529.0s] n=11782 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1530.0s] n=11792 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1531.0s] n=11802 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  10ms
+[ 1532.0s] n=11812 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1533.0s] n=11822 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1534.0s] n=11832 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1535.0s] n=11842 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.0 dB  QPSK  13ms
+[ 1536.2s] n=11853 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  18ms
+[ 1537.2s] n=11864 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  10ms
+[ 1538.2s] n=11874 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1539.2s] n=11884 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1540.3s] n=11894 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1541.3s] n=11904 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1542.3s] n=11914 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1543.3s] n=11924 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.5 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1544.3s] n=11934 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1545.3s] n=11944 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 31.0 dB  QPSK  11ms
+[ 1546.3s] n=11954 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1547.3s] n=11964 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 31.0 dB  QPSK  10ms
+[ 1548.3s] n=11974 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1549.3s] n=11984 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1550.3s] n=11994 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1551.3s] n=12004 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1552.3s] n=12014 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1553.3s] n=12024 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1554.3s] n=12034 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1555.3s] n=12044 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 31.0 dB  QPSK  13ms
+[ 1556.4s] n=12055 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1557.4s] n=12065 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1558.4s] n=12075 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 30.5 dB  QPSK  14ms
+[ 1559.5s] n=12086 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.9 dBm  CNR= 31.0 dB  QPSK  12ms
+[ 1560.6s] n=12097 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1561.6s] n=12107 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.0 dB  QPSK  11ms
+[ 1562.6s] n=12117 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1563.6s] n=12127 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1564.6s] n=12137 err=188  SlaveTx=   5.0 dBm  MasterRx= -51.0 dBm  CNR= 30.5 dB  QPSK  11ms
+[ 1565.6s] n=12147 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  12ms
+[ 1566.6s] n=12157 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.7 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1567.6s] n=12167 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1568.6s] n=12177 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.8 dBm  CNR= 30.5 dB  QPSK  10ms
+[ 1569.6s] n=12187 err=188  SlaveTx=   5.0 dBm  MasterRx= -50.6 dBm  CNR= 30.5 dB  QPSK  12ms
