@@ -1,0 +1,6 @@
+clean trials 20:32..20:43: n=12
+first DOWN second-of-minute: mean 40.56 std 1.03 min 39.4 max 42.6
+=> edge past LOS at disconnect (assuming 1 cm/s): mean 10.6 cm (range 9.4 .. 12.6)
+Rx -3 dB start: mean 32.5 s (range 31.1 .. 33.7); lead before first DOWN: 8.0 s
+last Rx before down: mean -63.7 dBm (range -67.7 .. -60.1)
+Doppler verdict fired in the 10 s before the first DOWN: 0/12
