@@ -55,6 +55,8 @@ Web page: ws://<this host>:8765/isac, state: http://<this host>:8765/isac/state
 
 import argparse
 import asyncio
+import subprocess
+import threading
 import base64
 import json
 import os
@@ -64,6 +66,7 @@ import sys
 import time
 
 DEFAULT_SERVER_DIR = "/home/usrpb210/DASH/DASH_html_old-main/isac_server"
+DEFAULT_NTG_LOGGER = "/home/usrpb210/DASH/DASH_html_old-main/ntg2501_power_logger/ntg2501_http_logger.py"
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
@@ -93,6 +96,16 @@ def main() -> int:
                    help="push the OLD mode string 'shadowing' instead of 'doppler_detected' to the page "
                         "(only needed while some page copy has not been updated yet; the new page "
                         "accepts both)")
+    p.add_argument("--no-ntg", action="store_true",
+                   help="do NOT start the NTG-2501 logger alongside (default: start it, CSV goes to "
+                        "--log-dir/ntg_<same stamp>.csv)")
+    p.add_argument("--ntg-logger", type=str, default=DEFAULT_NTG_LOGGER, help="path of ntg2501_http_logger.py")
+    p.add_argument("--ntg-period", type=float, default=0.1, help="NTG poll period s (0.05 = 20 Hz max)")
+    # 20261025: Master/Slave swapped on the NTG-2501 pair -> the Master is now 192.168.1.101
+    # (it used to be .201). The Master's XML reports all four directions; a Slave only reports two.
+    p.add_argument("--ntg-master-ip", type=str, default="192.168.1.101")
+    p.add_argument("--no-overview", action="store_true",
+                   help="do not draw the Doppler-vs-power(+NTG) overview PNG on exit")
     p.add_argument("--no-spec", action="store_true",
                    help="do not forward spectrogram columns to the page (still recorded)")
     a = p.parse_args()
@@ -148,6 +161,49 @@ def main() -> int:
         print(f"[bridge] session files: {os.path.dirname(log.path)}/isac_<stamp>_pNNN.npz "
               f"(autosave every {a.save_every:.0f}s, new part every {a.rotate_min:g} min)")
 
+    # ---- NTG-2501 logger as a sibling process, same stamp, same host clock (unix_time column) ----
+    stamp = log._stamp if log is not None else time.strftime("%Y%m%d_%H%M%S")
+    os.makedirs(a.log_dir, exist_ok=True)
+    ntg_csv = os.path.join(a.log_dir, f"ntg_{stamp}.csv")
+    ntg_proc = None
+    ntg_checked = False
+    if not a.no_ntg:
+        if not os.path.isfile(a.ntg_logger):
+            print(f"[bridge] NTG logger not found: {a.ntg_logger} (use --ntg-logger or --no-ntg)",
+                  file=sys.stderr)
+        else:
+            ntg_log = open(os.path.join(a.log_dir, f"ntg_{stamp}.log"), "w")
+            ntg_proc = subprocess.Popen(
+                [sys.executable, a.ntg_logger, "--out", ntg_csv, "--period", str(a.ntg_period),
+                 "--master-ip", a.ntg_master_ip, "--markers-stdin"],
+                stdin=subprocess.PIPE, stdout=ntg_log, stderr=subprocess.STDOUT, text=True, bufsize=1)
+            print(f"[bridge] NTG-2501 logger started -> {ntg_csv}  (every {a.ntg_period:g}s)")
+
+    # ---- operator markers: press Enter in THIS terminal (optionally type a label first) ----
+    def _marker_loop():
+        while True:
+            try:
+                line = sys.stdin.readline()
+            except Exception:
+                return
+            if not line:
+                return
+            label = line.strip() or "mark"
+            t_ms = time.time() * 1000.0
+            if log is not None:
+                log.add_marker(t_ms, label)
+            if ntg_proc is not None and ntg_proc.poll() is None:
+                try:
+                    ntg_proc.stdin.write(label + "\n")
+                    ntg_proc.stdin.flush()
+                except Exception:
+                    pass
+            print(f"[bridge] marker '{label}' @ {time.strftime('%H:%M:%S')}", flush=True)
+
+    if sys.stdin.isatty():
+        threading.Thread(target=_marker_loop, daemon=True).start()
+        print("[bridge] markers: type a label + Enter in this terminal (goes to the session file and the NTG CSV)")
+
     def telemetry():
         try:
             return get_telemetry() if get_telemetry is not None else []
@@ -161,6 +217,7 @@ def main() -> int:
           f"{'  (dry mode, isac_server not started)' if a.dry else ''}")
     print("[bridge] waiting for rt_main ... Ctrl+C to quit")
 
+    t_start = time.time()
     mode = MODE_NORMAL
     last_rx = 0.0
     n_rx = n_rx_dbfs = n_rx_power = n_spec = 0
@@ -181,8 +238,14 @@ def main() -> int:
 
     def tick() -> None:
         """Periodic work that must run even when rt_main is silent."""
-        nonlocal last_clock
+        nonlocal last_clock, ntg_checked
         now = time.time()
+        if ntg_proc is not None and not ntg_checked and now - t_start > 6.0:
+            ntg_checked = True
+            if ntg_proc.poll() is not None:
+                print(f"[bridge] WARNING: NTG logger exited (code {ntg_proc.returncode}); "
+                      f"see {ntg_csv[:-4]}.log. Is Master {a.ntg_master_ip} reachable? "
+                      f"(restart bridge, or run the logger yourself)", file=sys.stderr)
         if now - last_clock >= 1.0:
             last_clock = now
             broadcast({"type": "clock", "ts": round(now * 1000.0, 3)})
@@ -282,6 +345,30 @@ def main() -> int:
             log.ingest_telemetry(telemetry(), force=True)
             log.save(None, blocking=True)
             print(f"[bridge] session saved: {len(log.paths)} part(s): " + ", ".join(os.path.basename(x) for x in log.paths))
+        if ntg_proc is not None:
+            try:
+                ntg_proc.stdin.close()
+            except Exception:
+                pass
+            if ntg_proc.poll() is None:
+                ntg_proc.send_signal(signal.SIGINT)
+            try:
+                ntg_proc.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                ntg_proc.kill()
+            print(f"[bridge] NTG csv: {ntg_csv}")
+        if log is not None and not a.no_overview:
+            png = os.path.join(a.log_dir, f"overview_{stamp}.png")
+            try:
+                r = subprocess.run(
+                    [sys.executable, os.path.join(HERE, "isac_overview.py"),
+                     os.path.join(a.log_dir, f"isac_{stamp}_p*.npz"),
+                     "--ntg", ntg_csv, "--out", png],
+                    capture_output=True, text=True, timeout=300)
+                print(f"[bridge] overview figure: {png}" if r.returncode == 0
+                      else f"[bridge] overview failed: {r.stderr[-400:]}")
+            except Exception as e:
+                print(f"[bridge] overview failed: {e}")
     return 0
 
 

@@ -45,6 +45,9 @@ marked score = -2 (so each part starts with a known state); score = -1 marks a b
   dbfs_ch1         float32 [K]        ch1 = sensing channel   (dBFS)
   dlpower_t_ms     float64 [L]        downlink (Master direction) power, sensing channel
   dlpower_dbfs     float32 [L]        (only while TDD is locked)
+  --- operator markers (v3) ---------------------------------------------------------------
+  marker_t_ms      float64 [P]        server time the operator pressed Enter in the bridge terminal
+  marker_label     str     [P]        text typed before Enter ("mark" if empty), e.g. "cross_mid_fast"
   --- raw page telemetry (segments, playback samples, ...) ---------------------------------
   video_telemetry_json   JSON string: list of the records the page pushed over the WebSocket,
                          each with server_recv_ts (server clock, SECONDS). v2: collected
@@ -62,7 +65,7 @@ import time
 
 import numpy as np
 
-FORMAT_VERSION = 2   # v2: + dbfs_* / dlpower_* 序列；网页遥测改为增量收集（v1 只含 isac_server 内存里最近 50000 条）
+FORMAT_VERSION = 3   # v3: + marker_t_ms/marker_label (终端回车打点)。# v2: + dbfs_* / dlpower_* 序列；网页遥测改为增量收集（v1 只含 isac_server 内存里最近 50000 条）
 NFFT = 256
 FS_OUT = 1000.0
 
@@ -92,6 +95,7 @@ class SessionLog:
         self._det: list = []            # (t_ms, state, ridge, score)
         self._dbfs: list = []           # (t_ms, mean, ch0, ch1)
         self._dl: list = []             # (t_ms, dBFS)
+        self._marks: list = []          # (t_ms, label)
         self._vt: list = []             # page telemetry records of THIS part (incremental)
         self._vt_last = None            # last record object ingested (identity)
         self._vt_t = 0.0                # monotonic time of the last ingest
@@ -110,7 +114,7 @@ class SessionLog:
         with self._lock:
             self._wf_t, self._wf_db, self._wf_ridge = [], [], []
             self._wf_hit, self._wf_v, self._wf_E = [], [], []
-            self._dbfs, self._dl, self._vt = [], [], []
+            self._dbfs, self._dl, self._vt, self._marks = [], [], [], []
             self._det = [(now_ms, last_state[1], last_state[2], -2)] if last_state else []
         self.part += 1
         self.part_start_ms = now_ms
@@ -138,6 +142,10 @@ class SessionLog:
     def add_dbfs(self, t_ms: float, mean: float, ch0: float, ch1: float) -> None:
         with self._lock:
             self._dbfs.append((t_ms, mean, ch0, ch1))
+
+    def add_marker(self, t_ms: float, label: str) -> None:
+        with self._lock:
+            self._marks.append((t_ms, label))
 
     def add_dlpower(self, t_ms: float, dbfs: float) -> None:
         with self._lock:
@@ -202,6 +210,7 @@ class SessionLog:
             det = list(self._det)
             dbfs = list(self._dbfs)
             dl = list(self._dl)
+            marks = list(self._marks)
             vt = list(self._vt)           # incremental (v2); already limited to this part
         ifc = [m for m in vt if m.get("kind") == "isacInterface"]
         path = self.path
@@ -231,6 +240,8 @@ class SessionLog:
             iface_client_est_server_ms=np.array([m.get("serverTsEst", np.nan) for m in ifc],
                                                 dtype=np.float64),
             iface_enabled=np.array([1 if m.get("enabled") else 0 for m in ifc], dtype=np.uint8),
+            marker_t_ms=np.array([m[0] for m in marks], dtype=np.float64),
+            marker_label=np.array([m[1] for m in marks], dtype=str),
             video_telemetry_json=np.array(json.dumps(vt)),
             meta_json=np.array(json.dumps({
                 "format_version": FORMAT_VERSION,
@@ -252,7 +263,7 @@ class SessionLog:
                 "n_columns": int(len(t)), "n_detection_events": len(det),
                 "n_dbfs": len(dbfs), "n_dlpower": len(dl), "n_telemetry": len(vt),
                 "telemetry_gaps": self.vt_gaps,
-                "n_interface_events": len(ifc),
+                "n_interface_events": len(ifc), "n_markers": len(marks),
             }, ensure_ascii=False)),
         )
 
