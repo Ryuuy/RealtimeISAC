@@ -1,0 +1,40 @@
+DASH_20261025_code.zip —— 替换掉 10-19 包里的 DASH_20261019_code.zip（只装这个，不用再装旧的 code 包）
+
+作用：让服务器的页面支持 ?mpd=tos（22 档 tos），并带上 10-25 新增的 ?fill=1（提前 t 秒补缓冲，fillplan.js）。
+大小很小（约 0.3 MB，92 个文件）。tos 视频本身仍然是 DASH_20261019_tos_v1..v4.zip（v1 你已经装了）。
+
+包含（全部用相对路径，解压到 DASH_html_old-main 里即可，选"全部覆盖"）：
+  dash-js/            整个文件夹（含新文件 fillplan.js；会覆盖同名旧文件，没有删除任何文件）
+  dashtest_2sDASH_1080p-public-access.html     支持 ?mpd=tos 和 fillplan.js
+  tos_ibmff_mixed_1080p.mpd / tos_ibmff_mixed_1080p-public-access.mpd     22 档 MPD
+  CODE_SHA256.txt     本包每个文件的 sha256
+  verify_install.js   装完后检查（见下）
+不包含 server7.js，不改 server 任何逻辑。
+
+怎么装（Windows）：
+  1. 找到 server 上的 DASH_html_old-main（里面有 server7.js、bunny_2s_1080p、dash-js、tos_2s_1080p）。
+  2. 把 DASH_20261025_code.zip 放进去，右键 → 7-Zip "解压到当前文件夹"（Extract Here）；遇到"覆盖？"→ 全部覆盖。
+     （用 Windows 自带"全部解压缩"时，目标路径填 DASH_html_old-main 本身，别多套一层目录。）
+  3. 把 DASH_20261019_tos_v2.zip、_v3.zip、_v4.zip 也解压到同一个文件夹（v1 已经装过了）。
+     服务器上现在只有 100–4000 kbit 共 14 档，缺 5000–20000 kbit 的 8 档，缺档时 ABR 选到会 404 卡住。
+  4. 检查：在 DASH_html_old-main 里打开命令行：   node verify_install.js
+     应当全部 ✓：22 档完整 + 2 个 MPD + 92 个代码文件都是 10-25 版本。
+  5. 重启 server：  node server7.js
+     NTG：Master/Slave 对调后，Master 是 192.168.1.101（以前是 .201），server7.js 默认还是 .201，不改代码的办法是设环境变量：
+       cmd:         set NTG_MASTER_IP=192.168.1.101 && node server7.js
+       PowerShell:  $env:NTG_MASTER_IP="192.168.1.101"; node server7.js
+       不要 NTG 图（Ubuntu 的 bridge 已经在记 NTG）：set NTG_ENABLE=0
+  6. 浏览器打开（改成 server 的 IP；强制刷新 Ctrl+F5，避免浏览器缓存旧 js）：
+       普通 tos：      http://192.168.1.5:8080/?mpd=tos
+       补缓冲验证：    http://192.168.1.5:8080/?mpd=tos&buf=4&fill=1&fillt=1.4&filltarget=12
+  7. F12 控制台应出现：
+       "3 distinct resolution(s) in MPD -> DASH_MULTIRES=true"
+       带 fill=1 时还有： "FILLPLAN enabled: target=12s default t=1.4s ..."
+
+fill=1 的参数：filltarget=遮挡期要扛的缓冲(秒,默认12)  fillt=t 的默认值(秒,默认1.4)  fillhis=网速均值窗口(秒,默认30)
+  fillsafety=网速安全系数(默认0.8)  buf=平时的缓冲目标(秒；不加是20，缓冲本来就≥12 s 时补缓冲什么都不做)
+不加 ?fill=1 时行为和以前完全一样；不加 ?mpd=tos 仍是 bunny。
+手动触发（F12 控制台）：  setISACLeadTime(1.4,'test'); setISACMode('doppler_detected','manual')   （必须同一行）
+                          setISACMode('normal','manual')
+
+注意：fill=1 的逻辑只做过语法检查和公式单元测试，还没在浏览器里完整跑过。

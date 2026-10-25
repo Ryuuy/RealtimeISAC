@@ -150,3 +150,23 @@ Widar 类数据约定正频 = 靠近（[Wi-CBR](https://arxiv.org/pdf/2506.11616
   - `asym_ratio_R.py`、`direction_metric_candidates.py`、`ddb_plot.py`、`los_crossing_plot.py` 方向指标
   - `rt_main_replay_file.py`、`compare_rt_vs_offline.py` 实时链路 vs 离线一致性
 - `figs/`：对应的图
+
+## 11. 断连之后到底多久恢复（后续补充，19:19–19:48 实测）
+
+**三段延迟**：NTG 报断连固定 ~10 s → NTG 报恢复后**数据面（ping/HTTP）再要 2–5 s** → 页面再多 2–5 s（旧参数 6–13 s）。
+
+| 阶段 | 数据 |
+|---|---|
+| NTG `master_valid=0`（Master 管理口对 xml_master_monitor.cgi 回空） | 每次 9.9–10.0 s，与遮挡多久无关；断前 ~1 s CNR 先掉 ~10 dB |
+| NTG 恢复后数据面通（`link_dataplane_probe.py`：ping / 新连接 / 复用连接，三者同时恢复） | +2~5 s（6 次：ping 3.4~6.2 s；一次 22 s 是下一次穿越又来了） |
+| 页面第一个分片完成（无头 Chrome，ISAC 接口关） | 旧（超时 3 s、重试 0.5→3 s 翻倍）：+7.5/11.1/13.9/14.6 s；新（超时 8 s、重试 0.2 s）：+4.2/6.0/6.5 s |
+
+**页面多出来的几秒是什么**（19:46:21 那次）：页面在断连开始前 1 s 发出的请求挂了 8 s 才超时取消；重试又在断连期间发出、再挂 8 s（19:46:28.1→36.1）；
+数据面其实 19:46:35.8 就通了，但这条请求要到 36.1 才被超时取消，下一条 36.3 才发出、2.0 s 下完（2 MB 大分片，新连接）。
+所以多出来的 = 等挂着的请求超时（~0.3–2.7 s）+ 第一个分片自己的下载（~1.7–2 s）。
+
+**NTG 自己的六个状态**（网页"メインモニタ"，接口 `POST /main_frm_xml.cgi`，不用登录，网页每 1 s 轮询）：
+装置状態 / 無線状態(`modem_sync_status`) / 認証状態(`auth_status`) / 監視信号状態(`signal_rx_status`) / イーサネットリンク状態 自局 / 対向局。
+用户在网页上看到：断连恢复时**两个イーサネットリンク先恢复，约 2 s 后 認証/監視信号 才恢复**；刚才读到 `同期中`+`認証中`。
+**猜测**（未验证）：数据面要等认证完成才转发。验证办法：`scripts/ntg_state_logger.py`（5 Hz，已并入 `headless_page_probe.py`，默认开）把六个状态存成 csv，与 ping/请求时间对齐。
+注意 `xml_master_monitor.cgi`（日志程序用的）里没有这六个状态。

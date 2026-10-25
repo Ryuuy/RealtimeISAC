@@ -1,0 +1,62 @@
+{
+ "stamp": "20261025_172239",
+ "gain": 20.0,
+ "sec": 10.0,
+ "overall": "⚠️ ",
+ "clipping": {
+  "verdict": "⚠️ ",
+  "rows": [
+   {
+    "ch": 0,
+    "max": 9868,
+    "pct": 30.11474609375,
+    "peak_dbfs": -10.424415882840389,
+    "headroom_db": 10.424415882840389,
+    "n90": 0,
+    "n_fullscale": 0
+   },
+   {
+    "ch": 1,
+    "max": 384,
+    "pct": 1.171875,
+    "peak_dbfs": -38.62237421184374,
+    "headroom_db": 38.62237421184374,
+    "n90": 0,
+    "n_fullscale": 0
+   }
+  ],
+  "advice": "要留够 12 dB 余量，增益建议降 2 dB（20 -> 18 dB）；不要自己改，先问用户",
+  "ch1_note": ""
+ },
+ "ntg": {
+  "verdict": "⏭ ",
+  "values": {},
+  "msg": "已跳过（--no-ntg）"
+ },
+ "tdd": {
+  "verdict": "⚠️ ",
+  "values": {
+   "lock_frac": 1.0,
+   "contrast": 0.9987678763050652,
+   "duty": 0.715,
+   "phase_us": 61.0,
+   "win_us": 695.0,
+   "on_us": 718.0,
+   "n_runs": 1,
+   "on_dbfs": -20.085997143850754,
+   "off_dbfs": -52.12961819420154,
+   "on_off_db": 32.04362105035079,
+   "margin_start_us": 13.0,
+   "margin_end_us": 10.0,
+   "drift_us_per_s": 3.5,
+   "ch1_on_off_db": 8.045066868107359,
+   "frames_gone_frac": 0.0001
+  },
+  "notes": [
+   "0.0% 的帧 ch0 信号消失（<中位数-25 dB）：链路在抖/断"
+  ]
+ },
+ "noise_floor_per_bin": 0.0031554666347801685,
+ "uhd": "overflow=0 late=0 timeout=0 other=0",
+ "dropped": 0
+}

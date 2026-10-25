@@ -108,6 +108,16 @@ def main() -> int:
                    help="do not draw the Doppler-vs-power(+NTG) overview PNG on exit")
     p.add_argument("--no-spec", action="store_true",
                    help="do not forward spectrogram columns to the page (still recorded)")
+    # 20261025: link monitors (client side only). NTG's six status fields (1 Hz, same poll rate as the NTG
+    # web UI itself) + a ping to the video server; both go to isac_logs/*.csv and are pushed to the page,
+    # which stores them in the snapshot (telemetry.ntgStates / telemetry.dataplane).
+    p.add_argument("--no-link-monitor", action="store_true",
+                   help="do NOT run the NTG-state + data-plane (ping) monitors")
+    p.add_argument("--ntg-state-hz", type=float, default=1.0,
+                   help="NTG six-state poll rate (default 1 Hz = what the NTG web page does; 5 Hz in the 20261025 D run "
+                        "looked disruptive)")
+    p.add_argument("--ping-host", type=str, default="192.168.1.5",
+                   help="video server to ping for the data-plane monitor (the Windows DASH server)")
     a = p.parse_args()
 
     # Ctrl+C (SIGINT) and `kill` (SIGTERM) both end in the same clean path: final save of the session
@@ -178,6 +188,15 @@ def main() -> int:
                  "--master-ip", a.ntg_master_ip, "--markers-stdin"],
                 stdin=subprocess.PIPE, stdout=ntg_log, stderr=subprocess.STDOUT, text=True, bufsize=1)
             print(f"[bridge] NTG-2501 logger started -> {ntg_csv}  (every {a.ntg_period:g}s)")
+
+    # ---- 20261025: NTG six-state + data-plane monitors (client side; pushed to the page through the ISAC ws) ----
+    link_mons = []
+    if not a.no_link_monitor:
+        import link_monitor
+        link_mons = link_monitor.start_monitors(a.log_dir, stamp, a.ntg_master_ip, a.ping_host, broadcast,
+                                                ntg_hz=a.ntg_state_hz)
+        print(f"[bridge] link monitors: NTG states {a.ntg_state_hz:g} Hz -> {a.log_dir}/ntgstate_{stamp}.csv ; "
+              f"ping {a.ping_host} 5 Hz -> {a.log_dir}/dataplane_{stamp}.csv")
 
     # ---- operator markers: press Enter in THIS terminal (optionally type a label first) ----
     def _marker_loop():
@@ -339,6 +358,8 @@ def main() -> int:
     except KeyboardInterrupt:
         print(f"\n[bridge] exit ({n_rx} verdict msgs, {n_spec} spectrum columns, "
               f"{n_rx_dbfs} dBFS, {n_rx_power} power)")
+        for m_ in link_mons:
+            m_.stop()
         if push_result is not None:
             push_result(MODE_NORMAL)
         if log is not None:

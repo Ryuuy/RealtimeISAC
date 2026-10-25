@@ -1,0 +1,946 @@
+1792924336.096 log sessionAutoSave: mode=light session=2026-10-25_19-32-16，每 10s 存一次到 sessions/2026-10-25_19-32-16/
+1792924336.130 log ISAC WS: connected to ws://192.168.1.50:8765/isac
+1792924336.490 log DASH-JS Version: 0.5a
+1792924336.491 log Can show the URL: http://192.168.1.5:8080/tos_ibmff_mixed_1080p-public-access.mpd
+1792924336.491 log http://192.168.1.5:8080/tos_ibmff_mixed_1080p-public-access.mpd
+1792924336.541 log ISAC interface: ON (init)
+1792924337.636 log ISAC interface: OFF (headless)
+1792924337.881 log The transmission time is: 1389
+1792924337.881 log Bitrate:3384040.316774658 bps
+1792924337.881 log lengthOfResponseText: 587554 Bytes
+1792924337.881 log function(xmlStr){ return (new DOMParser()).parseFromString(xmlStr, "text/xml");}
+1792924337.900 log pmpd.profile=urn:mpeg:dash:profile:isoff-main:2011
+1792924337.900 log pmpd.type=static
+1792924337.900 log pmpd.mediaPresentationDuration=PT0H12M14.00S
+1792924337.900 log pmpd.minBufferTime=PT2.0S
+1792924337.900 log tos_2s_1080p/
+1792924337.901 log pmpd.period[0].start=PT0S
+1792924337.947 log DASH JS prototype [basic] adaptation selecting representation 0 with bandwidth: 108533
+1792924337.947 log DASH JS using adaptation: Rate Based Adaptation
+1792924337.947 log DASH-JS: 3 distinct resolution(s) in MPD -> DASH_MULTIRES=true
+1792924337.952 log Results of parser: 734
+1792924337.953 log Results of parser: 734
+1792924337.955 log n: 108533, m:0
+1792924337.956 log Buffer size: 10
+1792924337.956 log Data transfer is completed
+1792924337.973 log DASJ-JS: content type: video/mp4; codecs="avc3.640028"
+1792924337.973 log Results of parser: 734
+1792924337.974 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_100kbit/tos_2sinit.mp4
+1792924337.978 log signaling refill
+1792924337.978 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_100kbit/tos_2s1.m4s
+1792924337.978 log Event got called from overlay buffer, fillstate(%) = 0, fillstate(s) = 0, max(s) = 20
+1792924337.978 log Buffer underrun!
+1792924338.079 log Buffer underrun!
+1792924338.180 log Buffer underrun!
+1792924338.281 log Buffer underrun!
+1792924338.383 log Buffer underrun!
+1792924338.483 log Buffer underrun!
+1792924338.584 log Buffer underrun!
+1792924338.684 log Buffer underrun!
+1792924338.785 log Buffer underrun!
+1792924338.885 log Buffer underrun!
+1792924338.986 log Buffer underrun!
+1792924339.086 log Buffer underrun!
+1792924339.186 log Buffer underrun!
+1792924339.287 log Buffer underrun!
+1792924339.388 log Buffer underrun!
+1792924339.488 log Buffer underrun!
+1792924339.589 log Buffer underrun!
+1792924339.689 log Buffer underrun!
+1792924339.790 log Buffer underrun!
+1792924339.890 log Buffer underrun!
+1792924339.974 log n: 108533, m:0
+1792924339.974 log DASH-JS client: appending data of length: 845 to the Media Source Buffer with id: 0
+1792924339.990 log n: 108533, m:0
+1792924339.991 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_100kbit/tos_2s2.m4s
+1792924339.992 log Event got called from overlay buffer, fillstate(%) = 10, fillstate(s) = 2, max(s) = 20
+1792924340.104 log DASH-JS client: appending data of length: 24754 to the Media Source Buffer with id: 0
+1792924340.502 log n: 108533, m:0
+1792924340.503 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_100kbit/tos_2s3.m4s
+1792924340.504 log Event got called from overlay buffer, fillstate(%) = 10, fillstate(s) = 2, max(s) = 20
+1792924340.506 log DASH-JS client: appending data of length: 26502 to the Media Source Buffer with id: 0
+1792924340.948 log n: 108533, m:0
+1792924340.977 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_100kbit/tos_2s4.m4s
+1792924340.978 log Event got called from overlay buffer, fillstate(%) = 10, fillstate(s) = 2, max(s) = 20
+1792924341.166 log n: 108533, m:0
+1792924341.168 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_100kbit/tos_2s5.m4s
+1792924341.169 log Event got called from overlay buffer, fillstate(%) = 20, fillstate(s) = 4, max(s) = 20
+1792924341.215 log n: 108533, m:0
+1792924341.231 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_100kbit/tos_2s6.m4s
+1792924341.231 log Event got called from overlay buffer, fillstate(%) = 30, fillstate(s) = 6, max(s) = 20
+1792924341.264 log n: 203160, m:1
+1792924341.264 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 203160
+1792924341.266 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_200kbit/tos_2s7.m4s
+1792924341.266 log Event got called from overlay buffer, fillstate(%) = 40, fillstate(s) = 8, max(s) = 20
+1792924341.307 log n: 302418, m:2
+1792924341.308 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 302418
+1792924341.310 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_300kbit/tos_2s8.m4s
+1792924341.311 log Event got called from overlay buffer, fillstate(%) = 50, fillstate(s) = 10, max(s) = 20
+1792924341.501 log n: 302418, m:2
+1792924341.507 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_300kbit/tos_2s9.m4s
+1792924341.507 log Event got called from overlay buffer, fillstate(%) = 60, fillstate(s) = 12, max(s) = 20
+1792924341.705 log n: 502364, m:3
+1792924341.705 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 502364
+1792924341.706 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_500kbit/tos_2s10.m4s
+1792924341.707 log Event got called from overlay buffer, fillstate(%) = 70, fillstate(s) = 14, max(s) = 20
+1792924341.963 log n: 502364, m:3
+1792924341.972 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_500kbit/tos_2s11.m4s
+1792924341.972 log Event got called from overlay buffer, fillstate(%) = 80, fillstate(s) = 16, max(s) = 20
+1792924342.140 log DASH-JS client: appending data of length: 26492 to the Media Source Buffer with id: 0
+1792924342.227 log n: 502364, m:3
+1792924342.233 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_500kbit/tos_2s12.m4s
+1792924342.233 log Event got called from overlay buffer, fillstate(%) = 80, fillstate(s) = 16, max(s) = 20
+1792924342.487 log n: 802313, m:4
+1792924342.487 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 802313
+1792924342.488 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_800kbit/tos_2s13.m4s
+1792924342.489 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924342.667 log n: 1002258, m:5
+1792924342.668 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 1002258
+1792924344.172 log signaling refill
+1792924344.172 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_1000kbit/tos_2s14.m4s
+1792924344.173 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924344.174 log DASH-JS client: appending data of length: 26492 to the Media Source Buffer with id: 0
+1792924346.192 log DASH-JS client: appending data of length: 29649 to the Media Source Buffer with id: 0
+1792924347.174 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_1000kbit/tos_2s14.m4s, retry in 500ms
+1792924347.674 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_1000kbit/tos_2s14.m4s
+1792924347.830 log n: 802313, m:4
+1792924347.830 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 802313
+1792924347.834 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_800kbit/tos_2s15.m4s
+1792924347.835 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924348.131 log n: 1252173, m:6
+1792924348.131 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 1252173
+1792924348.141 log signaling refill
+1792924348.142 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_1250kbit/tos_2s16.m4s
+1792924348.142 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924348.145 log DASH-JS client: appending data of length: 44829 to the Media Source Buffer with id: 0
+1792924348.788 log n: 1502088, m:7
+1792924348.788 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 1502088
+1792924350.169 log signaling refill
+1792924350.169 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_1500kbit/tos_2s17.m4s
+1792924350.169 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924350.172 log DASH-JS client: appending data of length: 54071 to the Media Source Buffer with id: 0
+1792924350.426 log n: 2001982, m:9
+1792924350.426 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 2001982
+1792924352.183 log signaling refill
+1792924352.183 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_2000kbit/tos_2s18.m4s
+1792924352.183 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924352.186 log DASH-JS client: appending data of length: 59999 to the Media Source Buffer with id: 0
+1792924352.503 log n: 3001705, m:11
+1792924352.504 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 3001705
+1792924354.201 log signaling refill
+1792924354.201 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_3000kbit/tos_2s19.m4s
+1792924354.202 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924354.204 log DASH-JS client: appending data of length: 70555 to the Media Source Buffer with id: 0
+1792924354.672 log n: 3501534, m:12
+1792924354.672 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 3501534
+1792924356.227 log signaling refill
+1792924356.227 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_3500kbit/tos_2s20.m4s
+1792924356.227 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924356.230 log DASH-JS client: appending data of length: 125399 to the Media Source Buffer with id: 0
+1792924356.924 log n: 4001427, m:13
+1792924356.924 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 4001427
+1792924358.150 log signaling refill
+1792924358.150 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_4000kbit/tos_2s21.m4s
+1792924358.150 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924358.155 log DASH-JS client: appending data of length: 126486 to the Media Source Buffer with id: 0
+1792924358.960 log n: 9999801, m:18
+1792924358.960 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 9999801
+1792924360.170 log signaling refill
+1792924360.170 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_10000kbit/tos_2s22.m4s
+1792924360.170 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924360.173 log DASH-JS client: appending data of length: 126485 to the Media Source Buffer with id: 0
+1792924361.490 log n: 11999253, m:19
+1792924361.490 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 11999253
+1792924362.186 log signaling refill
+1792924362.187 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s23.m4s
+1792924362.187 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924362.192 log DASH-JS client: appending data of length: 201487 to the Media Source Buffer with id: 0
+1792924364.219 log DASH-JS client: appending data of length: 251490 to the Media Source Buffer with id: 0
+1792924364.223 log n: 11999253, m:19
+1792924364.236 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s24.m4s
+1792924364.237 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924366.243 log DASH-JS client: appending data of length: 201481 to the Media Source Buffer with id: 0
+1792924366.497 log n: 11999253, m:19
+1792924366.505 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s25.m4s
+1792924366.505 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924368.188 log DASH-JS client: appending data of length: 313969 to the Media Source Buffer with id: 0
+1792924368.418 log n: 11999253, m:19
+1792924368.429 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s26.m4s
+1792924368.429 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924370.051 log n: 11999253, m:19
+1792924370.200 log signaling refill
+1792924370.200 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s27.m4s
+1792924370.200 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924370.215 log DASH-JS client: appending data of length: 376470 to the Media Source Buffer with id: 0
+1792924371.785 log n: 11999253, m:19
+1792924372.230 log signaling refill
+1792924372.230 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s28.m4s
+1792924372.230 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924372.247 log DASH-JS client: appending data of length: 501483 to the Media Source Buffer with id: 0
+1792924374.176 log DASH-JS client: appending data of length: 751481 to the Media Source Buffer with id: 0
+1792924374.338 log n: 11999253, m:19
+1792924374.345 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s29.m4s
+1792924374.346 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924376.182 log n: 11999253, m:19
+1792924376.188 log signaling refill
+1792924376.188 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s30.m4s
+1792924376.189 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924376.218 log DASH-JS client: appending data of length: 876465 to the Media Source Buffer with id: 0
+1792924378.284 log DASH-JS client: appending data of length: 1260449 to the Media Source Buffer with id: 0
+1792924379.176 log n: 9999801, m:18
+1792924379.176 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 9999801
+1792924379.185 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_10000kbit/tos_2s31.m4s
+1792924379.186 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924380.279 log DASH-JS client: appending data of length: 2081121 to the Media Source Buffer with id: 0
+1792924380.724 log n: 9999801, m:18
+1792924380.732 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_10000kbit/tos_2s32.m4s
+1792924380.732 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924382.381 log DASH-JS client: appending data of length: 3255042 to the Media Source Buffer with id: 0
+1792924382.391 log n: 9999801, m:18
+1792924382.416 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_10000kbit/tos_2s33.m4s
+1792924382.417 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924383.943 log n: 9999801, m:18
+1792924384.190 log signaling refill
+1792924384.190 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_10000kbit/tos_2s34.m4s
+1792924384.190 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924384.347 log DASH-JS client: appending data of length: 3645018 to the Media Source Buffer with id: 0
+1792924385.868 log n: 9999801, m:18
+1792924386.169 log signaling refill
+1792924386.169 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_10000kbit/tos_2s35.m4s
+1792924386.169 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924386.299 log DASH-JS client: appending data of length: 3050235 to the Media Source Buffer with id: 0
+1792924387.799 log n: 9999801, m:18
+1792924388.206 log signaling refill
+1792924388.206 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_10000kbit/tos_2s36.m4s
+1792924388.206 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924388.305 log DASH-JS client: appending data of length: 2564880 to the Media Source Buffer with id: 0
+1792924390.380 log DASH-JS client: appending data of length: 2501443 to the Media Source Buffer with id: 0
+1792924390.464 log n: 9999801, m:18
+1792924390.483 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_10000kbit/tos_2s37.m4s
+1792924390.483 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924391.909 log n: 9999801, m:18
+1792924392.189 log signaling refill
+1792924392.190 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_10000kbit/tos_2s38.m4s
+1792924392.190 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924392.325 log DASH-JS client: appending data of length: 2934874 to the Media Source Buffer with id: 0
+1792924393.983 log n: 9999801, m:18
+1792924394.236 log signaling refill
+1792924394.236 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_10000kbit/tos_2s39.m4s
+1792924394.236 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924394.350 log DASH-JS client: appending data of length: 3001481 to the Media Source Buffer with id: 0
+1792924395.905 log n: 9999801, m:18
+1792924396.190 log signaling refill
+1792924396.190 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_10000kbit/tos_2s40.m4s
+1792924396.190 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924396.258 log DASH-JS client: appending data of length: 3001476 to the Media Source Buffer with id: 0
+1792924398.282 log DASH-JS client: appending data of length: 2501494 to the Media Source Buffer with id: 0
+1792924398.652 log n: 9999801, m:18
+1792924398.659 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_10000kbit/tos_2s41.m4s
+1792924398.660 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924400.134 log n: 9999801, m:18
+1792924400.196 log signaling refill
+1792924400.196 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_10000kbit/tos_2s42.m4s
+1792924400.196 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924400.269 log DASH-JS client: appending data of length: 2501495 to the Media Source Buffer with id: 0
+1792924401.796 log n: 9999801, m:18
+1792924402.180 log signaling refill
+1792924402.180 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_10000kbit/tos_2s43.m4s
+1792924402.180 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924402.240 log DASH-JS client: appending data of length: 2501503 to the Media Source Buffer with id: 0
+1792924404.103 log n: 9999801, m:18
+1792924404.157 log signaling refill
+1792924404.157 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_10000kbit/tos_2s44.m4s
+1792924404.157 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924404.215 log DASH-JS client: appending data of length: 2501515 to the Media Source Buffer with id: 0
+1792924405.870 log n: 9999801, m:18
+1792924406.213 log signaling refill
+1792924406.213 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_10000kbit/tos_2s45.m4s
+1792924406.213 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924406.227 log DASH-JS client: appending data of length: 2651932 to the Media Source Buffer with id: 0
+1792924407.530 log n: 9999801, m:18
+1792924408.151 log signaling refill
+1792924408.151 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_10000kbit/tos_2s46.m4s
+1792924408.151 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924408.245 log DASH-JS client: appending data of length: 2628070 to the Media Source Buffer with id: 0
+1792924409.825 log n: 11999253, m:19
+1792924409.825 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 11999253
+1792924410.166 log signaling refill
+1792924410.166 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s47.m4s
+1792924410.167 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924410.252 log DASH-JS client: appending data of length: 2255503 to the Media Source Buffer with id: 0
+1792924411.871 log n: 11999253, m:19
+1792924412.163 log signaling refill
+1792924412.164 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s48.m4s
+1792924412.164 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924412.316 log DASH-JS client: appending data of length: 2850421 to the Media Source Buffer with id: 0
+1792924414.051 log n: 11999253, m:19
+1792924414.235 log signaling refill
+1792924414.235 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s49.m4s
+1792924414.235 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924414.371 log DASH-JS client: appending data of length: 2672945 to the Media Source Buffer with id: 0
+1792924416.231 log n: 11999253, m:19
+1792924416.231 log signaling refill
+1792924416.232 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s50.m4s
+1792924416.232 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924416.309 log DASH-JS client: appending data of length: 2185933 to the Media Source Buffer with id: 0
+1792924417.977 log n: 11999253, m:19
+1792924418.235 log signaling refill
+1792924418.235 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s51.m4s
+1792924418.236 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924418.331 log DASH-JS client: appending data of length: 2265520 to the Media Source Buffer with id: 0
+1792924420.238 log DASH-JS client: appending data of length: 2501478 to the Media Source Buffer with id: 0
+1792924420.246 log n: 11999253, m:19
+1792924420.279 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s52.m4s
+1792924420.279 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924422.281 log DASH-JS client: appending data of length: 2943630 to the Media Source Buffer with id: 0
+1792924422.296 log n: 11999253, m:19
+1792924422.326 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s53.m4s
+1792924422.326 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924424.320 log DASH-JS client: appending data of length: 2715776 to the Media Source Buffer with id: 0
+1792924424.330 log n: 11999253, m:19
+1792924424.365 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s54.m4s
+1792924424.366 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924426.280 log DASH-JS client: appending data of length: 2289879 to the Media Source Buffer with id: 0
+1792924426.669 log n: 11999253, m:19
+1792924426.681 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s55.m4s
+1792924426.681 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924428.325 log DASH-JS client: appending data of length: 2667318 to the Media Source Buffer with id: 0
+1792924428.548 log n: 11999253, m:19
+1792924428.559 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s56.m4s
+1792924428.559 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924430.329 log DASH-JS client: appending data of length: 2175970 to the Media Source Buffer with id: 0
+1792924430.349 log n: 11999253, m:19
+1792924430.371 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s57.m4s
+1792924430.371 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924432.044 log n: 11999253, m:19
+1792924432.157 log signaling refill
+1792924432.157 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s58.m4s
+1792924432.157 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924432.302 log DASH-JS client: appending data of length: 3001480 to the Media Source Buffer with id: 0
+1792924434.349 log DASH-JS client: appending data of length: 3001473 to the Media Source Buffer with id: 0
+1792924434.358 log n: 11999253, m:19
+1792924434.382 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s59.m4s
+1792924434.382 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924435.733 log n: 11999253, m:19
+1792924436.268 log signaling refill
+1792924436.268 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s60.m4s
+1792924436.268 log Event got called from overlay buffer, fillstate(%) = 90, fillstate(s) = 18, max(s) = 20
+1792924436.320 log DASH-JS client: appending data of length: 3001469 to the Media Source Buffer with id: 0
+1792924438.378 log DASH-JS client: appending data of length: 3001479 to the Media Source Buffer with id: 0
+1792924439.193 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_12000kbit/tos_2s60.m4s, retry in 500ms
+1792924439.694 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s60.m4s
+1792924440.315 log DASH-JS client: appending data of length: 3001473 to the Media Source Buffer with id: 0
+1792924442.245 log DASH-JS client: appending data of length: 3001467 to the Media Source Buffer with id: 0
+1792924442.694 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_12000kbit/tos_2s60.m4s, retry in 1000ms
+1792924443.695 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s60.m4s
+1792924444.298 log DASH-JS client: appending data of length: 3679778 to the Media Source Buffer with id: 0
+1792924446.336 log DASH-JS client: appending data of length: 2981407 to the Media Source Buffer with id: 0
+1792924446.695 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_12000kbit/tos_2s60.m4s, retry in 2000ms
+1792924448.286 log DASH-JS client: appending data of length: 2915916 to the Media Source Buffer with id: 0
+1792924448.696 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s60.m4s
+1792924450.309 log DASH-JS client: appending data of length: 2701466 to the Media Source Buffer with id: 0
+1792924451.696 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_12000kbit/tos_2s60.m4s, retry in 3000ms
+1792924452.296 log DASH-JS client: appending data of length: 3512591 to the Media Source Buffer with id: 0
+1792924454.305 log DASH-JS client: appending data of length: 2217639 to the Media Source Buffer with id: 0
+1792924454.697 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s60.m4s
+1792924457.697 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_12000kbit/tos_2s60.m4s, retry in 3000ms
+1792924458.229 log Buffer underrun!
+1792924458.330 log Buffer underrun!
+1792924458.430 log Buffer underrun!
+1792924458.531 log Buffer underrun!
+1792924458.631 log Buffer underrun!
+1792924458.732 log Buffer underrun!
+1792924458.832 log Buffer underrun!
+1792924458.933 log Buffer underrun!
+1792924459.033 log Buffer underrun!
+1792924459.134 log Buffer underrun!
+1792924459.237 log Buffer underrun!
+1792924459.337 log Buffer underrun!
+1792924459.437 log Buffer underrun!
+1792924459.541 log Buffer underrun!
+1792924459.644 log Buffer underrun!
+1792924459.744 log Buffer underrun!
+1792924459.844 log Buffer underrun!
+1792924459.945 log Buffer underrun!
+1792924460.045 log Buffer underrun!
+1792924460.145 log Buffer underrun!
+1792924460.246 log Buffer underrun!
+1792924460.346 log Buffer underrun!
+1792924460.446 log Buffer underrun!
+1792924460.547 log Buffer underrun!
+1792924460.647 log Buffer underrun!
+1792924460.698 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_12000kbit/tos_2s60.m4s
+1792924460.747 log Buffer underrun!
+1792924460.848 log Buffer underrun!
+1792924460.948 log Buffer underrun!
+1792924461.050 log Buffer underrun!
+1792924461.150 log Buffer underrun!
+1792924461.250 log Buffer underrun!
+1792924461.351 log Buffer underrun!
+1792924461.453 log Buffer underrun!
+1792924461.557 log Buffer underrun!
+1792924461.659 log Buffer underrun!
+1792924461.761 log Buffer underrun!
+1792924461.864 log Buffer underrun!
+1792924461.964 log Buffer underrun!
+1792924462.066 log Buffer underrun!
+1792924462.168 log Buffer underrun!
+1792924462.269 log Buffer underrun!
+1792924462.374 log Buffer underrun!
+1792924462.476 log Buffer underrun!
+1792924462.578 log Buffer underrun!
+1792924462.644 log n: 3001705, m:11
+1792924462.644 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 3001705
+1792924462.649 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_3000kbit/tos_2s61.m4s
+1792924462.650 log Event got called from overlay buffer, fillstate(%) = 10, fillstate(s) = 2, max(s) = 20
+1792924462.868 log DASH-JS client: appending data of length: 3078211 to the Media Source Buffer with id: 0
+1792924463.151 log n: 3501534, m:12
+1792924463.151 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 3501534
+1792924463.153 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_3500kbit/tos_2s62.m4s
+1792924463.161 log Event got called from overlay buffer, fillstate(%) = 10, fillstate(s) = 2, max(s) = 20
+1792924463.195 log DASH-JS client: appending data of length: 752948 to the Media Source Buffer with id: 0
+1792924463.800 log n: 4001427, m:13
+1792924463.800 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 4001427
+1792924463.804 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_4000kbit/tos_2s63.m4s
+1792924463.804 log Event got called from overlay buffer, fillstate(%) = 10, fillstate(s) = 2, max(s) = 20
+1792924464.523 log n: 4001427, m:13
+1792924464.533 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_4000kbit/tos_2s64.m4s
+1792924464.533 log Event got called from overlay buffer, fillstate(%) = 20, fillstate(s) = 4, max(s) = 20
+1792924465.093 log n: 7000611, m:16
+1792924465.093 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 7000611
+1792924465.096 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_7000kbit/tos_2s65.m4s
+1792924465.096 log Event got called from overlay buffer, fillstate(%) = 30, fillstate(s) = 6, max(s) = 20
+1792924465.138 log DASH-JS client: appending data of length: 998400 to the Media Source Buffer with id: 0
+1792924466.271 log n: 8000336, m:17
+1792924466.271 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 8000336
+1792924466.271 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_8000kbit/tos_2s66.m4s
+1792924466.271 log Event got called from overlay buffer, fillstate(%) = 30, fillstate(s) = 6, max(s) = 20
+1792924467.099 log DASH-JS client: appending data of length: 1122878 to the Media Source Buffer with id: 0
+1792924467.500 log n: 8000336, m:17
+1792924467.507 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_8000kbit/tos_2s67.m4s
+1792924467.508 log Event got called from overlay buffer, fillstate(%) = 30, fillstate(s) = 6, max(s) = 20
+1792924468.732 log n: 8000336, m:17
+1792924468.735 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_8000kbit/tos_2s68.m4s
+1792924468.736 log Event got called from overlay buffer, fillstate(%) = 40, fillstate(s) = 8, max(s) = 20
+1792924469.155 log DASH-JS client: appending data of length: 875967 to the Media Source Buffer with id: 0
+1792924471.129 log DASH-JS client: appending data of length: 1720198 to the Media Source Buffer with id: 0
+1792924471.736 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_8000kbit/tos_2s68.m4s, retry in 500ms
+1792924472.236 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_8000kbit/tos_2s68.m4s
+1792924473.207 log DASH-JS client: appending data of length: 2002819 to the Media Source Buffer with id: 0
+1792924475.193 log DASH-JS client: appending data of length: 2000124 to the Media Source Buffer with id: 0
+1792924475.238 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_8000kbit/tos_2s68.m4s, retry in 1000ms
+1792924476.259 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_8000kbit/tos_2s68.m4s
+1792924479.080 log Buffer underrun!
+1792924479.182 log Buffer underrun!
+1792924479.240 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_8000kbit/tos_2s68.m4s, retry in 2000ms
+1792924479.284 log Buffer underrun!
+1792924479.386 log Buffer underrun!
+1792924479.491 log Buffer underrun!
+1792924479.593 log Buffer underrun!
+1792924479.695 log Buffer underrun!
+1792924479.796 log Buffer underrun!
+1792924479.896 log Buffer underrun!
+1792924479.998 log Buffer underrun!
+1792924480.100 log Buffer underrun!
+1792924480.202 log Buffer underrun!
+1792924480.307 log Buffer underrun!
+1792924480.409 log Buffer underrun!
+1792924480.511 log Buffer underrun!
+1792924480.613 log Buffer underrun!
+1792924480.725 log Buffer underrun!
+1792924480.826 log Buffer underrun!
+1792924480.926 log Buffer underrun!
+1792924481.027 log Buffer underrun!
+1792924481.128 log Buffer underrun!
+1792924481.232 log Buffer underrun!
+1792924481.242 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_8000kbit/tos_2s68.m4s
+1792924481.334 log Buffer underrun!
+1792924481.436 log Buffer underrun!
+1792924481.540 log Buffer underrun!
+1792924481.644 log Buffer underrun!
+1792924481.746 log Buffer underrun!
+1792924481.849 log Buffer underrun!
+1792924481.949 log Buffer underrun!
+1792924482.050 log Buffer underrun!
+1792924482.150 log Buffer underrun!
+1792924482.251 log Buffer underrun!
+1792924482.358 log Buffer underrun!
+1792924482.459 log Buffer underrun!
+1792924482.561 log Buffer underrun!
+1792924482.663 log Buffer underrun!
+1792924482.765 log Buffer underrun!
+1792924482.866 log Buffer underrun!
+1792924482.968 log Buffer underrun!
+1792924483.073 log Buffer underrun!
+1792924483.175 log Buffer underrun!
+1792924483.277 log Buffer underrun!
+1792924483.379 log Buffer underrun!
+1792924483.479 log Buffer underrun!
+1792924483.580 log Buffer underrun!
+1792924483.682 log Buffer underrun!
+1792924483.784 log Buffer underrun!
+1792924483.887 log Buffer underrun!
+1792924483.991 log Buffer underrun!
+1792924484.093 log Buffer underrun!
+1792924484.196 log Buffer underrun!
+1792924484.242 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_8000kbit/tos_2s68.m4s, retry in 3000ms
+1792924484.297 log Buffer underrun!
+1792924484.397 log Buffer underrun!
+1792924484.499 log Buffer underrun!
+1792924484.601 log Buffer underrun!
+1792924484.702 log Buffer underrun!
+1792924484.807 log Buffer underrun!
+1792924484.909 log Buffer underrun!
+1792924485.011 log Buffer underrun!
+1792924485.111 log Buffer underrun!
+1792924485.212 log Buffer underrun!
+1792924485.314 log Buffer underrun!
+1792924485.416 log Buffer underrun!
+1792924485.518 log Buffer underrun!
+1792924485.620 log Buffer underrun!
+1792924485.733 log Buffer underrun!
+1792924485.835 log Buffer underrun!
+1792924485.940 log Buffer underrun!
+1792924486.044 log Buffer underrun!
+1792924486.248 log Buffer underrun!
+1792924486.295 log Buffer underrun!
+1792924486.396 log Buffer underrun!
+1792924486.496 log Buffer underrun!
+1792924486.597 log Buffer underrun!
+1792924486.698 log Buffer underrun!
+1792924486.800 log Buffer underrun!
+1792924486.902 log Buffer underrun!
+1792924487.006 log Buffer underrun!
+1792924487.108 log Buffer underrun!
+1792924487.211 log Buffer underrun!
+1792924487.242 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_8000kbit/tos_2s68.m4s
+1792924487.312 log Buffer underrun!
+1792924487.413 log Buffer underrun!
+1792924487.514 log Buffer underrun!
+1792924487.615 log Buffer underrun!
+1792924487.728 log Buffer underrun!
+1792924487.829 log Buffer underrun!
+1792924487.929 log Buffer underrun!
+1792924488.030 log Buffer underrun!
+1792924488.131 log Buffer underrun!
+1792924488.232 log Buffer underrun!
+1792924488.334 log Buffer underrun!
+1792924488.436 log Buffer underrun!
+1792924488.541 log Buffer underrun!
+1792924488.646 log Buffer underrun!
+1792924488.760 log Buffer underrun!
+1792924488.867 log Buffer underrun!
+1792924488.967 log Buffer underrun!
+1792924489.068 log Buffer underrun!
+1792924489.168 log Buffer underrun!
+1792924489.269 log Buffer underrun!
+1792924489.369 log Buffer underrun!
+1792924489.470 log Buffer underrun!
+1792924489.576 log Buffer underrun!
+1792924489.676 log Buffer underrun!
+1792924489.777 log Buffer underrun!
+1792924489.878 log Buffer underrun!
+1792924489.978 log Buffer underrun!
+1792924490.079 log Buffer underrun!
+1792924490.181 log Buffer underrun!
+1792924490.242 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_8000kbit/tos_2s68.m4s, retry in 3000ms
+1792924490.283 log Buffer underrun!
+1792924490.384 log Buffer underrun!
+1792924490.487 log Buffer underrun!
+1792924490.591 log Buffer underrun!
+1792924490.693 log Buffer underrun!
+1792924490.800 log Buffer underrun!
+1792924490.901 log Buffer underrun!
+1792924491.001 log Buffer underrun!
+1792924491.101 log Buffer underrun!
+1792924491.207 log Buffer underrun!
+1792924491.311 log Buffer underrun!
+1792924491.412 log Buffer underrun!
+1792924491.512 log Buffer underrun!
+1792924491.612 log Buffer underrun!
+1792924491.726 log Buffer underrun!
+1792924491.826 log Buffer underrun!
+1792924491.927 log Buffer underrun!
+1792924492.028 log Buffer underrun!
+1792924492.128 log Buffer underrun!
+1792924492.234 log Buffer underrun!
+1792924492.335 log Buffer underrun!
+1792924492.440 log Buffer underrun!
+1792924492.544 log Buffer underrun!
+1792924492.645 log Buffer underrun!
+1792924492.747 log Buffer underrun!
+1792924492.847 log Buffer underrun!
+1792924492.948 log Buffer underrun!
+1792924493.050 log Buffer underrun!
+1792924493.152 log Buffer underrun!
+1792924493.243 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_8000kbit/tos_2s68.m4s
+1792924493.256 log Buffer underrun!
+1792924493.358 log Buffer underrun!
+1792924493.460 log Buffer underrun!
+1792924493.562 log Buffer underrun!
+1792924493.662 log Buffer underrun!
+1792924493.764 log Buffer underrun!
+1792924493.865 log Buffer underrun!
+1792924493.968 log Buffer underrun!
+1792924494.069 log Buffer underrun!
+1792924494.174 log Buffer underrun!
+1792924494.276 log Buffer underrun!
+1792924494.380 log Buffer underrun!
+1792924494.480 log Buffer underrun!
+1792924494.511 log n: 2001982, m:9
+1792924494.511 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 2001982
+1792924494.515 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_2000kbit/tos_2s69.m4s
+1792924494.516 log Event got called from overlay buffer, fillstate(%) = 10, fillstate(s) = 2, max(s) = 20
+1792924494.737 log DASH-JS client: appending data of length: 2001475 to the Media Source Buffer with id: 0
+1792924494.830 log n: 2501812, m:10
+1792924494.830 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 2501812
+1792924494.837 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_2500kbit/tos_2s70.m4s
+1792924494.837 log Event got called from overlay buffer, fillstate(%) = 10, fillstate(s) = 2, max(s) = 20
+1792924494.957 log DASH-JS client: appending data of length: 501490 to the Media Source Buffer with id: 0
+1792924495.257 log n: 3001705, m:11
+1792924495.257 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 3001705
+1792924495.261 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_3000kbit/tos_2s71.m4s
+1792924495.261 log Event got called from overlay buffer, fillstate(%) = 10, fillstate(s) = 2, max(s) = 20
+1792924495.764 log n: 3501534, m:12
+1792924495.764 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 3501534
+1792924495.769 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_3500kbit/tos_2s72.m4s
+1792924495.769 log Event got called from overlay buffer, fillstate(%) = 20, fillstate(s) = 4, max(s) = 20
+1792924496.363 log n: 4001427, m:13
+1792924496.363 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 4001427
+1792924496.371 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_4000kbit/tos_2s73.m4s
+1792924496.372 log Event got called from overlay buffer, fillstate(%) = 30, fillstate(s) = 6, max(s) = 20
+1792924496.948 log DASH-JS client: appending data of length: 648260 to the Media Source Buffer with id: 0
+1792924497.026 log n: 4001427, m:13
+1792924497.028 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_4000kbit/tos_2s74.m4s
+1792924497.029 log Event got called from overlay buffer, fillstate(%) = 30, fillstate(s) = 6, max(s) = 20
+1792924497.647 log n: 7000611, m:16
+1792924497.647 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 7000611
+1792924497.651 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_7000kbit/tos_2s75.m4s
+1792924497.651 log Event got called from overlay buffer, fillstate(%) = 40, fillstate(s) = 8, max(s) = 20
+1792924499.000 log DASH-JS client: appending data of length: 800673 to the Media Source Buffer with id: 0
+1792924500.652 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_7000kbit/tos_2s75.m4s, retry in 500ms
+1792924500.941 log DASH-JS client: appending data of length: 943487 to the Media Source Buffer with id: 0
+1792924501.153 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_7000kbit/tos_2s75.m4s
+1792924502.993 log DASH-JS client: appending data of length: 1018622 to the Media Source Buffer with id: 0
+1792924504.156 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_7000kbit/tos_2s75.m4s, retry in 1000ms
+1792924504.930 log DASH-JS client: appending data of length: 954262 to the Media Source Buffer with id: 0
+1792924505.157 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_7000kbit/tos_2s75.m4s
+1792924508.157 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_7000kbit/tos_2s75.m4s, retry in 2000ms
+1792924508.962 log Buffer underrun!
+1792924509.064 log Buffer underrun!
+1792924509.166 log Buffer underrun!
+1792924509.268 log Buffer underrun!
+1792924509.373 log Buffer underrun!
+1792924509.475 log Buffer underrun!
+1792924509.577 log Buffer underrun!
+1792924509.677 log Buffer underrun!
+1792924509.779 log Buffer underrun!
+1792924509.881 log Buffer underrun!
+1792924509.983 log Buffer underrun!
+1792924510.085 log Buffer underrun!
+1792924510.157 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_7000kbit/tos_2s75.m4s
+1792924510.189 log Buffer underrun!
+1792924510.292 log Buffer underrun!
+1792924510.394 log Buffer underrun!
+1792924510.494 log Buffer underrun!
+1792924510.595 log Buffer underrun!
+1792924510.697 log Buffer underrun!
+1792924510.799 log Buffer underrun!
+1792924510.902 log Buffer underrun!
+1792924511.006 log Buffer underrun!
+1792924511.108 log Buffer underrun!
+1792924511.210 log Buffer underrun!
+1792924511.312 log Buffer underrun!
+1792924511.414 log Buffer underrun!
+1792924511.517 log Buffer underrun!
+1792924511.618 log Buffer underrun!
+1792924511.732 log Buffer underrun!
+1792924511.834 log Buffer underrun!
+1792924511.939 log Buffer underrun!
+1792924512.043 log Buffer underrun!
+1792924512.148 log Buffer underrun!
+1792924512.248 log Buffer underrun!
+1792924512.349 log Buffer underrun!
+1792924512.449 log Buffer underrun!
+1792924512.549 log Buffer underrun!
+1792924512.651 log Buffer underrun!
+1792924512.758 log Buffer underrun!
+1792924512.859 log Buffer underrun!
+1792924512.962 log Buffer underrun!
+1792924513.062 log Buffer underrun!
+1792924513.164 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_7000kbit/tos_2s75.m4s, retry in 3000ms
+1792924513.165 log Buffer underrun!
+1792924513.266 log Buffer underrun!
+1792924513.368 log Buffer underrun!
+1792924513.473 log Buffer underrun!
+1792924513.577 log Buffer underrun!
+1792924513.684 log Buffer underrun!
+1792924513.785 log Buffer underrun!
+1792924513.885 log Buffer underrun!
+1792924513.986 log Buffer underrun!
+1792924514.088 log Buffer underrun!
+1792924514.190 log Buffer underrun!
+1792924514.292 log Buffer underrun!
+1792924514.393 log Buffer underrun!
+1792924514.494 log Buffer underrun!
+1792924514.597 log Buffer underrun!
+1792924514.697 log Buffer underrun!
+1792924514.799 log Buffer underrun!
+1792924514.901 log Buffer underrun!
+1792924515.006 log Buffer underrun!
+1792924515.108 log Buffer underrun!
+1792924515.210 log Buffer underrun!
+1792924515.312 log Buffer underrun!
+1792924515.412 log Buffer underrun!
+1792924515.513 log Buffer underrun!
+1792924515.616 log Buffer underrun!
+1792924515.727 log Buffer underrun!
+1792924515.827 log Buffer underrun!
+1792924515.928 log Buffer underrun!
+1792924516.028 log Buffer underrun!
+1792924516.251 log Buffer underrun!
+1792924516.251 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_7000kbit/tos_2s75.m4s
+1792924516.293 log Buffer underrun!
+1792924516.395 log Buffer underrun!
+1792924516.495 log Buffer underrun!
+1792924516.596 log Buffer underrun!
+1792924516.698 log Buffer underrun!
+1792924516.801 log Buffer underrun!
+1792924516.905 log Buffer underrun!
+1792924517.008 log Buffer underrun!
+1792924517.109 log Buffer underrun!
+1792924517.211 log Buffer underrun!
+1792924517.312 log Buffer underrun!
+1792924517.413 log Buffer underrun!
+1792924517.515 log Buffer underrun!
+1792924517.617 log Buffer underrun!
+1792924517.732 log Buffer underrun!
+1792924517.832 log Buffer underrun!
+1792924517.933 log Buffer underrun!
+1792924518.033 log Buffer underrun!
+1792924518.133 log Buffer underrun!
+1792924518.146 log n: 1502088, m:7
+1792924518.146 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 1502088
+1792924518.150 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_1500kbit/tos_2s76.m4s
+1792924518.150 log Event got called from overlay buffer, fillstate(%) = 10, fillstate(s) = 2, max(s) = 20
+1792924518.382 log DASH-JS client: appending data of length: 1751484 to the Media Source Buffer with id: 0
+1792924518.408 log n: 2001982, m:9
+1792924518.408 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 2001982
+1792924518.409 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_2000kbit/tos_2s77.m4s
+1792924518.409 log Event got called from overlay buffer, fillstate(%) = 10, fillstate(s) = 2, max(s) = 20
+1792924518.594 log DASH-JS client: appending data of length: 376468 to the Media Source Buffer with id: 0
+1792924518.744 log n: 2001982, m:9
+1792924518.750 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_2000kbit/tos_2s78.m4s
+1792924518.750 log Event got called from overlay buffer, fillstate(%) = 10, fillstate(s) = 2, max(s) = 20
+1792924520.621 log DASH-JS client: appending data of length: 501477 to the Media Source Buffer with id: 0
+1792924521.327 log n: 3001705, m:11
+1792924521.327 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 3001705
+1792924521.331 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_3000kbit/tos_2s79.m4s
+1792924521.331 log Event got called from overlay buffer, fillstate(%) = 10, fillstate(s) = 2, max(s) = 20
+1792924521.815 log n: 3501534, m:12
+1792924521.815 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 3501534
+1792924521.817 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_3500kbit/tos_2s80.m4s
+1792924521.817 log Event got called from overlay buffer, fillstate(%) = 20, fillstate(s) = 4, max(s) = 20
+1792924522.446 log n: 4001427, m:13
+1792924522.446 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 4001427
+1792924522.448 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_4000kbit/tos_2s81.m4s
+1792924522.448 log Event got called from overlay buffer, fillstate(%) = 30, fillstate(s) = 6, max(s) = 20
+1792924522.555 log DASH-JS client: appending data of length: 501478 to the Media Source Buffer with id: 0
+1792924523.006 log n: 4001427, m:13
+1792924523.009 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_4000kbit/tos_2s82.m4s
+1792924523.009 log Event got called from overlay buffer, fillstate(%) = 30, fillstate(s) = 6, max(s) = 20
+1792924523.708 log n: 5001162, m:14
+1792924523.708 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 5001162
+1792924523.714 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_5000kbit/tos_2s83.m4s
+1792924523.714 log Event got called from overlay buffer, fillstate(%) = 40, fillstate(s) = 8, max(s) = 20
+1792924524.458 log n: 5001162, m:14
+1792924524.461 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_5000kbit/tos_2s84.m4s
+1792924524.461 log Event got called from overlay buffer, fillstate(%) = 50, fillstate(s) = 10, max(s) = 20
+1792924524.615 log DASH-JS client: appending data of length: 751479 to the Media Source Buffer with id: 0
+1792924525.164 log n: 6000887, m:15
+1792924525.165 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 6000887
+1792924525.172 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_6000kbit/tos_2s85.m4s
+1792924525.172 log Event got called from overlay buffer, fillstate(%) = 50, fillstate(s) = 10, max(s) = 20
+1792924526.258 log n: 6000887, m:15
+1792924526.258 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_6000kbit/tos_2s86.m4s
+1792924526.258 log Event got called from overlay buffer, fillstate(%) = 60, fillstate(s) = 12, max(s) = 20
+1792924526.544 log DASH-JS client: appending data of length: 974516 to the Media Source Buffer with id: 0
+1792924527.126 log n: 8000336, m:17
+1792924527.126 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 8000336
+1792924527.132 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_8000kbit/tos_2s87.m4s
+1792924527.132 log Event got called from overlay buffer, fillstate(%) = 60, fillstate(s) = 12, max(s) = 20
+1792924528.591 log DASH-JS client: appending data of length: 845768 to the Media Source Buffer with id: 0
+1792924530.008 log n: 8000336, m:17
+1792924530.011 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_8000kbit/tos_2s88.m4s
+1792924530.012 log Event got called from overlay buffer, fillstate(%) = 60, fillstate(s) = 12, max(s) = 20
+1792924530.644 log DASH-JS client: appending data of length: 1098004 to the Media Source Buffer with id: 0
+1792924532.607 log DASH-JS client: appending data of length: 1184166 to the Media Source Buffer with id: 0
+1792924533.012 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_8000kbit/tos_2s88.m4s, retry in 500ms
+1792924533.514 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_8000kbit/tos_2s88.m4s
+1792924534.557 log DASH-JS client: appending data of length: 1101590 to the Media Source Buffer with id: 0
+1792924536.554 log DASH-JS client: appending data of length: 1501476 to the Media Source Buffer with id: 0
+1792924536.558 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_8000kbit/tos_2s88.m4s, retry in 1000ms
+1792924537.558 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_8000kbit/tos_2s88.m4s
+1792924538.616 log DASH-JS client: appending data of length: 1501473 to the Media Source Buffer with id: 0
+1792924540.596 log DASH-JS client: appending data of length: 2001476 to the Media Source Buffer with id: 0
+1792924540.602 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_8000kbit/tos_2s88.m4s, retry in 2000ms
+1792924542.603 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_8000kbit/tos_2s88.m4s
+1792924544.525 log Buffer underrun!
+1792924544.625 log Buffer underrun!
+1792924544.732 log Buffer underrun!
+1792924544.837 log Buffer underrun!
+1792924544.939 log Buffer underrun!
+1792924545.044 log Buffer underrun!
+1792924545.146 log Buffer underrun!
+1792924545.247 log Buffer underrun!
+1792924545.347 log Buffer underrun!
+1792924545.450 log Buffer underrun!
+1792924545.555 log Buffer underrun!
+1792924545.603 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_8000kbit/tos_2s88.m4s, retry in 3000ms
+1792924545.657 log Buffer underrun!
+1792924545.759 log Buffer underrun!
+1792924545.861 log Buffer underrun!
+1792924545.962 log Buffer underrun!
+1792924546.064 log Buffer underrun!
+1792924546.247 log Buffer underrun!
+1792924546.298 log Buffer underrun!
+1792924546.401 log Buffer underrun!
+1792924546.508 log Buffer underrun!
+1792924546.608 log Buffer underrun!
+1792924546.710 log Buffer underrun!
+1792924546.811 log Buffer underrun!
+1792924546.912 log Buffer underrun!
+1792924547.015 log Buffer underrun!
+1792924547.121 log Buffer underrun!
+1792924547.231 log Buffer underrun!
+1792924547.331 log Buffer underrun!
+1792924547.433 log Buffer underrun!
+1792924547.538 log Buffer underrun!
+1792924547.642 log Buffer underrun!
+1792924547.744 log Buffer underrun!
+1792924547.847 log Buffer underrun!
+1792924547.947 log Buffer underrun!
+1792924548.048 log Buffer underrun!
+1792924548.150 log Buffer underrun!
+1792924548.255 log Buffer underrun!
+1792924548.357 log Buffer underrun!
+1792924548.459 log Buffer underrun!
+1792924548.561 log Buffer underrun!
+1792924548.603 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_8000kbit/tos_2s88.m4s
+1792924548.662 log Buffer underrun!
+1792924548.764 log Buffer underrun!
+1792924548.866 log Buffer underrun!
+1792924548.971 log Buffer underrun!
+1792924549.074 log Buffer underrun!
+1792924549.177 log Buffer underrun!
+1792924549.277 log Buffer underrun!
+1792924549.378 log Buffer underrun!
+1792924549.480 log Buffer underrun!
+1792924549.583 log Buffer underrun!
+1792924549.688 log Buffer underrun!
+1792924549.791 log Buffer underrun!
+1792924549.893 log Buffer underrun!
+1792924549.994 log Buffer underrun!
+1792924550.095 log Buffer underrun!
+1792924550.197 log Buffer underrun!
+1792924550.300 log Buffer underrun!
+1792924550.405 log Buffer underrun!
+1792924550.508 log Buffer underrun!
+1792924550.609 log Buffer underrun!
+1792924550.710 log Buffer underrun!
+1792924550.811 log Buffer underrun!
+1792924550.914 log Buffer underrun!
+1792924551.016 log Buffer underrun!
+1792924551.121 log Buffer underrun!
+1792924551.230 log Buffer underrun!
+1792924551.337 log Buffer underrun!
+1792924551.441 log Buffer underrun!
+1792924551.546 log Buffer underrun!
+1792924551.603 log DASH JS Client: segment fetch failed/timeout for tos_2s_1080p/tos_2s_8000kbit/tos_2s88.m4s, retry in 3000ms
+1792924551.647 log Buffer underrun!
+1792924551.747 log Buffer underrun!
+1792924551.847 log Buffer underrun!
+1792924551.948 log Buffer underrun!
+1792924552.050 log Buffer underrun!
+1792924552.158 log Buffer underrun!
+1792924552.263 log Buffer underrun!
+1792924552.365 log Buffer underrun!
+1792924552.476 log Buffer underrun!
+1792924552.581 log Buffer underrun!
+1792924552.681 log Buffer underrun!
+1792924552.782 log Buffer underrun!
+1792924552.882 log Buffer underrun!
+1792924552.983 log Buffer underrun!
+1792924553.090 log Buffer underrun!
+1792924553.190 log Buffer underrun!
+1792924553.292 log Buffer underrun!
+1792924553.395 log Buffer underrun!
+1792924553.495 log Buffer underrun!
+1792924553.596 log Buffer underrun!
+1792924553.700 log Buffer underrun!
+1792924553.804 log Buffer underrun!
+1792924553.906 log Buffer underrun!
+1792924554.008 log Buffer underrun!
+1792924554.114 log Buffer underrun!
+1792924554.216 log Buffer underrun!
+1792924554.317 log Buffer underrun!
+1792924554.418 log Buffer underrun!
+1792924554.520 log Buffer underrun!
+1792924554.604 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_8000kbit/tos_2s88.m4s
+1792924554.623 log Buffer underrun!
+1792924554.729 log Buffer underrun!
+1792924554.829 log Buffer underrun!
+1792924554.930 log Buffer underrun!
+1792924555.032 log Buffer underrun!
+1792924555.138 log Buffer underrun!
+1792924555.243 log Buffer underrun!
+1792924555.345 log Buffer underrun!
+1792924555.448 log Buffer underrun!
+1792924555.549 log Buffer underrun!
+1792924555.649 log Buffer underrun!
+1792924555.753 log Buffer underrun!
+1792924555.855 log Buffer underrun!
+1792924555.879 log n: 2001982, m:9
+1792924555.879 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 2001982
+1792924555.883 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_2000kbit/tos_2s89.m4s
+1792924555.883 log Event got called from overlay buffer, fillstate(%) = 10, fillstate(s) = 2, max(s) = 20
+1792924556.121 log DASH-JS client: appending data of length: 2001467 to the Media Source Buffer with id: 0
+1792924556.306 log n: 2501812, m:10
+1792924556.306 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 2501812
+1792924556.306 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_2500kbit/tos_2s90.m4s
+1792924556.306 log Event got called from overlay buffer, fillstate(%) = 10, fillstate(s) = 2, max(s) = 20
+1792924556.454 log DASH-JS client: appending data of length: 501481 to the Media Source Buffer with id: 0
+1792924556.644 log n: 3001705, m:11
+1792924556.644 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 3001705
+1792924556.651 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_3000kbit/tos_2s91.m4s
+1792924556.652 log Event got called from overlay buffer, fillstate(%) = 10, fillstate(s) = 2, max(s) = 20
+1792924557.145 log n: 3501534, m:12
+1792924557.145 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 3501534
+1792924557.148 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_3500kbit/tos_2s92.m4s
+1792924557.148 log Event got called from overlay buffer, fillstate(%) = 20, fillstate(s) = 4, max(s) = 20
+1792924557.725 log n: 4001427, m:13
+1792924557.725 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 4001427
+1792924557.727 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_4000kbit/tos_2s93.m4s
+1792924557.728 log Event got called from overlay buffer, fillstate(%) = 30, fillstate(s) = 6, max(s) = 20
+1792924558.356 log n: 4001427, m:13
+1792924558.359 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_4000kbit/tos_2s94.m4s
+1792924558.360 log Event got called from overlay buffer, fillstate(%) = 40, fillstate(s) = 8, max(s) = 20
+1792924558.412 log DASH-JS client: appending data of length: 626472 to the Media Source Buffer with id: 0
+1792924560.478 log DASH-JS client: appending data of length: 751476 to the Media Source Buffer with id: 0
+1792924560.899 log n: 5001162, m:14
+1792924560.899 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 5001162
+1792924560.902 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_5000kbit/tos_2s95.m4s
+1792924560.903 log Event got called from overlay buffer, fillstate(%) = 30, fillstate(s) = 6, max(s) = 20
+1792924561.693 log n: 6000887, m:15
+1792924561.693 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 6000887
+1792924561.697 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_6000kbit/tos_2s96.m4s
+1792924561.697 log Event got called from overlay buffer, fillstate(%) = 40, fillstate(s) = 8, max(s) = 20
+1792924562.442 log DASH-JS client: appending data of length: 876472 to the Media Source Buffer with id: 0
+1792924562.651 log n: 6000887, m:15
+1792924562.659 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_6000kbit/tos_2s97.m4s
+1792924562.659 log Event got called from overlay buffer, fillstate(%) = 40, fillstate(s) = 8, max(s) = 20
+1792924563.646 log n: 7000611, m:16
+1792924563.646 log DASH rate based adaptation: SWITCHING STREAM TO BITRATE = 7000611
+1792924563.659 log DASH JS Client fetching segment: tos_2s_1080p/tos_2s_7000kbit/tos_2s98.m4s
+1792924563.659 log Event got called from overlay buffer, fillstate(%) = 50, fillstate(s) = 10, max(s) = 20
+1792924564.409 log DASH-JS client: appending data of length: 1001474 to the Media Source Buffer with id: 0

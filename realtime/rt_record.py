@@ -132,3 +132,100 @@ class DopplerRecorder:
         if self.truncated:
             s += "  ⚠️缓冲已满，后续帧被丢弃（用 --debug-max-sec 加大）"
         return s
+
+
+class HRecorder:
+    """--save-h：把 H（1kHz 复数相关系数 dec，多普勒谱就是对它加窗 FFT）本体落盘。
+
+    和 DopplerRecorder 的区别：
+    - 存的是 STFT 之前的复数序列，事后能换任何窗长/算法（过零、带符号质心、相位展开...）；
+    - 边录边追加写盘（后台线程），Ctrl+C / 崩溃最多丢最后 ~10 s，不像 DopplerRecorder 收尾才写；
+    - 带本机 time.time() 时间戳，跟 isac_bridge 的 session / 回车打点 / NTG csv 用同一个钟。
+    数据量：H 8 KB/s + 幅度 8 KB/s，≈ 58 MB/小时。
+
+    文件（同一个 stamp 前缀，目录由 --h-dir 指定）：
+      h_<stamp>.h.bin     complex64  n_samples          H 的每个样本（1kHz）
+      h_<stamp>.amp.bin   float32    n_samples x 2      每帧 ch0/ch1 RMS 幅度（满量程=1）
+      h_<stamp>.t.bin     float64    n_steps            每步结束时的 time.time()（秒）
+      h_<stamp>.flag.bin  uint8      n_steps            bit0=环已灌满(ready)  bit1=丢步/overflow冻结中
+      h_<stamp>.json      元数据（开始时写一次，结束时更新）
+    样本 k（第 j 步内第 i 个）的时间 ≈ t[j] - (n_fr-1-i)/fs_out。读取用 debug/load_h.py。
+    """
+
+    FLUSH_STEPS = 500          # 10 s 一次
+
+    def __init__(self, cfg: RtConfig, out_dir: str, extra: dict | None = None):
+        import queue
+        import threading
+        os.makedirs(out_dir, exist_ok=True)
+        self.cfg = cfg
+        self.t_start = time.time()
+        stamp = time.strftime("%Y%m%d_%H%M%S", time.localtime(self.t_start))
+        self.prefix = os.path.join(out_dir, f"h_{stamp}")
+        self.n_fr = cfg.n_frames_per_step
+        n = self.FLUSH_STEPS
+        self._h = np.zeros(n * self.n_fr, dtype=np.complex64)
+        self._a = np.zeros((n * self.n_fr, 2), dtype=np.float32)
+        self._t = np.zeros(n, dtype=np.float64)
+        self._f = np.zeros(n, dtype=np.uint8)
+        self.k = 0
+        self.steps = 0
+        self.meta = {"fs_out": cfg.fs_out, "step_sec": cfg.step_sec, "n_frames_per_step": self.n_fr,
+                     "window_sec": cfg.window_sec, "sample_rate": cfg.sample_rate,
+                     "center_freq": cfg.center_freq, "gain": cfg.gain, "serial": cfg.serial,
+                     "t_start": self.t_start, "t_start_str": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(self.t_start))}
+        self.meta.update(extra or {})
+        self._fh = {k: open(f"{self.prefix}.{k}.bin", "ab") for k in ("h", "amp", "t", "flag")}
+        self._q = queue.Queue()
+        self._th = threading.Thread(target=self._writer, daemon=True)
+        self._th.start()
+        self._write_meta(done=False)
+
+    def _write_meta(self, done: bool):
+        m = dict(self.meta, n_steps=self.steps, n_samples=self.steps * self.n_fr, complete=done)
+        with open(self.prefix + ".json", "w", encoding="utf-8") as f:
+            json.dump(m, f, ensure_ascii=False, indent=1)
+
+    def _writer(self):
+        while True:
+            item = self._q.get()
+            if item is None:
+                return
+            h, a, t, f = item
+            self._fh["h"].write(h.tobytes()); self._fh["amp"].write(a.tobytes())
+            self._fh["t"].write(t.tobytes()); self._fh["flag"].write(f.tobytes())
+            for fh in self._fh.values():
+                fh.flush()
+
+    def add(self, dec, amp, ready: bool, guard: bool) -> None:
+        if dec is None:
+            return
+        j = self.k
+        self._h[j * self.n_fr:(j + 1) * self.n_fr] = dec
+        self._a[j * self.n_fr:(j + 1) * self.n_fr] = amp
+        self._t[j] = time.time()
+        self._f[j] = (1 if ready else 0) | (2 if guard else 0)
+        self.k += 1
+        self.steps += 1
+        if self.k >= self.FLUSH_STEPS:
+            self._flush()
+
+    def _flush(self):
+        n = self.k
+        if n:
+            self._q.put((self._h[:n * self.n_fr].copy(), self._a[:n * self.n_fr].copy(),
+                         self._t[:n].copy(), self._f[:n].copy()))
+        self.k = 0
+
+    def close(self, extra: dict | None = None) -> str:
+        self._flush()
+        self._q.put(None)
+        self._th.join(timeout=10)
+        for fh in self._fh.values():
+            fh.close()
+        self.meta.update(extra or {})
+        self._write_meta(done=True)
+        return self.prefix
+
+    def status(self) -> str:
+        return f"save-h: {self.steps} 步 ({self.steps * self.cfg.step_sec:.1f}s) -> {self.prefix}.*"

@@ -1,0 +1,15 @@
+{
+ "fs_out": 1000.0,
+ "step_sec": 0.02,
+ "n_frames_per_step": 20,
+ "window_sec": 0.2,
+ "sample_rate": 10000000.0,
+ "center_freq": 1890000000.0,
+ "gain": 20.0,
+ "serial": "32392D3",
+ "t_start": 1792930966.71564,
+ "t_start_str": "2026-10-25 21:22:46",
+ "n_steps": 0,
+ "n_samples": 0,
+ "complete": false
+}

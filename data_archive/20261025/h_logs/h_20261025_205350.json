@@ -1,0 +1,20 @@
+{
+ "fs_out": 1000.0,
+ "step_sec": 0.02,
+ "n_frames_per_step": 20,
+ "window_sec": 0.2,
+ "sample_rate": 10000000.0,
+ "center_freq": 1890000000.0,
+ "gain": 20.0,
+ "serial": "32392D3",
+ "t_start": 1792929230.3645546,
+ "t_start_str": "2026-10-25 20:53:50",
+ "sync_locked": true,
+ "sync_phase": 180,
+ "sync_n_integrate": 6850,
+ "dry_run": false,
+ "uhd_errors": "overflow=8 late=0 timeout=0 other=0",
+ "n_steps": 86356,
+ "n_samples": 1727120,
+ "complete": true
+}

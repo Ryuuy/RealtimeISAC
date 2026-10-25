@@ -43,6 +43,10 @@ class DopplerEngine:
         # 最近一帧的**复数**谱。实时判决只要 |S|^2，这个引用纯给 --debug 录制用
         # （复数谱才画得出相位面板）。不额外分配：S 本来就要算出来。
         self.last_spectrum = None
+        # 20261019：最近一步的 H 本体（1kHz 复数相关系数 dec，n_fr 个）+ 每帧两路 RMS 幅度
+        # （满量程=1）。--save-h 录制用；归一化把绝对幅度除掉了，幅度另存才能做 Fresnel/幅度类分析。
+        self.last_dec = None
+        self.last_amp = None
 
         self.freqs = np.fft.fftshift(np.fft.fftfreq(cfg.nfft, d=1.0 / cfg.fs_out))
         # 命名仍叫 dc_mask（外部一堆代码在用这个名字），但现在也把已知 TX
@@ -128,6 +132,8 @@ class DopplerEngine:
         dec_re = np.divide(re_f, norm, out=np.zeros_like(re_f), where=norm > 0)
         dec_im = np.divide(im_f, norm, out=np.zeros_like(im_f), where=norm > 0)
         dec = (dec_re + 1j * dec_im).astype(np.complex64)
+        self.last_dec = dec
+        self.last_amp = np.stack([np.sqrt(ea / n_int), np.sqrt(eb / n_int)], axis=1).astype(np.float32) / 32768.0
 
         # ---- 不做时域去 DC ----
         # 静态信道下 conj(ch0)·ch1 的零多普勒常量（静止杂波）留在流里，靠频域的

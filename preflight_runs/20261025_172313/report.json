@@ -1,0 +1,70 @@
+{
+ "stamp": "20261025_172313",
+ "gain": 20.0,
+ "sec": 10.0,
+ "overall": "⚠️ ",
+ "clipping": {
+  "verdict": "⚠️ ",
+  "rows": [
+   {
+    "ch": 0,
+    "max": 9796,
+    "pct": 29.89501953125,
+    "peak_dbfs": -10.488023170140828,
+    "headroom_db": 10.488023170140828,
+    "n90": 0,
+    "n_fullscale": 0
+   },
+   {
+    "ch": 1,
+    "max": 336,
+    "pct": 1.025390625,
+    "peak_dbfs": -39.78221315139748,
+    "headroom_db": 39.78221315139748,
+    "n90": 0,
+    "n_fullscale": 0
+   }
+  ],
+  "advice": "要留够 12 dB 余量，增益建议降 2 dB（20 -> 18 dB）；不要自己改，先问用户",
+  "ch1_note": ""
+ },
+ "ntg": {
+  "verdict": "⚠️ ",
+  "values": {
+   "tx_up": 3.3,
+   "tx_down": 4.9,
+   "rx_up": -50.3,
+   "rx_down": -50.1,
+   "cnr_up": 31.5,
+   "cnr_down": 31.0,
+   "mod_up": "QPSK",
+   "mod_down": "QPSK",
+   "query_ms": 24
+  },
+  "msg": "tx_up 偏离 5 dBm 超过 ±1 dB（ATPC 在调功率？）"
+ },
+ "tdd": {
+  "verdict": "✅",
+  "values": {
+   "lock_frac": 1.0,
+   "contrast": 0.998784842058762,
+   "duty": 0.715,
+   "phase_us": 814.0,
+   "win_us": 695.0,
+   "on_us": 718.0,
+   "n_runs": 1,
+   "on_dbfs": -20.054099737753393,
+   "off_dbfs": -52.27248134739038,
+   "on_off_db": 32.21838160963699,
+   "margin_start_us": 13.0,
+   "margin_end_us": 10.0,
+   "drift_us_per_s": 3.5,
+   "ch1_on_off_db": 6.638462257327271,
+   "frames_gone_frac": 0.0
+  },
+  "notes": []
+ },
+ "noise_floor_per_bin": 0.00313228159211576,
+ "uhd": "overflow=0 late=0 timeout=0 other=0",
+ "dropped": 0
+}

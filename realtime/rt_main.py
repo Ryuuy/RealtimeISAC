@@ -26,7 +26,7 @@ from rt_dsp import DopplerEngine, to_db
 from rt_live import LiveWaterfallProc
 from rt_publish import (Publisher, UdpSink, stdout_sink, encode_spec,
                         SPEC_DB_MIN, SPEC_DB_MAX)
-from rt_record import DopplerRecorder
+from rt_record import DopplerRecorder, HRecorder
 from rt_sync import TddSync
 
 DEBUG_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
@@ -66,7 +66,7 @@ def run(cfg: RtConfig, duration: float, waterfall: bool, dry_run: bool,
         debug_max_sec: float = 0.0, live: bool = False,
         live_sec: float = 15.0, live_fps: float = 12.0,
         live_fmax: float | None = None, sink=None,
-        heartbeat_sec: float = 2.0) -> int:
+        heartbeat_sec: float = 2.0, h_dir: str | None = None) -> int:
     print("=== 实时多普勒 + 有无检测 (RealtimeISAC) ===")
     print(cfg.describe())
     if cfg.use_ridge:
@@ -118,6 +118,12 @@ def run(cfg: RtConfig, duration: float, waterfall: bool, dry_run: bool,
         rec = DopplerRecorder(cfg, debug_dir, debug_max_sec or (duration + 5.0))
         print(f"🔴 debug 录制已开启 -> {debug_dir}  "
               f"(上限 {rec.n_max} 帧, 预分配 {rec.nbytes/1e6:.1f} MB)")
+
+    # --save-h：H（STFT 之前的 1kHz 复数序列）本体边录边写盘，默认不建对象
+    hrec = None
+    if h_dir:
+        hrec = HRecorder(cfg, h_dir)
+        print(f"🔴 save-h 已开启 -> {hrec.prefix}.*  (~58 MB/小时，后台线程追加写)")
 
     spec_every = 2          # 频谱列每 2 步发一次 = 25 列/秒（给网页瀑布图 + 落盘），不影响 DSP 速率
     spec_k = 0
@@ -248,6 +254,8 @@ def run(cfg: RtConfig, duration: float, waterfall: bool, dry_run: bool,
                         detector.n_hits, detector.max_run, detector.peak_hz, engine.ready,
                         power_mon.inst, detector.energy.e_db,
                         detector.energy.floor_db or 0.0)
+            if hrec is not None:
+                hrec.add(engine.last_dec, engine.last_amp, engine.ready, guard > 0)
             tag = "[丢步,冻结判决]" if guard > 0 else ("" if engine.ready else "[灌注中]")
             # 实时图也算进计时区：它每 4 步要花几毫秒，是本方案里最贵的一项，
             # 挪到计时区外面只会让 p99 好看而不解决丢步。分项耗时见 lw.status()。
@@ -303,6 +311,11 @@ def run(cfg: RtConfig, duration: float, waterfall: bool, dry_run: bool,
     print(pub.status())
     if lw is not None:
         print(lw.status())
+    if hrec is not None:
+        hrec.close(extra={"sync_locked": sync.locked, "sync_phase": sync.phase,
+                          "sync_n_integrate": sync.n_integrate, "dry_run": dry_run,
+                          "uhd_errors": str(errors) if errors is not None else None})
+        print(f"💾 {hrec.status()}  (读取: /usr/bin/python3 {os.path.join(DEBUG_DIR, 'load_h.py')} {hrec.prefix})")
     if rec is not None:
         print(rec.status())
         path = rec.save(engine.freqs, extra={
@@ -384,6 +397,11 @@ def main() -> int:
                    help=f"录制输出目录（默认 {DEBUG_DIR}）")
     p.add_argument("--debug-max-sec", type=float, default=0.0,
                    help="录制缓冲上限秒数（默认 = duration + 5）")
+    p.add_argument("--save-h", action="store_true",
+                   help="把 H（1kHz 复数相关系数，STFT 之前）+ 每帧幅度 + 时间戳边录边存（~58MB/小时）；"
+                        "可和 --isac / --debug 同用")
+    p.add_argument("--h-dir", type=str, default=os.path.join(os.path.dirname(DEBUG_DIR), "h_logs"),
+                   help="--save-h 输出目录（默认 RealtimeISAC/h_logs）")
     p.add_argument("--live", action="store_true",
                    help="弹一个实时滚动多普勒瀑布图（数据从右往左填）")
     p.add_argument("--live-sec", type=float, default=15.0, help="实时图时间窗(秒)")
@@ -439,7 +457,7 @@ def main() -> int:
                debug_dir=a.debug_dir if a.debug else None,
                debug_max_sec=a.debug_max_sec, live=a.live, live_sec=a.live_sec,
                live_fps=a.live_fps, live_fmax=a.live_fmax, sink=sink,
-               heartbeat_sec=a.heartbeat)
+               heartbeat_sec=a.heartbeat, h_dir=a.h_dir if a.save_h else None)
 
 
 if __name__ == "__main__":

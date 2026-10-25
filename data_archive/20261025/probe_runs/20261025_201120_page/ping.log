@@ -1,0 +1,2119 @@
+PING 192.168.1.5 (192.168.1.5) 56(84) bytes of data.
+[1792926680.498601] 64 bytes from 192.168.1.5: icmp_seq=1 ttl=128 time=2.04 ms
+[1792926680.698554] 64 bytes from 192.168.1.5: icmp_seq=2 ttl=128 time=1.68 ms
+[1792926680.929621] 64 bytes from 192.168.1.5: icmp_seq=3 ttl=128 time=32.6 ms
+[1792926681.222581] 64 bytes from 192.168.1.5: icmp_seq=4 ttl=128 time=126 ms
+[1792926681.493647] 64 bytes from 192.168.1.5: icmp_seq=5 ttl=128 time=197 ms
+[1792926681.677673] 64 bytes from 192.168.1.5: icmp_seq=6 ttl=128 time=181 ms
+[1792926681.847664] 64 bytes from 192.168.1.5: icmp_seq=7 ttl=128 time=150 ms
+[1792926682.095696] 64 bytes from 192.168.1.5: icmp_seq=8 ttl=128 time=197 ms
+[1792926682.180639] 64 bytes from 192.168.1.5: icmp_seq=9 ttl=128 time=82.8 ms
+[1792926682.318660] 64 bytes from 192.168.1.5: icmp_seq=10 ttl=128 time=19.7 ms
+[1792926682.614614] 64 bytes from 192.168.1.5: icmp_seq=11 ttl=128 time=115 ms
+[1792926682.864558] 64 bytes from 192.168.1.5: icmp_seq=12 ttl=128 time=164 ms
+[1792926683.108944] no answer yet for icmp_seq=13
+[1792926683.191720] 64 bytes from 192.168.1.5: icmp_seq=13 ttl=128 time=290 ms
+[1792926683.208671] 64 bytes from 192.168.1.5: icmp_seq=14 ttl=128 time=99.7 ms
+[1792926683.365630] 64 bytes from 192.168.1.5: icmp_seq=15 ttl=128 time=55.7 ms
+[1792926683.633701] 64 bytes from 192.168.1.5: icmp_seq=16 ttl=128 time=123 ms
+[1792926683.840625] 64 bytes from 192.168.1.5: icmp_seq=17 ttl=128 time=129 ms
+[1792926683.913606] 64 bytes from 192.168.1.5: icmp_seq=18 ttl=128 time=0.784 ms
+[1792926684.257675] 64 bytes from 192.168.1.5: icmp_seq=19 ttl=128 time=141 ms
+[1792926684.452738] 64 bytes from 192.168.1.5: icmp_seq=20 ttl=128 time=135 ms
+[1792926684.661738] 64 bytes from 192.168.1.5: icmp_seq=21 ttl=128 time=143 ms
+[1792926684.855686] 64 bytes from 192.168.1.5: icmp_seq=22 ttl=128 time=136 ms
+[1792926684.921613] 64 bytes from 192.168.1.5: icmp_seq=23 ttl=128 time=0.702 ms
+[1792926685.193615] 64 bytes from 192.168.1.5: icmp_seq=24 ttl=128 time=68.7 ms
+[1792926685.388618] 64 bytes from 192.168.1.5: icmp_seq=25 ttl=128 time=62.8 ms
+[1792926685.592685] 64 bytes from 192.168.1.5: icmp_seq=26 ttl=128 time=65.8 ms
+[1792926685.801677] 64 bytes from 192.168.1.5: icmp_seq=27 ttl=128 time=73.8 ms
+[1792926685.998605] 64 bytes from 192.168.1.5: icmp_seq=28 ttl=128 time=69.7 ms
+[1792926686.199708] 64 bytes from 192.168.1.5: icmp_seq=29 ttl=128 time=69.7 ms
+[1792926686.403690] 64 bytes from 192.168.1.5: icmp_seq=30 ttl=128 time=72.8 ms
+[1792926686.624727] 64 bytes from 192.168.1.5: icmp_seq=31 ttl=128 time=92.8 ms
+[1792926686.819628] 64 bytes from 192.168.1.5: icmp_seq=32 ttl=128 time=86.7 ms
+[1792926687.013673] 64 bytes from 192.168.1.5: icmp_seq=33 ttl=128 time=79.8 ms
+[1792926687.172626] 64 bytes from 192.168.1.5: icmp_seq=34 ttl=128 time=37.7 ms
+[1792926687.419720] 64 bytes from 192.168.1.5: icmp_seq=35 ttl=128 time=83.8 ms
+[1792926687.638673] 64 bytes from 192.168.1.5: icmp_seq=36 ttl=128 time=102 ms
+[1792926687.833681] 64 bytes from 192.168.1.5: icmp_seq=37 ttl=128 time=95.8 ms
+[1792926688.028676] 64 bytes from 192.168.1.5: icmp_seq=38 ttl=128 time=89.8 ms
+[1792926688.230686] 64 bytes from 192.168.1.5: icmp_seq=39 ttl=128 time=90.8 ms
+[1792926688.433703] 64 bytes from 192.168.1.5: icmp_seq=40 ttl=128 time=92.8 ms
+[1792926688.609702] 64 bytes from 192.168.1.5: icmp_seq=41 ttl=128 time=67.8 ms
+[1792926688.844711] 64 bytes from 192.168.1.5: icmp_seq=42 ttl=128 time=102 ms
+[1792926689.038713] 64 bytes from 192.168.1.5: icmp_seq=43 ttl=128 time=94.8 ms
+[1792926689.240720] 64 bytes from 192.168.1.5: icmp_seq=44 ttl=128 time=95.8 ms
+[1792926689.452653] 64 bytes from 192.168.1.5: icmp_seq=45 ttl=128 time=107 ms
+[1792926689.662740] 64 bytes from 192.168.1.5: icmp_seq=46 ttl=128 time=116 ms
+[1792926689.856655] 64 bytes from 192.168.1.5: icmp_seq=47 ttl=128 time=109 ms
+[1792926690.029682] 64 bytes from 192.168.1.5: icmp_seq=48 ttl=128 time=80.9 ms
+[1792926690.245759] 64 bytes from 192.168.1.5: icmp_seq=49 ttl=128 time=95.8 ms
+[1792926690.453724] 64 bytes from 192.168.1.5: icmp_seq=50 ttl=128 time=103 ms
+[1792926690.676681] 64 bytes from 192.168.1.5: icmp_seq=51 ttl=128 time=125 ms
+[1792926690.874647] 64 bytes from 192.168.1.5: icmp_seq=52 ttl=128 time=122 ms
+[1792926691.073720] 64 bytes from 192.168.1.5: icmp_seq=53 ttl=128 time=120 ms
+[1792926691.279672] 64 bytes from 192.168.1.5: icmp_seq=54 ttl=128 time=126 ms
+[1792926691.495725] 64 bytes from 192.168.1.5: icmp_seq=55 ttl=128 time=141 ms
+[1792926691.626628] 64 bytes from 192.168.1.5: icmp_seq=56 ttl=128 time=71.8 ms
+[1792926691.901716] 64 bytes from 192.168.1.5: icmp_seq=57 ttl=128 time=146 ms
+[1792926692.109689] 64 bytes from 192.168.1.5: icmp_seq=58 ttl=128 time=154 ms
+[1792926692.337677] 64 bytes from 192.168.1.5: icmp_seq=59 ttl=128 time=181 ms
+[1792926692.539683] 64 bytes from 192.168.1.5: icmp_seq=60 ttl=128 time=182 ms
+[1792926692.759373] no answer yet for icmp_seq=61
+[1792926692.764768] 64 bytes from 192.168.1.5: icmp_seq=61 ttl=128 time=206 ms
+[1792926692.950697] 64 bytes from 192.168.1.5: icmp_seq=62 ttl=128 time=191 ms
+[1792926693.165929] no answer yet for icmp_seq=63
+[1792926693.169685] 64 bytes from 192.168.1.5: icmp_seq=63 ttl=128 time=211 ms
+[1792926693.203695] 64 bytes from 192.168.1.5: icmp_seq=64 ttl=128 time=37.7 ms
+[1792926693.572937] no answer yet for icmp_seq=65
+[1792926693.598669] 64 bytes from 192.168.1.5: icmp_seq=65 ttl=128 time=232 ms
+[1792926693.773886] no answer yet for icmp_seq=66
+[1792926693.833735] 64 bytes from 192.168.1.5: icmp_seq=66 ttl=128 time=261 ms
+[1792926693.974910] no answer yet for icmp_seq=67
+[1792926694.020734] 64 bytes from 192.168.1.5: icmp_seq=67 ttl=128 time=247 ms
+[1792926694.175930] no answer yet for icmp_seq=68
+[1792926694.245740] 64 bytes from 192.168.1.5: icmp_seq=68 ttl=128 time=271 ms
+[1792926694.376915] no answer yet for icmp_seq=69
+[1792926694.477739] 64 bytes from 192.168.1.5: icmp_seq=69 ttl=128 time=302 ms
+[1792926694.577871] no answer yet for icmp_seq=70
+[1792926694.675793] 64 bytes from 192.168.1.5: icmp_seq=70 ttl=128 time=299 ms
+[1792926694.778926] no answer yet for icmp_seq=71
+[1792926694.900719] 64 bytes from 192.168.1.5: icmp_seq=71 ttl=128 time=323 ms
+[1792926694.979826] no answer yet for icmp_seq=72
+[1792926695.051717] 64 bytes from 192.168.1.5: icmp_seq=72 ttl=128 time=273 ms
+[1792926695.060725] 64 bytes from 192.168.1.5: icmp_seq=73 ttl=128 time=80.8 ms
+[1792926695.389939] no answer yet for icmp_seq=74
+[1792926695.529760] 64 bytes from 192.168.1.5: icmp_seq=74 ttl=128 time=349 ms
+[1792926695.590851] no answer yet for icmp_seq=75
+[1792926695.755772] 64 bytes from 192.168.1.5: icmp_seq=75 ttl=128 time=366 ms
+[1792926695.791866] no answer yet for icmp_seq=76
+[1792926695.996976] no answer yet for icmp_seq=77
+[1792926696.002698] 64 bytes from 192.168.1.5: icmp_seq=76 ttl=128 time=412 ms
+[1792926696.197926] no answer yet for icmp_seq=78
+[1792926696.222784] 64 bytes from 192.168.1.5: icmp_seq=77 ttl=128 time=431 ms
+[1792926696.398981] no answer yet for icmp_seq=79
+[1792926696.431842] 64 bytes from 192.168.1.5: icmp_seq=78 ttl=128 time=435 ms
+[1792926696.600163] no answer yet for icmp_seq=80
+[1792926696.669749] 64 bytes from 192.168.1.5: icmp_seq=79 ttl=128 time=472 ms
+[1792926696.800923] no answer yet for icmp_seq=81
+[1792926696.882759] 64 bytes from 192.168.1.5: icmp_seq=80 ttl=128 time=484 ms
+[1792926697.001910] no answer yet for icmp_seq=82
+[1792926697.072766] 64 bytes from 192.168.1.5: icmp_seq=81 ttl=128 time=472 ms
+[1792926697.080735] 64 bytes from 192.168.1.5: icmp_seq=82 ttl=128 time=280 ms
+[1792926697.081715] 64 bytes from 192.168.1.5: icmp_seq=83 ttl=128 time=79.7 ms
+[1792926697.332747] 64 bytes from 192.168.1.5: icmp_seq=84 ttl=128 time=130 ms
+[1792926697.589777] 64 bytes from 192.168.1.5: icmp_seq=85 ttl=128 time=186 ms
+[1792926697.812930] no answer yet for icmp_seq=86
+[1792926697.847789] 64 bytes from 192.168.1.5: icmp_seq=86 ttl=128 time=243 ms
+[1792926698.014154] no answer yet for icmp_seq=87
+[1792926698.072747] 64 bytes from 192.168.1.5: icmp_seq=87 ttl=128 time=260 ms
+[1792926698.214997] no answer yet for icmp_seq=88
+[1792926698.328774] 64 bytes from 192.168.1.5: icmp_seq=88 ttl=128 time=315 ms
+[1792926698.415934] no answer yet for icmp_seq=89
+[1792926698.554755] 64 bytes from 192.168.1.5: icmp_seq=89 ttl=128 time=340 ms
+[1792926698.616867] no answer yet for icmp_seq=90
+[1792926698.757725] 64 bytes from 192.168.1.5: icmp_seq=90 ttl=128 time=342 ms
+[1792926698.812784] 64 bytes from 192.168.1.5: icmp_seq=91 ttl=128 time=196 ms
+[1792926698.828883] 64 bytes from 192.168.1.5: icmp_seq=92 ttl=128 time=11.8 ms
+[1792926699.221954] no answer yet for icmp_seq=93
+[1792926699.421713] 64 bytes from 192.168.1.5: icmp_seq=93 ttl=128 time=405 ms
+[1792926699.431889] no answer yet for icmp_seq=94
+[1792926699.637986] no answer yet for icmp_seq=95
+[1792926699.646879] 64 bytes from 192.168.1.5: icmp_seq=94 ttl=128 time=425 ms
+[1792926699.839171] no answer yet for icmp_seq=96
+[1792926699.867712] 64 bytes from 192.168.1.5: icmp_seq=95 ttl=128 time=436 ms
+[1792926700.039758] no answer yet for icmp_seq=97
+[1792926700.113750] 64 bytes from 192.168.1.5: icmp_seq=96 ttl=128 time=476 ms
+[1792926700.239936] no answer yet for icmp_seq=98
+[1792926700.337773] 64 bytes from 192.168.1.5: icmp_seq=97 ttl=128 time=499 ms
+[1792926700.440926] no answer yet for icmp_seq=99
+[1792926700.558811] 64 bytes from 192.168.1.5: icmp_seq=98 ttl=128 time=519 ms
+[1792926700.641983] no answer yet for icmp_seq=100
+[1792926700.659805] 64 bytes from 192.168.1.5: icmp_seq=99 ttl=128 time=420 ms
+[1792926700.659822] 64 bytes from 192.168.1.5: icmp_seq=100 ttl=128 time=219 ms
+[1792926700.676837] 64 bytes from 192.168.1.5: icmp_seq=101 ttl=128 time=34.8 ms
+[1792926701.045966] no answer yet for icmp_seq=102
+[1792926701.252942] no answer yet for icmp_seq=103
+[1792926701.415799] 64 bytes from 192.168.1.5: icmp_seq=102 ttl=128 time=573 ms
+[1792926701.453928] no answer yet for icmp_seq=104
+[1792926701.617814] 64 bytes from 192.168.1.5: icmp_seq=103 ttl=128 time=572 ms
+[1792926701.654943] no answer yet for icmp_seq=105
+[1792926701.823848] 64 bytes from 192.168.1.5: icmp_seq=104 ttl=128 time=571 ms
+[1792926701.856002] no answer yet for icmp_seq=106
+[1792926701.999785] 64 bytes from 192.168.1.5: icmp_seq=105 ttl=128 time=546 ms
+[1792926702.055933] no answer yet for icmp_seq=107
+[1792926702.124836] 64 bytes from 192.168.1.5: icmp_seq=106 ttl=128 time=470 ms
+[1792926702.249803] 64 bytes from 192.168.1.5: icmp_seq=107 ttl=128 time=394 ms
+[1792926702.259894] no answer yet for icmp_seq=108
+[1792926702.390801] 64 bytes from 192.168.1.5: icmp_seq=108 ttl=128 time=335 ms
+[1792926702.460896] no answer yet for icmp_seq=109
+[1792926702.474872] 64 bytes from 192.168.1.5: icmp_seq=109 ttl=128 time=215 ms
+[1792926702.491823] 64 bytes from 192.168.1.5: icmp_seq=110 ttl=128 time=30.8 ms
+[1792926702.869018] no answer yet for icmp_seq=111
+[1792926703.076931] no answer yet for icmp_seq=112
+[1792926703.226789] 64 bytes from 192.168.1.5: icmp_seq=111 ttl=128 time=565 ms
+[1792926703.277881] no answer yet for icmp_seq=113
+[1792926703.439841] 64 bytes from 192.168.1.5: icmp_seq=112 ttl=128 time=571 ms
+[1792926703.478930] no answer yet for icmp_seq=114
+[1792926703.648986] 64 bytes from 192.168.1.5: icmp_seq=113 ttl=128 time=572 ms
+[1792926703.679205] no answer yet for icmp_seq=115
+[1792926703.843824] 64 bytes from 192.168.1.5: icmp_seq=114 ttl=128 time=566 ms
+[1792926703.879930] no answer yet for icmp_seq=116
+[1792926703.984776] 64 bytes from 192.168.1.5: icmp_seq=115 ttl=128 time=506 ms
+[1792926704.079931] no answer yet for icmp_seq=117
+[1792926704.135758] 64 bytes from 192.168.1.5: icmp_seq=116 ttl=128 time=456 ms
+[1792926704.280938] no answer yet for icmp_seq=118
+[1792926704.291793] 64 bytes from 192.168.1.5: icmp_seq=117 ttl=128 time=412 ms
+[1792926704.481936] no answer yet for icmp_seq=119
+[1792926704.652052] 64 bytes from 192.168.1.5: icmp_seq=118 ttl=128 time=572 ms
+[1792926704.682554] no answer yet for icmp_seq=120
+[1792926704.819874] 64 bytes from 192.168.1.5: icmp_seq=119 ttl=128 time=539 ms
+[1792926704.819946] 64 bytes from 192.168.1.5: icmp_seq=120 ttl=128 time=338 ms
+[1792926704.826945] 64 bytes from 192.168.1.5: icmp_seq=121 ttl=128 time=144 ms
+[1792926705.084984] no answer yet for icmp_seq=122
+[1792926705.292970] no answer yet for icmp_seq=123
+[1792926705.402865] 64 bytes from 192.168.1.5: icmp_seq=122 ttl=128 time=520 ms
+[1792926705.494032] no answer yet for icmp_seq=124
+[1792926705.616829] 64 bytes from 192.168.1.5: icmp_seq=123 ttl=128 time=532 ms
+[1792926705.694930] no answer yet for icmp_seq=125
+[1792926705.838818] 64 bytes from 192.168.1.5: icmp_seq=124 ttl=128 time=546 ms
+[1792926705.895945] no answer yet for icmp_seq=126
+[1792926706.062853] 64 bytes from 192.168.1.5: icmp_seq=125 ttl=128 time=569 ms
+[1792926706.095934] no answer yet for icmp_seq=127
+[1792926706.269051] 64 bytes from 192.168.1.5: icmp_seq=126 ttl=128 time=572 ms
+[1792926706.296434] no answer yet for icmp_seq=128
+[1792926706.456820] 64 bytes from 192.168.1.5: icmp_seq=127 ttl=128 time=561 ms
+[1792926706.496938] no answer yet for icmp_seq=129
+[1792926706.666844] 64 bytes from 192.168.1.5: icmp_seq=128 ttl=128 time=571 ms
+[1792926706.697964] no answer yet for icmp_seq=130
+[1792926706.778814] 64 bytes from 192.168.1.5: icmp_seq=129 ttl=128 time=482 ms
+[1792926706.900003] no answer yet for icmp_seq=131
+[1792926706.904854] 64 bytes from 192.168.1.5: icmp_seq=130 ttl=128 time=408 ms
+[1792926706.942799] 64 bytes from 192.168.1.5: icmp_seq=131 ttl=128 time=245 ms
+[1792926706.951818] 64 bytes from 192.168.1.5: icmp_seq=132 ttl=128 time=51.6 ms
+[1792926707.300942] no answer yet for icmp_seq=133
+[1792926707.509932] no answer yet for icmp_seq=134
+[1792926707.594833] 64 bytes from 192.168.1.5: icmp_seq=133 ttl=128 time=495 ms
+[1792926707.710930] no answer yet for icmp_seq=135
+[1792926707.822998] 64 bytes from 192.168.1.5: icmp_seq=134 ttl=128 time=522 ms
+[1792926707.911126] no answer yet for icmp_seq=136
+[1792926708.054882] 64 bytes from 192.168.1.5: icmp_seq=135 ttl=128 time=545 ms
+[1792926708.110996] no answer yet for icmp_seq=137
+[1792926708.271876] 64 bytes from 192.168.1.5: icmp_seq=136 ttl=128 time=561 ms
+[1792926708.311995] no answer yet for icmp_seq=138
+[1792926708.483212] 64 bytes from 192.168.1.5: icmp_seq=137 ttl=128 time=572 ms
+[1792926708.512766] no answer yet for icmp_seq=139
+[1792926708.549838] 64 bytes from 192.168.1.5: icmp_seq=138 ttl=128 time=439 ms
+[1792926708.549878] 64 bytes from 192.168.1.5: icmp_seq=139 ttl=128 time=238 ms
+[1792926708.558820] 64 bytes from 192.168.1.5: icmp_seq=140 ttl=128 time=46.0 ms
+[1792926708.916999] no answer yet for icmp_seq=141
+[1792926709.123849] 64 bytes from 192.168.1.5: icmp_seq=141 ttl=128 time=411 ms
+[1792926709.123885] no answer yet for icmp_seq=142
+[1792926709.324939] no answer yet for icmp_seq=143
+[1792926709.327809] 64 bytes from 192.168.1.5: icmp_seq=142 ttl=128 time=411 ms
+[1792926709.525936] no answer yet for icmp_seq=144
+[1792926709.552777] 64 bytes from 192.168.1.5: icmp_seq=143 ttl=128 time=429 ms
+[1792926709.726937] no answer yet for icmp_seq=145
+[1792926709.754840] 64 bytes from 192.168.1.5: icmp_seq=144 ttl=128 time=430 ms
+[1792926709.927940] no answer yet for icmp_seq=146
+[1792926709.948865] 64 bytes from 192.168.1.5: icmp_seq=145 ttl=128 time=423 ms
+[1792926710.127928] no answer yet for icmp_seq=147
+[1792926710.170841] 64 bytes from 192.168.1.5: icmp_seq=146 ttl=128 time=444 ms
+[1792926710.329006] no answer yet for icmp_seq=148
+[1792926710.373877] 64 bytes from 192.168.1.5: icmp_seq=147 ttl=128 time=446 ms
+[1792926710.529973] no answer yet for icmp_seq=149
+[1792926710.577844] 64 bytes from 192.168.1.5: icmp_seq=148 ttl=128 time=450 ms
+[1792926710.590794] 64 bytes from 192.168.1.5: icmp_seq=149 ttl=128 time=262 ms
+[1792926710.590896] 64 bytes from 192.168.1.5: icmp_seq=150 ttl=128 time=60.8 ms
+[1792926710.941932] no answer yet for icmp_seq=151
+[1792926711.144902] 64 bytes from 192.168.1.5: icmp_seq=151 ttl=128 time=410 ms
+[1792926711.144935] no answer yet for icmp_seq=152
+[1792926711.350090] no answer yet for icmp_seq=153
+[1792926711.366753] 64 bytes from 192.168.1.5: icmp_seq=152 ttl=128 time=425 ms
+[1792926711.550933] no answer yet for icmp_seq=154
+[1792926711.600991] 64 bytes from 192.168.1.5: icmp_seq=153 ttl=128 time=456 ms
+[1792926711.751288] no answer yet for icmp_seq=155
+[1792926711.823825] 64 bytes from 192.168.1.5: icmp_seq=154 ttl=128 time=473 ms
+[1792926711.951929] no answer yet for icmp_seq=156
+[1792926712.014020] 64 bytes from 192.168.1.5: icmp_seq=155 ttl=128 time=463 ms
+[1792926712.152322] no answer yet for icmp_seq=157
+[1792926712.235861] 64 bytes from 192.168.1.5: icmp_seq=156 ttl=128 time=484 ms
+[1792926712.352938] no answer yet for icmp_seq=158
+[1792926712.442878] 64 bytes from 192.168.1.5: icmp_seq=157 ttl=128 time=491 ms
+[1792926712.553931] no answer yet for icmp_seq=159
+[1792926712.645850] 64 bytes from 192.168.1.5: icmp_seq=158 ttl=128 time=493 ms
+[1792926712.754935] no answer yet for icmp_seq=160
+[1792926712.842865] 64 bytes from 192.168.1.5: icmp_seq=159 ttl=128 time=490 ms
+[1792926712.858876] 64 bytes from 192.168.1.5: icmp_seq=160 ttl=128 time=305 ms
+[1792926712.884847] 64 bytes from 192.168.1.5: icmp_seq=161 ttl=128 time=130 ms
+[1792926713.157941] no answer yet for icmp_seq=162
+[1792926713.364935] no answer yet for icmp_seq=163
+[1792926713.399167] 64 bytes from 192.168.1.5: icmp_seq=162 ttl=128 time=443 ms
+[1792926713.566043] no answer yet for icmp_seq=164
+[1792926713.629009] 64 bytes from 192.168.1.5: icmp_seq=163 ttl=128 time=471 ms
+[1792926713.767279] no answer yet for icmp_seq=165
+[1792926713.841044] 64 bytes from 192.168.1.5: icmp_seq=164 ttl=128 time=476 ms
+[1792926713.968231] no answer yet for icmp_seq=166
+[1792926714.044936] 64 bytes from 192.168.1.5: icmp_seq=165 ttl=128 time=479 ms
+[1792926714.169112] no answer yet for icmp_seq=167
+[1792926714.253879] 64 bytes from 192.168.1.5: icmp_seq=166 ttl=128 time=486 ms
+[1792926714.369929] no answer yet for icmp_seq=168
+[1792926714.468845] 64 bytes from 192.168.1.5: icmp_seq=167 ttl=128 time=501 ms
+[1792926714.570949] no answer yet for icmp_seq=169
+[1792926714.672930] 64 bytes from 192.168.1.5: icmp_seq=168 ttl=128 time=504 ms
+[1792926714.752929] 64 bytes from 192.168.1.5: icmp_seq=169 ttl=128 time=383 ms
+[1792926714.769930] 64 bytes from 192.168.1.5: icmp_seq=170 ttl=128 time=199 ms
+[1792926714.973932] no answer yet for icmp_seq=171
+[1792926715.181130] no answer yet for icmp_seq=172
+[1792926715.257013] 64 bytes from 192.168.1.5: icmp_seq=171 ttl=128 time=486 ms
+[1792926715.382174] no answer yet for icmp_seq=173
+[1792926715.471965] 64 bytes from 192.168.1.5: icmp_seq=172 ttl=128 time=498 ms
+[1792926715.583160] no answer yet for icmp_seq=174
+[1792926715.696885] 64 bytes from 192.168.1.5: icmp_seq=173 ttl=128 time=516 ms
+[1792926715.784143] no answer yet for icmp_seq=175
+[1792926715.899044] 64 bytes from 192.168.1.5: icmp_seq=174 ttl=128 time=517 ms
+[1792926715.985022] no answer yet for icmp_seq=176
+[1792926716.101037] 64 bytes from 192.168.1.5: icmp_seq=175 ttl=128 time=518 ms
+[1792926716.185258] no answer yet for icmp_seq=177
+[1792926716.298897] 64 bytes from 192.168.1.5: icmp_seq=176 ttl=128 time=515 ms
+[1792926716.327911] 64 bytes from 192.168.1.5: icmp_seq=177 ttl=128 time=343 ms
+[1792926716.345874] 64 bytes from 192.168.1.5: icmp_seq=178 ttl=128 time=160 ms
+[1792926716.588991] no answer yet for icmp_seq=179
+[1792926716.797932] no answer yet for icmp_seq=180
+[1792926716.865903] 64 bytes from 192.168.1.5: icmp_seq=179 ttl=128 time=480 ms
+[1792926716.998093] no answer yet for icmp_seq=181
+[1792926717.071913] 64 bytes from 192.168.1.5: icmp_seq=180 ttl=128 time=483 ms
+[1792926717.199012] no answer yet for icmp_seq=182
+[1792926717.300911] 64 bytes from 192.168.1.5: icmp_seq=181 ttl=128 time=503 ms
+[1792926717.401111] no answer yet for icmp_seq=183
+[1792926717.511880] 64 bytes from 192.168.1.5: icmp_seq=182 ttl=128 time=514 ms
+[1792926717.601983] no answer yet for icmp_seq=184
+[1792926717.713860] 64 bytes from 192.168.1.5: icmp_seq=183 ttl=128 time=515 ms
+[1792926717.802936] no answer yet for icmp_seq=185
+[1792926717.881924] 64 bytes from 192.168.1.5: icmp_seq=184 ttl=128 time=481 ms
+[1792926717.881941] 64 bytes from 192.168.1.5: icmp_seq=185 ttl=128 time=280 ms
+[1792926717.900071] 64 bytes from 192.168.1.5: icmp_seq=186 ttl=128 time=96.8 ms
+[1792926718.205063] no answer yet for icmp_seq=187
+[1792926718.414121] no answer yet for icmp_seq=188
+[1792926718.502013] 64 bytes from 192.168.1.5: icmp_seq=187 ttl=128 time=499 ms
+[1792926718.615162] no answer yet for icmp_seq=189
+[1792926718.722014] 64 bytes from 192.168.1.5: icmp_seq=188 ttl=128 time=517 ms
+[1792926718.816211] no answer yet for icmp_seq=190
+[1792926718.933952] 64 bytes from 192.168.1.5: icmp_seq=189 ttl=128 time=520 ms
+[1792926719.016213] no answer yet for icmp_seq=191
+[1792926719.136958] 64 bytes from 192.168.1.5: icmp_seq=190 ttl=128 time=522 ms
+[1792926719.217096] no answer yet for icmp_seq=192
+[1792926719.340995] 64 bytes from 192.168.1.5: icmp_seq=191 ttl=128 time=525 ms
+[1792926719.418111] no answer yet for icmp_seq=193
+[1792926719.553938] 64 bytes from 192.168.1.5: icmp_seq=192 ttl=128 time=538 ms
+[1792926719.619039] no answer yet for icmp_seq=194
+[1792926719.707922] 64 bytes from 192.168.1.5: icmp_seq=193 ttl=128 time=491 ms
+[1792926719.707945] 64 bytes from 192.168.1.5: icmp_seq=194 ttl=128 time=290 ms
+[1792926719.716954] 64 bytes from 192.168.1.5: icmp_seq=195 ttl=128 time=97.8 ms
+[1792926720.020954] no answer yet for icmp_seq=196
+[1792926720.228932] no answer yet for icmp_seq=197
+[1792926720.362946] 64 bytes from 192.168.1.5: icmp_seq=196 ttl=128 time=543 ms
+[1792926720.429071] no answer yet for icmp_seq=198
+[1792926720.568960] 64 bytes from 192.168.1.5: icmp_seq=197 ttl=128 time=548 ms
+[1792926720.630115] no answer yet for icmp_seq=199
+[1792926720.781937] 64 bytes from 192.168.1.5: icmp_seq=198 ttl=128 time=553 ms
+[1792926720.831029] no answer yet for icmp_seq=200
+[1792926720.995965] 64 bytes from 192.168.1.5: icmp_seq=199 ttl=128 time=567 ms
+[1792926721.031064] no answer yet for icmp_seq=201
+[1792926721.200980] 64 bytes from 192.168.1.5: icmp_seq=200 ttl=128 time=571 ms
+[1792926721.233060] no answer yet for icmp_seq=202
+[1792926721.400211] 64 bytes from 192.168.1.5: icmp_seq=201 ttl=128 time=569 ms
+[1792926721.433762] no answer yet for icmp_seq=203
+[1792926721.533104] 64 bytes from 192.168.1.5: icmp_seq=202 ttl=128 time=502 ms
+[1792926721.536016] 64 bytes from 192.168.1.5: icmp_seq=203 ttl=128 time=303 ms
+[1792926721.543038] 64 bytes from 192.168.1.5: icmp_seq=204 ttl=128 time=109 ms
+[1792926721.836935] no answer yet for icmp_seq=205
+[1792926722.030016] 64 bytes from 192.168.1.5: icmp_seq=205 ttl=128 time=396 ms
+[1792926722.040113] no answer yet for icmp_seq=206
+[1792926722.233198] 64 bytes from 192.168.1.5: icmp_seq=206 ttl=128 time=396 ms
+[1792926722.243532] no answer yet for icmp_seq=207
+[1792926722.438060] 64 bytes from 192.168.1.5: icmp_seq=207 ttl=128 time=398 ms
+[1792926722.448145] no answer yet for icmp_seq=208
+[1792926722.652986] no answer yet for icmp_seq=209
+[1792926722.656953] 64 bytes from 192.168.1.5: icmp_seq=208 ttl=128 time=413 ms
+[1792926722.854189] no answer yet for icmp_seq=210
+[1792926722.871964] 64 bytes from 192.168.1.5: icmp_seq=209 ttl=128 time=424 ms
+[1792926723.055201] no answer yet for icmp_seq=211
+[1792926723.080923] 64 bytes from 192.168.1.5: icmp_seq=210 ttl=128 time=428 ms
+[1792926723.256141] no answer yet for icmp_seq=212
+[1792926723.283963] 64 bytes from 192.168.1.5: icmp_seq=211 ttl=128 time=430 ms
+[1792926723.435201] 64 bytes from 192.168.1.5: icmp_seq=212 ttl=128 time=380 ms
+[1792926723.435416] 64 bytes from 192.168.1.5: icmp_seq=213 ttl=128 time=179 ms
+[1792926723.460129] 64 bytes from 192.168.1.5: icmp_seq=214 ttl=128 time=3.42 ms
+[1792926723.860962] no answer yet for icmp_seq=215
+[1792926724.069021] no answer yet for icmp_seq=216
+[1792926724.091964] 64 bytes from 192.168.1.5: icmp_seq=215 ttl=128 time=435 ms
+[1792926724.270283] no answer yet for icmp_seq=217
+[1792926724.300961] 64 bytes from 192.168.1.5: icmp_seq=216 ttl=128 time=440 ms
+[1792926724.471164] no answer yet for icmp_seq=218
+[1792926724.513107] 64 bytes from 192.168.1.5: icmp_seq=217 ttl=128 time=444 ms
+[1792926724.671408] no answer yet for icmp_seq=219
+[1792926724.731951] 64 bytes from 192.168.1.5: icmp_seq=218 ttl=128 time=460 ms
+[1792926724.872343] no answer yet for icmp_seq=220
+[1792926724.934322] 64 bytes from 192.168.1.5: icmp_seq=219 ttl=128 time=463 ms
+[1792926725.071632] no answer yet for icmp_seq=221
+[1792926725.137944] 64 bytes from 192.168.1.5: icmp_seq=220 ttl=128 time=466 ms
+[1792926725.272174] no answer yet for icmp_seq=222
+[1792926725.322963] 64 bytes from 192.168.1.5: icmp_seq=221 ttl=128 time=451 ms
+[1792926725.341015] 64 bytes from 192.168.1.5: icmp_seq=222 ttl=128 time=269 ms
+[1792926725.341029] 64 bytes from 192.168.1.5: icmp_seq=223 ttl=128 time=68.7 ms
+[1792926725.676946] no answer yet for icmp_seq=224
+[1792926725.884940] no answer yet for icmp_seq=225
+[1792926725.988013] 64 bytes from 192.168.1.5: icmp_seq=224 ttl=128 time=515 ms
+[1792926726.084151] no answer yet for icmp_seq=226
+[1792926726.285193] no answer yet for icmp_seq=227
+[1792926726.493022] no answer yet for icmp_seq=228
+[1792926726.701096] no answer yet for icmp_seq=229
+[1792926726.909079] no answer yet for icmp_seq=230
+[1792926727.117162] no answer yet for icmp_seq=231
+[1792926727.325148] no answer yet for icmp_seq=232
+[1792926727.532970] no answer yet for icmp_seq=233
+[1792926727.741064] no answer yet for icmp_seq=234
+[1792926727.949247] no answer yet for icmp_seq=235
+[1792926728.157163] no answer yet for icmp_seq=236
+[1792926728.365162] no answer yet for icmp_seq=237
+[1792926728.573057] no answer yet for icmp_seq=238
+[1792926728.781271] no answer yet for icmp_seq=239
+[1792926728.989257] no answer yet for icmp_seq=240
+[1792926729.197156] no answer yet for icmp_seq=241
+[1792926729.405263] no answer yet for icmp_seq=242
+[1792926729.613095] no answer yet for icmp_seq=243
+[1792926729.821261] no answer yet for icmp_seq=244
+[1792926730.029067] no answer yet for icmp_seq=245
+[1792926730.237094] no answer yet for icmp_seq=246
+[1792926730.445292] no answer yet for icmp_seq=247
+[1792926730.652983] no answer yet for icmp_seq=248
+[1792926730.861141] no answer yet for icmp_seq=249
+[1792926731.069075] no answer yet for icmp_seq=250
+[1792926731.277257] no answer yet for icmp_seq=251
+[1792926731.484982] no answer yet for icmp_seq=252
+[1792926731.693260] no answer yet for icmp_seq=253
+[1792926731.900948] no answer yet for icmp_seq=254
+[1792926732.109182] no answer yet for icmp_seq=255
+[1792926732.316992] no answer yet for icmp_seq=256
+[1792926732.525102] no answer yet for icmp_seq=257
+[1792926732.734194] no answer yet for icmp_seq=258
+[1792926732.940940] no answer yet for icmp_seq=259
+[1792926733.150150] no answer yet for icmp_seq=260
+[1792926733.357068] no answer yet for icmp_seq=261
+[1792926733.565140] no answer yet for icmp_seq=262
+[1792926733.773107] no answer yet for icmp_seq=263
+[1792926733.981146] no answer yet for icmp_seq=264
+[1792926734.189291] no answer yet for icmp_seq=265
+[1792926734.397049] no answer yet for icmp_seq=266
+[1792926734.604961] no answer yet for icmp_seq=267
+[1792926734.815681] no answer yet for icmp_seq=268
+[1792926735.020979] no answer yet for icmp_seq=269
+[1792926735.229018] no answer yet for icmp_seq=270
+[1792926735.437109] no answer yet for icmp_seq=271
+[1792926735.645153] no answer yet for icmp_seq=272
+[1792926735.854077] no answer yet for icmp_seq=273
+[1792926736.061262] no answer yet for icmp_seq=274
+[1792926736.268972] no answer yet for icmp_seq=275
+[1792926736.477261] no answer yet for icmp_seq=276
+[1792926736.684992] no answer yet for icmp_seq=277
+[1792926736.893052] no answer yet for icmp_seq=278
+[1792926737.101013] no answer yet for icmp_seq=279
+[1792926737.309190] no answer yet for icmp_seq=280
+[1792926737.517223] no answer yet for icmp_seq=281
+[1792926737.725011] no answer yet for icmp_seq=282
+[1792926737.933132] no answer yet for icmp_seq=283
+[1792926738.141147] no answer yet for icmp_seq=284
+[1792926738.349074] no answer yet for icmp_seq=285
+[1792926738.557083] no answer yet for icmp_seq=286
+[1792926738.765132] no answer yet for icmp_seq=287
+[1792926738.973104] no answer yet for icmp_seq=288
+[1792926739.181033] no answer yet for icmp_seq=289
+[1792926739.389031] no answer yet for icmp_seq=290
+[1792926739.597064] no answer yet for icmp_seq=291
+[1792926739.804985] no answer yet for icmp_seq=292
+[1792926739.816235] 64 bytes from 192.168.1.5: icmp_seq=293 ttl=128 time=11.0 ms
+[1792926740.056055] 64 bytes from 192.168.1.5: icmp_seq=294 ttl=128 time=50.4 ms
+[1792926740.278053] 64 bytes from 192.168.1.5: icmp_seq=295 ttl=128 time=71.7 ms
+[1792926740.489028] 64 bytes from 192.168.1.5: icmp_seq=296 ttl=128 time=81.8 ms
+[1792926740.673067] 64 bytes from 192.168.1.5: icmp_seq=297 ttl=128 time=64.9 ms
+[1792926740.879056] 64 bytes from 192.168.1.5: icmp_seq=298 ttl=128 time=69.8 ms
+[1792926741.102018] 64 bytes from 192.168.1.5: icmp_seq=299 ttl=128 time=91.7 ms
+[1792926741.283063] 64 bytes from 192.168.1.5: icmp_seq=300 ttl=128 time=71.8 ms
+[1792926741.496032] 64 bytes from 192.168.1.5: icmp_seq=301 ttl=128 time=83.8 ms
+[1792926741.619083] 64 bytes from 192.168.1.5: icmp_seq=302 ttl=128 time=5.85 ms
+[1792926741.850167] 64 bytes from 192.168.1.5: icmp_seq=303 ttl=128 time=35.4 ms
+[1792926742.077056] 64 bytes from 192.168.1.5: icmp_seq=304 ttl=128 time=61.4 ms
+[1792926742.280050] 64 bytes from 192.168.1.5: icmp_seq=305 ttl=128 time=63.8 ms
+[1792926742.493052] 64 bytes from 192.168.1.5: icmp_seq=306 ttl=128 time=75.8 ms
+[1792926742.686074] 64 bytes from 192.168.1.5: icmp_seq=307 ttl=128 time=67.8 ms
+[1792926742.888098] 64 bytes from 192.168.1.5: icmp_seq=308 ttl=128 time=68.8 ms
+[1792926743.110062] 64 bytes from 192.168.1.5: icmp_seq=309 ttl=128 time=89.7 ms
+[1792926743.296154] 64 bytes from 192.168.1.5: icmp_seq=310 ttl=128 time=74.8 ms
+[1792926743.508168] 64 bytes from 192.168.1.5: icmp_seq=311 ttl=128 time=85.7 ms
+[1792926743.648326] 64 bytes from 192.168.1.5: icmp_seq=312 ttl=128 time=24.7 ms
+[1792926743.903083] 64 bytes from 192.168.1.5: icmp_seq=313 ttl=128 time=79.4 ms
+[1792926744.042079] 64 bytes from 192.168.1.5: icmp_seq=314 ttl=128 time=17.8 ms
+[1792926744.306084] 64 bytes from 192.168.1.5: icmp_seq=315 ttl=128 time=80.8 ms
+[1792926744.427323] 64 bytes from 192.168.1.5: icmp_seq=316 ttl=128 time=0.777 ms
+[1792926744.718103] 64 bytes from 192.168.1.5: icmp_seq=317 ttl=128 time=89.1 ms
+[1792926744.919194] 64 bytes from 192.168.1.5: icmp_seq=318 ttl=128 time=89.8 ms
+[1792926745.113196] 64 bytes from 192.168.1.5: icmp_seq=319 ttl=128 time=82.7 ms
+[1792926745.316202] 64 bytes from 192.168.1.5: icmp_seq=320 ttl=128 time=84.6 ms
+[1792926745.511133] 64 bytes from 192.168.1.5: icmp_seq=321 ttl=128 time=78.5 ms
+[1792926745.725091] 64 bytes from 192.168.1.5: icmp_seq=322 ttl=128 time=91.8 ms
+[1792926745.928113] 64 bytes from 192.168.1.5: icmp_seq=323 ttl=128 time=93.8 ms
+[1792926746.111116] 64 bytes from 192.168.1.5: icmp_seq=324 ttl=128 time=75.7 ms
+[1792926746.334085] 64 bytes from 192.168.1.5: icmp_seq=325 ttl=128 time=97.7 ms
+[1792926746.563109] 64 bytes from 192.168.1.5: icmp_seq=326 ttl=128 time=126 ms
+[1792926746.718043] 64 bytes from 192.168.1.5: icmp_seq=327 ttl=128 time=79.8 ms
+[1792926746.940104] 64 bytes from 192.168.1.5: icmp_seq=328 ttl=128 time=101 ms
+[1792926747.167068] 64 bytes from 192.168.1.5: icmp_seq=329 ttl=128 time=129 ms
+[1792926747.344128] 64 bytes from 192.168.1.5: icmp_seq=330 ttl=128 time=105 ms
+[1792926747.444072] 64 bytes from 192.168.1.5: icmp_seq=331 ttl=128 time=3.73 ms
+[1792926747.723134] 64 bytes from 192.168.1.5: icmp_seq=332 ttl=128 time=81.8 ms
+[1792926747.959177] 64 bytes from 192.168.1.5: icmp_seq=333 ttl=128 time=117 ms
+[1792926748.096247] 64 bytes from 192.168.1.5: icmp_seq=334 ttl=128 time=53.7 ms
+[1792926748.314110] 64 bytes from 192.168.1.5: icmp_seq=335 ttl=128 time=71.6 ms
+[1792926748.589112] 64 bytes from 192.168.1.5: icmp_seq=336 ttl=128 time=146 ms
+[1792926748.766105] 64 bytes from 192.168.1.5: icmp_seq=337 ttl=128 time=122 ms
+[1792926748.971076] 64 bytes from 192.168.1.5: icmp_seq=338 ttl=128 time=126 ms
+[1792926749.187079] 64 bytes from 192.168.1.5: icmp_seq=339 ttl=128 time=142 ms
+[1792926749.371126] 64 bytes from 192.168.1.5: icmp_seq=340 ttl=128 time=125 ms
+[1792926749.583127] 64 bytes from 192.168.1.5: icmp_seq=341 ttl=128 time=136 ms
+[1792926749.649903] 64 bytes from 192.168.1.5: icmp_seq=342 ttl=128 time=1.59 ms
+[1792926749.979090] 64 bytes from 192.168.1.5: icmp_seq=343 ttl=128 time=130 ms
+[1792926750.206076] 64 bytes from 192.168.1.5: icmp_seq=344 ttl=128 time=157 ms
+[1792926750.381137] 64 bytes from 192.168.1.5: icmp_seq=345 ttl=128 time=131 ms
+[1792926750.593102] 64 bytes from 192.168.1.5: icmp_seq=346 ttl=128 time=142 ms
+[1792926750.795146] 64 bytes from 192.168.1.5: icmp_seq=347 ttl=128 time=143 ms
+[1792926750.886128] 64 bytes from 192.168.1.5: icmp_seq=348 ttl=128 time=32.8 ms
+[1792926751.208105] 64 bytes from 192.168.1.5: icmp_seq=349 ttl=128 time=154 ms
+[1792926751.393097] 64 bytes from 192.168.1.5: icmp_seq=350 ttl=128 time=138 ms
+[1792926751.620108] 64 bytes from 192.168.1.5: icmp_seq=351 ttl=128 time=164 ms
+[1792926751.764208] 64 bytes from 192.168.1.5: icmp_seq=352 ttl=128 time=107 ms
+[1792926751.998144] 64 bytes from 192.168.1.5: icmp_seq=353 ttl=128 time=141 ms
+[1792926752.224117] 64 bytes from 192.168.1.5: icmp_seq=354 ttl=128 time=167 ms
+[1792926752.401154] 64 bytes from 192.168.1.5: icmp_seq=355 ttl=128 time=143 ms
+[1792926752.630126] 64 bytes from 192.168.1.5: icmp_seq=356 ttl=128 time=171 ms
+[1792926752.814104] 64 bytes from 192.168.1.5: icmp_seq=357 ttl=128 time=154 ms
+[1792926753.009149] 64 bytes from 192.168.1.5: icmp_seq=358 ttl=128 time=148 ms
+[1792926753.238170] 64 bytes from 192.168.1.5: icmp_seq=359 ttl=128 time=177 ms
+[1792926753.469140] no answer yet for icmp_seq=360
+[1792926753.677175] no answer yet for icmp_seq=361
+[1792926753.885256] no answer yet for icmp_seq=362
+[1792926754.093182] no answer yet for icmp_seq=363
+[1792926754.301145] no answer yet for icmp_seq=364
+[1792926754.509055] no answer yet for icmp_seq=365
+[1792926754.717098] no answer yet for icmp_seq=366
+[1792926754.925100] no answer yet for icmp_seq=367
+[1792926755.132980] no answer yet for icmp_seq=368
+[1792926755.341142] no answer yet for icmp_seq=369
+[1792926755.550019] no answer yet for icmp_seq=370
+[1792926755.757156] no answer yet for icmp_seq=371
+[1792926755.964966] no answer yet for icmp_seq=372
+[1792926756.173069] no answer yet for icmp_seq=373
+[1792926756.381080] no answer yet for icmp_seq=374
+[1792926756.588998] no answer yet for icmp_seq=375
+[1792926756.798023] no answer yet for icmp_seq=376
+[1792926757.005267] no answer yet for icmp_seq=377
+[1792926757.212987] no answer yet for icmp_seq=378
+[1792926757.421025] no answer yet for icmp_seq=379
+[1792926757.628992] no answer yet for icmp_seq=380
+[1792926757.838065] no answer yet for icmp_seq=381
+[1792926758.044937] no answer yet for icmp_seq=382
+[1792926758.253006] no answer yet for icmp_seq=383
+[1792926758.461000] no answer yet for icmp_seq=384
+[1792926758.669145] no answer yet for icmp_seq=385
+[1792926758.876934] no answer yet for icmp_seq=386
+[1792926759.085163] no answer yet for icmp_seq=387
+[1792926759.293163] no answer yet for icmp_seq=388
+[1792926759.500980] no answer yet for icmp_seq=389
+[1792926759.709156] no answer yet for icmp_seq=390
+[1792926759.917271] no answer yet for icmp_seq=391
+[1792926760.125001] no answer yet for icmp_seq=392
+[1792926760.333065] no answer yet for icmp_seq=393
+[1792926760.540995] no answer yet for icmp_seq=394
+[1792926760.750017] no answer yet for icmp_seq=395
+[1792926760.957173] no answer yet for icmp_seq=396
+[1792926761.165062] no answer yet for icmp_seq=397
+[1792926761.374117] no answer yet for icmp_seq=398
+[1792926761.581082] no answer yet for icmp_seq=399
+[1792926761.789163] no answer yet for icmp_seq=400
+[1792926761.996977] no answer yet for icmp_seq=401
+[1792926762.205211] no answer yet for icmp_seq=402
+[1792926762.413062] no answer yet for icmp_seq=403
+[1792926762.621246] no answer yet for icmp_seq=404
+[1792926762.829071] no answer yet for icmp_seq=405
+[1792926763.037183] no answer yet for icmp_seq=406
+[1792926763.244946] no answer yet for icmp_seq=407
+[1792926763.453265] no answer yet for icmp_seq=408
+[1792926763.661249] no answer yet for icmp_seq=409
+[1792926763.869137] no answer yet for icmp_seq=410
+[1792926764.077220] no answer yet for icmp_seq=411
+[1792926764.285020] no answer yet for icmp_seq=412
+[1792926764.493053] no answer yet for icmp_seq=413
+[1792926764.701263] no answer yet for icmp_seq=414
+[1792926764.909279] no answer yet for icmp_seq=415
+[1792926765.117149] no answer yet for icmp_seq=416
+[1792926765.325095] no answer yet for icmp_seq=417
+[1792926765.533152] no answer yet for icmp_seq=418
+[1792926765.741151] no answer yet for icmp_seq=419
+[1792926765.949087] no answer yet for icmp_seq=420
+[1792926766.157063] no answer yet for icmp_seq=421
+[1792926766.364990] no answer yet for icmp_seq=422
+[1792926766.573226] no answer yet for icmp_seq=423
+[1792926766.781147] no answer yet for icmp_seq=424
+[1792926766.989155] no answer yet for icmp_seq=425
+[1792926767.037284] 64 bytes from 192.168.1.5: icmp_seq=426 ttl=128 time=48.0 ms
+[1792926767.191385] 64 bytes from 192.168.1.5: icmp_seq=427 ttl=128 time=1.62 ms
+[1792926767.392381] 64 bytes from 192.168.1.5: icmp_seq=428 ttl=128 time=1.56 ms
+[1792926767.593276] 64 bytes from 192.168.1.5: icmp_seq=429 ttl=128 time=1.35 ms
+[1792926767.794289] 64 bytes from 192.168.1.5: icmp_seq=430 ttl=128 time=1.42 ms
+[1792926767.995343] 64 bytes from 192.168.1.5: icmp_seq=431 ttl=128 time=1.55 ms
+[1792926768.215226] 64 bytes from 192.168.1.5: icmp_seq=432 ttl=128 time=20.6 ms
+[1792926768.455378] 64 bytes from 192.168.1.5: icmp_seq=433 ttl=128 time=59.7 ms
+[1792926768.660361] 64 bytes from 192.168.1.5: icmp_seq=434 ttl=128 time=63.6 ms
+[1792926768.863251] 64 bytes from 192.168.1.5: icmp_seq=435 ttl=128 time=65.7 ms
+[1792926769.066273] 64 bytes from 192.168.1.5: icmp_seq=436 ttl=128 time=67.7 ms
+[1792926769.268343] 64 bytes from 192.168.1.5: icmp_seq=437 ttl=128 time=68.7 ms
+[1792926769.481332] 64 bytes from 192.168.1.5: icmp_seq=438 ttl=128 time=80.6 ms
+[1792926769.674422] 64 bytes from 192.168.1.5: icmp_seq=439 ttl=128 time=72.8 ms
+[1792926769.878361] 64 bytes from 192.168.1.5: icmp_seq=440 ttl=128 time=75.6 ms
+[1792926770.080299] 64 bytes from 192.168.1.5: icmp_seq=441 ttl=128 time=76.7 ms
+[1792926770.284235] 64 bytes from 192.168.1.5: icmp_seq=442 ttl=128 time=79.8 ms
+[1792926770.486445] 64 bytes from 192.168.1.5: icmp_seq=443 ttl=128 time=80.8 ms
+[1792926770.688273] 64 bytes from 192.168.1.5: icmp_seq=444 ttl=128 time=82.5 ms
+[1792926770.807293] 64 bytes from 192.168.1.5: icmp_seq=445 ttl=128 time=0.778 ms
+[1792926771.117277] 64 bytes from 192.168.1.5: icmp_seq=446 ttl=128 time=103 ms
+[1792926771.281245] 64 bytes from 192.168.1.5: icmp_seq=447 ttl=128 time=65.8 ms
+[1792926771.506397] 64 bytes from 192.168.1.5: icmp_seq=448 ttl=128 time=89.9 ms
+[1792926771.707355] 64 bytes from 192.168.1.5: icmp_seq=449 ttl=128 time=90.7 ms
+[1792926771.909363] 64 bytes from 192.168.1.5: icmp_seq=450 ttl=128 time=91.8 ms
+[1792926772.130306] 64 bytes from 192.168.1.5: icmp_seq=451 ttl=128 time=112 ms
+[1792926772.316400] 64 bytes from 192.168.1.5: icmp_seq=452 ttl=128 time=96.8 ms
+[1792926772.515313] 64 bytes from 192.168.1.5: icmp_seq=453 ttl=128 time=95.7 ms
+[1792926772.721243] 64 bytes from 192.168.1.5: icmp_seq=454 ttl=128 time=101 ms
+[1792926772.922331] 64 bytes from 192.168.1.5: icmp_seq=455 ttl=128 time=101 ms
+[1792926773.035286] 64 bytes from 192.168.1.5: icmp_seq=456 ttl=128 time=13.8 ms
+[1792926773.311263] 64 bytes from 192.168.1.5: icmp_seq=457 ttl=128 time=88.7 ms
+[1792926773.572325] 64 bytes from 192.168.1.5: icmp_seq=458 ttl=128 time=149 ms
+[1792926773.669289] 64 bytes from 192.168.1.5: icmp_seq=459 ttl=128 time=44.8 ms
+[1792926773.980275] 64 bytes from 192.168.1.5: icmp_seq=460 ttl=128 time=155 ms
+[1792926774.206357] 64 bytes from 192.168.1.5: icmp_seq=461 ttl=128 time=181 ms
+[1792926774.389357] 64 bytes from 192.168.1.5: icmp_seq=462 ttl=128 time=164 ms
+[1792926774.431402] 64 bytes from 192.168.1.5: icmp_seq=463 ttl=128 time=4.83 ms
+[1792926774.803376] 64 bytes from 192.168.1.5: icmp_seq=464 ttl=128 time=176 ms
+[1792926774.987329] 64 bytes from 192.168.1.5: icmp_seq=465 ttl=128 time=159 ms
+[1792926775.206408] 64 bytes from 192.168.1.5: icmp_seq=466 ttl=128 time=178 ms
+[1792926775.389346] 64 bytes from 192.168.1.5: icmp_seq=467 ttl=128 time=161 ms
+[1792926775.599479] 64 bytes from 192.168.1.5: icmp_seq=468 ttl=128 time=170 ms
+[1792926775.819432] 64 bytes from 192.168.1.5: icmp_seq=469 ttl=128 time=190 ms
+[1792926775.994327] 64 bytes from 192.168.1.5: icmp_seq=470 ttl=128 time=164 ms
+[1792926776.132486] 64 bytes from 192.168.1.5: icmp_seq=471 ttl=128 time=102 ms
+[1792926776.396374] 64 bytes from 192.168.1.5: icmp_seq=472 ttl=128 time=166 ms
+[1792926776.598407] 64 bytes from 192.168.1.5: icmp_seq=473 ttl=128 time=167 ms
+[1792926776.827296] 64 bytes from 192.168.1.5: icmp_seq=474 ttl=128 time=195 ms
+[1792926777.001365] 64 bytes from 192.168.1.5: icmp_seq=475 ttl=128 time=169 ms
+[1792926777.047417] 64 bytes from 192.168.1.5: icmp_seq=476 ttl=128 time=14.8 ms
+[1792926777.383369] 64 bytes from 192.168.1.5: icmp_seq=477 ttl=128 time=151 ms
+[1792926777.633346] 64 bytes from 192.168.1.5: icmp_seq=478 ttl=128 time=200 ms
+[1792926777.837930] no answer yet for icmp_seq=479
+[1792926777.901326] 64 bytes from 192.168.1.5: icmp_seq=479 ttl=128 time=268 ms
+[1792926777.955408] 64 bytes from 192.168.1.5: icmp_seq=480 ttl=128 time=117 ms
+[1792926778.245933] no answer yet for icmp_seq=481
+[1792926778.354366] 64 bytes from 192.168.1.5: icmp_seq=481 ttl=128 time=317 ms
+[1792926778.446492] no answer yet for icmp_seq=482
+[1792926778.585402] 64 bytes from 192.168.1.5: icmp_seq=482 ttl=128 time=339 ms
+[1792926778.647493] no answer yet for icmp_seq=483
+[1792926778.656373] 64 bytes from 192.168.1.5: icmp_seq=483 ttl=128 time=210 ms
+[1792926778.674317] 64 bytes from 192.168.1.5: icmp_seq=484 ttl=128 time=26.7 ms
+[1792926779.030389] 64 bytes from 192.168.1.5: icmp_seq=485 ttl=128 time=182 ms
+[1792926779.252978] no answer yet for icmp_seq=486
+[1792926779.257442] 64 bytes from 192.168.1.5: icmp_seq=486 ttl=128 time=209 ms
+[1792926779.453661] no answer yet for icmp_seq=487
+[1792926779.462350] 64 bytes from 192.168.1.5: icmp_seq=487 ttl=128 time=209 ms
+[1792926779.654564] no answer yet for icmp_seq=488
+[1792926779.672399] 64 bytes from 192.168.1.5: icmp_seq=488 ttl=128 time=219 ms
+[1792926779.855606] no answer yet for icmp_seq=489
+[1792926779.890505] 64 bytes from 192.168.1.5: icmp_seq=489 ttl=128 time=236 ms
+[1792926780.056866] no answer yet for icmp_seq=490
+[1792926780.090419] 64 bytes from 192.168.1.5: icmp_seq=490 ttl=128 time=235 ms
+[1792926780.257774] no answer yet for icmp_seq=491
+[1792926780.314418] 64 bytes from 192.168.1.5: icmp_seq=491 ttl=128 time=257 ms
+[1792926780.458625] no answer yet for icmp_seq=492
+[1792926780.511334] 64 bytes from 192.168.1.5: icmp_seq=492 ttl=128 time=253 ms
+[1792926780.584355] 64 bytes from 192.168.1.5: icmp_seq=493 ttl=128 time=126 ms
+[1792926780.861929] no answer yet for icmp_seq=494
+[1792926781.031433] 64 bytes from 192.168.1.5: icmp_seq=494 ttl=128 time=372 ms
+[1792926781.061552] no answer yet for icmp_seq=495
+[1792926781.269134] no answer yet for icmp_seq=496
+[1792926781.281627] 64 bytes from 192.168.1.5: icmp_seq=495 ttl=128 time=420 ms
+[1792926781.470063] no answer yet for icmp_seq=497
+[1792926781.677206] no answer yet for icmp_seq=498
+[1792926781.885155] no answer yet for icmp_seq=499
+[1792926782.093147] no answer yet for icmp_seq=500
+[1792926782.301061] no answer yet for icmp_seq=501
+[1792926782.509145] no answer yet for icmp_seq=502
+[1792926782.717299] no answer yet for icmp_seq=503
+[1792926782.925069] no answer yet for icmp_seq=504
+[1792926783.133270] no answer yet for icmp_seq=505
+[1792926783.341172] no answer yet for icmp_seq=506
+[1792926783.549090] no answer yet for icmp_seq=507
+[1792926783.757022] no answer yet for icmp_seq=508
+[1792926783.965063] no answer yet for icmp_seq=509
+[1792926784.172980] no answer yet for icmp_seq=510
+[1792926784.382061] no answer yet for icmp_seq=511
+[1792926784.589245] no answer yet for icmp_seq=512
+[1792926784.796940] no answer yet for icmp_seq=513
+[1792926785.005127] no answer yet for icmp_seq=514
+[1792926785.212934] no answer yet for icmp_seq=515
+[1792926785.421248] no answer yet for icmp_seq=516
+[1792926785.629044] no answer yet for icmp_seq=517
+[1792926785.837287] no answer yet for icmp_seq=518
+[1792926786.045033] no answer yet for icmp_seq=519
+[1792926786.253086] no answer yet for icmp_seq=520
+[1792926786.460976] no answer yet for icmp_seq=521
+[1792926786.669105] no answer yet for icmp_seq=522
+[1792926786.876991] no answer yet for icmp_seq=523
+[1792926787.085124] no answer yet for icmp_seq=524
+[1792926787.293178] no answer yet for icmp_seq=525
+[1792926787.501266] no answer yet for icmp_seq=526
+[1792926787.709162] no answer yet for icmp_seq=527
+[1792926787.917042] no answer yet for icmp_seq=528
+[1792926788.125101] no answer yet for icmp_seq=529
+[1792926788.332968] no answer yet for icmp_seq=530
+[1792926788.541068] no answer yet for icmp_seq=531
+[1792926788.749068] no answer yet for icmp_seq=532
+[1792926788.957058] no answer yet for icmp_seq=533
+[1792926789.165087] no answer yet for icmp_seq=534
+[1792926789.373256] no answer yet for icmp_seq=535
+[1792926789.580987] no answer yet for icmp_seq=536
+[1792926789.789153] no answer yet for icmp_seq=537
+[1792926789.997063] no answer yet for icmp_seq=538
+[1792926790.204935] no answer yet for icmp_seq=539
+[1792926790.413007] no answer yet for icmp_seq=540
+[1792926790.621179] no answer yet for icmp_seq=541
+[1792926790.829068] no answer yet for icmp_seq=542
+[1792926791.037145] no answer yet for icmp_seq=543
+[1792926791.245063] no answer yet for icmp_seq=544
+[1792926791.453266] no answer yet for icmp_seq=545
+[1792926791.660937] no answer yet for icmp_seq=546
+[1792926791.869130] no answer yet for icmp_seq=547
+[1792926792.077062] no answer yet for icmp_seq=548
+[1792926792.285160] no answer yet for icmp_seq=549
+[1792926792.493167] no answer yet for icmp_seq=550
+[1792926792.701263] no answer yet for icmp_seq=551
+[1792926792.909313] no answer yet for icmp_seq=552
+[1792926793.117151] no answer yet for icmp_seq=553
+[1792926793.325077] no answer yet for icmp_seq=554
+[1792926793.533275] no answer yet for icmp_seq=555
+[1792926793.741138] no answer yet for icmp_seq=556
+[1792926793.950144] no answer yet for icmp_seq=557
+[1792926794.157083] no answer yet for icmp_seq=558
+[1792926794.365193] no answer yet for icmp_seq=559
+[1792926794.573291] no answer yet for icmp_seq=560
+[1792926794.781193] no answer yet for icmp_seq=561
+[1792926794.787123] 64 bytes from 192.168.1.5: icmp_seq=562 ttl=128 time=5.67 ms
+[1792926794.984796] 64 bytes from 192.168.1.5: icmp_seq=563 ttl=128 time=2.17 ms
+[1792926795.251594] 64 bytes from 192.168.1.5: icmp_seq=564 ttl=128 time=68.5 ms
+[1792926795.455638] 64 bytes from 192.168.1.5: icmp_seq=565 ttl=128 time=71.7 ms
+[1792926795.648501] 64 bytes from 192.168.1.5: icmp_seq=566 ttl=128 time=63.7 ms
+[1792926795.869546] 64 bytes from 192.168.1.5: icmp_seq=567 ttl=128 time=83.8 ms
+[1792926796.055533] 64 bytes from 192.168.1.5: icmp_seq=568 ttl=128 time=68.8 ms
+[1792926796.268531] 64 bytes from 192.168.1.5: icmp_seq=569 ttl=128 time=80.7 ms
+[1792926796.461524] 64 bytes from 192.168.1.5: icmp_seq=570 ttl=128 time=72.8 ms
+[1792926796.665532] 64 bytes from 192.168.1.5: icmp_seq=571 ttl=128 time=75.8 ms
+[1792926796.871513] 64 bytes from 192.168.1.5: icmp_seq=572 ttl=128 time=80.7 ms
+[1792926796.993622] 64 bytes from 192.168.1.5: icmp_seq=573 ttl=128 time=1.62 ms
+[1792926797.257599] 64 bytes from 192.168.1.5: icmp_seq=574 ttl=128 time=64.6 ms
+[1792926797.462544] 64 bytes from 192.168.1.5: icmp_seq=575 ttl=128 time=68.6 ms
+[1792926797.675519] 64 bytes from 192.168.1.5: icmp_seq=576 ttl=128 time=80.7 ms
+[1792926797.885537] 64 bytes from 192.168.1.5: icmp_seq=577 ttl=128 time=89.8 ms
+[1792926798.073462] 64 bytes from 192.168.1.5: icmp_seq=578 ttl=128 time=76.7 ms
+[1792926798.283486] 64 bytes from 192.168.1.5: icmp_seq=579 ttl=128 time=85.8 ms
+[1792926798.477712] 64 bytes from 192.168.1.5: icmp_seq=580 ttl=128 time=78.9 ms
+[1792926798.680548] 64 bytes from 192.168.1.5: icmp_seq=581 ttl=128 time=81.6 ms
+[1792926798.857560] 64 bytes from 192.168.1.5: icmp_seq=582 ttl=128 time=57.7 ms
+[1792926799.086585] 64 bytes from 192.168.1.5: icmp_seq=583 ttl=128 time=85.7 ms
+[1792926799.257600] 64 bytes from 192.168.1.5: icmp_seq=584 ttl=128 time=55.7 ms
+[1792926799.491496] 64 bytes from 192.168.1.5: icmp_seq=585 ttl=128 time=88.7 ms
+[1792926799.694585] 64 bytes from 192.168.1.5: icmp_seq=586 ttl=128 time=90.8 ms
+[1792926799.897472] 64 bytes from 192.168.1.5: icmp_seq=587 ttl=128 time=92.7 ms
+[1792926800.100571] 64 bytes from 192.168.1.5: icmp_seq=588 ttl=128 time=94.9 ms
+[1792926800.301533] 64 bytes from 192.168.1.5: icmp_seq=589 ttl=128 time=94.8 ms
+[1792926800.504576] 64 bytes from 192.168.1.5: icmp_seq=590 ttl=128 time=96.8 ms
+[1792926800.619627] 64 bytes from 192.168.1.5: icmp_seq=591 ttl=128 time=10.8 ms
+[1792926800.930085] 64 bytes from 192.168.1.5: icmp_seq=592 ttl=128 time=117 ms
+[1792926801.213063] no answer yet for icmp_seq=593
+[1792926801.421070] no answer yet for icmp_seq=594
+[1792926801.629057] no answer yet for icmp_seq=595
+[1792926801.837156] no answer yet for icmp_seq=596
+[1792926802.045081] no answer yet for icmp_seq=597
+[1792926802.253061] no answer yet for icmp_seq=598
+[1792926802.461062] no answer yet for icmp_seq=599
+[1792926802.669064] no answer yet for icmp_seq=600
+[1792926802.877093] no answer yet for icmp_seq=601
+[1792926803.085068] no answer yet for icmp_seq=602
+[1792926803.293032] no answer yet for icmp_seq=603
+[1792926803.501081] no answer yet for icmp_seq=604
+[1792926803.709249] no answer yet for icmp_seq=605
+[1792926803.917058] no answer yet for icmp_seq=606
+[1792926804.125116] no answer yet for icmp_seq=607
+[1792926804.333163] no answer yet for icmp_seq=608
+[1792926804.541262] no answer yet for icmp_seq=609
+[1792926804.749135] no answer yet for icmp_seq=610
+[1792926804.957212] no answer yet for icmp_seq=611
+[1792926805.165266] no answer yet for icmp_seq=612
+[1792926805.373088] no answer yet for icmp_seq=613
+[1792926805.581113] no answer yet for icmp_seq=614
+[1792926805.789336] no answer yet for icmp_seq=615
+[1792926805.996934] no answer yet for icmp_seq=616
+[1792926806.205160] no answer yet for icmp_seq=617
+[1792926806.413065] no answer yet for icmp_seq=618
+[1792926806.620992] no answer yet for icmp_seq=619
+[1792926806.829108] no answer yet for icmp_seq=620
+[1792926807.037146] no answer yet for icmp_seq=621
+[1792926807.245071] no answer yet for icmp_seq=622
+[1792926807.453110] no answer yet for icmp_seq=623
+[1792926807.662059] no answer yet for icmp_seq=624
+[1792926807.869155] no answer yet for icmp_seq=625
+[1792926808.076981] no answer yet for icmp_seq=626
+[1792926808.285165] no answer yet for icmp_seq=627
+[1792926808.494066] no answer yet for icmp_seq=628
+[1792926808.701151] no answer yet for icmp_seq=629
+[1792926808.908939] no answer yet for icmp_seq=630
+[1792926809.117150] no answer yet for icmp_seq=631
+[1792926809.325153] no answer yet for icmp_seq=632
+[1792926809.533235] no answer yet for icmp_seq=633
+[1792926809.741166] no answer yet for icmp_seq=634
+[1792926809.949069] no answer yet for icmp_seq=635
+[1792926810.157130] no answer yet for icmp_seq=636
+[1792926810.365028] no answer yet for icmp_seq=637
+[1792926810.573161] no answer yet for icmp_seq=638
+[1792926810.781122] no answer yet for icmp_seq=639
+[1792926810.989045] no answer yet for icmp_seq=640
+[1792926811.197327] no answer yet for icmp_seq=641
+[1792926811.405191] no answer yet for icmp_seq=642
+[1792926811.613012] no answer yet for icmp_seq=643
+[1792926811.821167] no answer yet for icmp_seq=644
+[1792926812.028942] no answer yet for icmp_seq=645
+[1792926812.237080] no answer yet for icmp_seq=646
+[1792926812.445064] no answer yet for icmp_seq=647
+[1792926812.653160] no answer yet for icmp_seq=648
+[1792926812.861139] no answer yet for icmp_seq=649
+[1792926813.069182] no answer yet for icmp_seq=650
+[1792926813.276933] no answer yet for icmp_seq=651
+[1792926813.485057] no answer yet for icmp_seq=652
+[1792926813.693087] no answer yet for icmp_seq=653
+[1792926813.901171] no answer yet for icmp_seq=654
+[1792926814.109140] no answer yet for icmp_seq=655
+[1792926814.317189] no answer yet for icmp_seq=656
+[1792926814.525269] no answer yet for icmp_seq=657
+[1792926814.734137] no answer yet for icmp_seq=658
+[1792926814.736120] 64 bytes from 192.168.1.5: icmp_seq=659 ttl=128 time=1.91 ms
+[1792926814.935702] 64 bytes from 192.168.1.5: icmp_seq=660 ttl=128 time=1.30 ms
+[1792926815.137284] 64 bytes from 192.168.1.5: icmp_seq=661 ttl=128 time=2.09 ms
+[1792926815.340630] 64 bytes from 192.168.1.5: icmp_seq=662 ttl=128 time=4.96 ms
+[1792926815.538259] 64 bytes from 192.168.1.5: icmp_seq=663 ttl=128 time=2.24 ms
+[1792926815.737769] 64 bytes from 192.168.1.5: icmp_seq=664 ttl=128 time=0.978 ms
+[1792926815.938605] 64 bytes from 192.168.1.5: icmp_seq=665 ttl=128 time=1.58 ms
+[1792926816.138649] 64 bytes from 192.168.1.5: icmp_seq=666 ttl=128 time=0.854 ms
+[1792926816.357701] 64 bytes from 192.168.1.5: icmp_seq=667 ttl=128 time=16.7 ms
+[1792926816.606676] 64 bytes from 192.168.1.5: icmp_seq=668 ttl=128 time=64.7 ms
+[1792926816.817676] 64 bytes from 192.168.1.5: icmp_seq=669 ttl=128 time=74.8 ms
+[1792926816.944743] 64 bytes from 192.168.1.5: icmp_seq=670 ttl=128 time=0.785 ms
+[1792926817.202691] 64 bytes from 192.168.1.5: icmp_seq=671 ttl=128 time=53.7 ms
+[1792926817.428704] 64 bytes from 192.168.1.5: icmp_seq=672 ttl=128 time=78.8 ms
+[1792926817.558678] 64 bytes from 192.168.1.5: icmp_seq=673 ttl=128 time=7.73 ms
+[1792926817.768656] 64 bytes from 192.168.1.5: icmp_seq=674 ttl=128 time=16.7 ms
+[1792926817.953742] 64 bytes from 192.168.1.5: icmp_seq=675 ttl=128 time=0.769 ms
+[1792926818.165744] 64 bytes from 192.168.1.5: icmp_seq=676 ttl=128 time=8.61 ms
+[1792926818.393784] 64 bytes from 192.168.1.5: icmp_seq=677 ttl=128 time=35.7 ms
+[1792926818.632656] 64 bytes from 192.168.1.5: icmp_seq=678 ttl=128 time=73.7 ms
+[1792926818.761790] 64 bytes from 192.168.1.5: icmp_seq=679 ttl=128 time=1.80 ms
+[1792926818.962678] 64 bytes from 192.168.1.5: icmp_seq=680 ttl=128 time=1.62 ms
+[1792926819.162767] 64 bytes from 192.168.1.5: icmp_seq=681 ttl=128 time=0.695 ms
+[1792926819.366834] 64 bytes from 192.168.1.5: icmp_seq=682 ttl=128 time=1.50 ms
+[1792926819.567641] 64 bytes from 192.168.1.5: icmp_seq=683 ttl=128 time=1.68 ms
+[1792926819.768681] 64 bytes from 192.168.1.5: icmp_seq=684 ttl=128 time=1.70 ms
+[1792926819.968823] 64 bytes from 192.168.1.5: icmp_seq=685 ttl=128 time=0.837 ms
+[1792926820.174636] 64 bytes from 192.168.1.5: icmp_seq=686 ttl=128 time=1.35 ms
+[1792926820.375755] 64 bytes from 192.168.1.5: icmp_seq=687 ttl=128 time=1.62 ms
+[1792926820.576895] 64 bytes from 192.168.1.5: icmp_seq=688 ttl=128 time=1.59 ms
+[1792926820.777733] 64 bytes from 192.168.1.5: icmp_seq=689 ttl=128 time=1.31 ms
+[1792926820.978716] 64 bytes from 192.168.1.5: icmp_seq=690 ttl=128 time=1.67 ms
+[1792926821.179766] 64 bytes from 192.168.1.5: icmp_seq=691 ttl=128 time=1.64 ms
+[1792926821.380681] 64 bytes from 192.168.1.5: icmp_seq=692 ttl=128 time=1.68 ms
+[1792926821.582058] 64 bytes from 192.168.1.5: icmp_seq=693 ttl=128 time=1.82 ms
+[1792926821.786028] 64 bytes from 192.168.1.5: icmp_seq=694 ttl=128 time=4.41 ms
+[1792926822.019760] 64 bytes from 192.168.1.5: icmp_seq=695 ttl=128 time=37.4 ms
+[1792926822.210755] 64 bytes from 192.168.1.5: icmp_seq=696 ttl=128 time=27.7 ms
+[1792926822.388326] 64 bytes from 192.168.1.5: icmp_seq=697 ttl=128 time=4.11 ms
+[1792926822.587202] 64 bytes from 192.168.1.5: icmp_seq=698 ttl=128 time=2.45 ms
+[1792926822.787704] 64 bytes from 192.168.1.5: icmp_seq=699 ttl=128 time=2.08 ms
+[1792926822.988197] 64 bytes from 192.168.1.5: icmp_seq=700 ttl=128 time=1.98 ms
+[1792926823.188953] 64 bytes from 192.168.1.5: icmp_seq=701 ttl=128 time=2.25 ms
+[1792926823.388842] 64 bytes from 192.168.1.5: icmp_seq=702 ttl=128 time=1.65 ms
+[1792926823.589880] 64 bytes from 192.168.1.5: icmp_seq=703 ttl=128 time=1.70 ms
+[1792926823.790880] 64 bytes from 192.168.1.5: icmp_seq=704 ttl=128 time=1.48 ms
+[1792926824.056752] 64 bytes from 192.168.1.5: icmp_seq=705 ttl=128 time=66.8 ms
+[1792926824.268783] 64 bytes from 192.168.1.5: icmp_seq=706 ttl=128 time=77.8 ms
+[1792926824.393797] 64 bytes from 192.168.1.5: icmp_seq=707 ttl=128 time=1.64 ms
+[1792926824.595440] 64 bytes from 192.168.1.5: icmp_seq=708 ttl=128 time=2.37 ms
+[1792926824.794980] 64 bytes from 192.168.1.5: icmp_seq=709 ttl=128 time=1.14 ms
+[1792926824.995809] 64 bytes from 192.168.1.5: icmp_seq=710 ttl=128 time=1.28 ms
+[1792926825.198145] 64 bytes from 192.168.1.5: icmp_seq=711 ttl=128 time=3.03 ms
+[1792926825.398387] 64 bytes from 192.168.1.5: icmp_seq=712 ttl=128 time=2.80 ms
+[1792926825.598977] 64 bytes from 192.168.1.5: icmp_seq=713 ttl=128 time=2.01 ms
+[1792926825.798981] 64 bytes from 192.168.1.5: icmp_seq=714 ttl=128 time=1.42 ms
+[1792926826.075809] 64 bytes from 192.168.1.5: icmp_seq=715 ttl=128 time=77.5 ms
+[1792926826.244792] 64 bytes from 192.168.1.5: icmp_seq=716 ttl=128 time=45.8 ms
+[1792926826.402711] 64 bytes from 192.168.1.5: icmp_seq=717 ttl=128 time=2.46 ms
+[1792926826.805085] no answer yet for icmp_seq=718
+[1792926827.013276] no answer yet for icmp_seq=719
+[1792926827.221260] no answer yet for icmp_seq=720
+[1792926827.429000] no answer yet for icmp_seq=721
+[1792926827.637134] no answer yet for icmp_seq=722
+[1792926827.845160] no answer yet for icmp_seq=723
+[1792926828.053163] no answer yet for icmp_seq=724
+[1792926828.261132] no answer yet for icmp_seq=725
+[1792926828.469025] no answer yet for icmp_seq=726
+[1792926828.677170] no answer yet for icmp_seq=727
+[1792926828.885084] no answer yet for icmp_seq=728
+[1792926829.093019] no answer yet for icmp_seq=729
+[1792926829.301303] no answer yet for icmp_seq=730
+[1792926829.508992] no answer yet for icmp_seq=731
+[1792926829.717027] no answer yet for icmp_seq=732
+[1792926829.925032] no answer yet for icmp_seq=733
+[1792926830.133062] no answer yet for icmp_seq=734
+[1792926830.341168] no answer yet for icmp_seq=735
+[1792926830.548985] no answer yet for icmp_seq=736
+[1792926830.757248] no answer yet for icmp_seq=737
+[1792926830.965230] no answer yet for icmp_seq=738
+[1792926831.173137] no answer yet for icmp_seq=739
+[1792926831.381231] no answer yet for icmp_seq=740
+[1792926831.590055] no answer yet for icmp_seq=741
+[1792926831.797055] no answer yet for icmp_seq=742
+[1792926832.005237] no answer yet for icmp_seq=743
+[1792926832.213089] no answer yet for icmp_seq=744
+[1792926832.421235] no answer yet for icmp_seq=745
+[1792926832.629193] no answer yet for icmp_seq=746
+[1792926832.837225] no answer yet for icmp_seq=747
+[1792926833.044998] no answer yet for icmp_seq=748
+[1792926833.253051] no answer yet for icmp_seq=749
+[1792926833.460990] no answer yet for icmp_seq=750
+[1792926833.669228] no answer yet for icmp_seq=751
+[1792926833.876935] no answer yet for icmp_seq=752
+[1792926834.085127] no answer yet for icmp_seq=753
+[1792926834.293005] no answer yet for icmp_seq=754
+[1792926834.501232] no answer yet for icmp_seq=755
+[1792926834.709042] no answer yet for icmp_seq=756
+[1792926834.917232] no answer yet for icmp_seq=757
+[1792926835.125056] no answer yet for icmp_seq=758
+[1792926835.333230] no answer yet for icmp_seq=759
+[1792926835.541227] no answer yet for icmp_seq=760
+[1792926835.749135] no answer yet for icmp_seq=761
+[1792926835.956967] no answer yet for icmp_seq=762
+[1792926836.165126] no answer yet for icmp_seq=763
+[1792926836.373283] no answer yet for icmp_seq=764
+[1792926836.581160] no answer yet for icmp_seq=765
+[1792926836.789092] no answer yet for icmp_seq=766
+[1792926836.997253] no answer yet for icmp_seq=767
+[1792926837.204972] no answer yet for icmp_seq=768
+[1792926837.413095] no answer yet for icmp_seq=769
+[1792926837.621153] no answer yet for icmp_seq=770
+[1792926837.829004] no answer yet for icmp_seq=771
+[1792926838.037144] no answer yet for icmp_seq=772
+[1792926838.244958] no answer yet for icmp_seq=773
+[1792926838.453143] no answer yet for icmp_seq=774
+[1792926838.661123] no answer yet for icmp_seq=775
+[1792926838.869172] no answer yet for icmp_seq=776
+[1792926839.078134] no answer yet for icmp_seq=777
+[1792926839.285175] no answer yet for icmp_seq=778
+[1792926839.493082] no answer yet for icmp_seq=779
+[1792926839.701113] no answer yet for icmp_seq=780
+[1792926839.909042] no answer yet for icmp_seq=781
+[1792926840.116982] no answer yet for icmp_seq=782
+[1792926840.119967] 64 bytes from 192.168.1.5: icmp_seq=783 ttl=128 time=2.89 ms
+[1792926840.363905] 64 bytes from 192.168.1.5: icmp_seq=784 ttl=128 time=46.7 ms
+[1792926840.616897] 64 bytes from 192.168.1.5: icmp_seq=785 ttl=128 time=98.7 ms
+[1792926840.770919] 64 bytes from 192.168.1.5: icmp_seq=786 ttl=128 time=51.8 ms
+[1792926840.986858] 64 bytes from 192.168.1.5: icmp_seq=787 ttl=128 time=66.7 ms
+[1792926841.178955] 64 bytes from 192.168.1.5: icmp_seq=788 ttl=128 time=58.9 ms
+[1792926841.320850] 64 bytes from 192.168.1.5: icmp_seq=789 ttl=128 time=0.642 ms
+[1792926841.527045] 64 bytes from 192.168.1.5: icmp_seq=790 ttl=128 time=1.90 ms
+[1792926841.727008] 64 bytes from 192.168.1.5: icmp_seq=791 ttl=128 time=1.47 ms
+[1792926841.939863] 64 bytes from 192.168.1.5: icmp_seq=792 ttl=128 time=13.4 ms
+[1792926842.128029] 64 bytes from 192.168.1.5: icmp_seq=793 ttl=128 time=1.61 ms
+[1792926842.328871] 64 bytes from 192.168.1.5: icmp_seq=794 ttl=128 time=1.42 ms
+[1792926842.530004] 64 bytes from 192.168.1.5: icmp_seq=795 ttl=128 time=1.73 ms
+[1792926842.730863] 64 bytes from 192.168.1.5: icmp_seq=796 ttl=128 time=1.46 ms
+[1792926842.942897] 64 bytes from 192.168.1.5: icmp_seq=797 ttl=128 time=12.8 ms
+[1792926843.333073] no answer yet for icmp_seq=798
+[1792926843.334074] 64 bytes from 192.168.1.5: icmp_seq=799 ttl=128 time=0.916 ms
+[1792926843.534962] 64 bytes from 192.168.1.5: icmp_seq=800 ttl=128 time=1.46 ms
+[1792926843.737814] 64 bytes from 192.168.1.5: icmp_seq=801 ttl=128 time=3.47 ms
+[1792926843.941971] 64 bytes from 192.168.1.5: icmp_seq=802 ttl=128 time=6.48 ms
+[1792926844.137868] 64 bytes from 192.168.1.5: icmp_seq=803 ttl=128 time=1.52 ms
+[1792926844.338202] 64 bytes from 192.168.1.5: icmp_seq=804 ttl=128 time=0.982 ms
+[1792926844.538863] 64 bytes from 192.168.1.5: icmp_seq=805 ttl=128 time=1.16 ms
+[1792926844.740175] 64 bytes from 192.168.1.5: icmp_seq=806 ttl=128 time=1.93 ms
+[1792926844.942967] 64 bytes from 192.168.1.5: icmp_seq=807 ttl=128 time=4.31 ms
+[1792926845.141124] 64 bytes from 192.168.1.5: icmp_seq=808 ttl=128 time=1.80 ms
+[1792926845.341993] 64 bytes from 192.168.1.5: icmp_seq=809 ttl=128 time=1.31 ms
+[1792926845.542834] 64 bytes from 192.168.1.5: icmp_seq=810 ttl=128 time=1.58 ms
+[1792926845.744099] 64 bytes from 192.168.1.5: icmp_seq=811 ttl=128 time=2.02 ms
+[1792926846.020929] 64 bytes from 192.168.1.5: icmp_seq=812 ttl=128 time=78.5 ms
+[1792926846.143912] 64 bytes from 192.168.1.5: icmp_seq=813 ttl=128 time=0.644 ms
+[1792926846.350097] 64 bytes from 192.168.1.5: icmp_seq=814 ttl=128 time=0.898 ms
+[1792926846.558981] 64 bytes from 192.168.1.5: icmp_seq=815 ttl=128 time=1.76 ms
+[1792926846.760141] 64 bytes from 192.168.1.5: icmp_seq=816 ttl=128 time=1.81 ms
+[1792926846.960936] 64 bytes from 192.168.1.5: icmp_seq=817 ttl=128 time=1.43 ms
+[1792926847.163312] 64 bytes from 192.168.1.5: icmp_seq=818 ttl=128 time=2.99 ms
+[1792926847.362322] 64 bytes from 192.168.1.5: icmp_seq=819 ttl=128 time=1.66 ms
+[1792926847.562943] 64 bytes from 192.168.1.5: icmp_seq=820 ttl=128 time=1.17 ms
+[1792926847.765580] 64 bytes from 192.168.1.5: icmp_seq=821 ttl=128 time=3.10 ms
+[1792926847.964020] 64 bytes from 192.168.1.5: icmp_seq=822 ttl=128 time=1.01 ms
+[1792926848.269935] 64 bytes from 192.168.1.5: icmp_seq=823 ttl=128 time=107 ms
+[1792926848.411057] 64 bytes from 192.168.1.5: icmp_seq=824 ttl=128 time=46.9 ms
+[1792926848.566025] 64 bytes from 192.168.1.5: icmp_seq=825 ttl=128 time=1.69 ms
+[1792926848.767014] 64 bytes from 192.168.1.5: icmp_seq=826 ttl=128 time=1.68 ms
+[1792926848.967965] 64 bytes from 192.168.1.5: icmp_seq=827 ttl=128 time=1.41 ms
+[1792926849.169134] 64 bytes from 192.168.1.5: icmp_seq=828 ttl=128 time=1.80 ms
+[1792926849.372463] 64 bytes from 192.168.1.5: icmp_seq=829 ttl=128 time=3.80 ms
+[1792926849.573540] 64 bytes from 192.168.1.5: icmp_seq=830 ttl=128 time=3.58 ms
+[1792926849.773184] 64 bytes from 192.168.1.5: icmp_seq=831 ttl=128 time=2.13 ms
+[1792926850.126039] 64 bytes from 192.168.1.5: icmp_seq=832 ttl=128 time=155 ms
+[1792926850.334981] 64 bytes from 192.168.1.5: icmp_seq=833 ttl=128 time=163 ms
+[1792926850.519035] 64 bytes from 192.168.1.5: icmp_seq=834 ttl=128 time=146 ms
+[1792926850.576057] 64 bytes from 192.168.1.5: icmp_seq=835 ttl=128 time=1.64 ms
+[1792926850.777000] 64 bytes from 192.168.1.5: icmp_seq=836 ttl=128 time=1.61 ms
+[1792926850.977938] 64 bytes from 192.168.1.5: icmp_seq=837 ttl=128 time=1.52 ms
+[1792926851.181257] 64 bytes from 192.168.1.5: icmp_seq=838 ttl=128 time=3.92 ms
+[1792926851.379982] 64 bytes from 192.168.1.5: icmp_seq=839 ttl=128 time=2.36 ms
+[1792926851.580125] 64 bytes from 192.168.1.5: icmp_seq=840 ttl=128 time=1.93 ms
+[1792926851.780561] 64 bytes from 192.168.1.5: icmp_seq=841 ttl=128 time=1.93 ms
+[1792926851.995965] 64 bytes from 192.168.1.5: icmp_seq=842 ttl=128 time=17.1 ms
+[1792926852.255006] 64 bytes from 192.168.1.5: icmp_seq=843 ttl=128 time=76.0 ms
+[1792926852.457027] 64 bytes from 192.168.1.5: icmp_seq=844 ttl=128 time=77.8 ms
+[1792926852.590065] 64 bytes from 192.168.1.5: icmp_seq=845 ttl=128 time=9.80 ms
+[1792926852.783503] 64 bytes from 192.168.1.5: icmp_seq=846 ttl=128 time=1.94 ms
+[1792926852.983164] 64 bytes from 192.168.1.5: icmp_seq=847 ttl=128 time=1.21 ms
+[1792926853.184068] 64 bytes from 192.168.1.5: icmp_seq=848 ttl=128 time=1.37 ms
+[1792926853.385186] 64 bytes from 192.168.1.5: icmp_seq=849 ttl=128 time=1.60 ms
+[1792926853.586179] 64 bytes from 192.168.1.5: icmp_seq=850 ttl=128 time=1.66 ms
+[1792926853.787060] 64 bytes from 192.168.1.5: icmp_seq=851 ttl=128 time=1.41 ms
+[1792926854.087014] 64 bytes from 192.168.1.5: icmp_seq=852 ttl=128 time=101 ms
+[1792926854.270059] 64 bytes from 192.168.1.5: icmp_seq=853 ttl=128 time=82.8 ms
+[1792926854.474042] 64 bytes from 192.168.1.5: icmp_seq=854 ttl=128 time=85.8 ms
+[1792926854.685044] 64 bytes from 192.168.1.5: icmp_seq=855 ttl=128 time=95.7 ms
+[1792926854.880002] 64 bytes from 192.168.1.5: icmp_seq=856 ttl=128 time=89.7 ms
+[1792926855.109025] 64 bytes from 192.168.1.5: icmp_seq=857 ttl=128 time=118 ms
+[1792926855.284023] 64 bytes from 192.168.1.5: icmp_seq=858 ttl=128 time=91.8 ms
+[1792926855.487021] 64 bytes from 192.168.1.5: icmp_seq=859 ttl=128 time=93.8 ms
+[1792926855.698015] 64 bytes from 192.168.1.5: icmp_seq=860 ttl=128 time=104 ms
+[1792926855.797389] 64 bytes from 192.168.1.5: icmp_seq=861 ttl=128 time=1.62 ms
+[1792926856.092020] 64 bytes from 192.168.1.5: icmp_seq=862 ttl=128 time=96.5 ms
+[1792926856.294066] 64 bytes from 192.168.1.5: icmp_seq=863 ttl=128 time=97.8 ms
+[1792926856.497074] 64 bytes from 192.168.1.5: icmp_seq=864 ttl=128 time=99.8 ms
+[1792926856.709066] 64 bytes from 192.168.1.5: icmp_seq=865 ttl=128 time=111 ms
+[1792926856.906090] 64 bytes from 192.168.1.5: icmp_seq=866 ttl=128 time=107 ms
+[1792926857.137090] 64 bytes from 192.168.1.5: icmp_seq=867 ttl=128 time=137 ms
+[1792926857.316057] 64 bytes from 192.168.1.5: icmp_seq=868 ttl=128 time=115 ms
+[1792926857.521040] 64 bytes from 192.168.1.5: icmp_seq=869 ttl=128 time=119 ms
+[1792926857.734015] 64 bytes from 192.168.1.5: icmp_seq=870 ttl=128 time=131 ms
+[1792926857.823034] 64 bytes from 192.168.1.5: icmp_seq=871 ttl=128 time=18.8 ms
+[1792926858.157070] 64 bytes from 192.168.1.5: icmp_seq=872 ttl=128 time=152 ms
+[1792926858.346047] 64 bytes from 192.168.1.5: icmp_seq=873 ttl=128 time=140 ms
+[1792926858.555035] 64 bytes from 192.168.1.5: icmp_seq=874 ttl=128 time=148 ms
+[1792926858.772054] 64 bytes from 192.168.1.5: icmp_seq=875 ttl=128 time=164 ms
+[1792926858.972042] 64 bytes from 192.168.1.5: icmp_seq=876 ttl=128 time=163 ms
+[1792926859.206015] 64 bytes from 192.168.1.5: icmp_seq=877 ttl=128 time=197 ms
+[1792926859.396107] 64 bytes from 192.168.1.5: icmp_seq=878 ttl=128 time=187 ms
+[1792926859.598037] 64 bytes from 192.168.1.5: icmp_seq=879 ttl=128 time=188 ms
+[1792926859.814013] no answer yet for icmp_seq=880
+[1792926859.836029] 64 bytes from 192.168.1.5: icmp_seq=880 ttl=128 time=225 ms
+[1792926859.993024] 64 bytes from 192.168.1.5: icmp_seq=881 ttl=128 time=179 ms
+[1792926860.221034] no answer yet for icmp_seq=882
+[1792926860.229039] 64 bytes from 192.168.1.5: icmp_seq=882 ttl=128 time=216 ms
+[1792926860.421268] no answer yet for icmp_seq=883
+[1792926860.455028] 64 bytes from 192.168.1.5: icmp_seq=883 ttl=128 time=234 ms
+[1792926860.622243] no answer yet for icmp_seq=884
+[1792926860.668057] 64 bytes from 192.168.1.5: icmp_seq=884 ttl=128 time=247 ms
+[1792926860.823317] no answer yet for icmp_seq=885
+[1792926861.029078] no answer yet for icmp_seq=886
+[1792926861.237167] no answer yet for icmp_seq=887
+[1792926861.445007] no answer yet for icmp_seq=888
+[1792926861.653269] no answer yet for icmp_seq=889
+[1792926861.861181] no answer yet for icmp_seq=890
+[1792926862.069167] no answer yet for icmp_seq=891
+[1792926862.277088] no answer yet for icmp_seq=892
+[1792926862.485155] no answer yet for icmp_seq=893
+[1792926862.693097] no answer yet for icmp_seq=894
+[1792926862.901073] no answer yet for icmp_seq=895
+[1792926863.109054] no answer yet for icmp_seq=896
+[1792926863.316983] no answer yet for icmp_seq=897
+[1792926863.524988] no answer yet for icmp_seq=898
+[1792926863.734033] no answer yet for icmp_seq=899
+[1792926863.940975] no answer yet for icmp_seq=900
+[1792926864.148999] no answer yet for icmp_seq=901
+[1792926864.357174] no answer yet for icmp_seq=902
+[1792926864.564935] no answer yet for icmp_seq=903
+[1792926864.773152] no answer yet for icmp_seq=904
+[1792926864.981173] no answer yet for icmp_seq=905
+[1792926865.189053] no answer yet for icmp_seq=906
+[1792926865.397054] no answer yet for icmp_seq=907
+[1792926865.605057] no answer yet for icmp_seq=908
+[1792926865.813091] no answer yet for icmp_seq=909
+[1792926866.021066] no answer yet for icmp_seq=910
+[1792926866.228937] no answer yet for icmp_seq=911
+[1792926866.437299] no answer yet for icmp_seq=912
+[1792926866.645227] no answer yet for icmp_seq=913
+[1792926866.853198] no answer yet for icmp_seq=914
+[1792926867.061166] no answer yet for icmp_seq=915
+[1792926867.269274] no answer yet for icmp_seq=916
+[1792926867.477078] no answer yet for icmp_seq=917
+[1792926867.684934] no answer yet for icmp_seq=918
+[1792926867.893128] no answer yet for icmp_seq=919
+[1792926868.101198] no answer yet for icmp_seq=920
+[1792926868.309084] no answer yet for icmp_seq=921
+[1792926868.517157] no answer yet for icmp_seq=922
+[1792926868.725104] no answer yet for icmp_seq=923
+[1792926868.933141] no answer yet for icmp_seq=924
+[1792926869.140938] no answer yet for icmp_seq=925
+[1792926869.349153] no answer yet for icmp_seq=926
+[1792926869.556987] no answer yet for icmp_seq=927
+[1792926869.765154] no answer yet for icmp_seq=928
+[1792926869.973174] no answer yet for icmp_seq=929
+[1792926870.181154] no answer yet for icmp_seq=930
+[1792926870.389161] no answer yet for icmp_seq=931
+[1792926870.597053] no answer yet for icmp_seq=932
+[1792926870.805069] no answer yet for icmp_seq=933
+[1792926871.013072] no answer yet for icmp_seq=934
+[1792926871.221207] no answer yet for icmp_seq=935
+[1792926871.428968] no answer yet for icmp_seq=936
+[1792926871.636964] no answer yet for icmp_seq=937
+[1792926871.845115] no answer yet for icmp_seq=938
+[1792926872.053143] no answer yet for icmp_seq=939
+[1792926872.261194] no answer yet for icmp_seq=940
+[1792926872.469280] no answer yet for icmp_seq=941
+[1792926872.677281] no answer yet for icmp_seq=942
+[1792926872.885135] no answer yet for icmp_seq=943
+[1792926873.093148] no answer yet for icmp_seq=944
+[1792926873.301094] no answer yet for icmp_seq=945
+[1792926873.509156] no answer yet for icmp_seq=946
+[1792926873.717170] no answer yet for icmp_seq=947
+[1792926873.925051] no answer yet for icmp_seq=948
+[1792926874.133163] no answer yet for icmp_seq=949
+[1792926874.341011] no answer yet for icmp_seq=950
+[1792926874.549089] no answer yet for icmp_seq=951
+[1792926874.550215] 64 bytes from 192.168.1.5: icmp_seq=952 ttl=128 time=1.04 ms
+[1792926874.829169] 64 bytes from 192.168.1.5: icmp_seq=953 ttl=128 time=79.7 ms
+[1792926875.072160] 64 bytes from 192.168.1.5: icmp_seq=954 ttl=128 time=122 ms
+[1792926875.274157] 64 bytes from 192.168.1.5: icmp_seq=955 ttl=128 time=123 ms
+[1792926875.485156] 64 bytes from 192.168.1.5: icmp_seq=956 ttl=128 time=133 ms
+[1792926875.671158] 64 bytes from 192.168.1.5: icmp_seq=957 ttl=128 time=118 ms
+[1792926875.872153] 64 bytes from 192.168.1.5: icmp_seq=958 ttl=128 time=118 ms
+[1792926876.101219] 64 bytes from 192.168.1.5: icmp_seq=959 ttl=128 time=146 ms
+[1792926876.229154] 64 bytes from 192.168.1.5: icmp_seq=960 ttl=128 time=72.8 ms
+[1792926876.359176] 64 bytes from 192.168.1.5: icmp_seq=961 ttl=128 time=1.75 ms
+[1792926876.614163] 64 bytes from 192.168.1.5: icmp_seq=962 ttl=128 time=55.7 ms
+[1792926876.836144] 64 bytes from 192.168.1.5: icmp_seq=963 ttl=128 time=76.8 ms
+[1792926877.035154] 64 bytes from 192.168.1.5: icmp_seq=964 ttl=128 time=74.7 ms
+[1792926877.234152] 64 bytes from 192.168.1.5: icmp_seq=965 ttl=128 time=72.1 ms
+[1792926877.445171] 64 bytes from 192.168.1.5: icmp_seq=966 ttl=128 time=82.8 ms
+[1792926877.639138] 64 bytes from 192.168.1.5: icmp_seq=967 ttl=128 time=75.7 ms
+[1792926877.851181] 64 bytes from 192.168.1.5: icmp_seq=968 ttl=128 time=86.8 ms
+[1792926878.062225] 64 bytes from 192.168.1.5: icmp_seq=969 ttl=128 time=96.8 ms
+[1792926878.248237] 64 bytes from 192.168.1.5: icmp_seq=970 ttl=128 time=81.8 ms
+[1792926878.450188] 64 bytes from 192.168.1.5: icmp_seq=971 ttl=128 time=82.8 ms
+[1792926878.587246] 64 bytes from 192.168.1.5: icmp_seq=972 ttl=128 time=18.8 ms
+[1792926878.865218] 64 bytes from 192.168.1.5: icmp_seq=973 ttl=128 time=95.7 ms
+[1792926879.013178] 64 bytes from 192.168.1.5: icmp_seq=974 ttl=128 time=42.8 ms
+[1792926879.233153] 64 bytes from 192.168.1.5: icmp_seq=975 ttl=128 time=61.7 ms
+[1792926879.453206] 64 bytes from 192.168.1.5: icmp_seq=976 ttl=128 time=80.8 ms
+[1792926879.576137] 64 bytes from 192.168.1.5: icmp_seq=977 ttl=128 time=0.777 ms
+[1792926879.981049] no answer yet for icmp_seq=978
+[1792926880.189227] no answer yet for icmp_seq=979
+[1792926880.397049] no answer yet for icmp_seq=980
+[1792926880.606134] no answer yet for icmp_seq=981
+[1792926880.813053] no answer yet for icmp_seq=982
+[1792926881.021197] no answer yet for icmp_seq=983
+[1792926881.229055] no answer yet for icmp_seq=984
+[1792926881.436995] no answer yet for icmp_seq=985
+[1792926881.645117] no answer yet for icmp_seq=986
+[1792926881.853262] no answer yet for icmp_seq=987
+[1792926882.061060] no answer yet for icmp_seq=988
+[1792926882.269158] no answer yet for icmp_seq=989
+[1792926882.477057] no answer yet for icmp_seq=990
+[1792926882.685180] no answer yet for icmp_seq=991
+[1792926882.893065] no answer yet for icmp_seq=992
+[1792926883.101264] no answer yet for icmp_seq=993
+[1792926883.309082] no answer yet for icmp_seq=994
+[1792926883.517202] no answer yet for icmp_seq=995
+[1792926883.725098] no answer yet for icmp_seq=996
+[1792926883.932996] no answer yet for icmp_seq=997
+[1792926884.141072] no answer yet for icmp_seq=998
+[1792926884.349147] no answer yet for icmp_seq=999
+[1792926884.556943] no answer yet for icmp_seq=1000
+[1792926884.765171] no answer yet for icmp_seq=1001
+[1792926884.973060] no answer yet for icmp_seq=1002
+[1792926885.181134] no answer yet for icmp_seq=1003
+[1792926885.389140] no answer yet for icmp_seq=1004
+[1792926885.597154] no answer yet for icmp_seq=1005
+[1792926885.805152] no answer yet for icmp_seq=1006
+[1792926886.013164] no answer yet for icmp_seq=1007
+[1792926886.220939] no answer yet for icmp_seq=1008
+[1792926886.429086] no answer yet for icmp_seq=1009
+[1792926886.637048] no answer yet for icmp_seq=1010
+[1792926886.845053] no answer yet for icmp_seq=1011
+[1792926887.053069] no answer yet for icmp_seq=1012
+[1792926887.261076] no answer yet for icmp_seq=1013
+[1792926887.469282] no answer yet for icmp_seq=1014
+[1792926887.677273] no answer yet for icmp_seq=1015
+[1792926887.885072] no answer yet for icmp_seq=1016
+[1792926888.093235] no answer yet for icmp_seq=1017
+[1792926888.301243] no answer yet for icmp_seq=1018
+[1792926888.508931] no answer yet for icmp_seq=1019
+[1792926888.717132] no answer yet for icmp_seq=1020
+[1792926888.925084] no answer yet for icmp_seq=1021
+[1792926889.133045] no answer yet for icmp_seq=1022
+[1792926889.341067] no answer yet for icmp_seq=1023
+[1792926889.549033] no answer yet for icmp_seq=1024
+[1792926889.757109] no answer yet for icmp_seq=1025
+[1792926889.965109] no answer yet for icmp_seq=1026
+[1792926890.173123] no answer yet for icmp_seq=1027
+[1792926890.381125] no answer yet for icmp_seq=1028
+[1792926890.590033] no answer yet for icmp_seq=1029
+[1792926890.797243] no answer yet for icmp_seq=1030
+[1792926891.005283] no answer yet for icmp_seq=1031
+[1792926891.213235] no answer yet for icmp_seq=1032
+[1792926891.421143] no answer yet for icmp_seq=1033
+[1792926891.629220] no answer yet for icmp_seq=1034
+[1792926891.837233] no answer yet for icmp_seq=1035
+[1792926892.045120] no answer yet for icmp_seq=1036
+[1792926892.253117] no answer yet for icmp_seq=1037
+[1792926892.461166] no answer yet for icmp_seq=1038
+[1792926892.669226] no answer yet for icmp_seq=1039
+[1792926892.877221] no answer yet for icmp_seq=1040
+[1792926893.085178] no answer yet for icmp_seq=1041
+[1792926893.293163] no answer yet for icmp_seq=1042
+[1792926893.493361] no answer yet for icmp_seq=1043
+[1792926893.542514] 64 bytes from 192.168.1.5: icmp_seq=1044 ttl=128 time=49.0 ms
+[1792926893.695589] 64 bytes from 192.168.1.5: icmp_seq=1045 ttl=128 time=1.55 ms
+[1792926893.895340] 64 bytes from 192.168.1.5: icmp_seq=1046 ttl=128 time=0.372 ms
+[1792926894.104887] 64 bytes from 192.168.1.5: icmp_seq=1047 ttl=128 time=3.51 ms
+[1792926894.306067] 64 bytes from 192.168.1.5: icmp_seq=1048 ttl=128 time=3.62 ms
+[1792926894.504404] 64 bytes from 192.168.1.5: icmp_seq=1049 ttl=128 time=0.817 ms
+[1792926894.711590] 64 bytes from 192.168.1.5: icmp_seq=1050 ttl=128 time=2.20 ms
+[1792926894.977493] 64 bytes from 192.168.1.5: icmp_seq=1051 ttl=128 time=67.5 ms
+[1792926895.229459] 64 bytes from 192.168.1.5: icmp_seq=1052 ttl=128 time=120 ms
+[1792926895.319373] 64 bytes from 192.168.1.5: icmp_seq=1053 ttl=128 time=8.64 ms
+[1792926895.530402] 64 bytes from 192.168.1.5: icmp_seq=1054 ttl=128 time=18.7 ms
+[1792926895.714335] 64 bytes from 192.168.1.5: icmp_seq=1055 ttl=128 time=1.58 ms
+[1792926895.924330] 64 bytes from 192.168.1.5: icmp_seq=1056 ttl=128 time=10.6 ms
+[1792926896.135371] 64 bytes from 192.168.1.5: icmp_seq=1057 ttl=128 time=20.8 ms
+[1792926896.441316] 64 bytes from 192.168.1.5: icmp_seq=1058 ttl=128 time=126 ms
+[1792926896.517363] 64 bytes from 192.168.1.5: icmp_seq=1059 ttl=128 time=0.771 ms
+[1792926896.726448] 64 bytes from 192.168.1.5: icmp_seq=1060 ttl=128 time=1.31 ms
+[1792926896.926337] 64 bytes from 192.168.1.5: icmp_seq=1061 ttl=128 time=0.430 ms
+[1792926897.135298] 64 bytes from 192.168.1.5: icmp_seq=1062 ttl=128 time=2.27 ms
+[1792926897.335558] 64 bytes from 192.168.1.5: icmp_seq=1063 ttl=128 time=1.72 ms
+[1792926897.537018] 64 bytes from 192.168.1.5: icmp_seq=1064 ttl=128 time=2.10 ms
+[1792926897.791326] 64 bytes from 192.168.1.5: icmp_seq=1065 ttl=128 time=55.9 ms
+[1792926897.937311] 64 bytes from 192.168.1.5: icmp_seq=1066 ttl=128 time=0.651 ms
+[1792926898.143467] 64 bytes from 192.168.1.5: icmp_seq=1067 ttl=128 time=2.30 ms
+[1792926898.343434] 64 bytes from 192.168.1.5: icmp_seq=1068 ttl=128 time=1.66 ms
+[1792926898.544433] 64 bytes from 192.168.1.5: icmp_seq=1069 ttl=128 time=1.71 ms
+[1792926898.745556] 64 bytes from 192.168.1.5: icmp_seq=1070 ttl=128 time=1.74 ms
+[1792926898.946529] 64 bytes from 192.168.1.5: icmp_seq=1071 ttl=128 time=1.41 ms
+[1792926899.148194] 64 bytes from 192.168.1.5: icmp_seq=1072 ttl=128 time=2.14 ms
+[1792926899.348898] 64 bytes from 192.168.1.5: icmp_seq=1073 ttl=128 time=2.16 ms
+[1792926899.548436] 64 bytes from 192.168.1.5: icmp_seq=1074 ttl=128 time=1.10 ms
+[1792926899.872429] 64 bytes from 192.168.1.5: icmp_seq=1075 ttl=128 time=125 ms
+[1792926899.996448] 64 bytes from 192.168.1.5: icmp_seq=1076 ttl=128 time=47.8 ms
+[1792926900.152237] 64 bytes from 192.168.1.5: icmp_seq=1077 ttl=128 time=2.29 ms
+[1792926900.352350] 64 bytes from 192.168.1.5: icmp_seq=1078 ttl=128 time=1.60 ms
+[1792926900.553810] 64 bytes from 192.168.1.5: icmp_seq=1079 ttl=128 time=1.92 ms
+[1792926900.755720] 64 bytes from 192.168.1.5: icmp_seq=1080 ttl=128 time=3.45 ms
+[1792926900.954562] 64 bytes from 192.168.1.5: icmp_seq=1081 ttl=128 time=1.37 ms
+[1792926901.155705] 64 bytes from 192.168.1.5: icmp_seq=1082 ttl=128 time=1.67 ms
+[1792926901.356455] 64 bytes from 192.168.1.5: icmp_seq=1083 ttl=128 time=1.22 ms
+[1792926901.557377] 64 bytes from 192.168.1.5: icmp_seq=1084 ttl=128 time=1.52 ms
+[1792926901.802464] 64 bytes from 192.168.1.5: icmp_seq=1085 ttl=128 time=45.7 ms
+[1792926902.017484] 64 bytes from 192.168.1.5: icmp_seq=1086 ttl=128 time=59.7 ms
+[1792926902.159979] 64 bytes from 192.168.1.5: icmp_seq=1087 ttl=128 time=1.18 ms
+[1792926902.360560] 64 bytes from 192.168.1.5: icmp_seq=1088 ttl=128 time=1.04 ms
+[1792926902.561535] 64 bytes from 192.168.1.5: icmp_seq=1089 ttl=128 time=1.58 ms
+[1792926902.761433] 64 bytes from 192.168.1.5: icmp_seq=1090 ttl=128 time=1.11 ms
+[1792926902.962422] 64 bytes from 192.168.1.5: icmp_seq=1091 ttl=128 time=1.47 ms
+[1792926903.163562] 64 bytes from 192.168.1.5: icmp_seq=1092 ttl=128 time=1.58 ms
+[1792926903.367927] 64 bytes from 192.168.1.5: icmp_seq=1093 ttl=128 time=4.82 ms
+[1792926903.565562] 64 bytes from 192.168.1.5: icmp_seq=1094 ttl=128 time=1.42 ms
+[1792926903.832495] 64 bytes from 192.168.1.5: icmp_seq=1095 ttl=128 time=67.6 ms
+[1792926904.036439] 64 bytes from 192.168.1.5: icmp_seq=1096 ttl=128 time=70.7 ms
+[1792926904.187505] 64 bytes from 192.168.1.5: icmp_seq=1097 ttl=128 time=20.7 ms
+[1792926904.369712] 64 bytes from 192.168.1.5: icmp_seq=1098 ttl=128 time=1.63 ms
+[1792926904.570498] 64 bytes from 192.168.1.5: icmp_seq=1099 ttl=128 time=1.39 ms
+[1792926904.771939] 64 bytes from 192.168.1.5: icmp_seq=1100 ttl=128 time=2.05 ms
+[1792926904.972445] 64 bytes from 192.168.1.5: icmp_seq=1101 ttl=128 time=1.99 ms
+[1792926905.172449] 64 bytes from 192.168.1.5: icmp_seq=1102 ttl=128 time=1.50 ms
+[1792926905.373525] 64 bytes from 192.168.1.5: icmp_seq=1103 ttl=128 time=1.55 ms
+[1792926905.574436] 64 bytes from 192.168.1.5: icmp_seq=1104 ttl=128 time=1.58 ms
+[1792926905.851494] 64 bytes from 192.168.1.5: icmp_seq=1105 ttl=128 time=78.2 ms
+[1792926906.058479] 64 bytes from 192.168.1.5: icmp_seq=1106 ttl=128 time=84.7 ms
+[1792926906.273492] 64 bytes from 192.168.1.5: icmp_seq=1107 ttl=128 time=98.7 ms
+[1792926906.377613] 64 bytes from 192.168.1.5: icmp_seq=1108 ttl=128 time=1.79 ms
+[1792926906.579445] 64 bytes from 192.168.1.5: icmp_seq=1109 ttl=128 time=2.39 ms
+[1792926906.779492] 64 bytes from 192.168.1.5: icmp_seq=1110 ttl=128 time=1.66 ms
+[1792926906.980510] 64 bytes from 192.168.1.5: icmp_seq=1111 ttl=128 time=1.66 ms
+[1792926907.181517] 64 bytes from 192.168.1.5: icmp_seq=1112 ttl=128 time=1.66 ms
+[1792926907.382634] 64 bytes from 192.168.1.5: icmp_seq=1113 ttl=128 time=1.59 ms
+[1792926907.583493] 64 bytes from 192.168.1.5: icmp_seq=1114 ttl=128 time=1.57 ms
+[1792926907.885566] 64 bytes from 192.168.1.5: icmp_seq=1115 ttl=128 time=103 ms
+[1792926908.110499] 64 bytes from 192.168.1.5: icmp_seq=1116 ttl=128 time=127 ms
+[1792926908.330505] 64 bytes from 192.168.1.5: icmp_seq=1117 ttl=128 time=146 ms
+[1792926908.531529] 64 bytes from 192.168.1.5: icmp_seq=1118 ttl=128 time=146 ms
+[1792926908.768526] 64 bytes from 192.168.1.5: icmp_seq=1119 ttl=128 time=182 ms
+[1792926908.959436] 64 bytes from 192.168.1.5: icmp_seq=1120 ttl=128 time=172 ms
+[1792926909.160469] 64 bytes from 192.168.1.5: icmp_seq=1121 ttl=128 time=173 ms
+[1792926909.380518] 64 bytes from 192.168.1.5: icmp_seq=1122 ttl=128 time=192 ms
+[1792926909.584481] 64 bytes from 192.168.1.5: icmp_seq=1123 ttl=128 time=196 ms
+[1792926909.602472] 64 bytes from 192.168.1.5: icmp_seq=1124 ttl=128 time=13.9 ms
+[1792926909.961452] 64 bytes from 192.168.1.5: icmp_seq=1125 ttl=128 time=172 ms
+[1792926910.196929] no answer yet for icmp_seq=1126
+[1792926910.228485] 64 bytes from 192.168.1.5: icmp_seq=1126 ttl=128 time=239 ms
+[1792926910.397685] no answer yet for icmp_seq=1127
+[1792926910.516532] 64 bytes from 192.168.1.5: icmp_seq=1127 ttl=128 time=319 ms
+[1792926910.598662] no answer yet for icmp_seq=1128
+[1792926910.746554] 64 bytes from 192.168.1.5: icmp_seq=1128 ttl=128 time=349 ms
+[1792926910.799652] no answer yet for icmp_seq=1129
+[1792926911.005978] no answer yet for icmp_seq=1130
+[1792926911.029521] 64 bytes from 192.168.1.5: icmp_seq=1129 ttl=128 time=431 ms
+[1792926911.206737] no answer yet for icmp_seq=1131
+[1792926911.310518] 64 bytes from 192.168.1.5: icmp_seq=1130 ttl=128 time=511 ms
+[1792926911.407646] no answer yet for icmp_seq=1132
+[1792926911.520566] 64 bytes from 192.168.1.5: icmp_seq=1131 ttl=128 time=514 ms
+[1792926911.520613] 64 bytes from 192.168.1.5: icmp_seq=1132 ttl=128 time=314 ms
+[1792926911.522504] 64 bytes from 192.168.1.5: icmp_seq=1133 ttl=128 time=115 ms
+[1792926911.610425] 64 bytes from 192.168.1.5: icmp_seq=1134 ttl=128 time=1.67 ms
+[1792926912.012929] no answer yet for icmp_seq=1135
+[1792926912.054523] 64 bytes from 192.168.1.5: icmp_seq=1135 ttl=128 time=245 ms
+[1792926912.213735] no answer yet for icmp_seq=1136
+[1792926912.308538] 64 bytes from 192.168.1.5: icmp_seq=1136 ttl=128 time=296 ms
+[1792926912.414672] no answer yet for icmp_seq=1137
+[1792926912.581435] 64 bytes from 192.168.1.5: icmp_seq=1137 ttl=128 time=368 ms
+[1792926912.615558] no answer yet for icmp_seq=1138
+[1792926912.805467] 64 bytes from 192.168.1.5: icmp_seq=1138 ttl=128 time=391 ms
+[1792926912.816583] no answer yet for icmp_seq=1139
+[1792926913.020964] no answer yet for icmp_seq=1140
+[1792926913.051472] 64 bytes from 192.168.1.5: icmp_seq=1139 ttl=128 time=436 ms
+[1792926913.221750] no answer yet for icmp_seq=1141
+[1792926913.275602] 64 bytes from 192.168.1.5: icmp_seq=1140 ttl=128 time=459 ms
+[1792926913.422793] no answer yet for icmp_seq=1142
+[1792926913.459531] 64 bytes from 192.168.1.5: icmp_seq=1141 ttl=128 time=438 ms
+[1792926913.476622] 64 bytes from 192.168.1.5: icmp_seq=1142 ttl=128 time=255 ms
+[1792926913.476644] 64 bytes from 192.168.1.5: icmp_seq=1143 ttl=128 time=53.6 ms
+[1792926913.625461] 64 bytes from 192.168.1.5: icmp_seq=1144 ttl=128 time=1.47 ms
+[1792926913.872526] 64 bytes from 192.168.1.5: icmp_seq=1145 ttl=128 time=47.8 ms
+[1792926914.100578] 64 bytes from 192.168.1.5: icmp_seq=1146 ttl=128 time=74.8 ms
+[1792926914.302598] 64 bytes from 192.168.1.5: icmp_seq=1147 ttl=128 time=75.8 ms
+[1792926914.515536] 64 bytes from 192.168.1.5: icmp_seq=1148 ttl=128 time=87.7 ms
+[1792926914.710507] 64 bytes from 192.168.1.5: icmp_seq=1149 ttl=128 time=81.7 ms
+[1792926914.921582] 64 bytes from 192.168.1.5: icmp_seq=1150 ttl=128 time=91.8 ms
+[1792926915.132505] 64 bytes from 192.168.1.5: icmp_seq=1151 ttl=128 time=102 ms
+[1792926915.317579] 64 bytes from 192.168.1.5: icmp_seq=1152 ttl=128 time=85.9 ms
+[1792926915.530445] 64 bytes from 192.168.1.5: icmp_seq=1153 ttl=128 time=97.7 ms
+[1792926915.634472] 64 bytes from 192.168.1.5: icmp_seq=1154 ttl=128 time=0.867 ms
+[1792926915.937538] 64 bytes from 192.168.1.5: icmp_seq=1155 ttl=128 time=99.6 ms
+[1792926916.148566] 64 bytes from 192.168.1.5: icmp_seq=1156 ttl=128 time=111 ms
+[1792926916.333549] 64 bytes from 192.168.1.5: icmp_seq=1157 ttl=128 time=94.8 ms
+[1792926916.544571] 64 bytes from 192.168.1.5: icmp_seq=1158 ttl=128 time=105 ms
+[1792926916.739594] 64 bytes from 192.168.1.5: icmp_seq=1159 ttl=128 time=98.8 ms
+[1792926916.949581] 64 bytes from 192.168.1.5: icmp_seq=1160 ttl=128 time=108 ms
+[1792926917.159599] 64 bytes from 192.168.1.5: icmp_seq=1161 ttl=128 time=118 ms
+[1792926917.345601] 64 bytes from 192.168.1.5: icmp_seq=1162 ttl=128 time=103 ms
+[1792926917.537555] 64 bytes from 192.168.1.5: icmp_seq=1163 ttl=128 time=93.7 ms
+[1792926917.646720] 64 bytes from 192.168.1.5: icmp_seq=1164 ttl=128 time=1.80 ms
+[1792926918.052946] no answer yet for icmp_seq=1165
+[1792926918.260930] no answer yet for icmp_seq=1166
+[1792926918.392614] 64 bytes from 192.168.1.5: icmp_seq=1165 ttl=128 time=547 ms
+[1792926918.461727] no answer yet for icmp_seq=1167
+[1792926918.624623] 64 bytes from 192.168.1.5: icmp_seq=1166 ttl=128 time=572 ms
+[1792926918.662747] no answer yet for icmp_seq=1168
+[1792926918.831609] 64 bytes from 192.168.1.5: icmp_seq=1167 ttl=128 time=571 ms
+[1792926918.863733] no answer yet for icmp_seq=1169
+[1792926919.033612] 64 bytes from 192.168.1.5: icmp_seq=1168 ttl=128 time=572 ms
+[1792926919.063764] no answer yet for icmp_seq=1170
+[1792926919.190543] 64 bytes from 192.168.1.5: icmp_seq=1169 ttl=128 time=528 ms
+[1792926919.264662] no answer yet for icmp_seq=1171
+[1792926919.340619] 64 bytes from 192.168.1.5: icmp_seq=1170 ttl=128 time=477 ms
+[1792926919.464839] no answer yet for icmp_seq=1172
+[1792926919.490608] 64 bytes from 192.168.1.5: icmp_seq=1171 ttl=128 time=427 ms
+[1792926919.497485] 64 bytes from 192.168.1.5: icmp_seq=1172 ttl=128 time=233 ms
+[1792926919.577627] 64 bytes from 192.168.1.5: icmp_seq=1173 ttl=128 time=113 ms
+[1792926919.666668] 64 bytes from 192.168.1.5: icmp_seq=1174 ttl=128 time=0.797 ms
+[1792926919.993600] 64 bytes from 192.168.1.5: icmp_seq=1175 ttl=128 time=125 ms
+[1792926920.207575] 64 bytes from 192.168.1.5: icmp_seq=1176 ttl=128 time=139 ms
+[1792926920.427543] 64 bytes from 192.168.1.5: icmp_seq=1177 ttl=128 time=158 ms
+[1792926920.634608] 64 bytes from 192.168.1.5: icmp_seq=1178 ttl=128 time=164 ms
+[1792926920.862628] 64 bytes from 192.168.1.5: icmp_seq=1179 ttl=128 time=191 ms
+[1792926921.053726] 64 bytes from 192.168.1.5: icmp_seq=1180 ttl=128 time=182 ms
+[1792926921.253691] 64 bytes from 192.168.1.5: icmp_seq=1181 ttl=128 time=183 ms
+[1792926921.477050] no answer yet for icmp_seq=1182
+[1792926921.488677] 64 bytes from 192.168.1.5: icmp_seq=1182 ttl=128 time=217 ms
+[1792926921.542702] 64 bytes from 192.168.1.5: icmp_seq=1183 ttl=128 time=65.5 ms
+[1792926921.679692] 64 bytes from 192.168.1.5: icmp_seq=1184 ttl=128 time=1.59 ms
+[1792926922.084929] no answer yet for icmp_seq=1185
+[1792926922.292933] no answer yet for icmp_seq=1186
+[1792926922.410626] 64 bytes from 192.168.1.5: icmp_seq=1185 ttl=128 time=532 ms
+[1792926922.493758] no answer yet for icmp_seq=1187
+[1792926922.653646] 64 bytes from 192.168.1.5: icmp_seq=1186 ttl=128 time=569 ms
+[1792926922.694735] no answer yet for icmp_seq=1188
+[1792926922.864568] 64 bytes from 192.168.1.5: icmp_seq=1187 ttl=128 time=572 ms
+[1792926922.895673] no answer yet for icmp_seq=1189
+[1792926923.065602] 64 bytes from 192.168.1.5: icmp_seq=1188 ttl=128 time=572 ms
+[1792926923.095701] no answer yet for icmp_seq=1190
+[1792926923.249545] 64 bytes from 192.168.1.5: icmp_seq=1189 ttl=128 time=555 ms
+[1792926923.296635] no answer yet for icmp_seq=1191
+[1792926923.392651] 64 bytes from 192.168.1.5: icmp_seq=1190 ttl=128 time=497 ms
+[1792926923.496809] no answer yet for icmp_seq=1192
+[1792926923.533657] 64 bytes from 192.168.1.5: icmp_seq=1191 ttl=128 time=438 ms
+[1792926923.551608] 64 bytes from 192.168.1.5: icmp_seq=1192 ttl=128 time=255 ms
+[1792926923.552573] 64 bytes from 192.168.1.5: icmp_seq=1193 ttl=128 time=55.7 ms
+[1792926923.900934] no answer yet for icmp_seq=1194
+[1792926924.109935] no answer yet for icmp_seq=1195
+[1792926924.137543] 64 bytes from 192.168.1.5: icmp_seq=1194 ttl=128 time=440 ms
+[1792926924.310612] no answer yet for icmp_seq=1196
+[1792926924.340679] 64 bytes from 192.168.1.5: icmp_seq=1195 ttl=128 time=440 ms
+[1792926924.510911] no answer yet for icmp_seq=1197
+[1792926924.551583] 64 bytes from 192.168.1.5: icmp_seq=1196 ttl=128 time=442 ms
+[1792926924.711652] no answer yet for icmp_seq=1198
+[1792926924.752604] 64 bytes from 192.168.1.5: icmp_seq=1197 ttl=128 time=442 ms
+[1792926924.912802] no answer yet for icmp_seq=1199
+[1792926924.954657] 64 bytes from 192.168.1.5: icmp_seq=1198 ttl=128 time=444 ms
+[1792926925.112845] no answer yet for icmp_seq=1200
+[1792926925.167668] 64 bytes from 192.168.1.5: icmp_seq=1199 ttl=128 time=456 ms
+[1792926925.313905] no answer yet for icmp_seq=1201
+[1792926925.372606] 64 bytes from 192.168.1.5: icmp_seq=1200 ttl=128 time=460 ms
+[1792926925.422664] 64 bytes from 192.168.1.5: icmp_seq=1201 ttl=128 time=310 ms
+[1792926925.423637] 64 bytes from 192.168.1.5: icmp_seq=1202 ttl=128 time=110 ms
+[1792926925.516695] 64 bytes from 192.168.1.5: icmp_seq=1203 ttl=128 time=1.72 ms
+[1792926925.916948] no answer yet for icmp_seq=1204
+[1792926926.125962] no answer yet for icmp_seq=1205
+[1792926926.176706] 64 bytes from 192.168.1.5: icmp_seq=1204 ttl=128 time=461 ms
+[1792926926.326921] no answer yet for icmp_seq=1206
+[1792926926.384674] 64 bytes from 192.168.1.5: icmp_seq=1205 ttl=128 time=468 ms
+[1792926926.527876] no answer yet for icmp_seq=1207
+[1792926926.606666] 64 bytes from 192.168.1.5: icmp_seq=1206 ttl=128 time=481 ms
+[1792926926.728842] no answer yet for icmp_seq=1208
+[1792926926.814637] 64 bytes from 192.168.1.5: icmp_seq=1207 ttl=128 time=488 ms
+[1792926926.929827] no answer yet for icmp_seq=1209
+[1792926927.029644] 64 bytes from 192.168.1.5: icmp_seq=1208 ttl=128 time=502 ms
+[1792926927.129812] no answer yet for icmp_seq=1210
+[1792926927.234705] 64 bytes from 192.168.1.5: icmp_seq=1209 ttl=128 time=506 ms
+[1792926927.330844] no answer yet for icmp_seq=1211
+[1792926927.434641] 64 bytes from 192.168.1.5: icmp_seq=1210 ttl=128 time=505 ms
+[1792926927.475552] 64 bytes from 192.168.1.5: icmp_seq=1211 ttl=128 time=346 ms
+[1792926927.475568] 64 bytes from 192.168.1.5: icmp_seq=1212 ttl=128 time=145 ms
+[1792926927.532628] 64 bytes from 192.168.1.5: icmp_seq=1213 ttl=128 time=0.678 ms
+[1792926927.940939] no answer yet for icmp_seq=1214
+[1792926927.943665] 64 bytes from 192.168.1.5: icmp_seq=1214 ttl=128 time=211 ms
+[1792926928.141904] no answer yet for icmp_seq=1215
+[1792926928.214647] 64 bytes from 192.168.1.5: icmp_seq=1215 ttl=128 time=274 ms
+[1792926928.342830] no answer yet for icmp_seq=1216
+[1792926928.464711] 64 bytes from 192.168.1.5: icmp_seq=1216 ttl=128 time=323 ms
+[1792926928.543830] no answer yet for icmp_seq=1217
+[1792926928.749930] no answer yet for icmp_seq=1218
+[1792926928.755607] 64 bytes from 192.168.1.5: icmp_seq=1217 ttl=128 time=413 ms
+[1792926928.950843] no answer yet for icmp_seq=1219
+[1792926929.028655] 64 bytes from 192.168.1.5: icmp_seq=1218 ttl=128 time=485 ms
+[1792926929.151859] no answer yet for icmp_seq=1220
+[1792926929.287588] 64 bytes from 192.168.1.5: icmp_seq=1219 ttl=128 time=538 ms
+[1792926929.352680] no answer yet for icmp_seq=1221
+[1792926929.496680] 64 bytes from 192.168.1.5: icmp_seq=1220 ttl=128 time=546 ms
+[1792926929.502673] 64 bytes from 192.168.1.5: icmp_seq=1221 ttl=128 time=351 ms
+[1792926929.502689] 64 bytes from 192.168.1.5: icmp_seq=1222 ttl=128 time=150 ms
+[1792926929.553592] 64 bytes from 192.168.1.5: icmp_seq=1223 ttl=128 time=0.638 ms
+[1792926929.964936] no answer yet for icmp_seq=1224
+[1792926930.172932] no answer yet for icmp_seq=1225
+[1792926930.306937] 64 bytes from 192.168.1.5: icmp_seq=1224 ttl=128 time=550 ms
+[1792926930.373245] no answer yet for icmp_seq=1226
+[1792926930.524865] 64 bytes from 192.168.1.5: icmp_seq=1225 ttl=128 time=560 ms
+[1792926930.574124] no answer yet for icmp_seq=1227
+[1792926930.743766] 64 bytes from 192.168.1.5: icmp_seq=1226 ttl=128 time=571 ms
+[1792926930.775046] no answer yet for icmp_seq=1228
+[1792926930.943849] 64 bytes from 192.168.1.5: icmp_seq=1227 ttl=128 time=570 ms
+[1792926930.975159] no answer yet for icmp_seq=1229
+[1792926931.145611] 64 bytes from 192.168.1.5: icmp_seq=1228 ttl=128 time=571 ms
+[1792926931.175829] no answer yet for icmp_seq=1230
+[1792926931.262644] 64 bytes from 192.168.1.5: icmp_seq=1229 ttl=128 time=487 ms
+[1792926931.372688] 64 bytes from 192.168.1.5: icmp_seq=1230 ttl=128 time=397 ms
+[1792926931.382811] no answer yet for icmp_seq=1231
+[1792926931.494737] 64 bytes from 192.168.1.5: icmp_seq=1231 ttl=128 time=319 ms
+[1792926931.527733] 64 bytes from 192.168.1.5: icmp_seq=1232 ttl=128 time=145 ms
+[1792926931.584686] 64 bytes from 192.168.1.5: icmp_seq=1233 ttl=128 time=0.725 ms
+[1792926931.996931] no answer yet for icmp_seq=1234
+[1792926932.204940] no answer yet for icmp_seq=1235
+[1792926932.205688] 64 bytes from 192.168.1.5: icmp_seq=1234 ttl=128 time=417 ms
+[1792926932.412932] no answer yet for icmp_seq=1236
+[1792926932.429690] 64 bytes from 192.168.1.5: icmp_seq=1235 ttl=128 time=433 ms
+[1792926932.613928] no answer yet for icmp_seq=1237
+[1792926932.638783] 64 bytes from 192.168.1.5: icmp_seq=1236 ttl=128 time=434 ms
+[1792926932.814146] no answer yet for icmp_seq=1238
+[1792926932.836724] 64 bytes from 192.168.1.5: icmp_seq=1237 ttl=128 time=424 ms
+[1792926933.014932] no answer yet for icmp_seq=1239
+[1792926933.051717] 64 bytes from 192.168.1.5: icmp_seq=1238 ttl=128 time=438 ms
+[1792926933.215934] no answer yet for icmp_seq=1240
+[1792926933.257691] 64 bytes from 192.168.1.5: icmp_seq=1239 ttl=128 time=444 ms
+[1792926933.416885] no answer yet for icmp_seq=1241
+[1792926933.475908] 64 bytes from 192.168.1.5: icmp_seq=1240 ttl=128 time=461 ms
+[1792926933.534811] 64 bytes from 192.168.1.5: icmp_seq=1241 ttl=128 time=319 ms
+[1792926933.536819] 64 bytes from 192.168.1.5: icmp_seq=1242 ttl=128 time=120 ms
+[1792926933.619903] 64 bytes from 192.168.1.5: icmp_seq=1243 ttl=128 time=1.65 ms
+[1792926934.020927] no answer yet for icmp_seq=1244
+[1792926934.229938] no answer yet for icmp_seq=1245
+[1792926934.325707] 64 bytes from 192.168.1.5: icmp_seq=1244 ttl=128 time=506 ms
+[1792926934.430893] no answer yet for icmp_seq=1246
+[1792926934.534714] 64 bytes from 192.168.1.5: icmp_seq=1245 ttl=128 time=514 ms
+[1792926934.631856] no answer yet for icmp_seq=1247
+[1792926934.766630] 64 bytes from 192.168.1.5: icmp_seq=1246 ttl=128 time=537 ms
+[1792926934.832709] no answer yet for icmp_seq=1248
+[1792926934.980751] 64 bytes from 192.168.1.5: icmp_seq=1247 ttl=128 time=550 ms
+[1792926935.031854] no answer yet for icmp_seq=1249
+[1792926935.168731] 64 bytes from 192.168.1.5: icmp_seq=1248 ttl=128 time=537 ms
+[1792926935.232839] no answer yet for icmp_seq=1250
+[1792926935.373731] 64 bytes from 192.168.1.5: icmp_seq=1249 ttl=128 time=541 ms
+[1792926935.433847] no answer yet for icmp_seq=1251
+[1792926935.527020] 64 bytes from 192.168.1.5: icmp_seq=1250 ttl=128 time=495 ms
+[1792926935.544615] 64 bytes from 192.168.1.5: icmp_seq=1251 ttl=128 time=312 ms
+[1792926935.544691] 64 bytes from 192.168.1.5: icmp_seq=1252 ttl=128 time=111 ms
+[1792926935.635642] 64 bytes from 192.168.1.5: icmp_seq=1253 ttl=128 time=0.815 ms
+[1792926936.044937] no answer yet for icmp_seq=1254
+[1792926936.252931] no answer yet for icmp_seq=1255
+[1792926936.385731] 64 bytes from 192.168.1.5: icmp_seq=1254 ttl=128 time=549 ms
+[1792926936.453828] no answer yet for icmp_seq=1256
+[1792926936.600715] 64 bytes from 192.168.1.5: icmp_seq=1255 ttl=128 time=556 ms
+[1792926936.654799] no answer yet for icmp_seq=1257
+[1792926936.823769] 64 bytes from 192.168.1.5: icmp_seq=1256 ttl=128 time=571 ms
+[1792926936.855965] no answer yet for icmp_seq=1258
+[1792926937.024901] 64 bytes from 192.168.1.5: icmp_seq=1257 ttl=128 time=571 ms
+[1792926937.056816] no answer yet for icmp_seq=1259
+[1792926937.226870] 64 bytes from 192.168.1.5: icmp_seq=1258 ttl=128 time=572 ms
+[1792926937.257137] no answer yet for icmp_seq=1260
+[1792926937.341738] 64 bytes from 192.168.1.5: icmp_seq=1259 ttl=128 time=485 ms
+[1792926937.441096] 64 bytes from 192.168.1.5: icmp_seq=1260 ttl=128 time=384 ms
+[1792926937.449831] 64 bytes from 192.168.1.5: icmp_seq=1261 ttl=128 time=193 ms
+[1792926937.474059] 64 bytes from 192.168.1.5: icmp_seq=1262 ttl=128 time=16.5 ms
+[1792926937.658749] 64 bytes from 192.168.1.5: icmp_seq=1263 ttl=128 time=1.21 ms
+[1792926938.060974] no answer yet for icmp_seq=1264
+[1792926938.268985] no answer yet for icmp_seq=1265
+[1792926938.331745] 64 bytes from 192.168.1.5: icmp_seq=1264 ttl=128 time=474 ms
+[1792926938.469940] no answer yet for icmp_seq=1266
+[1792926938.544771] 64 bytes from 192.168.1.5: icmp_seq=1265 ttl=128 time=484 ms
+[1792926938.670936] no answer yet for icmp_seq=1267
+[1792926938.759715] 64 bytes from 192.168.1.5: icmp_seq=1266 ttl=128 time=491 ms
+[1792926938.871881] no answer yet for icmp_seq=1268
+[1792926938.974975] 64 bytes from 192.168.1.5: icmp_seq=1267 ttl=128 time=505 ms
+[1792926939.071278] no answer yet for icmp_seq=1269
+[1792926939.180750] 64 bytes from 192.168.1.5: icmp_seq=1268 ttl=128 time=510 ms
+[1792926939.273852] no answer yet for icmp_seq=1270
+[1792926939.385867] 64 bytes from 192.168.1.5: icmp_seq=1269 ttl=128 time=514 ms
+[1792926939.474051] no answer yet for icmp_seq=1271
+[1792926939.502646] 64 bytes from 192.168.1.5: icmp_seq=1270 ttl=128 time=431 ms
+[1792926939.502661] 64 bytes from 192.168.1.5: icmp_seq=1271 ttl=128 time=229 ms
+[1792926939.519842] 64 bytes from 192.168.1.5: icmp_seq=1272 ttl=128 time=45.4 ms
+[1792926939.876938] no answer yet for icmp_seq=1273
+[1792926940.085930] no answer yet for icmp_seq=1274
+[1792926940.170859] 64 bytes from 192.168.1.5: icmp_seq=1273 ttl=128 time=496 ms
+[1792926940.287159] no answer yet for icmp_seq=1275
+[1792926940.391910] 64 bytes from 192.168.1.5: icmp_seq=1274 ttl=128 time=515 ms
+[1792926940.488171] no answer yet for icmp_seq=1276
+[1792926940.603706] 64 bytes from 192.168.1.5: icmp_seq=1275 ttl=128 time=518 ms
+[1792926940.692941] no answer yet for icmp_seq=1277
+[1792926940.799717] 64 bytes from 192.168.1.5: icmp_seq=1276 ttl=128 time=513 ms
+[1792926940.893838] no answer yet for icmp_seq=1278
+[1792926941.006769] 64 bytes from 192.168.1.5: icmp_seq=1277 ttl=128 time=519 ms
+[1792926941.093890] no answer yet for icmp_seq=1279
+[1792926941.221903] 64 bytes from 192.168.1.5: icmp_seq=1278 ttl=128 time=529 ms
+[1792926941.294327] no answer yet for icmp_seq=1280
+[1792926941.424787] 64 bytes from 192.168.1.5: icmp_seq=1279 ttl=128 time=531 ms
+[1792926941.495082] no answer yet for icmp_seq=1281
+[1792926941.497714] 64 bytes from 192.168.1.5: icmp_seq=1280 ttl=128 time=404 ms
+[1792926941.497749] 64 bytes from 192.168.1.5: icmp_seq=1281 ttl=128 time=203 ms
+[1792926941.515828] 64 bytes from 192.168.1.5: icmp_seq=1282 ttl=128 time=20.6 ms
+[1792926941.901020] no answer yet for icmp_seq=1283
+[1792926942.094806] 64 bytes from 192.168.1.5: icmp_seq=1283 ttl=128 time=399 ms
+[1792926942.107092] no answer yet for icmp_seq=1284
+[1792926942.309040] no answer yet for icmp_seq=1285
+[1792926942.334802] 64 bytes from 192.168.1.5: icmp_seq=1284 ttl=128 time=434 ms
+[1792926942.509944] no answer yet for icmp_seq=1286
+[1792926942.552766] 64 bytes from 192.168.1.5: icmp_seq=1285 ttl=128 time=445 ms
+[1792926942.710941] no answer yet for icmp_seq=1287
+[1792926942.746765] 64 bytes from 192.168.1.5: icmp_seq=1286 ttl=128 time=438 ms
+[1792926942.911930] no answer yet for icmp_seq=1288
+[1792926942.982781] 64 bytes from 192.168.1.5: icmp_seq=1287 ttl=128 time=473 ms
+[1792926943.111934] no answer yet for icmp_seq=1289
+[1792926943.190158] 64 bytes from 192.168.1.5: icmp_seq=1288 ttl=128 time=479 ms
+[1792926943.312600] no answer yet for icmp_seq=1290
+[1792926943.395776] 64 bytes from 192.168.1.5: icmp_seq=1289 ttl=128 time=484 ms
+[1792926943.512934] no answer yet for icmp_seq=1291
+[1792926943.516738] 64 bytes from 192.168.1.5: icmp_seq=1290 ttl=128 time=405 ms
+[1792926943.516754] 64 bytes from 192.168.1.5: icmp_seq=1291 ttl=128 time=204 ms
+[1792926943.533896] 64 bytes from 192.168.1.5: icmp_seq=1292 ttl=128 time=20.8 ms
+[1792926943.916931] no answer yet for icmp_seq=1293
+[1792926944.124932] no answer yet for icmp_seq=1294
+[1792926944.181810] 64 bytes from 192.168.1.5: icmp_seq=1293 ttl=128 time=469 ms
+[1792926944.325935] no answer yet for icmp_seq=1295
+[1792926944.405817] 64 bytes from 192.168.1.5: icmp_seq=1294 ttl=128 time=489 ms
+[1792926944.526971] no answer yet for icmp_seq=1296
+[1792926944.616749] 64 bytes from 192.168.1.5: icmp_seq=1295 ttl=128 time=492 ms
+[1792926944.727890] no answer yet for icmp_seq=1297
+[1792926944.818764] 64 bytes from 192.168.1.5: icmp_seq=1296 ttl=128 time=493 ms
+[1792926944.928906] no answer yet for icmp_seq=1298
+[1792926945.028825] 64 bytes from 192.168.1.5: icmp_seq=1297 ttl=128 time=502 ms
+[1792926945.128930] no answer yet for icmp_seq=1299
+[1792926945.231774] 64 bytes from 192.168.1.5: icmp_seq=1298 ttl=128 time=504 ms
+[1792926945.329987] no answer yet for icmp_seq=1300
+[1792926945.432734] 64 bytes from 192.168.1.5: icmp_seq=1299 ttl=128 time=504 ms
+[1792926945.524984] 64 bytes from 192.168.1.5: icmp_seq=1300 ttl=128 time=396 ms
+[1792926945.525702] 64 bytes from 192.168.1.5: icmp_seq=1301 ttl=128 time=196 ms
+[1792926945.543826] 64 bytes from 192.168.1.5: icmp_seq=1302 ttl=128 time=13.7 ms
+[1792926945.765711] 64 bytes from 192.168.1.5: icmp_seq=1303 ttl=128 time=34.7 ms
+[1792926946.034699] 64 bytes from 192.168.1.5: icmp_seq=1304 ttl=128 time=103 ms
+[1792926946.228680] 64 bytes from 192.168.1.5: icmp_seq=1305 ttl=128 time=96.7 ms
+[1792926946.421655] 64 bytes from 192.168.1.5: icmp_seq=1306 ttl=128 time=88.8 ms
+[1792926946.632621] 64 bytes from 192.168.1.5: icmp_seq=1307 ttl=128 time=98.8 ms
+[1792926946.827656] 64 bytes from 192.168.1.5: icmp_seq=1308 ttl=128 time=92.8 ms
+[1792926947.046601] 64 bytes from 192.168.1.5: icmp_seq=1309 ttl=128 time=111 ms
+[1792926947.240639] 64 bytes from 192.168.1.5: icmp_seq=1310 ttl=128 time=104 ms
+[1792926947.435544] 64 bytes from 192.168.1.5: icmp_seq=1311 ttl=128 time=97.8 ms
+[1792926947.588567] 64 bytes from 192.168.1.5: icmp_seq=1312 ttl=128 time=49.8 ms
+[1792926947.838587] 64 bytes from 192.168.1.5: icmp_seq=1313 ttl=128 time=98.7 ms
+[1792926948.055711] 64 bytes from 192.168.1.5: icmp_seq=1314 ttl=128 time=115 ms
+[1792926948.248660] 64 bytes from 192.168.1.5: icmp_seq=1315 ttl=128 time=107 ms
+[1792926948.444670] 64 bytes from 192.168.1.5: icmp_seq=1316 ttl=128 time=103 ms
+[1792926948.656481] 64 bytes from 192.168.1.5: icmp_seq=1317 ttl=128 time=114 ms
+[1792926948.858551] 64 bytes from 192.168.1.5: icmp_seq=1318 ttl=128 time=115 ms
+[1792926949.069531] 64 bytes from 192.168.1.5: icmp_seq=1319 ttl=128 time=126 ms
+[1792926949.262453] 64 bytes from 192.168.1.5: icmp_seq=1320 ttl=128 time=118 ms
+[1792926949.456444] 64 bytes from 192.168.1.5: icmp_seq=1321 ttl=128 time=111 ms
+[1792926949.625324] 64 bytes from 192.168.1.5: icmp_seq=1322 ttl=128 time=78.7 ms
+[1792926949.860408] 64 bytes from 192.168.1.5: icmp_seq=1323 ttl=128 time=113 ms
+[1792926950.080368] 64 bytes from 192.168.1.5: icmp_seq=1324 ttl=128 time=132 ms
+[1792926950.274516] 64 bytes from 192.168.1.5: icmp_seq=1325 ttl=128 time=125 ms
+[1792926950.466359] 64 bytes from 192.168.1.5: icmp_seq=1326 ttl=128 time=116 ms
+[1792926950.677294] 64 bytes from 192.168.1.5: icmp_seq=1327 ttl=128 time=127 ms
+[1792926950.880228] 64 bytes from 192.168.1.5: icmp_seq=1328 ttl=128 time=129 ms
+[1792926951.092250] 64 bytes from 192.168.1.5: icmp_seq=1329 ttl=128 time=140 ms
+[1792926951.290201] 64 bytes from 192.168.1.5: icmp_seq=1330 ttl=128 time=137 ms
+[1792926951.489165] 64 bytes from 192.168.1.5: icmp_seq=1331 ttl=128 time=132 ms
+[1792926951.627187] 64 bytes from 192.168.1.5: icmp_seq=1332 ttl=128 time=69.7 ms
+[1792926951.900148] 64 bytes from 192.168.1.5: icmp_seq=1333 ttl=128 time=142 ms
+[1792926952.126126] 64 bytes from 192.168.1.5: icmp_seq=1334 ttl=128 time=167 ms
+[1792926952.326093] 64 bytes from 192.168.1.5: icmp_seq=1335 ttl=128 time=166 ms
+[1792926952.532127] 64 bytes from 192.168.1.5: icmp_seq=1336 ttl=128 time=171 ms
+[1792926952.737138] 64 bytes from 192.168.1.5: icmp_seq=1337 ttl=128 time=175 ms
+[1792926952.954056] 64 bytes from 192.168.1.5: icmp_seq=1338 ttl=128 time=191 ms
+[1792926953.165969] no answer yet for icmp_seq=1339
+[1792926953.166062] 64 bytes from 192.168.1.5: icmp_seq=1339 ttl=128 time=204 ms
+[1792926953.361081] 64 bytes from 192.168.1.5: icmp_seq=1340 ttl=128 time=195 ms
+[1792926953.537027] 64 bytes from 192.168.1.5: icmp_seq=1341 ttl=128 time=171 ms
+[1792926953.567044] 64 bytes from 192.168.1.5: icmp_seq=1342 ttl=128 time=0.881 ms
+[1792926953.980996] no answer yet for icmp_seq=1343
+[1792926954.191488] no answer yet for icmp_seq=1344
+[1792926954.277016] 64 bytes from 192.168.1.5: icmp_seq=1343 ttl=128 time=503 ms
+[1792926954.392284] no answer yet for icmp_seq=1345
+[1792926954.540080] 64 bytes from 192.168.1.5: icmp_seq=1344 ttl=128 time=559 ms
+[1792926954.593197] no answer yet for icmp_seq=1346
+[1792926954.763096] 64 bytes from 192.168.1.5: icmp_seq=1345 ttl=128 time=571 ms
+[1792926954.794314] no answer yet for icmp_seq=1347
+[1792926954.962029] 64 bytes from 192.168.1.5: icmp_seq=1346 ttl=128 time=570 ms
+[1792926954.994245] no answer yet for icmp_seq=1348
+[1792926955.165026] 64 bytes from 192.168.1.5: icmp_seq=1347 ttl=128 time=572 ms
+[1792926955.195277] no answer yet for icmp_seq=1349
+[1792926955.303004] 64 bytes from 192.168.1.5: icmp_seq=1348 ttl=128 time=509 ms
+[1792926955.396249] no answer yet for icmp_seq=1350
+[1792926955.427993] 64 bytes from 192.168.1.5: icmp_seq=1349 ttl=128 time=434 ms
+[1792926955.499087] 64 bytes from 192.168.1.5: icmp_seq=1350 ttl=128 time=304 ms
+[1792926955.504977] 64 bytes from 192.168.1.5: icmp_seq=1351 ttl=128 time=109 ms
+[1792926955.598075] 64 bytes from 192.168.1.5: icmp_seq=1352 ttl=128 time=0.799 ms
+[1792926956.005033] no answer yet for icmp_seq=1353
+[1792926956.040021] 64 bytes from 192.168.1.5: icmp_seq=1353 ttl=128 time=242 ms
+[1792926956.205238] no answer yet for icmp_seq=1354
+[1792926956.317914] 64 bytes from 192.168.1.5: icmp_seq=1354 ttl=128 time=313 ms
+[1792926956.406064] no answer yet for icmp_seq=1355
+[1792926956.563848] 64 bytes from 192.168.1.5: icmp_seq=1355 ttl=128 time=358 ms
+[1792926956.607094] no answer yet for icmp_seq=1356
+[1792926956.805959] 64 bytes from 192.168.1.5: icmp_seq=1356 ttl=128 time=400 ms
+[1792926956.816316] no answer yet for icmp_seq=1357
+[1792926957.023149] no answer yet for icmp_seq=1358
+[1792926957.048767] 64 bytes from 192.168.1.5: icmp_seq=1357 ttl=128 time=442 ms
+[1792926957.224099] no answer yet for icmp_seq=1359
+[1792926957.280709] 64 bytes from 192.168.1.5: icmp_seq=1358 ttl=128 time=464 ms
+[1792926957.424813] no answer yet for icmp_seq=1360
+[1792926957.519720] 64 bytes from 192.168.1.5: icmp_seq=1359 ttl=128 time=496 ms
+[1792926957.527805] 64 bytes from 192.168.1.5: icmp_seq=1360 ttl=128 time=303 ms
+[1792926957.527854] 64 bytes from 192.168.1.5: icmp_seq=1361 ttl=128 time=103 ms
+[1792926957.626675] 64 bytes from 192.168.1.5: icmp_seq=1362 ttl=128 time=1.54 ms
+[1792926958.028929] no answer yet for icmp_seq=1363
+[1792926958.236934] no answer yet for icmp_seq=1364
+[1792926958.290672] 64 bytes from 192.168.1.5: icmp_seq=1363 ttl=128 time=465 ms
+[1792926958.440016] no answer yet for icmp_seq=1365
+[1792926958.535676] 64 bytes from 192.168.1.5: icmp_seq=1364 ttl=128 time=507 ms
+[1792926958.640888] no answer yet for icmp_seq=1366
+[1792926958.773047] 64 bytes from 192.168.1.5: icmp_seq=1365 ttl=128 time=534 ms
+[1792926958.841274] no answer yet for icmp_seq=1367
+[1792926958.988642] 64 bytes from 192.168.1.5: icmp_seq=1366 ttl=128 time=548 ms
+[1792926959.040790] no answer yet for icmp_seq=1368
+[1792926959.202581] 64 bytes from 192.168.1.5: icmp_seq=1367 ttl=128 time=561 ms
+[1792926959.241681] no answer yet for icmp_seq=1369
+[1792926959.412618] 64 bytes from 192.168.1.5: icmp_seq=1368 ttl=128 time=571 ms
+[1792926959.442770] no answer yet for icmp_seq=1370
+[1792926959.611570] 64 bytes from 192.168.1.5: icmp_seq=1369 ttl=128 time=571 ms
+[1792926959.643668] no answer yet for icmp_seq=1371
+[1792926959.647543] 64 bytes from 192.168.1.5: icmp_seq=1370 ttl=128 time=406 ms
+[1792926959.652522] 64 bytes from 192.168.1.5: icmp_seq=1371 ttl=128 time=210 ms
+[1792926959.679498] 64 bytes from 192.168.1.5: icmp_seq=1372 ttl=128 time=35.7 ms
+[1792926960.044934] no answer yet for icmp_seq=1373
+[1792926960.244546] 64 bytes from 192.168.1.5: icmp_seq=1373 ttl=128 time=400 ms
+[1792926960.254622] no answer yet for icmp_seq=1374
+[1792926960.444518] 64 bytes from 192.168.1.5: icmp_seq=1374 ttl=128 time=399 ms
+[1792926960.455629] no answer yet for icmp_seq=1375
+[1792926960.660943] no answer yet for icmp_seq=1376
+[1792926960.672451] 64 bytes from 192.168.1.5: icmp_seq=1375 ttl=128 time=418 ms
+[1792926960.861690] no answer yet for icmp_seq=1377
+[1792926960.874456] 64 bytes from 192.168.1.5: icmp_seq=1376 ttl=128 time=419 ms
+[1792926961.062684] no answer yet for icmp_seq=1378
+[1792926961.082423] 64 bytes from 192.168.1.5: icmp_seq=1377 ttl=128 time=421 ms
+[1792926961.263644] no answer yet for icmp_seq=1379
+[1792926961.293412] 64 bytes from 192.168.1.5: icmp_seq=1378 ttl=128 time=432 ms
+[1792926961.464626] no answer yet for icmp_seq=1380
+[1792926961.482346] 64 bytes from 192.168.1.5: icmp_seq=1379 ttl=128 time=420 ms
+[1792926961.526438] 64 bytes from 192.168.1.5: icmp_seq=1380 ttl=128 time=263 ms
+[1792926961.527416] 64 bytes from 192.168.1.5: icmp_seq=1381 ttl=128 time=62.7 ms
+[1792926961.667367] 64 bytes from 192.168.1.5: icmp_seq=1382 ttl=128 time=1.56 ms
+[1792926962.068966] no answer yet for icmp_seq=1383
+[1792926962.277932] no answer yet for icmp_seq=1384
+[1792926962.429344] 64 bytes from 192.168.1.5: icmp_seq=1383 ttl=128 time=563 ms
+[1792926962.478431] no answer yet for icmp_seq=1385
+[1792926962.641422] 64 bytes from 192.168.1.5: icmp_seq=1384 ttl=128 time=572 ms
+[1792926962.678676] no answer yet for icmp_seq=1386
+[1792926962.849215] 64 bytes from 192.168.1.5: icmp_seq=1385 ttl=128 time=571 ms
+[1792926962.879347] no answer yet for icmp_seq=1387
+[1792926963.051246] 64 bytes from 192.168.1.5: icmp_seq=1386 ttl=128 time=573 ms
+[1792926963.079346] no answer yet for icmp_seq=1388
+[1792926963.198210] 64 bytes from 192.168.1.5: icmp_seq=1387 ttl=128 time=519 ms
+[1792926963.280326] no answer yet for icmp_seq=1389
+[1792926963.342263] 64 bytes from 192.168.1.5: icmp_seq=1388 ttl=128 time=463 ms
+[1792926963.481464] no answer yet for icmp_seq=1390
+[1792926963.508241] 64 bytes from 192.168.1.5: icmp_seq=1389 ttl=128 time=429 ms
+[1792926963.525279] 64 bytes from 192.168.1.5: icmp_seq=1390 ttl=128 time=245 ms
+[1792926963.682557] no answer yet for icmp_seq=1391
+[1792926963.884934] no answer yet for icmp_seq=1392
+[1792926964.053120] 64 bytes from 192.168.1.5: icmp_seq=1391 ttl=128 time=572 ms
+[1792926964.078170] 64 bytes from 192.168.1.5: icmp_seq=1392 ttl=128 time=396 ms
+[1792926964.078202] 64 bytes from 192.168.1.5: icmp_seq=1393 ttl=128 time=193 ms
+[1792926964.286110] no answer yet for icmp_seq=1394
+[1792926964.493112] no answer yet for icmp_seq=1395
+[1792926964.548138] 64 bytes from 192.168.1.5: icmp_seq=1394 ttl=128 time=464 ms
+[1792926964.693314] no answer yet for icmp_seq=1396
+[1792926964.800082] 64 bytes from 192.168.1.5: icmp_seq=1395 ttl=128 time=514 ms
+[1792926964.894236] no answer yet for icmp_seq=1397
+[1792926965.030098] 64 bytes from 192.168.1.5: icmp_seq=1396 ttl=128 time=537 ms
+[1792926965.094216] no answer yet for icmp_seq=1398
+[1792926965.205037] 64 bytes from 192.168.1.5: icmp_seq=1397 ttl=128 time=512 ms
+[1792926965.295191] no answer yet for icmp_seq=1399
+[1792926965.356250] 64 bytes from 192.168.1.5: icmp_seq=1398 ttl=128 time=460 ms
+[1792926965.495633] no answer yet for icmp_seq=1400
+[1792926965.501066] 64 bytes from 192.168.1.5: icmp_seq=1399 ttl=128 time=407 ms
+[1792926965.696303] no answer yet for icmp_seq=1401
+[1792926965.696999] 64 bytes from 192.168.1.5: icmp_seq=1400 ttl=128 time=402 ms
+[1792926965.897990] 64 bytes from 192.168.1.5: icmp_seq=1401 ttl=128 time=402 ms
+[1792926965.898020] no answer yet for icmp_seq=1402
+[1792926966.100929] no answer yet for icmp_seq=1403
+[1792926966.107264] 64 bytes from 192.168.1.5: icmp_seq=1402 ttl=128 time=411 ms
+[1792926966.200131] 64 bytes from 192.168.1.5: icmp_seq=1403 ttl=128 time=302 ms
+[1792926966.209100] 64 bytes from 192.168.1.5: icmp_seq=1404 ttl=128 time=108 ms
+[1792926966.345008] 64 bytes from 192.168.1.5: icmp_seq=1405 ttl=128 time=43.7 ms
+[1792926966.595953] 64 bytes from 192.168.1.5: icmp_seq=1406 ttl=128 time=93.6 ms
+[1792926966.814952] 64 bytes from 192.168.1.5: icmp_seq=1407 ttl=128 time=112 ms
+[1792926967.008960] 64 bytes from 192.168.1.5: icmp_seq=1408 ttl=128 time=105 ms
+[1792926967.201946] 64 bytes from 192.168.1.5: icmp_seq=1409 ttl=128 time=97.7 ms
+[1792926967.402843] 64 bytes from 192.168.1.5: icmp_seq=1410 ttl=128 time=97.1 ms
+[1792926967.614871] 64 bytes from 192.168.1.5: icmp_seq=1411 ttl=128 time=109 ms
+[1792926967.825924] 64 bytes from 192.168.1.5: icmp_seq=1412 ttl=128 time=119 ms
+[1792926968.019830] 64 bytes from 192.168.1.5: icmp_seq=1413 ttl=128 time=113 ms
+[1792926968.118876] 64 bytes from 192.168.1.5: icmp_seq=1414 ttl=128 time=11.7 ms
+[1792926968.415875] 64 bytes from 192.168.1.5: icmp_seq=1415 ttl=128 time=107 ms
+[1792926968.625769] 64 bytes from 192.168.1.5: icmp_seq=1416 ttl=128 time=117 ms
+[1792926968.836817] 64 bytes from 192.168.1.5: icmp_seq=1417 ttl=128 time=127 ms
+[1792926969.029745] 64 bytes from 192.168.1.5: icmp_seq=1418 ttl=128 time=119 ms
+[1792926969.224730] 64 bytes from 192.168.1.5: icmp_seq=1419 ttl=128 time=114 ms
+[1792926969.424768] 64 bytes from 192.168.1.5: icmp_seq=1420 ttl=128 time=113 ms
+[1792926969.640110] 64 bytes from 192.168.1.5: icmp_seq=1421 ttl=128 time=124 ms
+[1792926969.846682] 64 bytes from 192.168.1.5: icmp_seq=1422 ttl=128 time=133 ms
+[1792926970.015683] 64 bytes from 192.168.1.5: icmp_seq=1423 ttl=128 time=102 ms
+[1792926970.316931] no answer yet for icmp_seq=1424
+[1792926970.510628] 64 bytes from 192.168.1.5: icmp_seq=1424 ttl=128 time=397 ms
+[1792926970.523020] no answer yet for icmp_seq=1425
+[1792926970.725041] no answer yet for icmp_seq=1426
+[1792926970.744685] 64 bytes from 192.168.1.5: icmp_seq=1425 ttl=128 time=428 ms
+[1792926970.925910] no answer yet for icmp_seq=1427
+[1792926970.963630] 64 bytes from 192.168.1.5: icmp_seq=1426 ttl=128 time=440 ms
+[1792926971.125894] no answer yet for icmp_seq=1428
+[1792926971.182545] 64 bytes from 192.168.1.5: icmp_seq=1427 ttl=128 time=457 ms
+[1792926971.326724] no answer yet for icmp_seq=1429
+[1792926971.390685] 64 bytes from 192.168.1.5: icmp_seq=1428 ttl=128 time=465 ms
+[1792926971.526945] no answer yet for icmp_seq=1430
+[1792926971.577703] 64 bytes from 192.168.1.5: icmp_seq=1429 ttl=128 time=452 ms
+[1792926971.633555] 64 bytes from 192.168.1.5: icmp_seq=1430 ttl=128 time=307 ms
+[1792926971.634552] 64 bytes from 192.168.1.5: icmp_seq=1431 ttl=128 time=107 ms
+[1792926971.759590] 64 bytes from 192.168.1.5: icmp_seq=1432 ttl=128 time=31.8 ms
+[1792926972.023036] 64 bytes from 192.168.1.5: icmp_seq=1433 ttl=128 time=91.6 ms
+[1792926972.241671] 64 bytes from 192.168.1.5: icmp_seq=1434 ttl=128 time=113 ms
+[1792926972.451634] 64 bytes from 192.168.1.5: icmp_seq=1435 ttl=128 time=123 ms
+[1792926972.647447] 64 bytes from 192.168.1.5: icmp_seq=1436 ttl=128 time=118 ms
+[1792926972.873529] 64 bytes from 192.168.1.5: icmp_seq=1437 ttl=128 time=143 ms
+[1792926973.055685] 64 bytes from 192.168.1.5: icmp_seq=1438 ttl=128 time=124 ms
+[1792926973.251441] 64 bytes from 192.168.1.5: icmp_seq=1439 ttl=128 time=120 ms
+[1792926973.462369] 64 bytes from 192.168.1.5: icmp_seq=1440 ttl=128 time=131 ms
+[1792926973.609411] 64 bytes from 192.168.1.5: icmp_seq=1441 ttl=128 time=76.9 ms
+[1792926973.856672] 64 bytes from 192.168.1.5: icmp_seq=1442 ttl=128 time=123 ms
+[1792926974.060258] 64 bytes from 192.168.1.5: icmp_seq=1443 ttl=128 time=126 ms
+[1792926974.279297] 64 bytes from 192.168.1.5: icmp_seq=1444 ttl=128 time=145 ms
+[1792926974.473570] 64 bytes from 192.168.1.5: icmp_seq=1445 ttl=128 time=138 ms
+[1792926974.665241] 64 bytes from 192.168.1.5: icmp_seq=1446 ttl=128 time=129 ms
+[1792926974.892321] 64 bytes from 192.168.1.5: icmp_seq=1447 ttl=128 time=156 ms
+[1792926975.080282] 64 bytes from 192.168.1.5: icmp_seq=1448 ttl=128 time=140 ms
+[1792926975.290242] 64 bytes from 192.168.1.5: icmp_seq=1449 ttl=128 time=150 ms
+[1792926975.484172] 64 bytes from 192.168.1.5: icmp_seq=1450 ttl=128 time=143 ms
+[1792926975.543207] 64 bytes from 192.168.1.5: icmp_seq=1451 ttl=128 time=0.813 ms
+[1792926975.768189] 64 bytes from 192.168.1.5: icmp_seq=1452 ttl=128 time=19.1 ms
+[1792926976.032200] 64 bytes from 192.168.1.5: icmp_seq=1453 ttl=128 time=82.8 ms
+[1792926976.268176] 64 bytes from 192.168.1.5: icmp_seq=1454 ttl=128 time=118 ms
+[1792926976.450160] 64 bytes from 192.168.1.5: icmp_seq=1455 ttl=128 time=98.8 ms
+[1792926976.649109] 64 bytes from 192.168.1.5: icmp_seq=1456 ttl=128 time=96.7 ms
+[1792926976.861219] 64 bytes from 192.168.1.5: icmp_seq=1457 ttl=128 time=108 ms
+[1792926977.056069] 64 bytes from 192.168.1.5: icmp_seq=1458 ttl=128 time=98.8 ms
+[1792926977.283025] 64 bytes from 192.168.1.5: icmp_seq=1459 ttl=128 time=128 ms
+[1792926977.468032] 64 bytes from 192.168.1.5: icmp_seq=1460 ttl=128 time=112 ms
+[1792926977.660121] 64 bytes from 192.168.1.5: icmp_seq=1461 ttl=128 time=103 ms
+[1792926977.777118] 64 bytes from 192.168.1.5: icmp_seq=1462 ttl=128 time=18.7 ms
+[1792926978.065045] 64 bytes from 192.168.1.5: icmp_seq=1463 ttl=128 time=106 ms
+[1792926978.293034] 64 bytes from 192.168.1.5: icmp_seq=1464 ttl=128 time=133 ms
+[1792926978.478998] 64 bytes from 192.168.1.5: icmp_seq=1465 ttl=128 time=118 ms
+[1792926978.672024] 64 bytes from 192.168.1.5: icmp_seq=1466 ttl=128 time=110 ms
+[1792926978.881997] 64 bytes from 192.168.1.5: icmp_seq=1467 ttl=128 time=119 ms
+[1792926979.077017] 64 bytes from 192.168.1.5: icmp_seq=1468 ttl=128 time=113 ms
+[1792926979.306276] 64 bytes from 192.168.1.5: icmp_seq=1469 ttl=128 time=141 ms
+[1792926979.489012] 64 bytes from 192.168.1.5: icmp_seq=1470 ttl=128 time=123 ms
+[1792926979.681934] 64 bytes from 192.168.1.5: icmp_seq=1471 ttl=128 time=116 ms
+[1792926979.894857] 64 bytes from 192.168.1.5: icmp_seq=1472 ttl=128 time=128 ms
+[1792926980.087884] 64 bytes from 192.168.1.5: icmp_seq=1473 ttl=128 time=120 ms
+[1792926980.307899] 64 bytes from 192.168.1.5: icmp_seq=1474 ttl=128 time=139 ms
+[1792926980.499836] 64 bytes from 192.168.1.5: icmp_seq=1475 ttl=128 time=131 ms
+[1792926980.692776] 64 bytes from 192.168.1.5: icmp_seq=1476 ttl=128 time=123 ms
+[1792926980.905796] 64 bytes from 192.168.1.5: icmp_seq=1477 ttl=128 time=133 ms
+[1792926981.106071] 64 bytes from 192.168.1.5: icmp_seq=1478 ttl=128 time=129 ms
+[1792926981.323752] 64 bytes from 192.168.1.5: icmp_seq=1479 ttl=128 time=149 ms
+[1792926981.516723] 64 bytes from 192.168.1.5: icmp_seq=1480 ttl=128 time=142 ms
+[1792926981.576644] 64 bytes from 192.168.1.5: icmp_seq=1481 ttl=128 time=0.756 ms
+[1792926981.943766] 64 bytes from 192.168.1.5: icmp_seq=1482 ttl=128 time=163 ms
+[1792926982.181933] no answer yet for icmp_seq=1483
+[1792926982.193731] 64 bytes from 192.168.1.5: icmp_seq=1483 ttl=128 time=213 ms
+[1792926982.382929] no answer yet for icmp_seq=1484
+[1792926982.480721] 64 bytes from 192.168.1.5: icmp_seq=1484 ttl=128 time=299 ms
+[1792926982.583892] no answer yet for icmp_seq=1485
+[1792926982.750655] 64 bytes from 192.168.1.5: icmp_seq=1485 ttl=128 time=368 ms
+[1792926982.784768] no answer yet for icmp_seq=1486
+[1792926982.988675] 64 bytes from 192.168.1.5: icmp_seq=1486 ttl=128 time=405 ms
+[1792926982.988701] no answer yet for icmp_seq=1487
+[1792926983.189028] no answer yet for icmp_seq=1488
+[1792926983.244623] 64 bytes from 192.168.1.5: icmp_seq=1487 ttl=128 time=460 ms
+[1792926983.389861] no answer yet for icmp_seq=1489
+[1792926983.483713] 64 bytes from 192.168.1.5: icmp_seq=1488 ttl=128 time=495 ms
+[1792926983.515606] 64 bytes from 192.168.1.5: icmp_seq=1489 ttl=128 time=326 ms
+[1792926983.515640] 64 bytes from 192.168.1.5: icmp_seq=1490 ttl=128 time=126 ms
+[1792926983.599592] 64 bytes from 192.168.1.5: icmp_seq=1491 ttl=128 time=8.74 ms
+[1792926983.996974] no answer yet for icmp_seq=1492
+[1792926984.204939] no answer yet for icmp_seq=1493
+[1792926984.336502] 64 bytes from 192.168.1.5: icmp_seq=1492 ttl=128 time=545 ms
+[1792926984.405617] no answer yet for icmp_seq=1494
+[1792926984.562529] 64 bytes from 192.168.1.5: icmp_seq=1493 ttl=128 time=565 ms
+[1792926984.606749] no answer yet for icmp_seq=1495
+[1792926984.776715] 64 bytes from 192.168.1.5: icmp_seq=1494 ttl=128 time=572 ms
+[1792926984.806978] no answer yet for icmp_seq=1496
+[1792926984.975464] 64 bytes from 192.168.1.5: icmp_seq=1495 ttl=128 time=570 ms
+[1792926985.006576] no answer yet for icmp_seq=1497
+[1792926985.175455] 64 bytes from 192.168.1.5: icmp_seq=1496 ttl=128 time=569 ms
+[1792926985.207564] no answer yet for icmp_seq=1498
+[1792926985.323444] 64 bytes from 192.168.1.5: icmp_seq=1497 ttl=128 time=516 ms
+[1792926985.408579] no answer yet for icmp_seq=1499
+[1792926985.444520] 64 bytes from 192.168.1.5: icmp_seq=1498 ttl=128 time=438 ms
+[1792926985.473738] 64 bytes from 192.168.1.5: icmp_seq=1499 ttl=128 time=263 ms
+[1792926985.608980] no answer yet for icmp_seq=1500
+[1792926985.812940] no answer yet for icmp_seq=1501
+[1792926985.939481] 64 bytes from 192.168.1.5: icmp_seq=1500 ttl=128 time=530 ms
+[1792926986.012852] no answer yet for icmp_seq=1502
+[1792926986.023202] 64 bytes from 192.168.1.5: icmp_seq=1501 ttl=128 time=411 ms
+[1792926986.023579] 64 bytes from 192.168.1.5: icmp_seq=1502 ttl=128 time=207 ms
+[1792926986.023603] 64 bytes from 192.168.1.5: icmp_seq=1503 ttl=128 time=8.41 ms
+[1792926986.404387] 64 bytes from 192.168.1.5: icmp_seq=1504 ttl=128 time=190 ms
+[1792926986.620964] no answer yet for icmp_seq=1505
+[1792926986.650372] 64 bytes from 192.168.1.5: icmp_seq=1505 ttl=128 time=236 ms
+[1792926986.821569] no answer yet for icmp_seq=1506
+[1792926986.922234] 64 bytes from 192.168.1.5: icmp_seq=1506 ttl=128 time=301 ms
+[1792926987.022511] no answer yet for icmp_seq=1507
+[1792926987.143387] 64 bytes from 192.168.1.5: icmp_seq=1507 ttl=128 time=322 ms
+[1792926987.223861] no answer yet for icmp_seq=1508
+[1792926987.402293] 64 bytes from 192.168.1.5: icmp_seq=1508 ttl=128 time=380 ms
+[1792926987.424408] no answer yet for icmp_seq=1509
+[1792926987.628936] no answer yet for icmp_seq=1510
+[1792926987.665245] 64 bytes from 192.168.1.5: icmp_seq=1509 ttl=128 time=441 ms
+[1792926987.829480] no answer yet for icmp_seq=1511
+[1792926987.889037] 64 bytes from 192.168.1.5: icmp_seq=1510 ttl=128 time=462 ms
+[1792926987.904326] 64 bytes from 192.168.1.5: icmp_seq=1511 ttl=128 time=275 ms
+[1792926987.904375] 64 bytes from 192.168.1.5: icmp_seq=1512 ttl=128 time=74.7 ms
+[1792926988.236994] no answer yet for icmp_seq=1513
+[1792926988.444937] no answer yet for icmp_seq=1514
+[1792926988.493098] 64 bytes from 192.168.1.5: icmp_seq=1513 ttl=128 time=463 ms
+[1792926988.645282] no answer yet for icmp_seq=1515
+[1792926988.743139] 64 bytes from 192.168.1.5: icmp_seq=1514 ttl=128 time=506 ms
+[1792926988.846270] no answer yet for icmp_seq=1516
+[1792926988.974260] 64 bytes from 192.168.1.5: icmp_seq=1515 ttl=128 time=529 ms
+[1792926989.045476] no answer yet for icmp_seq=1517
+[1792926989.191381] 64 bytes from 192.168.1.5: icmp_seq=1516 ttl=128 time=546 ms
+[1792926989.245636] no answer yet for icmp_seq=1518
+[1792926989.416104] 64 bytes from 192.168.1.5: icmp_seq=1517 ttl=128 time=570 ms
+[1792926989.446257] no answer yet for icmp_seq=1519
+[1792926989.616237] 64 bytes from 192.168.1.5: icmp_seq=1518 ttl=128 time=571 ms
+[1792926989.646462] no answer yet for icmp_seq=1520
+[1792926989.805183] 64 bytes from 192.168.1.5: icmp_seq=1519 ttl=128 time=559 ms
+[1792926989.814172] 64 bytes from 192.168.1.5: icmp_seq=1520 ttl=128 time=368 ms
+[1792926989.844196] 64 bytes from 192.168.1.5: icmp_seq=1521 ttl=128 time=198 ms
+[1792926989.855189] 64 bytes from 192.168.1.5: icmp_seq=1522 ttl=128 time=6.58 ms
+[1792926990.253946] no answer yet for icmp_seq=1523
+[1792926990.451993] 64 bytes from 192.168.1.5: icmp_seq=1523 ttl=128 time=404 ms
+[1792926990.462107] no answer yet for icmp_seq=1524
+[1792926990.669997] no answer yet for icmp_seq=1525
+[1792926990.677017] 64 bytes from 192.168.1.5: icmp_seq=1524 ttl=128 time=423 ms
+[1792926990.870235] no answer yet for icmp_seq=1526
+[1792926990.884017] 64 bytes from 192.168.1.5: icmp_seq=1525 ttl=128 time=422 ms
+[1792926991.071229] no answer yet for icmp_seq=1527
+[1792926991.091994] 64 bytes from 192.168.1.5: icmp_seq=1526 ttl=128 time=422 ms
+[1792926991.272331] no answer yet for icmp_seq=1528
+[1792926991.304639] 64 bytes from 192.168.1.5: icmp_seq=1527 ttl=128 time=434 ms
+[1792926991.473270] no answer yet for icmp_seq=1529
+[1792926991.491115] 64 bytes from 192.168.1.5: icmp_seq=1528 ttl=128 time=420 ms
+[1792926991.674322] no answer yet for icmp_seq=1530
+[1792926991.696966] 64 bytes from 192.168.1.5: icmp_seq=1529 ttl=128 time=424 ms
+[1792926991.698877] 64 bytes from 192.168.1.5: icmp_seq=1530 ttl=128 time=225 ms
+[1792926991.715944] 64 bytes from 192.168.1.5: icmp_seq=1531 ttl=128 time=41.6 ms
+[1792926992.077938] no answer yet for icmp_seq=1532
+[1792926992.284933] no answer yet for icmp_seq=1533
+[1792926992.411914] 64 bytes from 192.168.1.5: icmp_seq=1532 ttl=128 time=537 ms
+[1792926992.485022] no answer yet for icmp_seq=1534
+[1792926992.648879] 64 bytes from 192.168.1.5: icmp_seq=1533 ttl=128 time=571 ms
+[1792926992.689092] no answer yet for icmp_seq=1535
+[1792926992.857060] 64 bytes from 192.168.1.5: icmp_seq=1534 ttl=128 time=572 ms
+[1792926992.889540] no answer yet for icmp_seq=1536
+[1792926993.056996] 64 bytes from 192.168.1.5: icmp_seq=1535 ttl=128 time=572 ms
+[1792926993.089257] no answer yet for icmp_seq=1537
+[1792926993.228794] 64 bytes from 192.168.1.5: icmp_seq=1536 ttl=128 time=539 ms
+[1792926993.289886] no answer yet for icmp_seq=1538
+[1792926993.378835] 64 bytes from 192.168.1.5: icmp_seq=1537 ttl=128 time=489 ms
+[1792926993.490934] no answer yet for icmp_seq=1539
+[1792926993.522010] 64 bytes from 192.168.1.5: icmp_seq=1538 ttl=128 time=432 ms
+[1792926993.618894] 64 bytes from 192.168.1.5: icmp_seq=1539 ttl=128 time=329 ms
+[1792926993.619810] 64 bytes from 192.168.1.5: icmp_seq=1540 ttl=128 time=129 ms
+[1792926993.692726] 64 bytes from 192.168.1.5: icmp_seq=1541 ttl=128 time=0.710 ms
+[1792926993.959770] 64 bytes from 192.168.1.5: icmp_seq=1542 ttl=128 time=66.8 ms
+[1792926994.166782] 64 bytes from 192.168.1.5: icmp_seq=1543 ttl=128 time=73.7 ms
+[1792926994.382764] 64 bytes from 192.168.1.5: icmp_seq=1544 ttl=128 time=88.7 ms
+[1792926994.574717] 64 bytes from 192.168.1.5: icmp_seq=1545 ttl=128 time=79.7 ms
+[1792926994.793705] 64 bytes from 192.168.1.5: icmp_seq=1546 ttl=128 time=97.7 ms
+[1792926994.978719] 64 bytes from 192.168.1.5: icmp_seq=1547 ttl=128 time=81.8 ms
+[1792926995.180619] 64 bytes from 192.168.1.5: icmp_seq=1548 ttl=128 time=83.7 ms
+[1792926995.392710] 64 bytes from 192.168.1.5: icmp_seq=1549 ttl=128 time=94.8 ms
+[1792926995.585685] 64 bytes from 192.168.1.5: icmp_seq=1550 ttl=128 time=86.7 ms
+[1792926995.701701] 64 bytes from 192.168.1.5: icmp_seq=1551 ttl=128 time=1.62 ms
+[1792926995.990606] 64 bytes from 192.168.1.5: icmp_seq=1552 ttl=128 time=89.6 ms
+[1792926996.193543] 64 bytes from 192.168.1.5: icmp_seq=1553 ttl=128 time=92.8 ms
+[1792926996.404637] 64 bytes from 192.168.1.5: icmp_seq=1554 ttl=128 time=103 ms
+[1792926996.598487] 64 bytes from 192.168.1.5: icmp_seq=1555 ttl=128 time=95.7 ms
+[1792926996.816484] 64 bytes from 192.168.1.5: icmp_seq=1556 ttl=128 time=113 ms
+[1792926997.011561] 64 bytes from 192.168.1.5: icmp_seq=1557 ttl=128 time=107 ms
+[1792926997.204520] 64 bytes from 192.168.1.5: icmp_seq=1558 ttl=128 time=98.1 ms
+[1792926997.417460] 64 bytes from 192.168.1.5: icmp_seq=1559 ttl=128 time=111 ms
+[1792926997.597513] 64 bytes from 192.168.1.5: icmp_seq=1560 ttl=128 time=89.8 ms
+[1792926997.812455] 64 bytes from 192.168.1.5: icmp_seq=1561 ttl=128 time=104 ms
+[1792926998.015492] 64 bytes from 192.168.1.5: icmp_seq=1562 ttl=128 time=106 ms
+[1792926998.217445] 64 bytes from 192.168.1.5: icmp_seq=1563 ttl=128 time=108 ms
+[1792926998.428419] 64 bytes from 192.168.1.5: icmp_seq=1564 ttl=128 time=118 ms
+[1792926998.623441] 64 bytes from 192.168.1.5: icmp_seq=1565 ttl=128 time=112 ms
+[1792926998.840404] 64 bytes from 192.168.1.5: icmp_seq=1566 ttl=128 time=128 ms
+[1792926999.035337] 64 bytes from 192.168.1.5: icmp_seq=1567 ttl=128 time=122 ms
+[1792926999.229355] 64 bytes from 192.168.1.5: icmp_seq=1568 ttl=128 time=116 ms
+[1792926999.444286] 64 bytes from 192.168.1.5: icmp_seq=1569 ttl=128 time=130 ms
+[1792926999.641413] 64 bytes from 192.168.1.5: icmp_seq=1570 ttl=128 time=126 ms
+[1792926999.864266] 64 bytes from 192.168.1.5: icmp_seq=1571 ttl=128 time=149 ms
+[1792927000.031266] 64 bytes from 192.168.1.5: icmp_seq=1572 ttl=128 time=115 ms
+[1792927000.317019] no answer yet for icmp_seq=1573
+[1792927000.526123] no answer yet for icmp_seq=1574
+[1792927000.732989] no answer yet for icmp_seq=1575
+[1792927000.941011] no answer yet for icmp_seq=1576
+[1792927001.149056] no answer yet for icmp_seq=1577
+[1792927001.357114] no answer yet for icmp_seq=1578
+[1792927001.565031] no answer yet for icmp_seq=1579
+[1792927001.773975] no answer yet for icmp_seq=1580
+[1792927001.981157] no answer yet for icmp_seq=1581
+[1792927002.189052] no answer yet for icmp_seq=1582
+[1792927002.397103] no answer yet for icmp_seq=1583
+[1792927002.605103] no answer yet for icmp_seq=1584
+[1792927002.813060] no answer yet for icmp_seq=1585
+[1792927003.021294] no answer yet for icmp_seq=1586
+[1792927003.229114] no answer yet for icmp_seq=1587
+[1792927003.439023] no answer yet for icmp_seq=1588
+[1792927003.645039] no answer yet for icmp_seq=1589
+[1792927003.853076] no answer yet for icmp_seq=1590
+[1792927004.061161] no answer yet for icmp_seq=1591
+[1792927004.270773] no answer yet for icmp_seq=1592
+[1792927004.477110] no answer yet for icmp_seq=1593
+[1792927004.685021] no answer yet for icmp_seq=1594
+[1792927004.893049] no answer yet for icmp_seq=1595
+[1792927005.101072] no answer yet for icmp_seq=1596
+[1792927005.308939] no answer yet for icmp_seq=1597
+[1792927005.518084] no answer yet for icmp_seq=1598
+[1792927005.724994] no answer yet for icmp_seq=1599
+[1792927005.933047] no answer yet for icmp_seq=1600
+[1792927006.142006] no answer yet for icmp_seq=1601
+[1792927006.349064] no answer yet for icmp_seq=1602
+[1792927006.556994] no answer yet for icmp_seq=1603
+[1792927006.764976] no answer yet for icmp_seq=1604
+[1792927006.973045] no answer yet for icmp_seq=1605
+[1792927007.181040] no answer yet for icmp_seq=1606
+[1792927007.389325] no answer yet for icmp_seq=1607
+[1792927007.596971] no answer yet for icmp_seq=1608
+[1792927007.805198] no answer yet for icmp_seq=1609
+[1792927008.012983] no answer yet for icmp_seq=1610
+[1792927008.221044] no answer yet for icmp_seq=1611
+[1792927008.428954] no answer yet for icmp_seq=1612
+[1792927008.637446] no answer yet for icmp_seq=1613
+[1792927008.844934] no answer yet for icmp_seq=1614
+[1792927009.053691] no answer yet for icmp_seq=1615
+[1792927009.261091] no answer yet for icmp_seq=1616
+[1792927009.469092] no answer yet for icmp_seq=1617
+[1792927009.676939] no answer yet for icmp_seq=1618
+[1792927009.885069] no answer yet for icmp_seq=1619
+[1792927010.093034] no answer yet for icmp_seq=1620
+[1792927010.300972] no answer yet for icmp_seq=1621
+[1792927010.508959] no answer yet for icmp_seq=1622
+[1792927010.717035] no answer yet for icmp_seq=1623
+[1792927010.924946] no answer yet for icmp_seq=1624
+[1792927011.133040] no answer yet for icmp_seq=1625
+[1792927011.341938] no answer yet for icmp_seq=1626
+[1792927011.549116] no answer yet for icmp_seq=1627
+[1792927011.756950] no answer yet for icmp_seq=1628
+[1792927011.966058] no answer yet for icmp_seq=1629
+[1792927012.173090] no answer yet for icmp_seq=1630
+[1792927012.381052] no answer yet for icmp_seq=1631
+[1792927012.590105] no answer yet for icmp_seq=1632
+[1792927012.797059] no answer yet for icmp_seq=1633
+[1792927013.005061] no answer yet for icmp_seq=1634
+[1792927013.212936] no answer yet for icmp_seq=1635
+[1792927013.421078] no answer yet for icmp_seq=1636
+[1792927013.629055] no answer yet for icmp_seq=1637
+[1792927013.837057] no answer yet for icmp_seq=1638
+[1792927014.045096] no answer yet for icmp_seq=1639
+[1792927014.253056] no answer yet for icmp_seq=1640
+[1792927014.461096] no answer yet for icmp_seq=1641
+[1792927014.541329] 64 bytes from 192.168.1.5: icmp_seq=1642 ttl=128 time=80.1 ms
+[1792927014.664179] 64 bytes from 192.168.1.5: icmp_seq=1643 ttl=128 time=2.27 ms
+[1792927014.864228] 64 bytes from 192.168.1.5: icmp_seq=1644 ttl=128 time=1.63 ms
+[1792927015.120112] 64 bytes from 192.168.1.5: icmp_seq=1645 ttl=128 time=56.6 ms
+[1792927015.389261] 64 bytes from 192.168.1.5: icmp_seq=1646 ttl=128 time=125 ms
+[1792927015.587138] 64 bytes from 192.168.1.5: icmp_seq=1647 ttl=128 time=122 ms
+[1792927015.782049] 64 bytes from 192.168.1.5: icmp_seq=1648 ttl=128 time=116 ms
+[1792927015.992021] 64 bytes from 192.168.1.5: icmp_seq=1649 ttl=128 time=125 ms
+[1792927016.184031] 64 bytes from 192.168.1.5: icmp_seq=1650 ttl=128 time=117 ms
+[1792927016.366135] 64 bytes from 192.168.1.5: icmp_seq=1651 ttl=128 time=97.8 ms
+[1792927016.492020] 64 bytes from 192.168.1.5: icmp_seq=1652 ttl=128 time=21.9 ms
+[1792927016.774070] 64 bytes from 192.168.1.5: icmp_seq=1653 ttl=128 time=104 ms
+[1792927016.989057] 64 bytes from 192.168.1.5: icmp_seq=1654 ttl=128 time=118 ms
+[1792927017.183125] 64 bytes from 192.168.1.5: icmp_seq=1655 ttl=128 time=112 ms
+[1792927017.407071] 64 bytes from 192.168.1.5: icmp_seq=1656 ttl=128 time=135 ms
+[1792927017.597018] 64 bytes from 192.168.1.5: icmp_seq=1657 ttl=128 time=122 ms
+[1792927017.808038] 64 bytes from 192.168.1.5: icmp_seq=1658 ttl=128 time=133 ms
+[1792927017.877889] 64 bytes from 192.168.1.5: icmp_seq=1659 ttl=128 time=1.63 ms
+[1792927018.077940] 64 bytes from 192.168.1.5: icmp_seq=1660 ttl=128 time=0.745 ms
+[1792927018.321973] 64 bytes from 192.168.1.5: icmp_seq=1661 ttl=128 time=36.9 ms
+[1792927018.585836] 64 bytes from 192.168.1.5: icmp_seq=1662 ttl=128 time=101 ms
+[1792927018.825879] 64 bytes from 192.168.1.5: icmp_seq=1663 ttl=128 time=137 ms
+[1792927018.965924] 64 bytes from 192.168.1.5: icmp_seq=1664 ttl=128 time=76.7 ms
+[1792927019.138080] 64 bytes from 192.168.1.5: icmp_seq=1665 ttl=128 time=48.7 ms
+[1792927019.379825] 64 bytes from 192.168.1.5: icmp_seq=1666 ttl=128 time=90.2 ms
+[1792927019.573779] 64 bytes from 192.168.1.5: icmp_seq=1667 ttl=128 time=83.8 ms
+[1792927019.794782] 64 bytes from 192.168.1.5: icmp_seq=1668 ttl=128 time=104 ms
+[1792927019.988763] 64 bytes from 192.168.1.5: icmp_seq=1669 ttl=128 time=96.7 ms
+[1792927020.215793] 64 bytes from 192.168.1.5: icmp_seq=1670 ttl=128 time=124 ms
+[1792927020.440719] 64 bytes from 192.168.1.5: icmp_seq=1671 ttl=128 time=148 ms
+[1792927020.597726] 64 bytes from 192.168.1.5: icmp_seq=1672 ttl=128 time=104 ms
+[1792927020.838759] 64 bytes from 192.168.1.5: icmp_seq=1673 ttl=128 time=144 ms
+[1792927021.034689] 64 bytes from 192.168.1.5: icmp_seq=1674 ttl=128 time=139 ms
+[1792927021.147695] 64 bytes from 192.168.1.5: icmp_seq=1675 ttl=128 time=51.8 ms
+[1792927021.431650] 64 bytes from 192.168.1.5: icmp_seq=1676 ttl=128 time=135 ms
+[1792927021.637073] 64 bytes from 192.168.1.5: icmp_seq=1677 ttl=128 time=139 ms
+[1792927021.788771] 64 bytes from 192.168.1.5: icmp_seq=1678 ttl=128 time=90.2 ms
+[1792927022.044748] 64 bytes from 192.168.1.5: icmp_seq=1679 ttl=128 time=146 ms
+[1792927022.251662] 64 bytes from 192.168.1.5: icmp_seq=1680 ttl=128 time=153 ms
+[1792927022.474614] 64 bytes from 192.168.1.5: icmp_seq=1681 ttl=128 time=175 ms
+[1792927022.530550] 64 bytes from 192.168.1.5: icmp_seq=1682 ttl=128 time=29.7 ms
+[1792927022.812654] 64 bytes from 192.168.1.5: icmp_seq=1683 ttl=128 time=111 ms
+[1792927023.007573] 64 bytes from 192.168.1.5: icmp_seq=1684 ttl=128 time=105 ms
+[1792927023.200496] 64 bytes from 192.168.1.5: icmp_seq=1685 ttl=128 time=96.4 ms
+[1792927023.329505] 64 bytes from 192.168.1.5: icmp_seq=1686 ttl=128 time=24.1 ms
+[1792927023.506667] 64 bytes from 192.168.1.5: icmp_seq=1687 ttl=128 time=0.705 ms
+[1792927023.839538] 64 bytes from 192.168.1.5: icmp_seq=1688 ttl=128 time=130 ms
+[1792927024.020510] 64 bytes from 192.168.1.5: icmp_seq=1689 ttl=128 time=110 ms
+[1792927024.227454] 64 bytes from 192.168.1.5: icmp_seq=1690 ttl=128 time=117 ms
+[1792927024.441390] 64 bytes from 192.168.1.5: icmp_seq=1691 ttl=128 time=130 ms
+[1792927024.514590] 64 bytes from 192.168.1.5: icmp_seq=1692 ttl=128 time=1.83 ms
+[1792927024.715534] 64 bytes from 192.168.1.5: icmp_seq=1693 ttl=128 time=1.40 ms
+[1792927024.916357] 64 bytes from 192.168.1.5: icmp_seq=1694 ttl=128 time=1.51 ms
+[1792927025.117467] 64 bytes from 192.168.1.5: icmp_seq=1695 ttl=128 time=1.58 ms
+[1792927025.317444] 64 bytes from 192.168.1.5: icmp_seq=1696 ttl=128 time=0.777 ms
+[1792927025.527463] 64 bytes from 192.168.1.5: icmp_seq=1697 ttl=128 time=2.20 ms
+[1792927025.726465] 64 bytes from 192.168.1.5: icmp_seq=1698 ttl=128 time=0.580 ms
+[1792927025.999350] 64 bytes from 192.168.1.5: icmp_seq=1699 ttl=128 time=66.3 ms
+[1792927026.202307] 64 bytes from 192.168.1.5: icmp_seq=1700 ttl=128 time=68.7 ms
+[1792927026.414269] 64 bytes from 192.168.1.5: icmp_seq=1701 ttl=128 time=79.7 ms
+[1792927026.537275] 64 bytes from 192.168.1.5: icmp_seq=1702 ttl=128 time=1.74 ms
+[1792927026.738222] 64 bytes from 192.168.1.5: icmp_seq=1703 ttl=128 time=1.56 ms
+[1792927026.938209] 64 bytes from 192.168.1.5: icmp_seq=1704 ttl=128 time=0.655 ms
+[1792927027.143448] 64 bytes from 192.168.1.5: icmp_seq=1705 ttl=128 time=2.20 ms
+[1792927027.344822] 64 bytes from 192.168.1.5: icmp_seq=1706 ttl=128 time=2.85 ms
+[1792927027.545446] 64 bytes from 192.168.1.5: icmp_seq=1707 ttl=128 time=2.08 ms
+[1792927027.816162] 64 bytes from 192.168.1.5: icmp_seq=1708 ttl=128 time=72.4 ms
+[1792927028.020228] 64 bytes from 192.168.1.5: icmp_seq=1709 ttl=128 time=75.8 ms
+[1792927028.152177] 64 bytes from 192.168.1.5: icmp_seq=1710 ttl=128 time=6.68 ms
+[1792927028.350190] 64 bytes from 192.168.1.5: icmp_seq=1711 ttl=128 time=3.61 ms
+[1792927028.549192] 64 bytes from 192.168.1.5: icmp_seq=1712 ttl=128 time=1.52 ms
+[1792927028.750089] 64 bytes from 192.168.1.5: icmp_seq=1713 ttl=128 time=1.45 ms
+[1792927028.951088] 64 bytes from 192.168.1.5: icmp_seq=1714 ttl=128 time=1.71 ms
+[1792927029.159083] 64 bytes from 192.168.1.5: icmp_seq=1715 ttl=128 time=8.47 ms
+[1792927029.352246] 64 bytes from 192.168.1.5: icmp_seq=1716 ttl=128 time=0.643 ms
+[1792927029.559605] 64 bytes from 192.168.1.5: icmp_seq=1717 ttl=128 time=2.45 ms
+[1792927029.760030] 64 bytes from 192.168.1.5: icmp_seq=1718 ttl=128 time=1.98 ms
+[1792927029.960135] 64 bytes from 192.168.1.5: icmp_seq=1719 ttl=128 time=1.80 ms
+[1792927030.166003] 64 bytes from 192.168.1.5: icmp_seq=1720 ttl=128 time=6.49 ms
+[1792927030.361978] 64 bytes from 192.168.1.5: icmp_seq=1721 ttl=128 time=1.46 ms
+[1792927030.564593] 64 bytes from 192.168.1.5: icmp_seq=1722 ttl=128 time=3.08 ms
+[1792927030.763895] 64 bytes from 192.168.1.5: icmp_seq=1723 ttl=128 time=1.99 ms
+[1792927030.963499] 64 bytes from 192.168.1.5: icmp_seq=1724 ttl=128 time=1.10 ms
+
+--- 192.168.1.5 ping statistics ---
+1724 packets transmitted, 1190 received, 30.9745% packet loss, time 350465ms
+rtt min/avg/max/mdev = 0.372/192.666/572.788/186.503 ms, pipe 3
