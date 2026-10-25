@@ -9,7 +9,12 @@
  "serial": "32392D3",
  "t_start": 1792930966.71564,
  "t_start_str": "2026-10-25 21:22:46",
- "n_steps": 0,
- "n_samples": 0,
- "complete": false
+ "sync_locked": true,
+ "sync_phase": 5060,
+ "sync_n_integrate": 6850,
+ "dry_run": false,
+ "uhd_errors": "overflow=11 late=0 timeout=0 other=0",
+ "n_steps": 132156,
+ "n_samples": 2643120,
+ "complete": true
 }
